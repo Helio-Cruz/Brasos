@@ -4,16 +4,11 @@
 
  @import
   '~reset-css',
-  '~uikit/src/scss/uikit-theme.scss',
-   '~font-awesome/scss/font-awesome';
-
-@import "uikit/src/scss/variables-theme.scss";
-@import "uikit/src/scss/mixins-theme.scss";
+  '~uikit/dist/css/uikit';
 
 @import
    'base/animations',
    'base/base';
-
 
 @import
     'layout/header',
