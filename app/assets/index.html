@@ -1,60 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Webpack</title>
   <link rel="stylesheet" href="css/style.css" />
-   <link rel="stylesheet" href="scss/main.scss" type="text/scss" />
+  <link rel="stylesheet" href="scss/main.scss" type="text/scss" />
 </head>
-<body>
-  <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
-    <nav class="uk-navbar-container" uk-navbar="dropbar: true;"  >
-        <div class="uk-navbar-right">
-          <a class="uk-navbar-toggle" uk-navbar-toggle-icon href=""></a>
-         </div>
-        <div class="uk-navbar-center">
-            <ul class="uk-navbar-nav">
-              <li><a href="#">Home</a></li>
-                <li class="uk-active"><a href="#">Active</a></li>
-                <li>
-                    <a href="#">Institucional</a>
-                    <div class="uk-navbar-dropdown">
-                        <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li><a href="#">Item</a></li>
-                            <li><a href="#">Item</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="#">Eventos</a></li>
-                <li><a href="#">Artigos</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
 
-        </div>
+<body>
+  <!-- NAVBAR -->
+  <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container" uk-navbar="dropbar: true;">
+      <!-- <nav class="uk-container uk-navbar"> -->
+      <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+          <li class="uk-active">
+            <a href="#">Brasos</a>
+          </li>
+        </ul>
+      </div>
+      <div class="uk-navbar-center">
+        <ul class="uk-navbar-nav uk-visible@s">
+          <li class="uk-active"><a href="#">Home</a></li>
+          <li>
+            <a href="#">Institucional</a>
+            <div class="uk-navbar-dropdown">
+              <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#">Eventos</a></li>
+          <li><a href="#">Artigos</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+      <div class="uk-navbar-right">
+        <a href="#" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+        <!-- <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a> -->
+      </div>
     </nav>
-</div>
- 
-<div uk-slideshow class="carousel-images">
-  <ul class="uk-slideshow-items">
-      <li >
-        <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left" >
-          <img src="/images/d.1.jpg" alt="">
+  </div>
+  <div id="sidenav" uk-offcanvas="overlay: true; mode: push; flip: true" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+      <ul class="uk-nav">
+        <li class="uk-active uk-text-large"><a href="#">Home</a></li>
+        <li>
+          <a href="#" class="uk-text-large">Institucional</a>
+          <!-- <div class="uk-navbar-dropdown"> -->
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+            </ul>
+          <!-- </div> -->
+        </li>
+        <li><a href="#" class="uk-text-large">Eventos</a></li>
+        <li><a href="#" class="uk-text-large">Artigos</a></li>
+        <li><a href="#" class="uk-text-large">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CAROUSEL -->
+  <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+    <ul class="uk-slideshow-items uk-height-viewport=" 90">
+      <li>
+        <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
+          <img src="/images/d.1.jpg" alt="" uk-cover>
         </div>
       </li>
       <li>
-        <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-right">
-        <img src="/images/d.2.jpg" alt="">
-      </div>
-    </li>
-    <li>
-      <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center" >
-      <img src="/images/d.3.jpg" alt="">
-    </div>
-  </li>
-  </ul>
+        <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
+          <img src="/images/d.2.jpg" alt="" uk-cover>
+        </div>
+      </li>
+      <li>
+        <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
+          <img src="/images/d.3.jpg" alt="" uk-cover>
+        </div>
+      </li>
+    </ul>
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+      uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+      uk-slideshow-item="next"></a>
   </div>
- 
+
+
+
+
+
+
+
+
   <script src="js/app.js"></script>
 </body>
+
 </html>
