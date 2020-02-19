@@ -5,28 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Webpack</title>
   <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="scss/main.scss" type="text/scss" />
 </head>
 <body>
-  <nav class="uk-navbar-container" uk-navbar>
-    <div class="uk-navbar-left">
+  <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container" uk-navbar="dropbar: true;"  >
+        <div class="uk-navbar-right">
+          <a class="uk-navbar-toggle" uk-navbar-toggle-icon href=""></a>
+         </div>
+        <div class="uk-navbar-center">
+            <ul class="uk-navbar-nav">
+              <li><a href="#">Home</a></li>
+                <li class="uk-active"><a href="#">Active</a></li>
+                <li>
+                    <a href="#">Institucional</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Artigos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
 
-        <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="#">Active</a></li>
-            <li>
-                <a href="#">Parent</a>
-                <div class="uk-navbar-dropdown">
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <li class="uk-active"><a href="#">Active</a></li>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="#">Item</a></li>
-        </ul>
-
+        </div>
+    </nav>
+</div>
+ 
+<div uk-slideshow class="carousel-images">
+  <ul class="uk-slideshow-items">
+      <li >
+        <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left" >
+          <img src="/images/d.1.jpg" alt="">
+        </div>
+      </li>
+      <li>
+        <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-right">
+        <img src="/images/d.2.jpg" alt="">
+      </div>
+    </li>
+    <li>
+      <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center" >
+      <img src="/images/d.3.jpg" alt="">
     </div>
-</nav>
+  </li>
+  </ul>
+  </div>
  
   <script src="js/app.js"></script>
 </body>
