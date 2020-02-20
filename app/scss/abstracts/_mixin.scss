@@ -1,1 +1,37 @@
-@mixin hook-card() { color: #000; }
+//@mixin hook-card() { color: #000; }
+
+// mobiles landscape
+@mixin mobiles {
+    @media (min-width : 481px) {
+        @content;
+    }
+}
+// tablets portrait + landscape
+@mixin tablets {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+// laptops and desktops
+@mixin computers {
+    @media (min-width : 1025px) {
+        @content;
+    }
+}
+// high resolutin screens
+@mixin large-screens {
+    @media (min-width : 1281px) {
+        @content;
+    }
+}
+
+// FLEXBOX
+@mixin flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    @include tablets {
+      flex-flow: row wrap;
+    }
+  }

@@ -1,0 +1,49 @@
+.brasos{
+ 
+    &__image{
+       
+        img{
+            object-fit: cover;
+            width: 350px;
+            height: 350px;           
+        }
+    }
+    &__back-grey{
+        background-color: $grey;
+        width: 350px;
+        height: 350px;
+    }
+    &__text{
+        width: 350px;
+        height: 300px;
+        color: $white;
+        background: $color-green-dark;
+        text-align: center;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 0.9em;
+ 
+       
+         
+    }
+    &__button{
+        border: none;
+        width: 120px;
+        height: 40px;
+        background: $white;
+        a{
+           color: $color-green-dark;  
+           text-decoration: none;
+        }
+        &:hover{
+            background-color: $color-green-regular;
+            transition: ease-in $duration-medium;
+            a{
+                color: $white;
+            }
+            
+        }
+       
+        
+    }
+}
