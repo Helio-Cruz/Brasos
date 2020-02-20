@@ -1,0 +1,43 @@
+.uk-navbar-container:not(.uk-navbar-transparent){
+    background-color: $white;
+}
+
+.uk-navbar-nav > li > a{
+    font-family: 'Roboto';
+    font-style: italic; 
+    text-transform: none;  
+    color: $color-green-dark;
+}
+
+/*DropDown */ 
+.uk-navbar-dropdown-nav li{
+    font-style: italic;
+    font-weight: 200;
+    font-size: 14px;
+    a{
+         color:$color-green-dark; 
+    }
+  
+}
+
+ .subnav{
+    display: flex;
+    width: 800px;
+    a{
+        margin: 0 0.5em;
+        font-size: 14px;
+      
+    }
+ }
+
+ /* flags */
+ .flag{
+     width: 65px;
+     display: flex;
+     margin: auto;
+     margin-left: 180px;
+     li{
+       margin: 0.1em; 
+     }
+     
+ }
