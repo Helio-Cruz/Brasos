@@ -24,4 +24,12 @@ h2{
     font-weight: 200;
     text-transform: uppercase;
     margin: 0 auto;
+    text-align: center;
+}
+.h3-title {
+    color: $color-green-dark;
+    font-size: $subheading;
+    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: left;
 }
