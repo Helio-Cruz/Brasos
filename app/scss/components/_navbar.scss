@@ -1,5 +1,9 @@
-.uk-navbar-container:not(.uk-navbar-transparent){
-    background-color: $white;
+// Navbar
+.uk-navbar-container {
+    padding: 0 5%;
+    &:not(.uk-navbar-transparent){
+        background-color: $white;
+    }
 }
 
 .uk-navbar-nav > li > a{
@@ -9,7 +13,7 @@
     color: $color-green-dark;
 }
 
-/*DropDown */ 
+/* DropDown */ 
 .uk-navbar-dropdown-nav li{
     font-style: italic;
     font-weight: 200;
@@ -20,7 +24,7 @@
   
 }
 
- .subnav{
+.subnav{
     display: flex;
     width: 800px;
     a{
@@ -28,16 +32,36 @@
         font-size: 14px;
       
     }
- }
+}
 
- /* flags */
- .flag{
-     width: 65px;
-     display: flex;
-     margin: auto;
-     margin-left: 180px;
-     li{
-       margin: 0.1em; 
-     }
-     
- }
+.uk-navbar-center .uk-navbar-nav {
+    position: relative;
+}
+/* flags */
+.flag {
+    width: 65px;
+    display: flex;
+    position: absolute;
+    right: -30%;
+    top: 32px;
+    li{
+        margin: 0 0.1em; 
+    }
+}
+.uk-nav {
+    .flag {
+        margin: 0;
+        top: 20px;
+        left: 40px;
+    }
+}
+
+// SIDENAV
+
+.uk-offcanvas-bar a,
+.uk-offcanvas-bar .uk-offcanvas-close {
+    color: $color-green-dark;
+    &:hover {
+        color: $grey;
+    }
+}
