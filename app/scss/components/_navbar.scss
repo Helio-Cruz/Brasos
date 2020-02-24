@@ -65,3 +65,11 @@
         color: $grey;
     }
 }
+
+
+
+@media (max-width: 850px) {
+    .uk-navbar-container .uk-visible {
+        visibility: hidden;
+    }
+}
