@@ -13,13 +13,17 @@
 @import
    'components/blog-cards',
    'components/brasos',
+   'components/buttons',
    'components/carousel-home',
+   'components/form',
    'components/navbar';
 
 @import
     'layout/header',
     'layout/footer';
  
-
+@import
+   'pages/member';
+   
 @import
     'shame';
