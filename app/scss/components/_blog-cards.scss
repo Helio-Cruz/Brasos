@@ -1,8 +1,6 @@
 .blog-cards {
-  // background: red;
     margin: 0 auto;
     //padding: 6em 0;
-
     &--title{
         // font-style: italic;
         // font-weight: 200;
@@ -28,8 +26,8 @@
  
     }
     .card {
-      margin: 0.5em auto;
-      height: 400px;
+      margin: 0 2em;
+      height: 350px;
       overflow: hidden;
       @include tablets {
         height: 350px;
@@ -53,7 +51,7 @@
         position: relative;
         img {
           width: 600px;
-          height: 400px;
+          height: 350px;
           object-fit: cover;
           @include tablets {
             height: 350px;

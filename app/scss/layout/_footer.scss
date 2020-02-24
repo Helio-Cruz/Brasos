@@ -7,32 +7,31 @@
     color: $white;
     font-style: italic;
     font-weight: 200;
+    margin: 1em;
   }
   &__button {
     border: none;
     width: 140px;
     height: 42px;
     background-color: $white;
+     color: $white;
     a {
       color: $color-green-dark;
       font-size: 14px;
     }
     &:hover {
-      background-color: $color-green-dark;
+      background-color: $color-green-regular;
       transition: ease-in $duration-medium;
       a {
         color: white;
         text-decoration: none;
-      }
-      color: $white;
+      }    
     }
   }
   .uk-navbar {
     background-color: $color-green-regular;
     margin: 30px auto;
-
-    a {
-        
+    a {  
       color: $white;
       &:hover {
         color: $color-green-dark;
@@ -48,9 +47,7 @@
     font-weight: 300;
     font-style: italic;
   }
-  // &____media-social {
-
-  // }
+ 
 
   &__logo img {
     width: 140px;

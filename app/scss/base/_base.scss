@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    font-size: $body;
+    font-family: $body-font-regular;
+}
+
 h2{
     font-style: italic;
     font-weight: 200;
