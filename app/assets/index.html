@@ -11,21 +11,21 @@
 
 <body>
   <!-- NAVBAR -->
-  <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar" >
+  <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
     <nav class="uk-navbar-container" uk-navbar="dropbar: true;">
       <!-- <nav class="uk-container uk-navbar"> -->
       <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
           <li class="uk-active">
             <div class="header-nav__logo">
-              <a href=""><img src="./images/logo.png" alt=""></a> 
-           </div>
+              <a href="#"><img src="./images/logo.png" alt=""></a>
+            </div>
           </li>
         </ul>
       </div>
       <div class="uk-navbar-center">
         <ul class="uk-navbar-nav uk-visible@s">
-          <li><a href="#">Home</a></li>
+          <li class="uk-active"><a href="#">Home</a></li>
           <li>
             <a href="#">Institucional</a>
             <div class="uk-navbar-dropdown">
@@ -56,17 +56,12 @@
       </div>
       <div class="uk-navbar-right">
         <a href="#" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
-        <!-- <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a> -->
       </div>
     </nav>
   </div>
   <div id="sidenav" uk-offcanvas="overlay: true; flip: true">
-    <div class="uk-offcanvas-bar">
-      <!-- <div class="uk-offcanvas-bar">
-
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
-
-    </div> -->
+    <div class="uk-offcanvas-bar uk-background-default">
+      <button class="uk-offcanvas-close" type="button" uk-close></button>
       <ul class="uk-nav">
         <div class="flag">
           <li>
@@ -82,40 +77,38 @@
         </div>
         <li class="uk-nav-divider"></li>
         <li class="uk-active"><a href="#">Home</a></li>
-        <li>
-          <a href="#" >Institucional</a>
-          <!-- <div class="uk-navbar-dropdown"> -->
-            <ul class="uk-nav uk-navbar-dropdown-nav">
-              <li><a href="#">Brasos</a></li>
-              <li><a href="#">Estatuo Abeti</a></li>
-              <li><a href="#">Palavras do Presidente</a></li>
-              <li><a href="#">Conselho Diretor</a></li>
-            </ul>
-          <!-- </div> -->
+        <li class="uk-parent">
+          <a href="#">Institucional</a>
+          <ul class="uk-nav-sub uk-navbar-dropdown-nav">
+            <li><a href="#">Brasos</a></li>
+            <li><a href="#">Estatuo Abeti</a></li>
+            <li><a href="#">Palavras do Presidente</a></li>
+            <li><a href="#">Conselho Diretor</a></li>
+          </ul>
         </li>
         <li><a href="#">Eventos</a></li>
         <li><a href="#">Artigos</a></li>
-        <li><a href="#" >Contato</a></li>
+        <li><a href="#">Contato</a></li>
       </ul>
     </div>
   </div>
 
   <!-- CAROUSEL -->
-  <div class="uk-position-relative uk-visible-toggle uk-light  " tabindex="-1" uk-slideshow>
-    <ul class="carousel-images   uk-slideshow-items uk-height-viewport=" 90">
+  <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+    <ul class="carousel-images uk-slideshow-items" uk-height-viewport="90">
       <li>
         <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
-          <img src="/images/d.1.jpg" alt=""  >
+          <img src="/images/d.1.jpg" alt="">
         </div>
       </li>
       <li>
         <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
-          <img src="/images/d.2.jpg" alt="" >
+          <img src="/images/d.2.jpg" alt="">
         </div>
       </li>
       <li>
         <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
-          <img src="/images/d.3.jpg" alt=""  >
+          <img src="/images/d.3.jpg" alt="">
         </div>
       </li>
     </ul>
@@ -163,71 +156,72 @@
     </div>
   </div>
 
-<div class="brasos">
-  <h2 class="brasos__title">Sobre a Brasos</h2>
-  <div class="brasos__image">
-    <img src="./images/card-3.jpg" alt="">
+  <div class="brasos">
+    <h2 class="brasos__title">Sobre a Brasos</h2>
+    <div class="brasos__image">
+      <img src="./images/card-3.jpg" alt="">
+    </div>
+    <div class="brasos__back-grey"></div>
+    <div class="brasos__text">
+      <p>
+        A BRASOS (Brazilian Society for Osteoarthritis, Osteoporosis and Sarcopenia) é uma sociedade de médicos de
+        diferentes especialidades, fundada em outubro de 2017, com o nome de ABETI (Associação Brasileira para Estudos
+        dos Tratamentos por Infiltração).
+      </p>
+      <button class="brasos__button">
+        <a href="">Saiba Mais</a>
+      </button>
+    </div>
   </div>
-  <div class="brasos__back-grey"></div>
-  <div class="brasos__text">
-    <p>
-      A BRASOS (Brazilian Society for Osteoarthritis, Osteoporosis and Sarcopenia) é uma sociedade de médicos de diferentes especialidades, fundada em outubro de 2017, com o nome de ABETI (Associação Brasileira para Estudos dos Tratamentos por Infiltração).
-    </p>
-    <button class="brasos__button">
-      <a href="">Saiba Mais</a>
-    </button>
-  </div>
-</div>
 
-<div class="uk-section uk-section-muted footer-nav">
-  <div class="uk-container">
-        <h2 class="footer-nav__title">Faça Parte da Nossa Comunidade</h2>
-          <button class="footer-nav__button">
-            <a href="">Torne-se Membro</a>
-          </button>
-       </div>
-      
-    <div uk-navbar  class="footer-nav__menu-fast ">
-        <div class="uk-navbar-center">     
-              <div> 
-                <ul class="uk-navbar-nav uk-child-width-expand@s">
-                <li><a href="">A Brasos</a></li>
-                <li><a href="">Conselho Diretor</a></li>
-                <li><a href="">Contato</a></li>
-                <li><a href="">Brasit 2020</a></li>
-                <li><a href="">Congresso</a></li>
-                <li><a href="">Certificados</a></li>
-              </ul>
-            </div>
-            </ul>
-        </div>
+
+  <div class="uk-section uk-section-muted footer-nav">
+    <div class="uk-container">
+      <h2 class="footer-nav__title">Faça Parte da Nossa Comunidade</h2>
+      <button class="footer-nav__button">
+        <a href="">Torne-se Membro</a>
+      </button>
     </div>
 
-  <div class="uk-grid-match uk-child-width-expand@s footer-nav__contact" uk-grid>
-            <div>
-                <p>Responsável Técnico<br>
-                 <b>Antonio Martins Tieppo<br></b> 
-                  Primeiro Secretário<br>
-                  CRM/SP: 47.777
-                </p>
-            </div>
-            <div  class="footer-nav__media-social">
-              <a href="" uk-icon="facebook"></a>
-              <a href="" uk-icon="instagram"></a>
-                <p>secretario@brasos.med.br</p>
-            </div>
-        </div>
- 
+    <div uk-navbar class="footer-nav__menu-fast ">
+      <div class="uk-navbar-center">
+          <ul class="uk-navbar-nav uk-flex-wrap uk-child-width-expand@s">
+            <li><a href="">A Brasos</a></li>
+            <li><a href="">Conselho Diretor</a></li>
+            <li><a href="">Contato</a></li>
+            <li><a href="">Brasit 2020</a></li>
+            <li><a href="">Congresso</a></li>
+            <li><a href="">Certificados</a></li>
+          </ul>
+        </ul>
+      </div>
     </div>
-</div>
-<div class="uk-grid-match uk-child-width-expand@s footer-mentions" uk-grid>
-  <div>
+
+    <div class="uk-grid-match uk-child-width-expand@s footer-nav__contact" uk-grid>
+      <div>
+        <p>Responsável Técnico<br>
+          <b>Antonio Martins Tieppo<br></b>
+          Primeiro Secretário<br>
+          CRM/SP: 47.777
+        </p>
+      </div>
+      <div class="footer-nav__media-social">
+        <a href="" uk-icon="facebook"></a>
+        <a href="" uk-icon="instagram"></a>
+        <p>secretario@brasos.med.br</p>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div class="uk-grid-match uk-child-width-expand@s footer-mentions" uk-grid>
+    <div>
       <p>Copyright@ 2020. Agência Fazer</p>
+    </div>
+    <div class="footer-nav__logo">
+      <a href=""><img src="./images/logo.png" alt=""></a>
+    </div>
   </div>
-  <div class="footer-nav__logo">
-       <a href=""><img src="./images/logo.png" alt=""></a> 
-  </div>
-</div>
 
   <script src="js/app.js"></script>
 </body>
