@@ -6,6 +6,7 @@
   }
   @include computers {
     width: 900px;
+    position: relative;
   }
   &__title {
     position: relative;
@@ -15,7 +16,10 @@
       margin: 0 3.5em;
     }
     @include computers {
-      top: 250px;
+      top: 500px;
+      position: absolute;
+      right: -20px;
+      margin: 0;
     }
   }
   &__container {
@@ -26,8 +30,7 @@
       margin: -16.5em auto;
     }
   }
-  &__image {
-    img {
+  &__image img {
       position: relative;
       top: 220px;
       object-fit: cover;
@@ -43,7 +46,6 @@
         width: 560px;
         height: 600px;
       }
-    }
   }
   &__back-grey {
     position: relative;
