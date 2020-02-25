@@ -1,117 +1,110 @@
-.brasos{
-   // width: 250px;
-    margin: auto;
+.brasos {
+  // width: 250px;
+  margin: auto;
+  @include tablets {
+    width: 800px;
+  }
+  @include computers {
+    width: 900px;
+  }
+  &__title {
+    position: relative;
+    top: 105px;
+    margin: 0 1.5em;
     @include tablets {
-        width: 800px;
+      margin: 0 3.5em;
+    }
+    @include computers {
+      top: 250px;
+      // left: 15.5em;
+      // margin: 0 2.5em ;
+    }
+  }
+  &__container {
+    @include flexbox;
+    margin: -6.5em auto;
+    @include computers {
+      width: 900px;
+      margin: -16.5em auto;
+    }
+  }
+  &__image {
+    img {
+      position: relative;
+      top: 220px;
+      object-fit: cover;
+      width: 370px;
+      height: 300px;
+      @include tablets {
+        width: 500px;
+        height: 350px;
       }
       @include computers {
-        width: 900px;
-     
-    } 
-    &__title{
-        position: relative;
-        top: 105px;
-        margin: 0 1.5em ;
-        @include tablets {
-            margin: 0 3.5em ;
-          }
-          @include computers {  
-            top: 250px;  
-            // left: 15.5em;
-           // margin: 0 2.5em ;
-          
-        } 
-     
+        top: 500px;
+        right: 115px;
+        width: 560px;
+        height: 600px;
+      }
     }
-    &__container{
-        @include flexbox;
-        margin: -6.5em auto;
-        @include computers {
-            width: 900px;
-            margin: -16.5em auto;
-         
-        } 
-    
+  }
+  &__back-grey {
+    position: relative;
+    background-color: $grey;
+    width: 90%;
+    height: 350px;
+    bottom: 50px;
+    z-index: -1;
+    @include tablets {
+      width: 650px;
+      height: 400px;
     }
-    &__image{   
-        img{
-            position: relative;
-            top: 220px;
-            object-fit: cover;  
-                width: 370px;
-                height: 300px;  
-            @include tablets {
-                width: 500px;
-                height: 350px; 
-              }      
-              @include computers {
-                top: 500px;
-                right: 115px;
-                width: 560px;
-                height: 600px; 
-            }  
-        }
+    @include computers {
+      width: 900px;
+      height: 500px;
     }
-    &__back-grey{
-        position: relative;
-        background-color: $grey;
-        width: 90%;
-        height: 350px;
-        bottom: 50px;
-        z-index: -1;
-        @include tablets {
-            width: 650px;
-            height: 400px;
-          }
-          @include computers {
-            width: 900px;
-            height: 500px; 
-        }  
+  }
+  &__text {
+    position: relative;
+    bottom: 200px;
+    max-width: 400px;
+    height: 250px;
+    color: $white;
+    background: $color-green-dark;
+    text-align: center;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.9em;
+    box-shadow: 10px 10px 15px #bfbfbf;
+    @include tablets {
+      bottom: 310px;
+      width: 400px;
+      height: 300px;
     }
-    &__text{
-        position: relative;
-        bottom: 200px;
-        max-width: 400px;
-        height: 250px;
+    @include computers {
+      left: 200px;
+      bottom: 440px;
+    }
+    p {
+      margin: 30px;
+      line-height: 1.2em;
+    }
+  }
+  &__button {
+    margin: 5px;
+    border: none;
+    width: 120px;
+    height: 40px;
+    background: $white;
+    a {
+      color: $color-green-dark;
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: $color-green-regular;
+      transition: ease-in $duration-medium;
+      a {
         color: $white;
-        background: $color-green-dark;
-        text-align: center;
-        font-style: italic;
-        font-weight: 300;
-        font-size: 0.9em;
-        box-shadow: 10px 10px 15px 	#bfbfbf;
-        @include tablets {
-            bottom: 310px;
-            width: 400px;
-            height: 300px;
-          } 
-          @include computers {
-                left: 200px;
-                bottom: 440px;
-          } 
-        p{
-            margin: 30px;
-            line-height: 1.2em;
-        }
-               
+      }
     }
-    &__button{
-        margin: 5px;
-        border: none;
-        width: 120px;
-        height: 40px;
-        background: $white;
-        a{
-           color: $color-green-dark;  
-           text-decoration: none;
-        }
-        &:hover{
-            background-color: $color-green-regular;
-            transition: ease-in $duration-medium;
-            a{
-                color: $white;
-            }
-            
-        }
-    }
+  }
 }

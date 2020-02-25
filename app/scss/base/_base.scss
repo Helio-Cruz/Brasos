@@ -17,6 +17,15 @@ h2{
     text-transform: uppercase;
 }
 
+.h1-title {
+    color: $color-green-dark;
+    font-size: $headline;
+    font-style: italic;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
+}
 .h2-title {
     color: $color-green-regular;
     font-size: $heading;
