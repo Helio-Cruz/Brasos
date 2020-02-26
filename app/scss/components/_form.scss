@@ -13,12 +13,11 @@
   background: $white;
   color: $color-green-dark;
   text-align: center;
-  height: 80vh;
+  height: auto;
   width: 80vw;
   padding: 2em;
   @include tablets {
     top: 25%;
-    height: 60vh;
     width: 700px;
     padding: 2em 6em;
   }
@@ -67,11 +66,12 @@
     }
   }
   .special-button {
-    margin: 2em;
-    @include tablets {
-      margin: 0.5em;
-    }
+    margin: 2em 0 0;
   }
+}
+
+.contact-form-member {
+  top: 25%;
 }
 
 .background-top {
