@@ -18,14 +18,14 @@
         <ul class="uk-navbar-nav">
           <li class="uk-active">
             <div class="header-nav__logo">
-              <a href="#"><img src="./images/logo.png" alt=""></a>
+              <a href="index.html"><img src="./images/logo.png" alt=""></a>
             </div>
           </li>
         </ul>
       </div>
       <div class="uk-navbar-center">
-        <ul class="uk-navbar-nav uk-visible@m">
-          <li class="uk-active"><a href="#">Home</a></li>
+        <ul class="uk-navbar-nav uk-visible">
+          <li class="uk-active"><a href="index.html">Home</a></li>
           <li>
             <a href="#">Institucional</a>
             <div class="uk-navbar-dropdown">
@@ -39,7 +39,8 @@
           </li>
           <li><a href="#">Eventos</a></li>
           <li><a href="#">Artigos</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><a href="contact.html">Contato</a></li>
+          <li><a href="member.html">Torne-se membro</a></li>
           <div class="flag">
             <li>
               <a href="#">
@@ -94,45 +95,46 @@
   </div>
 
 
-  <section>
-    <div class="message">
-      <h2 class="h2-title">Torne-se membro da Brasos!</h2>
-      <p class="message__content">
-        Faça parte de uma comunidade de profissionais de medicina com a mesma mentalidade: atualização, aplicação
-        prática e pesquisa de novas tecnologias no tratamento da atividade inflamatória descontrolada, através de
-        técnicas guiadas de injeção e infiltração de moléculas reguladoras dos processos metabólicos envolvidos na
-        doença osteoartrítica.<br><br>
-        A ABETI dá-lhe a oportunidade de se tornar parte de uma comunidade de clínicos e pesquisadores especializados e
-        dedicados a melhorar a vida de milhões de pessoas afetadas pela osteoartrite (OA).<br><br>
-        A ABETI pode ajudá-lo a fazer conexões benéficas com indivíduos e organizações em todo o mundo que estão na
-        vanguarda da pesquisa, conhecimento e experiência em OA.<br><br>
-        Compartilhar pesquisa, ideias e resultados.<br><br>
-        Oportunidade de servir em comitês e forças-tarefa da ABETI para ajudar a desenvolver novas iniciativas e
-        diretrizes.<br><br>
-        Desconto na inscrição nas atividades científicas como Simpósios e Congressos da ABETI.<br><br>
-        Para tornar-se membro,preencha o cadastro abaixo:
-      </p>
-    </div>
-  </section>
+  <div class="diplom__content">
+    <div class="diplom__research">
+      <h2 class="h2-title">CERTIFICADOS</h2>
+      <h3 class="h3-title">BRASIT 2018 - BRASOStbt 2019</h3>
 
-  <section uk-height-viewport class="contact-section">
-    <div class="background-left">
-      <img src="/images/contact.jpg" alt="">
-    </div>
-    <div class="contact-form contact-form-member">
-      <h2 class="h2-title">Tornar-se membro</h2>
-      <form>
-        <input class="uk-input uk-input-full" type="text" autocomplete="name" placeholder="Nome completo" required>
-        <div class="contact-form__fields">
-          <input class="uk-input" type="email" autocomplete="email" placeholder="Email" required>
-          <input class="uk-input" type="tel" autocomplete="tel" placeholder="Telefone" required>
-        </div>
-        <textarea class="uk-textarea" placeholder="Mensagem"></textarea>
-        <button class="normal-button special-button" type="button">Enviar</button>
+      <form class="uk-search uk-search-default">
+        <a href="" class="uk-search-icon-flip" uk-search-icon></a>
+        <input class="uk-search-input" type="search" name="peopleDiplom" placeholder="Search...">
       </form>
+      <p>Por favor, digite seu nome para acessar os certificados disponíveis.</p>
     </div>
-    <div class="background-right"></div>
-  </section>
+    <div class="diplom__show">
+      <h3 class="h3-title">NOME COMPLETO</h3>
+      <div uk-flex uk-flex-center uk-grid>
+        <div class="uk-card uk-card-default uk-card-hover">
+          <a href="image.jpg" target="_blank">
+            <div class="uk-card-header">
+              <img class="uk-border-circle" src="images/certificate_icon.png">
+            </div>
+            <div class="uk-card-body">
+              <h3 class="h3-title">Nome do certificado</h3>
+              <p><a download="image.jpg">Clique para fazer download</a></p>
+            </div>
+          </a>
+        </div>
+        <div class="uk-card uk-card-default uk-card-hover">
+          <a href="image.jpg" target="_blank">
+            <div class="uk-card-header">
+              <img class="uk-border-circle" src="images/certificate_icon.png">
+            </div>
+            <div class="uk-card-body">
+              <h3 class="h3-title">Nome do certificado</h3>
+              <p><a download="image.jpg">Clique para fazer download</a></p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
   <div class="uk-section uk-section-muted footer-nav">
     <div class="uk-container">
@@ -145,13 +147,12 @@
     <div uk-navbar class="footer-nav__menu-fast ">
       <div class="uk-navbar-center">
         <ul class="uk-navbar-nav uk-flex-wrap uk-child-width-expand@s">
-          <li><a href="">A Brasos</a></li>
-          <li><a href="">Conselho Diretor</a></li>
-          <li><a href="">Contato</a></li>
-          <li><a href="">Brasit 2020</a></li>
-          <li><a href="">Congresso</a></li>
-          <li><a href="">Certificados</a></li>
-        </ul>
+          <li><a href="#">A Brasos</a></li>
+          <li><a href="#">Conselho Diretor</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Brasit 2020</a></li>
+          <li><a href="#">Congresso</a></li>
+          <li><a href="#">Certificados</a></li>
         </ul>
       </div>
     </div>
@@ -165,9 +166,12 @@
         </p>
       </div>
       <div class="footer-nav__media-social">
-        <a href="" uk-icon="facebook"></a>
-        <a href="" uk-icon="instagram"></a>
-        <p>secretario@brasos.med.br</p>
+        <div class="uk-flex-wrap">
+          <a href="" uk-icon="facebook"></a>
+          <a href="" uk-icon="instagram"></a>
+          <p>secretario@brasos.med.br</p>
+        </div>
+
       </div>
     </div>
 
