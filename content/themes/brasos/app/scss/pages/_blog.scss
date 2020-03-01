@@ -1,0 +1,49 @@
+.blog__cover .uk-card {
+  height: 300px;
+  background-size: 100%;
+  background-position: center;
+  .uk-card-title {
+    color: $white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    padding: 0.5em 1em;
+    font-style: italic;
+    text-transform: uppercase;
+    @include tablets {
+      padding: 1.5em 1em;
+    }
+  }
+}
+
+.blog__content {
+  box-shadow: 0 0 15px 0 darken($color: $grey, $amount: 10%);
+  margin: 4em;
+  padding: 2em 0;
+  @include tablets {
+    width: 600px;
+    margin: 6em auto;
+  }
+  @include computers {
+    width: 900px;
+    margin: 8em auto;
+  }
+  .h3-title {
+    padding: 0 2em;
+    padding-top: 1em;
+  }
+  p {
+    padding: 0 3em;
+    line-height: 30px;
+    color: black;
+  }
+  img {
+    object-fit: cover;
+    padding: 1em 0 1.5em;
+    width: 100%;
+    height: 300px;
+    @include tablets {
+      height: 350px;
+    }
+  }
+}
