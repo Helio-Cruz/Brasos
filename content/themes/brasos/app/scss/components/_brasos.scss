@@ -1,0 +1,124 @@
+.brasos {
+  position: relative;
+  margin: 2em;
+  margin-bottom: 5em;
+  @include tablets {
+    margin: 8em auto 0;
+    width: 700px;
+  }
+  @include computers {
+    width: 900px;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 1em;
+    @include tablets {
+      font-size: $heading;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  &__container {
+    position: relative;
+    margin: 1em auto;
+    height: 400px;
+    @include tablets {
+      height: 580px;
+    }
+    @include computers {
+      height: 600px;
+    }
+  }
+  &__image img {
+    position: absolute;
+    object-fit: cover;
+    width: 70%;
+    height: 150px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    @include tablets {
+      width: 400px;
+      height: 500px;
+      left: 50px;
+      right: inherit;
+    }
+    @include computers {
+      width: 500px;
+    }
+  }
+  &__back-grey {
+    position: absolute;
+    background-color: $grey;
+    z-index: -1;
+    width: 100%;
+    height: 250px;
+    top: 50px;
+    @include tablets {
+      width: 100%;
+      height: 400px;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+  &__text {
+    @include flexbox;
+    flex-direction: column;
+    color: $white;
+    background: $color-green-dark;
+    text-align: center;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 20px;
+    box-shadow: 5px 5px 25px 0 rgb(90, 90, 90);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 85%;
+    height: 250px;
+    @include tablets {
+      left: 250px;
+      top: 100px;
+      margin: 0;
+      width: 400px;
+      height: 300px;
+    }
+    @include computers {
+      left: 450px;
+    }
+    p {
+      margin: 30px;
+      line-height: 1.2em;
+      @include tablets {
+        line-height: 1.5em;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__button {
+    margin: 5px;
+    border: none;
+    width: 120px;
+    height: 40px;
+    background: $white;
+    @include tablets {
+      margin-top: 0;
+    }
+    a {
+      color: $color-green-dark;
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: $color-green-regular;
+      transition: ease-in $duration-medium;
+      a {
+        color: $white;
+      }
+    }
+  }
+}

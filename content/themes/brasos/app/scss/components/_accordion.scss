@@ -1,0 +1,47 @@
+.accordion__content {
+  margin: 0 3em 3em;
+  padding: 2em 0;
+  @include tablets {
+    width: 600px;
+    margin: 1em auto 6em;
+  }
+  @include computers {
+    width: 900px;
+    margin: 3em auto 8em;
+  }
+  .h2-title {
+    font-weight: bold;
+  }
+  .h2-title,
+  .h3-title,
+  p {
+    padding: 0.5em 0;
+    line-height: 19px;
+  }
+  .h3-title {
+    text-align: center;
+    font-size: $body-xl;
+  }
+  .uk-accordion-title {
+    width: 400px;
+    margin: 0 auto;
+  }
+  .h4-title+.h4-title {
+    padding-top: 1.5em;
+  }
+  .h4-title > span {
+    color: $color-green-dark;
+  }
+  p > span {
+    color: $color-green-regular;
+  }
+  // .uk-accordion-title::before {
+  //   color: $color-green-dark;
+  //   background-image: url("../../images/icons/chevron-down.svg");
+  // }
+  // .uk-open {
+  //   .uk-accordion-title::before {
+  //     background-image: url("../../images/icons/chevron-up.svg");
+  //   }
+  // }
+}
