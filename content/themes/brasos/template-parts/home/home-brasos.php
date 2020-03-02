@@ -12,7 +12,7 @@
         dos Tratamentos por Infiltração).
       </p>
         <button class="brasos__button">
-          <a href="institutional.html">Saiba Mais</a>
+        <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'A Brasos' ) ) ); ?>"><?php esc_html_e( 'Saiba Mais', 'textdomain' ); ?></a>
         </button>
     </div>
     </div>
