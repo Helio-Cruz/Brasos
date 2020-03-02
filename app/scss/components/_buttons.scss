@@ -1,0 +1,22 @@
+.normal-button {
+  border: 1px solid $grey;
+  border-radius: 3px;
+  color: $color-green-dark;
+  background-color: $white;
+  font-size: $body;
+  padding: 0.5em 2em;
+  &:hover {
+    color: $white;
+    background-color: $color-green-dark;
+    transition: ease-in $duration-medium;
+  }
+}
+
+.special-button {
+  color: $white;
+  background-color: $color-green-dark;
+  &:hover {
+    color: $color-green-dark;
+    background-color: $white;
+  }
+}

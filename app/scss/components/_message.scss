@@ -1,0 +1,31 @@
+.message {
+  width: 80%;
+  margin: 10% auto;
+  position: relative;
+  background: $grey;
+  @include tablets {
+    width: 700px;
+    margin: 5% auto;
+  }
+  @include computers {
+    width: 1000px;
+  }
+  .h2-title {
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  &__content {
+    padding: 4em 2em;
+    line-height: 1.5em;
+  }
+  a {
+    color: $color-green-regular;
+    text-decoration: none;
+    &:hover {
+      color: $color-green-dark;
+    }
+  }
+}

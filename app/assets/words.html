@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpack</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="scss/main.scss" type="text/scss" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container" uk-navbar="dropbar: true;">
+      <!-- <nav class="uk-container uk-navbar"> -->
+      <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+          <li class="uk-active">
+            <div class="header-nav__logo">
+              <a href="#"><img src="./images/logo.png" alt=""></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="uk-navbar-center">
+        <ul class="uk-navbar-nav uk-visible@m">
+          <li class="uk-active"><a href="#">Home</a></li>
+          <li>
+            <a href="#">Institucional</a>
+            <div class="uk-navbar-dropdown">
+              <ul class="uk-nav uk-navbar-dropdown-nav subnav">
+                <li><a href="#">Brasos</a></li>
+                <li><a href="#">Estatuo Abeti</a></li>
+                <li><a href="#">Palavras do Presidente</a></li>
+                <li><a href="#">Conselho Diretor</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#">Eventos</a></li>
+          <li><a href="#">Artigos</a></li>
+          <li><a href="#">Contato</a></li>
+          <div class="flag">
+            <li>
+              <a href="#">
+                <img src="./images/flag/brazil.png" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/flag/usa.png" alt="">
+              </a>
+            </li>
+          </div>
+        </ul>
+      </div>
+      <div class="uk-navbar-right">
+        <a href="#" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+      </div>
+    </nav>
+  </div>
+  <div id="sidenav" uk-offcanvas="overlay: true; flip: true">
+    <div class="uk-offcanvas-bar uk-background-default">
+      <button class="uk-offcanvas-close" type="button" uk-close></button>
+      <ul class="uk-nav">
+        <div class="flag">
+          <li>
+            <a href="#">
+              <img src="./images/flag/brazil.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/flag/usa.png" alt="">
+            </a>
+          </li>
+        </div>
+        <li class="uk-nav-divider"></li>
+        <li class="uk-active"><a href="#">Home</a></li>
+        <li class="uk-parent">
+          <a href="#">Institucional</a>
+          <ul class="uk-nav-sub uk-navbar-dropdown-nav">
+            <li><a href="#">Brasos</a></li>
+            <li><a href="#">Estatuo Abeti</a></li>
+            <li><a href="#">Palavras do Presidente</a></li>
+            <li><a href="#">Conselho Diretor</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Eventos</a></li>
+        <li><a href="#">Artigos</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <section>
+    <div class="message">
+      <h2 class="h2-title">Palavras do presidente</h2>
+      <p class="message__content">
+        Caros amigos,
+        <br><br>
+        A Braziian Society for Osteoarthritis, Osteoporosis and Sarcopenia - BRASOS - uma evolução da Associação
+        Brasileira para Estudos do Tratamento por Infiltração - ABETI - representa uma emergente sociedade médica,
+        cabendo a mim, neste momento acompanhar seus primeiros passos. Nossa tarefa é hercúlea e árdua, porém
+        extremamente cativante e apaixonante. Desta forma, temos metas a curto, médio e a longo prazo. Temos como tarefa
+        imediata, tornar eficiente a qualidade de serviço a ser prestado pela BRASOS, criando cursos de acreditação,
+        tais como: aperfeiçoamento nas técnicas de infiltração músculo esquelética; manejos com as principais moléculas
+        utilizadas no tratamento por injeção ou infiltração e, a utilização da ultrassonografia, como ferramenta de
+        auxilio às técnicas de infiltração. Um dos nossos diferenciais reside na potencialização das nossas terapias de
+        injeção tecidual através da promoção de medidas para a melhora das atividades imunometabólicas determinantes do
+        anabolismo e catabolisnmo do sistema locomotor do paciente a ser tratado. A médio prazo, buscaremos
+        entendimentos com órgãos públicos e operadoras de saúde, almejando estabelecer políticas de saúde neste sentido.
+        Ainda dentro de nossas metas, em médio à longo prazo, pretendemos alcançar um expressivo número de associados,
+        que nos permita tornarmos reconhecidos em todos os recantos do país. Procuraremos incentivar a pesquisa e a
+        produção cientifica nacional, sobre os temas acima descritos, dentro dos guidelines e diretrizes de centros mais
+        avançados, objetivando descrever os nossos, contudo, dentro de nossa realidade.
+        <br><br>
+        Aqui segue meu muito obrigado, aos amigos incentivadores para criação da BRASOS (ABETI) e aos meus diletos
+        membros da diretoria. Ponderem, argumentem, interpelem, cobrem! Sintam-se partícipes da gestão!
+        <br><br>
+        Forte abraço a todos,
+        <br><br>
+        <a href="">Paulo Cesar Hamdan</a>
+        <br><br>
+        Presidente BRASOS 2017-2020.
+      </p>
+    </div>
+  </section>
+
+  <div class="uk-section uk-section-muted footer-nav">
+    <div class="uk-container">
+      <h2 class="footer-nav__title">Faça Parte da Nossa Comunidade</h2>
+      <button class="footer-nav__button">
+        <a href="">Torne-se Membro</a>
+      </button>
+    </div>
+    <div uk-navbar class="footer-nav__menu-fast ">
+      <div class="uk-navbar-center">
+        <ul class="uk-navbar-nav uk-flex-wrap uk-child-width-expand@s">
+          <li><a href="">A Brasos</a></li>
+          <li><a href="">Conselho Diretor</a></li>
+          <li><a href="">Contato</a></li>
+          <li><a href="">Brasit 2020</a></li>
+          <li><a href="">Congresso</a></li>
+          <li><a href="">Certificados</a></li>
+        </ul>
+        </ul>
+      </div>
+    </div>
+    <div class="uk-grid-match uk-child-width-expand@s footer-nav__contact" uk-grid>
+      <div>
+        <p>Responsável Técnico<br>
+          <b>Antonio Martins Tieppo<br></b>
+          Primeiro Secretário<br>
+          CRM/SP: 47.777
+        </p>
+      </div>
+      <div class="footer-nav__media-social">
+        <a href="" uk-icon="facebook"></a>
+        <a href="" uk-icon="instagram"></a>
+        <p>secretario@brasos.med.br</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="uk-grid-match uk-child-width-expand@s footer-mentions" uk-grid>
+    <div>
+      <p>Copyright@ 2020. Agência Fazer</p>
+    </div>
+    <div class="footer-nav__logo">
+      <a href=""><img src="./images/logo.png" alt=""></a>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
