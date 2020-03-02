@@ -42,11 +42,11 @@ Template Name: Institucional
   <ul class="uk-slideshow-items">
     <li>
       <div class="institutional__slides">
-        <div class="background-back">
+        <div class="background-grey">
           <img src=" <?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
           <h2 class="h2-title">Nossa historia</h2>
         </div>
-        <div class="background-front">
+        <div class="background-green">
           <h3 class="h3-title">Outubro 2017</h3>
           <p>Fundação da ABETI (Associação Brasileira para Estudos dos Tratamentos por Infiltração).</p>
           <h3 class="h3-title">2019</h3>
@@ -56,11 +56,11 @@ Template Name: Institucional
     </li>
     <li>
       <div class="institutional__slides">
-        <div class="background-back">
+        <div class="background-grey">
           <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
           <h2 class="h2-title">Nossa área de atuação</h2>
         </div>
-        <div class="background-front">
+        <div class="background-green">
           <p>Nossos médicos atuam na área musculoesquelética e neuro-muscular, realizando tratamentos por injeção e
             infiltração teciduais, com ênfase nas articulações, tecidos periarticulares e músculos.</p>
         </div>
@@ -68,11 +68,11 @@ Template Name: Institucional
     </li>
     <li>
       <div class="institutional__slides">
-        <div class="background-back">
+        <div class="background-grey">
           <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
           <h2 class="h2-title">Nosso differencial</h2>
         </div>
-        <div class="background-front">
+        <div class="background-green">
           <p>Temos como diferencial a valorização e a promoção de ações potencializadoras da injeção tecidual,
             através da busca da regulação restauradora imunometabólica do sistema locomotor integrado no sistema
             biológico do paciente.</p>
@@ -81,11 +81,11 @@ Template Name: Institucional
     </li>
     <li>
       <div class="institutional__slides">
-        <div class="background-back">
+        <div class="background-grey">
           <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
           <h2 class="h2-title">Nossa MISSÃO</h2>
         </div>
-        <div class="background-front">
+        <div class="background-green">
           <p>Promover estudos e disseminação de conhecimentos dos tratamentos realizados por Injeções e Infiltrações
             no Sistema Locomotor e das ações imunometabólicas integradas para melhora da qualidade de vida do ser
             humano.</p>
@@ -94,11 +94,11 @@ Template Name: Institucional
     </li>
     <li>
       <div class="institutional__slides">
-        <div class="background-back">
+        <div class="background-grey">
           <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
           <h2 class="h2-title">Nossa VISÃO</h2>
         </div>
-        <div class="background-front">
+        <div class="background-green">
           <p>- Desenvolver pesquisa na área de tratamento por injeção e infiltração;
             <br>- Promover educação médica na área de tratamento por injeção e infiltração, acoplada a regulação
             imunometabólica restauradora do sistema locomotor;
@@ -114,11 +114,11 @@ Template Name: Institucional
     </li>
     <li>
       <div class="institutional__slides">
-        <div class="background-back">
+        <div class="background-grey">
           <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
           <h2 class="h2-title">Nossos Objetivos</h2>
         </div>
-        <div class="background-front">
+        <div class="background-green">
           <p>- Assessorar as associações médicas envolvidas no tratamento de doenças do aparelho locomotor com os
             temas relacionados ao tratamento por injeção e infiltração;
             <br>- Preparar médicos para atuação em tratamento por injeção e infiltração;
@@ -134,11 +134,11 @@ Template Name: Institucional
     </li>
     <li>
       <div class="institutional__slides">
-        <div class="background-back">
+        <div class="background-grey">
           <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
           <h2 class="h2-title">Nossos Valores</h2>
         </div>
-        <div class="background-front">
+        <div class="background-green">
           <p>- Foco no Estratégico: As decisões dos membros da BRASOS, por mais corriqueiras que sejam, devem ser
             tomadas olhando para o futuro das práticas médicas: tratamentos menos invasivos, com menores efeitos
             adversos e resultados satisfatórios sustentados.
@@ -153,11 +153,11 @@ Template Name: Institucional
     </li>
     <li>
       <div class="institutional__slides">
-        <div class="background-back">
+        <div class="background-grey">
           <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
           <h2 class="h2-title">Nossa Visão De Futuro</h2>
         </div>
-        <div class="background-front">
+        <div class="background-green">
           <p>Ser reconhecido como referência nacional e mundial em gerenciamentos dos Tratamentos por Injeção e
             Infiltração tecidual.</p>
         </div>
@@ -165,11 +165,11 @@ Template Name: Institucional
     </li>
     <li>
       <div class="institutional__slides">
-        <div class="background-back">
+        <div class="background-grey">
           <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
           <h2 class="h2-title">Nossa Razão De Ser</h2>
         </div>
-        <div class="background-front">
+        <div class="background-green">
           <p>Acreditamos que há uma tendência, cada vez maior, para que os procedimentos médicos, em todas as
             especialidades, precipuamente naquelas gerenciadoras do sistema locomotor, utilizem técnicas por Injeção
             e Infiltração tecidual. Assim, entendemos como útil e necessária uma entidade como a BRASOS, que terá um
