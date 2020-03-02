@@ -2,6 +2,7 @@
 <?php
 
 require('customizer/brasos_header.php');
+require('customizer/brasos_home_images.php');
 require('customizer/brasos_main.php');
 require('customizer/brasos_call_to_action.php');
 require('customizer/brasos_footer.php');
@@ -40,6 +41,14 @@ function brasos_customize_register($wp_customize) {
      
     ]);
 
+    //SECTION  HOME IMAGES
+    $wp_customize->add_section('brasos_home_images', [
+        'title' => 'Brasos Home Imagens',
+        'panel' => 'brasos_theme_panel',
+            
+    ]);
+        
+
 
 
     brasos_header($wp_customize);
@@ -49,6 +58,8 @@ function brasos_customize_register($wp_customize) {
     brasos_footer($wp_customize);
 
     brasos_call_to_action($wp_customize);
+
+    brasos_home_images($wp_customize);
  
 }
 

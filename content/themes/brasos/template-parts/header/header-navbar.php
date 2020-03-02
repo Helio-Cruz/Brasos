@@ -13,32 +13,39 @@
         </ul>
       </div>
       <div class="uk-navbar-center uk-visible">
-        <ul class="uk-navbar-nav uk-visible">
+      <ul class="uk-navbar-nav uk-visible"> 
           <li class="uk-active"><a href="<?php echo home_url(); ?>">Home</a></li>
-          <?php
-          // $menu = wp_nav_menu([
-          //   'menu' => 'menu-header',
-          //   'theme_location' => 'menu-top',
-          //   'echo' => true
-          // ]);
-          // $menu = strip_tags($menu, '<div></div>');
-          // echo $menu;
-        ?>
           <li>
-            <a href="institutional.html">Institucional</a>
+            <a href="<?php echo home_url(); ?>">Institucional</a>
             <div class="uk-navbar-dropdown">
               <ul class="uk-nav uk-navbar-dropdown-nav subnav">
-                <li><a href="institutional.html">Brasos</a></li>
-                <li><a href="law.html">Estatuo Abeti</a></li>
-                <li><a href="words.html">Palavras do Presidente</a></li>
-                <li><a href="board.html">Conselho Diretor</a></li>
+                <?php
+                    $menu = wp_nav_menu([
+                      'menu' => 'subnav',
+                      'theme_location' => 'menu-top',
+                      'container' => '',
+                      'items_wrap' => '<li><a href="%2$s">%3$s</a></li>',
+                      'echo' => true
+                    ]); 
+                    $menu = strip_tags($menu, '<li></li>');
+                    echo $menu;
+                ?>
+               <!-- <li><a href="board.html">Conselho Diretor</a></li> -->
               </ul>
             </div>
           </li>
-          <li><a href="#">Eventos</a></li>
-          <li><a href="articles.html">Artigos</a></li>
-          <li><a href="contact.html">Contato</a></li>
-          <li><a href="member.html">Torne-se membro</a></li>
+        <?php
+          $menu = wp_nav_menu([
+            'menu' => 'menu-header',
+          //  'theme_location' => 'menu-top',
+           // 'container_class' => '',
+             'container' => '',
+           'items_wrap' => '<li><a href="%2$s">%3$s</a></li>',
+            'echo' => true
+          ]);
+          $menu = strip_tags($menu, '<li></li>');
+         echo $menu;
+        ?>
         </ul>
       </div>
       <div class="uk-navbar-right">

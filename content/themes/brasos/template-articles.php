@@ -1,9 +1,8 @@
 <?php
 /*
-Template Name: Congressos
+Template Name: Artigos
 */
 ?>
-
 <?php get_header(); ?>
 
 <div class="articles-cards">
@@ -24,7 +23,7 @@ Template Name: Congressos
 
         
     <?php
-        $args = ['category_name' => 'Congresso'];
+        $args = ['category_name' => 'Artigo'];
         $wp_query = new WP_Query($args);
         if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
     ?>
@@ -37,4 +36,5 @@ Template Name: Congressos
      
     </div>
   </div>
-<?php get_footer(); ?>
+
+  <?php get_footer(); ?>
