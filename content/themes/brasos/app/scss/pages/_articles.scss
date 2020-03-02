@@ -1,12 +1,16 @@
 .articles-cards {
-  margin: 0 4em 3em;
+  margin: 0 auto 3em;
   padding: 2em 0;
+  width: 80%;
+  @include tablets {
+    width: 500px;
+    margin-bottom: 6em;
+  }
   @include computers {
     width: 900px;
-    margin: 3em auto 8em;
   }
   .h2-title {
-    padding: 2em;
+    padding: 1em 0;
     font-size: 36px;
   }
   .uk-card {
@@ -44,15 +48,22 @@
       }
     }
     .uk-card-body {
-      height: 230px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex-flow: column nowrap;
       color: $white;
+      @include tablets {
+        height: 230px;
+      }
       .uk-card-title {
         color: $white;
-        @include tablets {
-          padding-top: 5em;
-        }
+        margin: 0;
       }
     }
+  }
+  .uk-card-body {
+    padding: 1em;
   }
   .uk-card-media-top img {
     height: 130px;
@@ -60,4 +71,3 @@
     object-fit: cover;
   }
 }
-
