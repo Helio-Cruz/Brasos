@@ -11,6 +11,7 @@
    'base/base';
 
 @import
+   'components/accordion',
    'components/blog-cards',
    'components/brasos',
    'components/buttons',
@@ -21,8 +22,9 @@
    'components/navbar';
 
 @import
-    'layout/header',
-    'layout/footer';
+   'layout/columns',
+   'layout/header',
+   'layout/footer';
  
 @import
    'pages/articles',
