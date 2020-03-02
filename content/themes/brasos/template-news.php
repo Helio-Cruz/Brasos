@@ -1,10 +1,14 @@
 <?php
 /*
-Template Name: Congressos
+Template Name: Noticia
 */
 ?>
 
 <?php get_header(); ?>
+
+
+      
+ 
 
 <div class="articles-cards">
     <h2 class="h2-title"><?php the_title(); ?></h2>
@@ -24,7 +28,7 @@ Template Name: Congressos
 
         
     <?php
-        $args = ['category_name' => 'Congresso'];
+        $args = ['category_name' => 'Noticia'];
         $wp_query = new WP_Query($args);
         if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
     ?>
@@ -37,4 +41,6 @@ Template Name: Congressos
      
     </div>
   </div>
+
+
 <?php get_footer(); ?>

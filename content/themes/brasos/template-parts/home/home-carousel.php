@@ -4,7 +4,7 @@
     <ul class="uk-slideshow-items">
       <li>
         <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
-          <img src="<?php echo get_template_directory_uri() . '/public/images/d.1.jpg ' ?>" alt="">
+          <img src="<?= get_theme_mod('brasos_bg_slide_1'); ?>" alt="">
         </div>
         <div class="uk-position-bottom-right uk-position-medium uk-light">
           <h1 class="h1-title"><span>BRASOS</span><br>
@@ -14,7 +14,7 @@
       </li>
       <li>
         <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
-          <img src="<?php echo get_template_directory_uri() . '/public/images/d.2.jpg ' ?>" alt="">
+          <img src="<?= get_theme_mod('brasos_bg_slide_2'); ?>" alt="">
         </div>
         <div class="uk-position-bottom-right uk-position-medium uk-light">
           <h1 class="h1-title">BRASOS<br>
@@ -24,7 +24,7 @@
       </li>
       <li>
         <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
-          <img src="<?php echo get_template_directory_uri() . '/public/images/d.3.jpg ' ?>" alt="">
+          <img src="<?= get_theme_mod('brasos_bg_slide_3'); ?>" alt="">
         </div>
         <div class="uk-position-bottom-right uk-position-medium uk-light">
           <h1 class="h1-title">BRASOS<br>
