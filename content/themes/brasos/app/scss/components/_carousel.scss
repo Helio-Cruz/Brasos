@@ -22,10 +22,12 @@
 
 // CAROUSEL HEADER - SMALL TEXT
 .carousel-small {
-  background: $color-green-regular;
+  background: $color-green-dark;
   color: $white;
   p {
     line-height: 1.1em;
+    font-size: 1.2em;
+    text-transform: uppercase;
   }
 }
 
