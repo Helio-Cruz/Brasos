@@ -4,7 +4,7 @@
     <div class="uk-container">
       <h2 class="footer-nav__title">Faça Parte da Nossa Comunidade</h2>
       <button class="footer-nav__button">
-        <a href="member.html">Torne-se Membro</a>
+        <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Torne-se Membro' ) ) ); ?>"><?php esc_html_e( 'Torne-se Membro', 'textdomain' ); ?></a>
       </button>
     </div>
 
