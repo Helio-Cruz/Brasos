@@ -1,6 +1,6 @@
  
 <?php
-
+require('customizer/brasos_banner_textos.php');
 require('customizer/brasos_header.php');
 require('customizer/brasos_home_images.php');
 require('customizer/brasos_main.php');
@@ -47,9 +47,17 @@ function brasos_customize_register($wp_customize) {
         'panel' => 'brasos_theme_panel',
             
     ]);
+
+    //SECTION  BANNER TEXTOS
+    $wp_customize->add_section('brasos_banner_textos', [
+        'title' => 'Brasos Banner Textos',
+        'panel' => 'brasos_theme_panel',
+            
+    ]);
         
 
 
+    brasos_banner_textos($wp_customize);
 
     brasos_header($wp_customize);
 

@@ -1,8 +1,8 @@
  
 
-<div class="uk-section uk-section-muted footer-nav">
+<div class="uk-section uk-section-muted footer-nav" uk-scrollspy="cls: uk-animation-slide-bottom; target: .title; delay: 300; repeat: true">
     <div class="uk-container">
-      <h2 class="footer-nav__title">Faça Parte da Nossa Comunidade</h2>
+      <h2 class="footer-nav__title title">Faça Parte da Nossa Comunidade</h2>
       <button class="footer-nav__button">
         <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Torne-se Membro' ) ) ); ?>"><?php esc_html_e( 'Torne-se Membro', 'textdomain' ); ?></a>
       </button>
@@ -12,7 +12,7 @@
       <div class="uk-navbar-center">
           <ul class="uk-navbar-nav uk-flex-wrap uk-child-width-expand@s">
             <li><a href="institutional.html">A Brasos</a></li>
-            <li><a href="board.html">Conselho Diretor</a></li>
+            <li><a href="directory.html">Conselho Diretor</a></li>
             <li><a href="contact.html">Contato</a></li>
             <li><a href="#">Brasit 2020</a></li>
             <li><a href="congress.html">Congresso</a></li>
