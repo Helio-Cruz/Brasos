@@ -1,6 +1,6 @@
 
   <!-- CAROUSEL -->
-  <div class="carousel-images uk-position-relative uk-light" tabindex="-1" uk-slideshow>
+  <div class="carousel-images uk-position-relative uk-light" tabindex="-1" uk-slideshow="min-height: 300; max-height: 600">
     <ul class="uk-slideshow-items">
       <li>
         <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
