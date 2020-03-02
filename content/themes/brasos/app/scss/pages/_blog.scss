@@ -2,16 +2,18 @@
   height: 300px;
   background-size: 100%;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
   .uk-card-title {
     color: $white;
     text-align: center;
     font-weight: bold;
-    font-size: 50px;
-    padding: 0.5em 1em;
+    font-size: 30px;
     font-style: italic;
     text-transform: uppercase;
     @include tablets {
-      padding: 1.5em 1em;
+      font-size: 50px;
     }
   }
 }
