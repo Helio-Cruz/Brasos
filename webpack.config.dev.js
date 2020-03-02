@@ -64,6 +64,32 @@ let config = {
           }
         ]
       },
+      // Images
+      {
+        test: /\.(jpg|jpeg|png|gif|svg)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]', // Nom du fichier généré
+            outputPath: 'images/', // Destination du fichier généré dans le répertoire public
+            publicPath: '../images' // Chemin relatif depuis le fichier CSS vers le dossier des images
+          }
+        }
+      },
+ 
+    // Fonts
+    {
+      test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'fonts/', // Je veux copier les fichiers de fonts dans le répertoire public/fonts
+          publicPath: '../fonts' // J'informe à mon code CSS (dans css/style.css) que les polices de caractères seront dans le répertoire ../fonts
+        }
+      },
+    },
+
     ]
   },
   // Configuration du serveur de développement qui rechargera automatiquement les contenus lors d'un changement
@@ -92,7 +118,10 @@ let config = {
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
-      jQuery: 'jquery'
+      jQuery: 'jquery',
+      Rellax: 'rellax',
+      Scrollex:'jquery.scrollex',
+      "window.jQuery": 'jquery'
     }),
     new CopyPlugin([
       {
