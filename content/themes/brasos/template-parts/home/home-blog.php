@@ -1,6 +1,6 @@
 
-  <div class="blog-cards">
-    <h2 class="blog-cards--title">Notícias</h2>
+  <div class="blog-cards" uk-scrollspy="cls: uk-animation-slide-left; target: .blog; delay: 300; repeat: true">
+    <h2 class="blog-cards--title blog">Notícias</h2>
     <div class="row">
       <div class="card">
         <div class="card-image">

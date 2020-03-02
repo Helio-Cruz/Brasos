@@ -8,10 +8,6 @@ var app = {
     // loads the Icon plugin
     UIkit.use(Icons);
 
-    var peopleDiplom = ["Nome Completo", "Nome Completo 2"];
-    $('.uk-search').search({
-      source: content
-    });
   }
 };
 

@@ -16,6 +16,10 @@
     left: 0;
     right: 0;
     text-align: center;
+  @include tablets {
+   font-size: 2.5em;
+   top: -25px;
+    }
   }
   &__content {
     padding: 4em 2em;

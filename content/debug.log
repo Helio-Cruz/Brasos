@@ -1,0 +1,10 @@
+[02-Mar-2020 10:09:29 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2545
+[02-Mar-2020 10:09:29 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2551
+[02-Mar-2020 10:15:58 UTC] PHP Notice:  Trying to get property 'post_name' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/post.php on line 6208
+[02-Mar-2020 10:15:58 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/post.php on line 6213
+[02-Mar-2020 10:15:58 UTC] PHP Notice:  Trying to get property 'post_date' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/post.php on line 6251
+[02-Mar-2020 10:15:58 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/post.php on line 6257
+[02-Mar-2020 10:15:58 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2545
+[02-Mar-2020 10:15:58 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2551
+[02-Mar-2020 10:16:02 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2545
+[02-Mar-2020 10:16:02 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2551
