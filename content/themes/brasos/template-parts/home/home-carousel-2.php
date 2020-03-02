@@ -1,95 +1,103 @@
 <!-- CAROUSEL -->
 <div class="carousel-small uk-light uk-position-relative" tabindex="-1"
-uk-slideshow="animation: fade; autoplay: true; autoplay-interval:4000; min-height: 120; max-height: 120">
+     uk-slideshow="animation:fade; autoplay:true; autoplay-interval:4000; min-height:120; max-height:120">
     <ul class="uk-slideshow-items">
       <li>
       <div class="uk-position-center uk-position-small uk-text-center uk-light">
-      <p class="uk-margin-remove">Cursos pré-simpósio de Injeções intra-articulares guiadas por Ultrassonografia em Osteoartrite do Joelho,
-            Quadril, Ombro e Tornozelo.
+          <p class="uk-margin-remove">
+          <?= get_theme_mod('brasos_call_to_content-1'); ?>
+ 
           </p>
         </div>
       </li>
       <li>
       <div class="uk-position-center uk-position-small uk-text-center uk-light">
-      <p class="uk-margin-remove">Tratamento por injeções intra-articulares: Ácido Hialurônico em diferentes pesos moleculares, Hialuronato e
-            Ácido Hialurônico associado à outras moléculas Glicocorticóides regulares e de liberação prolongada. Novas
-            moléculas
+          <p class="uk-margin-remove">
+          <?= get_theme_mod('brasos_call_to_content-2'); ?>
           </p>
         </div>
       </li>
       <li>
       <div class="uk-position-center uk-position-small uk-text-center uk-light">
-      <p class="uk-margin-remove">Fatores que potencializam as infiltrações articulares: Colágenos (Natural – Hidrolisados –
-            Ultra-hidrolisados) - Suplementos Adjuvantes – Sysadoa (Sulfato de Condroitina e Glicosamina de alta
-            qualidade – Curcumina – Diacereína) – Prebióticos - Probióticos
+          <p class="uk-margin-remove">
+          <?= get_theme_mod('brasos_call_to_content-3'); ?>
           </p>
         </div>
       </li>
       <li>
       <div class="uk-position-center uk-position-small uk-text-center uk-light">
-      <p class="uk-margin-remove">Tratamento por infiltração na Rede Pública, é possível? Exemplo do municipio de Caraguatatuba.
+          <p class="uk-margin-remove">
+          <?= get_theme_mod('brasos_call_to_content-4'); ?>
           </p>
         </div>
       </li>
       <li>
       <div class="uk-position-center uk-position-small uk-text-center uk-light">
-      <p class="uk-margin-remove">Viscossuplementação na Agência Nacional de Saúde Suplementar
+          <p class="uk-margin-remove">
+          <?= get_theme_mod('brasos_call_to_content-5'); ?>
           </p>
         </div>
       </li>
       <li>
       <div class="uk-position-center uk-position-small uk-text-center uk-light">
-        <p class="uk-margin-remove">Viscossuplementação e Farmacoeconomia
+          <p class="uk-margin-remove">
+          <?= get_theme_mod('brasos_call_to_content-6'); ?>
           </p>
         </div>
       </li>
       <li>
       <div class="uk-position-center uk-position-small uk-text-center uk-light">
-        <p class="uk-margin-remove">Consenso Brasileiro sobre Viscossuplementação de Joelho – COBRAVI J: Qual seu legado?
+          <p class="uk-margin-remove">
+          <?= get_theme_mod('brasos_call_to_content-7'); ?>
           </p>
         </div>
       </li>
       <li>
       <div class="uk-position-center uk-position-small uk-text-center uk-light">
-        <p class="uk-margin-remove">Consenso Brasileiro sobre Viscossuplementação de Quadril – COBRAVI Q: Apresentação.
+          <p class="uk-margin-remove">
+          <?= get_theme_mod('brasos_call_to_content-8'); ?>
           </p>
         </div>
       </li>
       <li>
       <div class="uk-position-center uk-position-small uk-text-center uk-light">
-        <p class="uk-margin-remove">Consenso Brasileiro sobre Viscossuplementação de Ombro – COBRAVI O: Realização.
+          <p class="uk-margin-remove">
+          <?= get_theme_mod('brasos_call_to_content-9'); ?>
           </p>
         </div>
       </li>
       <li>
       <div class="uk-position-center uk-position-small uk-text-center uk-light">
-        <p class="uk-margin-remove">Uso do Ácido Hialurônico em partes moles
+          <p class="uk-margin-remove">
+          <?= get_theme_mod('brasos_call_to_content-10'); ?>
           </p>
         </div>
       </li>
       <li>
       <div class="uk-position-center uk-position-small uk-text-center uk-light">
-        <p class="uk-margin-remove">Fatores que potencializam as infiltrações articulares: Colágenos - Suplmentos Adjuvantes - Sysadoa
+          <p class="uk-margin-remove">
+          <?= get_theme_mod('brasos_call_to_content-11'); ?>
           </p>
         </div>
       </li>
       <li>
       <div class="uk-position-center uk-position-small uk-text-center uk-light">
-        <p class="uk-margin-remove">Novas moléculas no tratamento por infiltração: BM7 - Lubricin - LMWF-5A - betaNGFantibody - Interleukin 1
-            antagonist and antibody receptor - TPX100MEB - PTHrP - TGF-B inhibitor - IARArORa
+          <p class="uk-margin-remove">
+          <?= get_theme_mod('brasos_call_to_content-12'); ?>
           </p>
         </div>
       </li>
       <li>
       <div class="uk-position-center uk-position-small uk-text-center uk-light">
-        <p class="uk-margin-remove">Tratamento intra-articular e combinação de moléculas: riscos e beneficios
+          <p class="uk-margin-remove">
+          <?= get_theme_mod('brasos_call_to_content-13'); ?>
           </p>
         </div>
       </li>
       <li>
       <div class="uk-position-center uk-position-small uk-text-center uk-light">
-        <p class="uk-margin-remove">Tratamento biológico intra-articular: PRP, PRF, CÉLULAS TRONCO – aspirado de medula óssea; fatores de
-            crescimento; células mesenquimais e regenerativas autólogas derivadas do tecido adiposo
+          <p class="uk-margin-remove">
+          <?= get_theme_mod('brasos_call_to_content-14'); ?>
           </p>
         </div>
       </li>

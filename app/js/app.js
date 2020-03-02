@@ -8,6 +8,7 @@ var app = {
     // loads the Icon plugin
     UIkit.use(Icons);
 
+    
   }
 };
 
