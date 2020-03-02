@@ -1,0 +1,59 @@
+.board__content {
+  margin: 0 auto 4em;
+  @include mobiles {
+    width: 480px;
+  }
+  @include tablets {
+    width: 600px;
+  }
+  @include computers {
+    margin: 0 auto 8em;
+    width: 1000px;
+  }
+  .h2-title {
+    padding: 2em;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  .uk-grid {
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .uk-grid > * {
+    padding-left: 0;
+  }
+  .uk-card {
+    border-radius: 3px;
+    margin: 0.5em 0.3em;
+    width: 180px;
+  }
+  .uk-card-header {
+    border-radius: 3px 3px 0 0;
+    height: 80px;
+    background: $color-green-dark;
+    position: relative;
+  }
+  .uk-border-circle {
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border: 2px solid $white;
+  }
+  .uk-card-body {
+    height: auto;
+    > * {
+      text-align: center;
+      font-size: $body-xs;
+    }
+    .h3-title {
+      padding-top: 2em;
+    }
+  }
+}

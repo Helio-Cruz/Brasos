@@ -1,0 +1,74 @@
+.blog-cards {
+  margin: 4em auto;
+  //padding: 6em 0;
+  &--title {
+    // font-style: italic;
+    // font-weight: 200;
+    // color: $color-green-dark;
+    margin: 1em 2em;
+    font-size: 30px;
+    // text-transform: uppercase;
+    // @include tablets {
+    //     margin: 0 4.7em ;
+    //   }
+    //   @include computers {
+    //     margin: 0 7.1em ;
+    //   }
+  }
+  .row {
+    margin: 0 auto;
+    @include flexbox;
+    @include tablets {
+      width: 700px;
+    }
+    @include computers {
+      width: 950px;
+    }
+  }
+  .card {
+    margin: 0 2em;
+    height: 350px;
+    overflow: hidden;
+    @include tablets {
+      height: 350px;
+      margin: 0;
+      width: 250px;
+      &--smaller {
+        width: 450px;
+      }
+    }
+    @include computers {
+      margin: 0;
+      width: 350px;
+      &--smaller {
+        width: 600px;
+      }
+    }
+
+    &-image {
+      position: relative;
+      img {
+        width: 600px;
+        height: 350px;
+        object-fit: cover;
+        @include tablets {
+          height: 350px;
+          border-radius: 0;
+        }
+      }
+      &:hover img {
+        transform: scale(1.1);
+        transition: 0.5s;
+      }
+    }
+    &-title {
+      margin: 0;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: 30px;
+      font-weight: 300;
+      color: $white;
+    }
+  }
+}
