@@ -11,7 +11,7 @@
 
 .institutional__introduction {
   .h1-title {
-    padding: 2em;
+    padding: 2em 0;
     text-transform: inherit;
     line-height: 2em;
   }
@@ -122,6 +122,7 @@
       padding: 2em 4em;
     }
     .h3-title {
+      font-size: $body-xl;
       color: $color-green-dark;
     }
     p {

@@ -9,13 +9,18 @@
     width: 900px;
     margin: 3em auto 8em;
   }
+  .h2-title {
+    font-weight: bold;
+  }
   .h2-title,
   .h3-title,
   p {
     padding: 0.5em 0;
+    line-height: 19px;
   }
   .h3-title {
     text-align: center;
+    font-size: $body-xl;
   }
   .uk-accordion-title {
     width: 400px;

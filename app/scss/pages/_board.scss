@@ -12,6 +12,7 @@
   }
   .h2-title {
     padding: 2em;
+    padding-top: 3.5em;
   }
   a {
     color: black;
@@ -26,34 +27,37 @@
   }
   .uk-card {
     border-radius: 3px;
-    margin: 0.5em 0.3em;
-    width: 180px;
+    margin: 2em 1em;
+    width: 175px;
+    height: 200px;
   }
   .uk-card-header {
     border-radius: 3px 3px 0 0;
-    height: 80px;
+    height: 100px;
     background: $color-green-dark;
     position: relative;
   }
   .uk-border-circle {
-    height: 90px;
-    width: 90px;
+    height: 115px;
+    width: 130px;
+    border-radius: 10px;
     object-fit: cover;
     position: absolute;
-    top: 40%;
+    top: -30px;
     left: 0;
     right: 0;
     margin: 0 auto;
-    border: 2px solid $white;
   }
   .uk-card-body {
-    height: auto;
+    padding: 1em 0.5em;
     > * {
       text-align: center;
-      font-size: $body-xs;
+      font-size: $body;
     }
     .h3-title {
-      padding-top: 2em;
+      margin: 0;
+      padding: 0;
+      font-size: $body-xl;
     }
   }
 }

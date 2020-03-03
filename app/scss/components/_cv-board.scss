@@ -8,8 +8,9 @@
     width: 600px;
   }
   @include computers {
-    margin: 0 auto 8em;
+    margin: 0 auto;
     width: 1000px;
+    height: 900px;
   }
   .h2-title {
     padding: 2em;
@@ -28,14 +29,13 @@
       position: absolute;
       z-index: -1;
       background: $grey;
-      border: 1px solid rgb(173, 173, 173);
       left: 0;
       right: 0;
       margin: 0 auto;
       width: 90%;
       height: 450px;
       @include computers {
-        width: 720px;
+        width: 800px;
         height: 550px;
       }
       img {
@@ -44,14 +44,12 @@
         height: 130px;
         position: absolute;
         top: 5%;
-        left: 5%;
-        border-radius: 50%;
+        left: -5%;
+        border-radius: 10px;
         object-fit: cover;
-        border: 2px solid $white;
-        // box-shadow: 10px 10px 20px rgb(90, 90, 90);
         @include computers {
-          width: 180px;
-          height: 180px;
+          width: 250px;
+          height: 195px;
         }
       }
       .h3-title {
@@ -59,9 +57,12 @@
         position: absolute;
         top: 16%;
         left: 40%;
+        font-style: italic;
+        font-size: $heading;
+        font-weight: 200;
         color: $color-green-regular;
         @include computers {
-          left: 35%;
+          left: 30%;
         }
       }
     }
@@ -82,20 +83,19 @@
       @include computers {
         z-index: 2;
         position: absolute;
-        top: 250px;
+        top: 300px;
         left: 5%;
+        padding: 0;
         width: 180px;
-        height: 180px;
+        height: 150px;
       }
       p {
         color: $color-green-regular;
-        line-height: 1.5em;
         text-align: center;
       }
     }
     .green-card {
       background: $color-green-regular;
-      border: 1px solid rgb(107, 107, 107);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -112,16 +112,17 @@
         position: absolute;
         top: 150px;
         left: 15%;
-        width: 550px;
+        width: 620px;
         height: auto;
         font-size: 1em;
-        padding: 2em 4em;
+        padding: 2em 1.5em;
+        padding-bottom: 0;
       }
       p {
         color: $white;
-        line-height: 1.5em;
+        line-height: 19px;
         @include computers {
-          padding-left: 6em;
+          padding-left: 8em;
         }
       }
     }
