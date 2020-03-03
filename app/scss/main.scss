@@ -1,0 +1,38 @@
+@import
+    'abstracts/mixin',
+    'abstracts/variables';
+
+ @import
+  '~reset-css',
+  '~uikit/dist/css/uikit';
+
+@import
+   'base/animations',
+   'base/base';
+
+@import
+   'components/accordion',
+   'components/blog-cards',
+   'components/brasos',
+   'components/buttons',
+   'components/carousel-home',
+   'components/cv-board',
+   'components/form',
+   'components/message',
+   'components/navbar';
+
+@import
+   'layout/columns',
+   'layout/header',
+   'layout/footer';
+ 
+@import
+   'pages/articles',
+   'pages/blog',
+   'pages/board',
+   'pages/congress',
+   'pages/diplom',
+   'pages/institutional';
+   
+@import
+    'shame';

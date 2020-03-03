@@ -1,9 +1,9 @@
 // Navbar
-@media (max-width: 1000px) {
-  .uk-navbar-container .uk-visible {
-    visibility: hidden;
-  }
-}
+// @media (max-width: 1000px) {
+//   .uk-navbar-container .uk-visible {
+//     visibility: hidden;
+//   }
+// }
 
 .uk-navbar-container {
   padding: 0 3%;
@@ -53,10 +53,6 @@
 }
 
 /* flags */
- 
-  // canvas, img, video {
-    
-  // }
  img.trp-flag-image{
    width: 40px;
  }
@@ -64,14 +60,14 @@
 .uk-navbar-nav .flag {
   width: 65px;
   display: flex;
-  @include computers {
+//   @include computers {
     position: absolute;
     top: 32px;
-    right: 15%;
-  }
-  li {
-    margin: 0 0.1em;
-  }
+//     right: 15%;
+//   }
+//   li {
+//     margin: 0 0.1em;
+//   }
 }
 
 // SIDENAV
@@ -82,21 +78,21 @@
     color: $grey;
   }
 }
-.uk-nav {
-  .flag {
-    width: 65px;
-    display: flex;
-    margin: 0;
-    top: 0;
-    left: 40px;
-    li {
-      margin: 0 0.1em;
-    }
-  }
-  .uk-navbar-dropdown-nav {
-    display: block;
-  }
-}
+// .uk-nav {
+  // .flag {
+  //   width: 65px;
+    // display: flex;
+    // margin: 0;
+    // top: 0;
+    // left: 40px;
+    // li {
+    //   margin: 0 0.1em;
+    // }
+  // }
+  // .uk-navbar-dropdown-nav {
+  //   display: block;
+  // }
+// }
 .uk-offcanvas-bar {
   left: -300px;
   width: 300px;

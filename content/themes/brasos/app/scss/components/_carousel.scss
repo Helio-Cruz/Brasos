@@ -9,7 +9,7 @@
     object-fit: cover;
     height: 100%;
     width: 100vw;
-    filter: brightness(80%);
+    filter: brightness(50%);
   }
   .h1-title {
     text-align: right;
@@ -197,8 +197,10 @@
       @include computers {
         position: absolute;
         top: 8%;
-        right: 10%;
-        width: 190px;
+        right: 3%;
+        // width: 190px;
+        width: 100%;
+        text-align: right;
       }
     }
   }
