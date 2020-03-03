@@ -1,7 +1,9 @@
 .articles-cards {
-  margin: 0 4em 4em;
-  @include tablets {
-    margin: 0 8em 8em;
+  margin: 0 4em 3em;
+  padding: 2em 0;
+  @include computers {
+    width: 900px;
+    margin: 3em auto 8em;
   }
   .h2-title {
     padding: 2em;
@@ -29,11 +31,11 @@
   }
   .uk-grid > * {
     padding-left: 0;
-    // border: 1px solid $grey;
   }
   .uk-child-width-1-1 {
     .uk-card {
       background-size: 100%;
+      background-repeat: no-repeat;
       background-position: center;
       overflow: hidden;
       &:hover {
@@ -45,8 +47,10 @@
       height: 230px;
       color: $white;
       .uk-card-title {
-        padding-top: 6em;
         color: $white;
+        @include tablets {
+          padding-top: 5em;
+        }
       }
     }
   }
