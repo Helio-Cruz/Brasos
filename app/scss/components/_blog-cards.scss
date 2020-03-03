@@ -1,18 +1,15 @@
 .blog-cards {
-  margin: 4em auto;
-  &--title {
-    margin: 1em 2em;
-    font-size: $heading;
+  margin: 4em auto 6em;
+  @include flexbox;
+  @include tablets {
+    width: 700px;
   }
-  .row {
-    margin: 0 auto;
-    @include flexbox;
-    @include tablets {
-      width: 700px;
-    }
-    @include computers {
-      width: 950px;
-    }
+  @include computers {
+    width: 950px;
+  }
+  &--title {
+    margin-bottom: 2em;
+    font-size: $heading;
   }
   .card {
     margin: 0 2em;
