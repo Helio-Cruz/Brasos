@@ -7,6 +7,10 @@
   @include computers {
     width: 950px;
   }
+  .row {
+
+    @include flexbox;
+  }
   &--title {
     margin-bottom: 2em;
     font-size: $heading;
