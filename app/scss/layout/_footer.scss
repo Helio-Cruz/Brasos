@@ -20,7 +20,7 @@
      color: $white;
     a {
       color: $color-green-dark;
-      font-size: 14px;
+      font-size: $body;
     }
     &:hover {
       background-color: $color-green-regular;
@@ -49,7 +49,7 @@
   }
 
   &__contact {
-    font-size: 14px;
+    font-size: $body;
     font-weight: 300;
     font-style: italic;
   }
@@ -61,7 +61,7 @@
 }
 .footer-mentions {
   height: 40px;
-  font-size: 12px;
+  font-size: $body-xs;
   background-color: $white;
   color: $color-green-dark;
   text-align: center;

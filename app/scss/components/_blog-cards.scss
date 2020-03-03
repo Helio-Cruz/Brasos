@@ -6,7 +6,7 @@
     // font-weight: 200;
     // color: $color-green-dark;
     margin: 1em 2em;
-    font-size: 30px;
+    font-size: $heading;
     // text-transform: uppercase;
     // @include tablets {
     //     margin: 0 4.7em ;
@@ -66,7 +66,7 @@
       position: absolute;
       bottom: 10px;
       left: 10px;
-      font-size: 30px;
+      font-size: $subheading;
       font-weight: 300;
       color: $white;
     }
