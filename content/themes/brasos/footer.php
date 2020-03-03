@@ -12,7 +12,7 @@
       <div class="uk-navbar-center">
           <ul class="uk-navbar-nav uk-flex-wrap uk-child-width-expand@s">
             <li><a href="institutional.html">A Brasos</a></li>
-            <li><a href="board.html">Conselho Diretor</a></li>
+            <li><a href="directory.html">Conselho Diretor</a></li>
             <li><a href="contact.html">Contato</a></li>
             <li><a href="#">Brasit 2020</a></li>
             <li><a href="congress.html">Congresso</a></li>
