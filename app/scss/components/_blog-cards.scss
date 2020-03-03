@@ -1,19 +1,8 @@
 .blog-cards {
   margin: 4em auto;
-  //padding: 6em 0;
   &--title {
-    // font-style: italic;
-    // font-weight: 200;
-    // color: $color-green-dark;
     margin: 1em 2em;
     font-size: $heading;
-    // text-transform: uppercase;
-    // @include tablets {
-    //     margin: 0 4.7em ;
-    //   }
-    //   @include computers {
-    //     margin: 0 7.1em ;
-    //   }
   }
   .row {
     margin: 0 auto;
