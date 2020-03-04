@@ -116,3 +116,60 @@
 [04-Mar-2020 13:51:58 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 29
 [04-Mar-2020 13:54:15 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 29
 [04-Mar-2020 13:54:15 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 29
+[04-Mar-2020 16:39:18 UTC] Erro de banco de dados do WordPress Table 'wp_brasos.wp_autocorrectindex' doesn't exist para a consulta SELECT COUNT(*) FROM wp_autocorrectindex feita por do_action('advanced-search_page_WP_Advanced_Search_Callback_Autocorrection'), WP_Hook->do_action, WP_Hook->apply_filters, WP_Advanced_Search_Callback_Autocorrection
+[04-Mar-2020 17:37:31 UTC] PHP Parse error:  syntax error, unexpected ',' in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/footer.php on line 38
+[04-Mar-2020 17:37:31 UTC] PHP Parse error:  syntax error, unexpected ',' in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/footer.php on line 38
+[04-Mar-2020 17:37:32 UTC] PHP Parse error:  syntax error, unexpected ',' in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/footer.php on line 38
+[04-Mar-2020 17:40:02 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:02 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 374
+[04-Mar-2020 17:40:02 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 386
+[04-Mar-2020 17:40:02 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 397
+[04-Mar-2020 17:40:02 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:02 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 374
+[04-Mar-2020 17:40:02 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 386
+[04-Mar-2020 17:40:02 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 397
+[04-Mar-2020 17:40:02 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:02 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 374
+[04-Mar-2020 17:40:02 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 386
+[04-Mar-2020 17:40:02 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 397
+[04-Mar-2020 17:40:02 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:02 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:04 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:04 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:04 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:04 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:04 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:11 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:11 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 374
+[04-Mar-2020 17:40:11 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 386
+[04-Mar-2020 17:40:11 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 397
+[04-Mar-2020 17:40:11 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:11 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 374
+[04-Mar-2020 17:40:11 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 386
+[04-Mar-2020 17:40:11 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 397
+[04-Mar-2020 17:40:11 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:11 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:12 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:12 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 374
+[04-Mar-2020 17:40:12 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 386
+[04-Mar-2020 17:40:12 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 397
+[04-Mar-2020 17:40:12 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:12 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 374
+[04-Mar-2020 17:40:12 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 386
+[04-Mar-2020 17:40:12 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 397
+[04-Mar-2020 17:40:12 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:12 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 374
+[04-Mar-2020 17:40:12 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 386
+[04-Mar-2020 17:40:12 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 397
+[04-Mar-2020 17:40:12 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:13 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:16 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:16 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:16 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:16 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:16 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:18 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 374
+[04-Mar-2020 17:40:18 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 386
+[04-Mar-2020 17:40:18 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 397
+[04-Mar-2020 17:40:18 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
+[04-Mar-2020 17:40:19 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/link-template.php on line 350
