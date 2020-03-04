@@ -1,12 +1,31 @@
 // Navbar
-// @media (max-width: 1000px) {
-//   .uk-navbar-container .uk-visible {
-//     visibility: hidden;
-//   }
-// }
+@media (max-width: 1000px) {
+  .uk-navbar-container .uk-visible {
+    display: none;
+  }
+  .menu-mobile {
+    background-color: $white;
+    padding: 0 8%;
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1001px) {
+  .uk-navbar-container .uk-visible {
+    display: flex;
+  }
+  .menu-mobile {
+    display: none;
+  }
+}
 
 .uk-navbar-container {
-  padding: 0 3%;
+    // position: relative;
+  // display: flex;
+  // justify-content: center;
   &:not(.uk-navbar-transparent) {
     background-color: $white;
   }
@@ -19,9 +38,26 @@
   color: $color-green-dark;
 }
 
+/* flags */
+// img.trp-flag-image {
+//   width: 40px;
+// }
+
+.uk-navbar-nav{
+  margin: 0 2em;
+}
+
+.uk-navbar-nav .flag {
+  display: flex;
+  align-items: center;
+  img {
+    height: 14px;
+    margin: 0 0.1em;
+  }
+}
+
 /* DropDown */
 .uk-navbar-dropdown-nav {
-  display: flex;
   a {
     color: $color-green-dark;
     margin: 0 0.5em;
@@ -31,18 +67,15 @@
   }
 }
 
-.uk-navbar-dropbar-slide {
-  border-top: 1px solid $color-green-dark;
-}
 
-.uk-navbar-dropdown-dropbar.uk-open {
-  width: 100vw;
+.uk-navbar-dropdown-dropbar {
+  height: 75px;
   border-top: 1px solid $color-green-dark;
   &::before {
     content: "";
     position: absolute;
     bottom: 66px;
-    left: 40px;
+    left: 35px;
     background: $white;
     border: solid $color-green-dark;
     border-width: 1px 1px 0 0;
@@ -50,25 +83,17 @@
     width: 15px;
     transform: rotate(135deg);
   }
-}
-
-/* flags */
- img.trp-flag-image{
-   width: 40px;
- }
- 
-.uk-navbar-nav .flag {
-  width: 65px;
-  display: flex;
-//   @include computers {
+  &::after {
+    content: "";
     position: absolute;
-    top: 32px;
-//     right: 15%;
-//   }
-//   li {
-//     margin: 0 0.1em;
-//   }
-}
+    bottom: 74px;
+    left: -1000px;
+    background: $color-green-dark;
+    height: 1px;
+    width: 3000px;
+    z-index: -1;
+  }
+}  
 
 // SIDENAV
 .uk-offcanvas-bar a,
@@ -78,21 +103,21 @@
     color: $grey;
   }
 }
-// .uk-nav {
-  // .flag {
-  //   width: 65px;
-    // display: flex;
-    // margin: 0;
-    // top: 0;
-    // left: 40px;
-    // li {
-    //   margin: 0 0.1em;
-    // }
-  // }
-  // .uk-navbar-dropdown-nav {
-  //   display: block;
-  // }
-// }
+.uk-nav {
+  .flag {
+    width: 65px;
+    display: flex;
+    margin: 0;
+    top: 0;
+    left: 40px;
+    li {
+      margin: 0 0.1em;
+    }
+  }
+  .uk-navbar-dropdown-nav {
+    display: block;
+  }
+}
 .uk-offcanvas-bar {
   left: -300px;
   width: 300px;
