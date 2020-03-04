@@ -1,0 +1,57 @@
+.board__content {
+  width: 70%;
+  margin: 0 auto 4em;
+  .h2-title {
+    padding: 2em;
+  }
+  .board__cards {
+    @include flexbox;
+    width: 100%;
+  }
+}
+
+.board__card {
+  margin: 2em 1em;
+  position: relative;
+  width: 315px;
+  height: 580px;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  &__image {
+    position: absolute;
+    img {
+      border-radius: 10px;
+      object-fit: cover;
+      width: 315px;
+      height: 435px;
+    }
+  }
+  &__body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 290px;
+    height: 375px;
+    padding-bottom: 1em;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-flow: column nowrap;
+    background: white;
+    z-index: -1;
+    box-shadow: 0 0 15px 0 darken($color: $grey, $amount: 30%);
+    p {
+      font-size: $body;
+      line-height: 20px;
+    }
+    .h3-title {
+      font-style: normal;
+      font-size: $body-xl;
+    }
+  }
+}
