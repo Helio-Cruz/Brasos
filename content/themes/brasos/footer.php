@@ -11,12 +11,16 @@
     <div uk-navbar class="footer-nav__menu-fast ">
       <div class="uk-navbar-center">
           <ul class="uk-navbar-nav uk-flex-wrap uk-child-width-expand@s">
-            <li><a href="institutional.html">A Brasos</a></li>
-            <li><a href="directory.html">Conselho Diretor</a></li>
-            <li><a href="contact.html">Contato</a></li>
-            <li><a href="#">Brasit 2020</a></li>
-            <li><a href="congress.html">Congresso</a></li>
-            <li><a href="diploms.html">Certificados</a></li>
+          <?php
+                $menu = wp_nav_menu([
+                  'menu' => 'menu-footer',
+                  'container' => '',
+                  'items_wrap' => '<li><a href="%2$s">%3$s</a></li>',
+                  'echo' => true
+                ]);
+                $menu = strip_tags($menu, '');
+                echo $menu;
+                ?>
           </ul>
       </div>
     </div>

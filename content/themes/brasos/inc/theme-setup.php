@@ -40,7 +40,7 @@ if (!function_exists('brasos_setup')):
 
 
     function brasos_excerpt_length($length) {
-        return 25;
+        return 35;
     }
      add_filter('excerpt_length', 'brasos_excerpt_length');
        

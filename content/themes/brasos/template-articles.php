@@ -8,17 +8,31 @@ Template Name: Artigos
 <div class="articles-cards">
     <h2 class="h2-title"><?php the_title(); ?></h2>
     <div class="uk-child-width-1-1" uk-grid>
+    <?php
+        $recent_posts = wp_get_recent_posts(array(
+          'orderby' => 'post_date',
+          'order' => 'DESC',
+            'numberposts' => 1, // Number of recent posts thumbnails to display
+            'post_status' => 'publish', // Show only the published posts
+            'category_name'  => 'Artigo',
+            'suppress_filters' => true
+            
+            
+        ));
+        foreach($recent_posts as $post) :
+     ?>
       <div>
-        <div class="uk-card uk-card-default" style="background-image: url('<?php echo get_template_directory_uri() . '/public/images/articles.jpg ' ?>');">
-          <a href="blog.html">
+        <div class="uk-card uk-card-default" style="background-image: url('<?php echo get_the_post_thumbnail_url($post['ID']); ?>');">
+          <a href="<?php echo get_permalink($post['ID']) ?>">
             <div class="uk-card-body">
-              <h3 class="uk-card-title h3-title">Titulo da noticia mais recente</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              <h3 class="uk-card-title h3-title"><?php echo $post['post_title'] ?></h3>
+              <p><?php echo $excerpt = wp_trim_excerpt( $post['post_content,   ']);  ?></p> <?php //echo substr(get_the_excerpt(), 0,65).'...'; ?>
             </div>
           </a>
         </div>
       </div>
-    </div>
+      <?php endforeach; wp_reset_query(); ?>
+      </div>
     <div class="uk-child-width-1-3@m" uk-grid>
 
         
