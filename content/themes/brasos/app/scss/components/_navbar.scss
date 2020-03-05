@@ -104,6 +104,10 @@ img.trp-flag-image {
   padding: 0;
   left: -300px;
   width: 300px;
+  @include tablets {
+    left: -400px;
+    width: 400px;
+  }
   a {
     text-align: center;
     font-style: italic;
@@ -151,12 +155,15 @@ img.trp-flag-image {
   position: relative;
   .mobile-nav-bottom {
     @include flexbox;
-  flex-flow: row wrap;
-  align-items: flex-start;
-  width: 100%;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    width: 100%;
   }
   li {
     padding: 0 0.5em;
+    @include tablets {
+      padding: 0 1em;
+    }
   }
   a {
     color: $white;
@@ -170,6 +177,9 @@ img.trp-flag-image {
   height: 0;
   border-bottom: 30px solid $color-green-regular;
   border-right: 300px solid transparent;
+  @include tablets {
+    border-right: 400px solid transparent;
+  }
 }
 
 // ______________________________________________________
