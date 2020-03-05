@@ -75,10 +75,13 @@
     width: 100%;
     object-fit: cover;
   }
+  .articles-cards-events {
+    box-shadow: 0 3px 6px 0 darken($color: $grey, $amount: 10%);
+  }
   .articles-cards-image-events {
     height: 160px;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 
