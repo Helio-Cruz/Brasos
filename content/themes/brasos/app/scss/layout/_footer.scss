@@ -10,13 +10,15 @@
     font-style: italic;
     font-weight: 200;
      margin: 1em;
-     bottom: 20px;
+     bottom: 40px;
   }
   &__button {
+    position: relative;
     border: none;
     width: 140px;
     height: 42px;
     background-color: $white;
+    bottom: 40px;
      color: $white;
     a {
       color: $color-green-dark;
@@ -60,12 +62,11 @@
   }
 }
 .footer-mentions {
-  height: 40px;
+  height: 80px;
   font-size: $body-xs;
   background-color: $white;
   color: $color-green-dark;
   text-align: center;
-  //margin: 0.8em auto;
   padding: 0.5em;
   align-items: center;
 }
