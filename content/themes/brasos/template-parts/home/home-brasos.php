@@ -7,16 +7,16 @@
  
     <div class="brasos__back-grey"></div>
     <div class="brasos-fade">
-    <div class="brasos__text brasos-about">
-      <p>
-        A BRASOS (Brazilian Society for Osteoarthritis, Osteoporosis and Sarcopenia) é uma sociedade de médicos de
-        diferentes especialidades, fundada em outubro de 2017, com o nome de ABETI (Associação Brasileira para Estudos
-        dos Tratamentos por Infiltração).
-      </p>
+      <div class="brasos__text">
+        <p>
+          A BRASOS (Brazilian Society for Osteoarthritis, Osteoporosis and Sarcopenia) é uma sociedade de médicos de
+          diferentes especialidades, fundada em outubro de 2017, com o nome de ABETI (Associação Brasileira para Estudos
+          dos Tratamentos por Infiltração).
+        </p>
         <button class="brasos__button">
-        <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'A Brasos' ) ) ); ?>"><?php esc_html_e( 'Saiba Mais', 'textdomain' ); ?></a>
+          <a href="<?php echo esc_url(get_permalink(get_page_by_title('A Brasos'))); ?>"><?php esc_html_e('Saiba Mais', 'textdomain'); ?></a>
         </button>
-      </div>  
-    </div>
+      </div>
     </div>
   </div>
+</div>
