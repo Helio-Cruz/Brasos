@@ -23,12 +23,27 @@
     }
   }
   &__content {
+    margin-bottom: 5em;
     position: relative;
-    display: block;
-    .background-back {
+    img {
       position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 130px;
+      height: 130px;
+      border-radius: 10px;
+      object-fit: contain;
+      @include computers {
+        width: 315px;
+        height: 235px;
+      }
+    }
+    .background-back {
       z-index: -1;
       background: $grey;
+      position: absolute;
+      top: 200px;
       left: 0;
       right: 0;
       margin: 0 auto;
@@ -37,20 +52,6 @@
       @include computers {
         width: 800px;
         height: 550px;
-      }
-      img {
-        z-index: 2;
-        width: 130px;
-        height: 130px;
-        position: absolute;
-        top: 5%;
-        left: -5%;
-        border-radius: 10px;
-        object-fit: cover;
-        @include computers {
-          width: 250px;
-          height: 195px;
-        }
       }
       .h3-title {
         z-index: 2;
@@ -90,12 +91,12 @@
         height: 150px;
       }
       p {
-        color: $color-green-regular;
+        color: $color-green-dark;
         text-align: center;
       }
     }
     .green-card {
-      background: $color-green-regular;
+      background: $color-green-dark;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -123,6 +124,7 @@
         line-height: 19px;
         @include computers {
           padding-left: 8em;
+          line-height: 2em;
         }
       }
     }
