@@ -60,10 +60,11 @@ img.trp-flag-image {
 /* DropDown */
 .uk-navbar-dropdown-nav {
   display: flex;
+  width: 100vw;
   a {
     text-decoration: none;
     color: $color-green-dark;
-    margin: 0 0.5em;
+    margin-right: 0.5em;
     font-size: $body;
     font-style: italic;
     font-weight: 300;
