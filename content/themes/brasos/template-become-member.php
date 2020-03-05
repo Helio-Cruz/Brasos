@@ -33,9 +33,9 @@ Template Name: Torne-se Membro
   </div>
   <div class="contact-form contact-form-member">
     <h2 class="h2-title">Tornar-se membro</h2>
-    <form>
+    <div class="contact-form-block">
       <?php echo do_shortcode('[contact-form-7 id="132" title="Membro"]'); ?>
-    </form>
+    </div>
   </div>
   <div class="background-right"></div>
 </section>
