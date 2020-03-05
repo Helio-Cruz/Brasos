@@ -10,15 +10,24 @@
   @include computers {
     width: 1000px;
   }
-  .h2-title {
+  .h2-title,
+  .h3-title {
     position: absolute;
     top: -12px;
     left: 0;
     right: 0;
     text-align: center;
-  @include tablets {
-   font-size: 2.5em;
-   top: -25px;
+    @include tablets {
+      font-size: 2.5em;
+      top: -25px;
+    }
+  }
+  .h3-title {
+    top: -30px;
+    font-size: $subheading;
+    @include tablets {
+      top: -25px;
+      width: 60%;
     }
   }
   &__content {
