@@ -8,15 +8,15 @@ Template Name: Institucional
 
 
 <div class="institutional__content">
-
+<div uk-scrollspy="cls: uk-animation-slide-bottom; target: .title; delay: 300; repeat: true">
   <div class="institutional__introduction">
-    <h1 class="h1-title">
+    <h1 class="h1-title title">
       A BRASOS<br>
       (Brazilian Society for Osteoarthritis, Osteoporosis and Sarcopenia) é uma sociedade de médicos de diferentes
       especialidades.</h1>
   </div>
 
-  <div class="institutional__resume">
+  <div class="institutional__resume title">
     <h2 class="h2-title">Resumo</h2>
     <p>
       Mantendo suas atividades nos procedimentos de injeção tecidual, a BRASOS agora também incorpora ações teóricas e
@@ -35,7 +35,7 @@ Template Name: Institucional
     </p>
   </div>
 </div>
-
+</div>
 <div uk-slideshow="animation: slide; min-height: 600; max-height: 600; autoplay:true; autoplay-interval:4000;">
 
   <div class="uk-position-relative uk-visible-toggle" tabindex="-1">
@@ -202,11 +202,12 @@ Template Name: Institucional
   <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
 </div>
 
+<div uk-scrollspy="cls: uk-animation-fade; target: .box; delay: 500; repeat: true">
 <div class="columns__list-names">
   <div class="columns__background">
     <h2 class="h2-title">Fundadores</h2>
     <div class="uk-flex uk-flex-center uk-flex-wrap">
-      <div class="uk-width-1-3@m">
+      <div class="uk-width-1-3@m box">
         <div>
           <h3 class="h3-title">ABMFR – SBMEE – SBR</h3>
           <p>RJ - Paulo Cesar Hamdan</p>
@@ -218,7 +219,7 @@ Template Name: Institucional
             SP - Eduardo de Melo Carvalho Rocha</p>
         </div>
       </div>
-      <div class="uk-width-1-3@m">
+      <div class="uk-width-1-3@m box">
         <h3 class="h3-title">SBOT</h3>
         <p>SP - Gustavo Constantino de Campos<br>
           SP - Márcia Ushoa de Rezende<br>
@@ -229,7 +230,7 @@ Template Name: Institucional
           RJ - Eduardo Branco de Souza<br>
           ES - Thanguy Friço</p>
       </div>
-      <div class="uk-width-1-3@m">
+      <div class="uk-width-1-3@m box">
         <div>
           <h3 class="h3-title">CBE</h3>
           <p>RS – Ivan Pacheco</p>
@@ -244,5 +245,8 @@ Template Name: Institucional
     </div>
   </div>
 </div>
+
+</div>
+
 
 <?php get_footer(); ?>
