@@ -56,6 +56,31 @@ function my_login_logo()
  }
  add_action('login_enqueue_scripts', 'my_login_logo');
 
+
+
+
+
+
+ function my_register_stylesheet() {
+?>
+    <style type="text/css">
+ 
+ 
+     .register-name  {
+        display:flex;
+        width: 270px;
+         padding: 0 0.5em;
+        }
+ 
+    </style>
+<?php
+    
+ 
+}
+add_action( 'login_enqueue_scripts', 'my_register_stylesheet' );
+
+ 
+
 //  function my_login_logo_url_title()
 // {
 //     return 'Brasos';
