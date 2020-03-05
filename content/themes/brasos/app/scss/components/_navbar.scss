@@ -127,3 +127,18 @@ img.trp-flag-image {
   width: 300px;
   padding: 30px 40px;
 }
+
+
+// ______________________________________________________
+
+// NAVBAR EVENTS
+
+.navbar-events a {
+  text-decoration: none;
+  color: $color-green-regular;
+  margin-right: 0.5em;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  text-transform: uppercase !important;
+}

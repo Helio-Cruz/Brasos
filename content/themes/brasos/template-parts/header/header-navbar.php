@@ -12,7 +12,7 @@
        <ul class="uk-navbar-nav">
          <li><a href="<?php echo home_url(); ?>">Home</a></li>
          <li>
-           <a href="<?php echo home_url(); ?>">Institucional</a>
+           <a href="">Institucional</a>
            <div class="uk-navbar-dropdown">
              <ul class="uk-nav uk-navbar-dropdown-nav">
                <?php

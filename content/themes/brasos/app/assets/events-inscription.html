@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="scss/main.scss" type="text/scss" />
 </head>
 
-<body>  
+<body>
   <!-- NAVBAR -->
   <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
     <nav class="uk-navbar-container" uk-navbar="dropbar: true;">
@@ -97,62 +97,142 @@
     </div>
   </div>
 
+  <!-- IMAGE COVER -->
+  <div class="events__cover">
+    <div class="uk-child-width-1-1" uk-grid>
+      <div class="uk-card uk-card-default" style="background-image: url(images/logo-brasostbt.jpg);">
+      </div>
+    </div>
+  </div>
+
   <!-- SUBNAV -->
   <nav class="uk-navbar-container">
     <div uk-navbar>
       <div class="uk-navbar-center">
         <ul class="uk-navbar-nav navbar-events">
           <li><a href="events-informations.html">Informações Gerais</a></li>
-          <li class="uk-active"><a href="events-diploms.html">Certificados</a></li>
+          <li><a href="events-diploms.html">Certificados</a></li>
           <li><a href="events-program.html">Programação</a></li>
           <li><a href="events-guests.html">Palestrantes convidados</a></li>
-          <li><a href="events-inscription.html">Inscrições/Pagamento</a></li>
+          <li class="uk-active"><a href="events-inscription.html">Inscrições/Pagamento</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-
-  <div class="diplom__content">
-    <div class="diplom__research">
-      <h2 class="h2-title">CERTIFICADOS</h2>
-      <h3 class="h3-title">BRASIT 2018 - BRASOStbt 2019</h3>
-
-      <form class="uk-search uk-search-default">
-        <a href="" class="uk-search-icon-flip" uk-search-icon></a>
-        <input class="uk-search-input" type="search" name="peopleDiplom" placeholder="Search...">
-      </form>
-      <p>Por favor, digite seu nome para acessar os certificados disponíveis.</p>
-    </div>
-    <div class="diplom__show">
-      <h3 class="h3-title">NOME COMPLETO</h3>
-      <div uk-flex uk-flex-center uk-grid>
-        <div class="uk-card uk-card-default uk-card-hover">
-          <a href="image.jpg" target="_blank">
-            <div class="uk-card-header">
-              <img class="uk-border-circle" src="images/certificate_icon.png">
-            </div>
-            <div class="uk-card-body">
-              <h3 class="h3-title">Nome do certificado</h3>
-              <p><a download="image.jpg">Clique para fazer download</a></p>
-            </div>
-          </a>
-        </div>
-        <div class="uk-card uk-card-default uk-card-hover">
-          <a href="image.jpg" target="_blank">
-            <div class="uk-card-header">
-              <img class="uk-border-circle" src="images/certificate_icon.png">
-            </div>
-            <div class="uk-card-body">
-              <h3 class="h3-title">Nome do certificado</h3>
-              <p><a download="image.jpg">Clique para fazer download</a></p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
+  <div class="blog__content">
+    <p>Para realizar sua inscrição, primeiro, faça o depósito na conta informada, envie o comprovante, conforme abaixo,
+      depois preencha o cadastro de informações e aguarde entrarmos em contato para confirmação.</p>
+    <h3 class="h3-title">NÃO MEMBROS - VALORES PARA INSCRIÇÕES</h3>
+    <img class="blog__img--xs" src="/images/brasos2019_table1.jpg" alt="">
+    <h3 class="h3-title">MEMBROS - VALORES PARA INSCRIÇÕES</h3>
+    <p><span>Valores exclusivos para membros ABETI!</span>
+      <br>Caso não seja, <a href="become-member.html">realiza seu cadastro</a> para ter direito ao desconto!
+    </p>
+    <img class="blog__img--xs" src="/images/brasos2019_table2.jpg" alt="">
+    <h3 class="h3-title">CURSOS PRÉ-SIMPÓSIO</h3>
+    <p>
+      <span>Curso Pré-Simpósio 1 - Microbiota Intestinal na Osteoartrite e Sarcopenia</span>
+      <br>Valores - Membros : R$ R$ 250,00 - Não Membros : R$ R$ 360,00
+      <br>
+      <span>Curso Pré-Simpósio 2 - Plataforma Vibratória nas Doenças Músculo-esqueléticas</span>
+      <br>Valores - Membros : R$ R$ 250,00 - Não Membros : R$ R$ 360,00
+      <br><br>
+      Local: <a href="https://www.brisabarrahotel.com.br/">Brisa Barra Hotel</a> - Rio de Janeiro
+      <br>Avn Lúcio Costa, 5700 - Barra da Tijuca - CEP: 22720-172
+      <br>(21) 34336600
+    </p>
+    <h3 class="h3-title">INSCRIÇÃO / PAGAMENTO</h3>
+    <p>
+      Para realizar sua inscrição, primeiro, faça o depósito na conta informada, envie o comprovante, preencha os campos
+      abaixo e aguarde entrarmos em contato para confirmação.
+      <br><span>Dados bancários</span>
+      <br>Banco: Itaú
+      <br>Razão social: Assoc Brasileira P Es P Infil
+      <br>CNPJ: 28.644.927/0001-83
+      <br>Agência: 0488
+      <br>Conta-corrente: 07696-9
+    </p>
   </div>
+
+  <section uk-height-viewport class="contact-section">
+    <div class="background-left">
+      <img src="/images/contact.jpg" alt="">
+    </div>
+    <div class="contact-form contact-form-member">
+      <h2 class="h2-title">Inscrição</h2>
+      <form>
+
+        <input class="uk-input uk-input-full" type="text" autocomplete="name" placeholder="Nome completo" required>
+
+        <div class="uk-column-1-2@s">
+          <div class="contact-form__fields">
+            <input class="uk-input" type="text" placeholder="Nome P/ Crachá (Até 20 Caracteres)" required>
+            <input class="uk-input" type="text" placeholder="Especialidade - CRM" required>
+          </div>
+        </div>
+
+        <div class="uk-column-1-2@s">
+          <div class="contact-form__fields">
+            <input class="uk-input" type="email" autocomplete="email" placeholder="Email" required>
+            <input class="uk-input" type="tel" autocomplete="tel" placeholder="Telefone P/Contato" required>
+          </div>
+        </div>
+
+        <textarea class="uk-textarea" placeholder="Mensagem / Observação"></textarea>
+
+        <div class="uk-column-1-2@s">
+          <div class="contact-form__fields">
+            <div uk-form-custom="target: > * > span:first-child">
+              Membro da ABETI
+              <select>
+                <option value="1">Sim</option>
+                <option value="2">Não</option>
+              </select>
+              <button class="uk-button uk-button-default" type="button" tabindex="-1">
+                <span></span>
+                <span uk-icon="icon: chevron-down"></span>
+              </button>
+            </div>
+            <div uk-form-custom="target: > * > span:first-child">
+              Tipo De Inscrição
+              <select>
+                <option value="1">MÉDICO</option>
+                <option value="2">ODONTOLOGISTA</option>
+                <option value="3">RESIDENTE</option>
+                <option value="4">PÓS GRADUANDO</option>
+                <option value="5">OUTRO PROFISSIONAL DE SAÚDE</option>
+              </select>
+              <button class="uk-button uk-button-default" type="button" tabindex="-1">
+                <span></span>
+                <span uk-icon="icon: chevron-down"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="uk-margin uk-child-width-auto uk-grid">
+          ESCOLHA OS ITENS P/ INSCRIÇÃO
+          <label><input class="uk-checkbox" type="checkbox">SIMPÓSIO</label>
+          <label><input class="uk-checkbox" type="checkbox">CURSO PRÉ-SIMPÓSIO 1</label>
+          <label><input class="uk-checkbox" type="checkbox">CURSO PRÉ-SIMPÓSIO 2</label>
+        </div>
+
+        <div class="uk-margin">
+          Comprovante de pagamento
+          <div uk-form-custom="target: true">
+            <input type="file">
+            <button class="normal-button" type="button" tabindex="-1">Escolher
+              arquivo</button>
+            <input class="uk-input uk-form-width-medium" type="text" placeholder="Nenhum arquivo selecionado" disabled>
+          </div>
+        </div>
+
+        <button class="normal-button special-button" type="button">Enviar</button>
+      </form>
+    </div>
+    <div class="background-right"></div>
+  </section>
 
   <div class="uk-section uk-section-muted footer-nav">
     <div class="uk-container">
