@@ -9,12 +9,13 @@
            </div>
          </li>
        </ul>
-       <ul class="uk-navbar-nav uk-visible">
-         <li><a href="<?php echo home_url(); ?>">Home</a></li>
+       <ul class="uk-navbar-nav">
+         <li>
+           <a href="<?php echo home_url(); ?>">Home</a></li>
          <li>
            <a href="<?php echo home_url(); ?>">Institucional</a>
            <div class="uk-navbar-dropdown">
-             <ul class="uk-nav uk-navbar-dropdown-nav subnav">
+             <ul class="uk-nav uk-navbar-dropdown-nav">
                <?php
                 $menu = wp_nav_menu([
                   'menu' => 'subnav',
@@ -32,7 +33,7 @@
          <li>
            <a href="">Eventos</a>
            <div class="uk-navbar-dropdown">
-             <ul class="uk-nav-sub uk-navbar-dropdown-nav subnav">
+             <ul class="uk-nav-sub uk-navbar-dropdown-nav">
                <?php
                 $menu = wp_nav_menu([
                   'menu' => 'menu-header',
@@ -61,7 +62,7 @@
                 echo $menu;
                 ?>
        </ul>
-       <ul class="uk-navbar-nav uk-visible">
+       <ul class="uk-navbar-nav">
          <div class="flag">
            <?php
             $menu = wp_nav_menu([
@@ -121,3 +122,12 @@
      </ul>
    </div>
  </div>
+
+
+  <!-- MENU MOBILE -->
+  <div class="menu-mobile" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky;">
+    <div class="header-nav__logo">
+      <a href="index.html"><img src="./images/logo.png" alt=""></a>
+    </div>
+    <a href="#" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+  </div>
