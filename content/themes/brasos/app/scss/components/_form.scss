@@ -29,7 +29,7 @@
     color: black;
     font-size: $body;
   }
-  form {
+  .contact-form-block {
     padding: 1em 2em;
   }
   .contact-form__fields {
@@ -118,7 +118,7 @@
       margin: 1em;
     }
   }
-  > form > .contact-form__fields {
+  > .contact-form-block > .contact-form__fields {
     margin: 1.5em auto 0;
     @include tablets {
       margin: 2em auto 0;

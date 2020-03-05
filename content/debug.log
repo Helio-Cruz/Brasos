@@ -436,3 +436,7 @@ Stack trace:
 [05-Mar-2020 21:16:20 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 32
 [05-Mar-2020 21:22:33 UTC] PHP Notice:  Undefined variable: noticeClass in /var/www/html/Agencia-Fazer/Brasos/content/plugins/wp-advanced-search/WP-Advanced-Search-ImportExport.php on line 146
 [05-Mar-2020 21:22:33 UTC] PHP Notice:  Undefined variable: message in /var/www/html/Agencia-Fazer/Brasos/content/plugins/wp-advanced-search/WP-Advanced-Search-ImportExport.php on line 147
+[05-Mar-2020 21:37:07 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-news.php on line 31
+[05-Mar-2020 21:37:12 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 32
+[05-Mar-2020 21:37:21 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 32
+[05-Mar-2020 21:37:25 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-news.php on line 31
