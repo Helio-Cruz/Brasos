@@ -35,8 +35,16 @@
       </div>
       <div class="footer-nav__media-social">
         <div class="uk-flex-wrap">
-          <a href="" uk-icon="facebook"></a>
-          <a href="" uk-icon="instagram"></a>
+        <?php
+                $menu = wp_nav_menu([
+                  'menu' => 'midia-social',
+                  'container' => '',
+                  'items_wrap' => '<a href="%2$s">%3$s</a>',
+                  'echo' => true
+                ]);
+                $menu = strip_tags($menu, '<div></div>');
+                echo $menu;
+                ?>
         <p>secretario@brasos.med.br</p>
         </div>
 
