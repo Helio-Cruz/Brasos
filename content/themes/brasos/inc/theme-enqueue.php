@@ -119,6 +119,7 @@ function myplugin_register_form() {
         <?php
     }
     add_filter( 'registration_errors', 'myplugin_registration_errors', 10, 3 );
+
     function myplugin_registration_errors( $errors, $sanitized_user_login, $user_email ) {
 
         if ( empty( $_POST['first_name'] ) || ! empty( $_POST['first_name'] ) && trim( $_POST['first_name'] ) == '' ) {
@@ -137,3 +138,7 @@ function myplugin_register_form() {
             update_user_meta( $user_id, 'last_name', trim( $_POST['last_name'] ) );
         }
     }
+
+ 
+    /* not sending email registration */
+    remove_action( 'register_new_user', 'wp_send_new_user_notifications' );
