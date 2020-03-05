@@ -1,4 +1,4 @@
-<div class="brasos" uk-scrollspy="cls: uk-animation-slide-right; target: .brasos-fade; delay: 600; repeat: true">
+<div class="brasos" uk-scrollspy="cls: uk-animation-slide-right; target: .brasos-fade; delay: 100; repeat: false">
     <h2 class="brasos__title brasos-fade">Sobre a Brasos</h2>
     <div class="brasos__container">
   <!-- <div uk-scrollspy="cls: uk-animation-slide-left; target: .brasos-home-image; delay: 600; repeat: true"> -->
@@ -7,7 +7,7 @@
       <!-- </div> -->
     </div>
         <div class="brasos__back-grey"></div>
-    <div uk-scrollspy="cls: uk-animation-slide-bottom; target: .brasos-about; delay: 600; repeat: true">
+    <div class="brasos-fade">
     <div class="brasos__text brasos-about">
       <p>
         A BRASOS (Brazilian Society for Osteoarthritis, Osteoporosis and Sarcopenia) é uma sociedade de médicos de
