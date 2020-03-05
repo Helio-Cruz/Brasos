@@ -28,6 +28,9 @@
     @include computers {
       width: 500px;
     }
+    &-xs {
+      width: 300px;
+    }
   }
   .h4-title+.h4-title {
     padding-top: 1.5em;
