@@ -105,3 +105,35 @@ function override_admin_bar_css()
 add_action('admin_head', 'override_admin_bar_css');
 // on frontend area
 add_action('wp_head', 'override_admin_bar_css');
+
+
+add_action( 'register_form', 'myplugin_register_form' );
+function myplugin_register_form() {
+
+    $first_name = ( ! empty( $_POST['first_name'] ) ) ? trim( $_POST['first_name'] ) : '';
+    $last_name = ( ! empty( $_POST['last_name'] ) ) ? trim( $_POST['last_name'] ) : '';
+
+        ?>
+        <!-- form html o wp-login.php  line 1074 -->
+
+        <?php
+    }
+    add_filter( 'registration_errors', 'myplugin_registration_errors', 10, 3 );
+    function myplugin_registration_errors( $errors, $sanitized_user_login, $user_email ) {
+
+        if ( empty( $_POST['first_name'] ) || ! empty( $_POST['first_name'] ) && trim( $_POST['first_name'] ) == '' ) {
+            $errors->add( 'first_name_error', __( '<strong>ERROR</strong>: You must include a first name.', 'mydomain' ) );
+        }
+        if ( empty( $_POST['last_name'] ) || ! empty( $_POST['last_name'] ) && trim( $_POST['last_name'] ) == '' ) {
+            $errors->add( 'last_name_error', __( '<strong>ERROR</strong>: You must include a first name.', 'mydomain' ) );
+        }
+        return $errors;
+    }
+
+    add_action( 'user_register', 'myplugin_user_register' );
+    function myplugin_user_register( $user_id ) {
+        if ( ! empty( $_POST['first_name'] ) ) {
+            update_user_meta( $user_id, 'first_name', trim( $_POST['first_name'] ) );
+            update_user_meta( $user_id, 'last_name', trim( $_POST['last_name'] ) );
+        }
+    }
