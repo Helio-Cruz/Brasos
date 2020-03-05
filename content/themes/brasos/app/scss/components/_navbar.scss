@@ -39,9 +39,10 @@
 }
 
 /* flags */
-// img.trp-flag-image {
-//   width: 40px;
-// }
+img.trp-flag-image {
+  width: 28px;
+  margin: 0 0.1em;
+}
 
 .uk-navbar-nav{
   margin: 0 2em;
@@ -58,7 +59,9 @@
 
 /* DropDown */
 .uk-navbar-dropdown-nav {
+  display: flex;
   a {
+    text-decoration: none;
     color: $color-green-dark;
     margin: 0 0.5em;
     font-size: $body;
