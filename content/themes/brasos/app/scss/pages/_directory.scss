@@ -22,8 +22,8 @@
   &__image {
     position: absolute;
     img {
-      border-radius: 10px;
-      object-fit: cover;
+     // border-radius: 10px;
+     object-fit: contain;
       width: 300px;
       height: 260px;
     }
@@ -34,10 +34,10 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    width: 260px;
+    width: 240px;
     height: 375px;
     padding-bottom: 1em;
-    border-radius: 10px;
+   // border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -52,6 +52,7 @@
     .h3-title {
       font-style: normal;
       font-size: 0.9em;
+      text-align: center;
     }
   }
 }
