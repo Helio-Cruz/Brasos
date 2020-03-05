@@ -343,3 +343,5 @@
 [05-Mar-2020 13:38:21 UTC] PHP Notice:  Undefined variable: last_name in /var/www/html/Agencia-Fazer/Brasos/wp/wp-login.php on line 1082
 [05-Mar-2020 13:38:48 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 29
 [05-Mar-2020 13:38:48 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 29
+[05-Mar-2020 15:38:18 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 29
+[05-Mar-2020 15:38:19 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 29
