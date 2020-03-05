@@ -66,6 +66,13 @@
   }
 }
 
+.contact-form-inscription {
+  height: 600px;
+  @include tablets {
+    height: 700px;
+  }
+}
+
 .background-top {
   position: absolute;
   top: 0;
