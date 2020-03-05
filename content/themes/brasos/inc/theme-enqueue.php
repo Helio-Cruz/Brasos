@@ -9,7 +9,7 @@ if (!function_exists('brasos_scripts')):
             get_theme_file_uri('/public/css/style.css'),
        //   get_theme_file_uri('/app/scss/main.scss'),
             [],
-            '1.0.0'
+            '1.0.1'
         );
      
 

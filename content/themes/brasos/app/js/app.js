@@ -7,7 +7,6 @@ var app = {
     console.log('init');
     // loads the Icon plugin
     UIkit.use(Icons);
-
   }
 };
 
