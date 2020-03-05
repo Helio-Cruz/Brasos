@@ -24,7 +24,7 @@
 
 .uk-navbar-container {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    // position: relative;
+  // position: relative;
   // display: flex;
   // justify-content: center;
   &:not(.uk-navbar-transparent) {
@@ -45,7 +45,7 @@ img.trp-flag-image {
   margin: 0 0.1em;
 }
 
-.uk-navbar-nav{
+.uk-navbar-nav {
   margin: 0 2em;
 }
 
@@ -72,7 +72,6 @@ img.trp-flag-image {
   }
 }
 
-
 .uk-navbar-dropdown-dropbar {
   height: 75px;
   border-top: 1px solid $color-green-dark;
@@ -98,48 +97,98 @@ img.trp-flag-image {
     width: 3000px;
     z-index: -1;
   }
-}  
+}
 
 // SIDENAV
-.uk-offcanvas-bar a,
-.uk-offcanvas-bar .uk-offcanvas-close {
-  color: $color-green-dark;
-  &:hover {
-    color: $grey;
+.uk-offcanvas-bar {
+  padding: 0;
+  left: -300px;
+  width: 300px;
+  a {
+    text-align: center;
+    font-style: italic;
+  }
+  a,
+  .uk-offcanvas-close {
+    color: $color-green-dark;
+    &:hover {
+      color: $darkgrey;
+    }
   }
 }
+
 .uk-nav {
   .flag {
     width: 65px;
     display: flex;
-    margin: 0;
-    top: 0;
-    left: 40px;
+    position: absolute;
+    top: 25px;
+    left: 50px;
     li {
       margin: 0 0.1em;
     }
   }
   .uk-navbar-dropdown-nav {
     display: block;
+    width: auto;
   }
 }
-.uk-offcanvas-bar {
-  left: -300px;
-  width: 300px;
-  padding: 30px 40px;
-}
 
+.white-block {
+  @include flexbox;
+  flex-direction: column;
+  padding: 0;
+  height: 50vh;
+  li {
+    padding: 0.5em 0;
+  }
+}
+.green-block {
+  width: 100%;
+  padding: 2em 1em;
+  height: 50vh;
+  background: $color-green-regular;
+  position: relative;
+  .mobile-nav-bottom {
+    @include flexbox;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  width: 100%;
+  }
+  li {
+    padding: 0 0.5em;
+  }
+  a {
+    color: $white;
+  }
+}
+.green-diagonal {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid $color-green-regular;
+  border-right: 300px solid transparent;
+}
 
 // ______________________________________________________
 
 // NAVBAR EVENTS
-
-.navbar-events a {
-  text-decoration: none;
-  color: $color-green-regular;
-  margin-right: 0.5em;
-  font-size: 20px;
-  font-style: italic;
-  font-weight: 300;
-  text-transform: uppercase !important;
+.navbar-container-events {
+  box-shadow: none;
+}
+.navbar-events {
+  @include flexbox;
+  a {
+    text-decoration: none;
+    color: $color-green-regular;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    text-transform: uppercase !important;
+    @include tablets {
+      margin-right: 0.5em;
+    }
+  }
 }

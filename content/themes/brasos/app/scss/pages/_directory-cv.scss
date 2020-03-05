@@ -1,19 +1,17 @@
 .cv-board {
-  height: 1000px;
-  margin: 0 auto 4em;
+  height: auto;
+  margin: 0 auto 5em;
   @include mobiles {
     width: 480px;
   }
   @include tablets {
-    width: 600px;
+    width: 700px;
   }
   @include computers {
-    margin: 0 auto;
     width: 1000px;
-    height: 900px;
   }
   .h2-title {
-    padding: 2em;
+    padding: 2em 0 0;
     a {
       color: $color-green-regular;
       &:hover {
@@ -23,107 +21,82 @@
     }
   }
   &__content {
-    margin-bottom: 5em;
+    height: auto;
+    width: 100%;
+    margin: 2em auto 5em;
+    @include flexbox;
+    flex-direction: column;
+  }
+  .background-back {
+    margin-top: 14em;
+    padding: 2em;
+    background: $grey;
+    width: 90%;
     position: relative;
     img {
       position: absolute;
+      top: -190px;
       left: 0;
       right: 0;
-      margin: 0 auto;
-      width: 130px;
-      height: 130px;
-      border-radius: 10px;
+      margin: auto;
+      width: 300px;
+      height: 235px;
+      // border-radius: 10px;
       object-fit: contain;
       @include computers {
         width: 315px;
         height: 235px;
       }
     }
-    .background-back {
-      z-index: -1;
-      background: $grey;
+    .h3-title {
+      margin: 1em auto;
+      text-align: center;
+      font-style: italic;
+      font-size: $heading;
+      font-weight: 200;
+      color: $color-green-regular;
+    }
+    .cards {
+      position: relative;
+      margin: 2em auto;
+      padding: 3em 0 0;
+    }
+    .white-card {
       position: absolute;
-      top: 200px;
+      top: 0;
       left: 0;
       right: 0;
       margin: 0 auto;
-      width: 90%;
-      height: 450px;
-      @include computers {
-        width: 800px;
-        height: 550px;
-      }
-      .h3-title {
-        z-index: 2;
-        position: absolute;
-        top: 16%;
-        left: 40%;
-        font-style: italic;
-        font-size: $heading;
-        font-weight: 200;
-        color: $color-green-regular;
-        @include computers {
-          left: 30%;
-        }
-      }
-    }
-    .white-card {
       background: $white;
-      display: flex;
+      @include flexbox;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 25%;
-      left: 20%;
       width: 70%;
       height: auto;
       z-index: 3;
-      padding: 2em;
-      z-index: -1;
       @include computers {
-        z-index: 2;
-        position: absolute;
-        top: 300px;
-        left: 5%;
-        padding: 0;
-        width: 180px;
-        height: 150px;
+        width: 300px;
       }
       p {
+        padding: 1em 0 0;
         color: $color-green-dark;
         text-align: center;
       }
     }
     .green-card {
+      z-index: 2;
       background: $color-green-dark;
-      display: flex;
+      @include flexbox;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 280px;
-      left: 5%;
-      width: 90%;
+      margin: 0 auto;
+      width: 100%;
       height: auto;
-      z-index: 1;
       font-size: 0.9em;
-      padding: 2em;
-      @include computers {
-        position: absolute;
-        top: 150px;
-        left: 15%;
-        width: 620px;
-        height: auto;
-        font-size: 1em;
-        padding: 2em 1.5em;
-        padding-bottom: 0;
-      }
       p {
+        padding: 1em;
+        padding-top: 60px;
         color: $white;
         line-height: 19px;
         @include computers {
-          padding-left: 8em;
           line-height: 2em;
         }
       }
