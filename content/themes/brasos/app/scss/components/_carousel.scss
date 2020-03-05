@@ -192,18 +192,21 @@
         height: 390px;
       }
     }
-    .h2-title {
+    .institutional__title {
       position: relative;
       margin: 0 auto;
       top: -30%;
       @include computers {
         position: absolute;
-        top: 8%;
-        right: 3%;
-        // width: 190px;
-        width: 100%;
-        text-align: right;
+        top: 15%;
+        right: 0;
+        width: 360px;
       }
+    }
+    .h2-title {
+      text-align: center;
+      padding: 0;
+      margin: 0;
     }
   }
   .background-green {
