@@ -10,7 +10,7 @@
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0; 
+  right: 0;
   margin: auto;
   box-shadow: 0 3px 6px 0 darken($color: $grey, $amount: 40%);
   background: $white;
@@ -67,9 +67,39 @@
 }
 
 .contact-form-inscription {
-  height: 600px;
+  height: 900px;
   @include tablets {
     height: 700px;
+    padding: 2em 3.5em;
+  }
+  @include computers {
+    width: 850px;
+    padding: 2em 5em;
+  }
+  .contact-form__fields {
+    font-size: $body;
+    font-weight: 300;
+    color: $color-green-regular;
+    .select-button {
+      margin: 0 1em;
+      padding: 0.3em 0.5em;
+      border-radius: 0;
+      color: $color-green-regular;
+      border: none;
+      border-bottom: 2px solid $color-green-regular;
+    }
+    .file-button {
+      color: $color-green-regular;
+    }
+    label {
+      padding: 1em 0.5em;
+    }
+    .uk-checkbox {
+        margin: 0 0.5em;
+    }
+    > div {
+      margin: 1em;
+    }
   }
 }
 
