@@ -18,7 +18,6 @@ function WP_Advanced_Search_Export() {
 	header('Content-type: application/octet-stream');
 	echo $sqlDB;
 }
-add_action('admin_post_nopriv_db_export', 'WP_Advanced_Search_Export');
 add_action('admin_post_db_export', 'WP_Advanced_Search_Export');
 
 // Fonction pour l'importation (après validation dans les options)
@@ -122,7 +121,6 @@ function WP_Advanced_Search_Import() {
 	$url = add_query_arg('message', $msg, urldecode(wp_get_referer()));
     wp_safe_redirect($url);
 }
-add_action('admin_post_nopriv_db_import', 'WP_Advanced_Search_Import');
 add_action('admin_post_db_import', 'WP_Advanced_Search_Import');
 
 // Gère l'affichage des notices adéquates
