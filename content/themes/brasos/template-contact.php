@@ -15,9 +15,9 @@ Template Name: Contato
     <p class="black-text">
       Dúvidas?</br>
       Utilize o formulário abaixo para entrar em contato com nossa equipe!</p>
-    <form>
+    <div class="contact-form-block">
       <?php echo do_shortcode('[contact-form-7 id="131" title="Contact form 1"]'); ?>
-    </form>
+    </div>
   </div>
   <div class="background-bottom"></div>
 </section>
