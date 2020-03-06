@@ -153,14 +153,11 @@ img.trp-flag-image {
   height: 50vh;
   background: $color-green-regular;
   position: relative;
-  .mobile-nav-bottom {
-    @include flexbox;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    width: 100%;
-  }
   li {
-    padding: 0;
+    width: 50%;
+    @include tablets {
+      width: 33%;
+    }
   }
   a {
     color: $white;
