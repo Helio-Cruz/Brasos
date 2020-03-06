@@ -44,55 +44,48 @@ Template Name: Brasos2019 Inscriptions
   </p>
 </div>
 
-<section uk-height-viewport class="contact-section">
-  <div class="background-left">
-    <img src="<?php echo get_template_directory_uri() . '/public/images/contact.jpg' ?>" alt="">
-  </div>
+<section uk-height-viewport class="contact-section inscription-section">
   <div class="contact-form contact-form-inscription">
     <h2 class="h2-title">Inscrição</h2>
     <div class="contact-form-block">
-
       <input class="uk-input uk-input-full" type="text" autocomplete="name" placeholder="Nome completo" required>
-
-      <div class="uk-column-1-2@s">
+      <div class="uk-column-1-2">
         <div class="contact-form__fields">
           <input class="uk-input" type="text" placeholder="Nome P/ Crachá (Até 20 Caracteres)" required>
           <input class="uk-input" type="text" placeholder="Especialidade - CRM" required>
         </div>
       </div>
-
-      <div class="uk-column-1-2@s">
+      <div class="uk-column-1-2">
         <div class="contact-form__fields">
           <input class="uk-input" type="email" autocomplete="email" placeholder="Email" required>
           <input class="uk-input" type="tel" autocomplete="tel" placeholder="Telefone P/Contato" required>
         </div>
       </div>
-
       <textarea class="uk-textarea" placeholder="Mensagem / Observação"></textarea>
 
-      <div class="uk-column-1-2@s">
+      <div class="uk-column-1-1">
         <div class="contact-form__fields">
           <div uk-form-custom="target: > * > span:first-child">
             Membro da ABETI
-            <select>
+            <select class="uk-select">
               <option value="1">Sim</option>
               <option value="2">Não</option>
             </select>
-            <button class="uk-button uk-button-default" type="button" tabindex="-1">
+            <button class="normal-button select-button" type="button" tabindex="-1">
               <span></span>
               <span uk-icon="icon: chevron-down"></span>
             </button>
           </div>
           <div uk-form-custom="target: > * > span:first-child">
             Tipo De Inscrição
-            <select>
-              <option value="1">MÉDICO</option>
-              <option value="2">ODONTOLOGISTA</option>
-              <option value="3">RESIDENTE</option>
-              <option value="4">PÓS GRADUANDO</option>
-              <option value="5">OUTRO PROFISSIONAL DE SAÚDE</option>
+            <select class="uk-select">
+              <option value="1">Médico</option>
+              <option value="2">Odontologista</option>
+              <option value="3">Residente</option>
+              <option value="4">Pós Graduando</option>
+              <option value="5">Outro Profissional De Saúde</option>
             </select>
-            <button class="uk-button uk-button-default" type="button" tabindex="-1">
+            <button class="normal-button select-button" type="button" tabindex="-1">
               <span></span>
               <span uk-icon="icon: chevron-down"></span>
             </button>
@@ -100,27 +93,27 @@ Template Name: Brasos2019 Inscriptions
         </div>
       </div>
 
-      <div class="uk-margin uk-child-width-auto uk-grid">
-        ESCOLHA OS ITENS P/ INSCRIÇÃO
-        <label><input class="uk-checkbox" type="checkbox">SIMPÓSIO</label>
-        <label><input class="uk-checkbox" type="checkbox">CURSO PRÉ-SIMPÓSIO 1</label>
-        <label><input class="uk-checkbox" type="checkbox">CURSO PRÉ-SIMPÓSIO 2</label>
-      </div>
+      <div class="contact-form__fields">
+          Escolha os itens p/inscrição
+          <label><input class="uk-checkbox" type="checkbox">Simpósio</label>
+          <label><input class="uk-checkbox" type="checkbox">Curso Pré-Simpósio 1</label>
+          <label><input class="uk-checkbox" type="checkbox">Curso Pré-Simpósio 2</label>
+        </div>
 
-      <div class="uk-margin">
+        <div class="contact-form__fields">
         Comprovante de pagamento
         <div uk-form-custom="target: true">
           <input type="file">
-          <button class="normal-button" type="button" tabindex="-1">Escolher
+          <input class="normal-button file-button" type="text" placeholder="Escolher arquivo" disabled>
+          <!-- <button class="normal-button" type="button" tabindex="-1">Escolher
             arquivo</button>
-          <input class="uk-input uk-form-width-medium" type="text" placeholder="Nenhum arquivo selecionado" disabled>
+          <input class="uk-input uk-form-width-medium" type="text" placeholder="Nenhum arquivo selecionado" disabled> -->
         </div>
       </div>
 
       <button class="normal-button special-button" type="button">Enviar</button>
     </div>
   </div>
-  <div class="background-right"></div>
 </section>
 
 
