@@ -67,10 +67,12 @@
 }
 
 .contact-form-inscription {
-  height: 900px;
+    height: auto;
+    padding: 2em 0;
   @include tablets {
-    height: 700px;
+    height: auto;
     padding: 2em 3.5em;
+    margin: 0 auto 5em;
   }
   @include computers {
     width: 850px;
@@ -80,6 +82,9 @@
     font-size: $body;
     font-weight: 300;
     color: $color-green-regular;
+    option {
+      color: $color-green-regular !important;
+    }
     .select-button {
       margin: 0 1em;
       padding: 0.3em 0.5em;
@@ -90,16 +95,27 @@
     }
     .file-button {
       color: $color-green-regular;
+      text-align: center;
+      padding: 0.5em 0;
     }
+    // .uk-textarea {
+    //   height: 60px;
+    // }
     label {
-      padding: 1em 0.5em;
+      padding: 0 0.5em;
+      @include tablets {
+        padding: 0.5em;
+      }
     }
     .uk-checkbox {
-        margin: 0 0.5em;
+      margin: 0 0.5em;
     }
     > div {
       margin: 1em;
     }
+  }
+  > form > .contact-form__fields {
+    margin: 2em auto 0;
   }
 }
 
