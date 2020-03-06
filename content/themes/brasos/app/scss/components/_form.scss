@@ -67,8 +67,9 @@
 }
 
 .contact-form-inscription {
-    height: auto;
-    padding: 2em 0;
+  height: 740px;
+  padding: 2em 0;
+  margin: 0 auto 10em;
   @include tablets {
     height: auto;
     padding: 2em 3.5em;
@@ -77,6 +78,12 @@
   @include computers {
     width: 850px;
     padding: 2em 5em;
+  }
+  .uk-textarea {
+    height: 80px;
+    @include tablets {
+      height: 140px;
+    }
   }
   .contact-form__fields {
     font-size: $body;
@@ -98,9 +105,6 @@
       text-align: center;
       padding: 0.5em 0;
     }
-    // .uk-textarea {
-    //   height: 60px;
-    // }
     label {
       padding: 0 0.5em;
       @include tablets {
@@ -115,7 +119,10 @@
     }
   }
   > form > .contact-form__fields {
-    margin: 2em auto 0;
+    margin: 1.5em auto 0;
+    @include tablets {
+      margin: 2em auto 0;
+    }
   }
 }
 
