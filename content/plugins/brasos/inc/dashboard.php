@@ -14,10 +14,12 @@ function brasos_dashboard_widget_function()
     ?>
     <!-- <h3>Agencia Fazer</h3> -->
     <img src="<?php echo get_template_directory_uri() . '/public/images/agencia-fazer.png' ?>" alt="" style="with:100px;height:100px;position:relative; left: 45px ">
-    <p>Telefone:</p>
+    <!-- <p>Telefone:</p>
     <p>Email:</p>
-    <p>Site: agenciafazer.com.br</p>
+    <p>Site: agenciafazer.com.br</p> -->
     <?php
+
+    
 }
 
 add_action('wp_dashboard_setup', 'brasos_add_dashboard_widgets');
