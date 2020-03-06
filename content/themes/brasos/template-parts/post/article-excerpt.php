@@ -1,5 +1,6 @@
+ 
 <div>
-    <div class="uk-card uk-card-default">
+    <div class="uk-card uk-card-default box">
         <a href="<?php the_permalink(); ?>">
             <div class="uk-card-media-top">
                 <img src="<?php the_post_thumbnail_url(); ?>" alt="">
@@ -13,3 +14,4 @@
         </a>
     </div>
 </div>
+ 

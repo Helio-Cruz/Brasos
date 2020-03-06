@@ -1,11 +1,10 @@
-<div class="brasos" uk-scrollspy="cls: uk-animation-slide-right; target: .brasos-fade; delay: 100; repeat: false">
-  <h2 class="brasos__title brasos-fade">Sobre a Brasos</h2>
-  <div class="brasos__container">
-    <!-- <div uk-scrollspy="cls: uk-animation-slide-left; target: .brasos-home-image; delay: 600; repeat: true"> -->
-    <div class="brasos__image">
-      <img src="<?php echo get_template_directory_uri() . '/public/images/board.jpg' ?>" alt="">
-      <!-- </div> -->
-    </div>
+<div class="brasos" uk-scrollspy="cls: uk-animation-slide-right; target: .brasos-fade; delay: 300; repeat: false">
+    <h2 class="brasos__title brasos-fade">Sobre a Brasos</h2>
+    <div class="brasos__container">
+      <div class="brasos__image">
+        <img src="<?php echo get_template_directory_uri() . '/public/images/board.jpg' ?>" alt="">
+       </div>  
+ 
     <div class="brasos__back-grey"></div>
     <div class="brasos-fade">
       <div class="brasos__text">
