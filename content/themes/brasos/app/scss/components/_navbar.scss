@@ -160,10 +160,7 @@ img.trp-flag-image {
     width: 100%;
   }
   li {
-    padding: 0 0.5em;
-    @include tablets {
-      padding: 0 1.5em;
-    }
+    padding: 0;
   }
   a {
     color: $white;
