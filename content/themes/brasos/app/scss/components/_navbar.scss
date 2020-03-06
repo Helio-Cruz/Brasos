@@ -105,8 +105,8 @@ img.trp-flag-image {
   left: -300px;
   width: 300px;
   @include tablets {
-    left: -400px;
-    width: 400px;
+    left: -450px;
+    width: 450px;
   }
   a {
     text-align: center;
@@ -162,7 +162,7 @@ img.trp-flag-image {
   li {
     padding: 0 0.5em;
     @include tablets {
-      padding: 0 1em;
+      padding: 0 1.5em;
     }
   }
   a {
@@ -178,7 +178,7 @@ img.trp-flag-image {
   border-bottom: 30px solid $color-green-regular;
   border-right: 300px solid transparent;
   @include tablets {
-    border-right: 400px solid transparent;
+    border-right: 450px solid transparent;
   }
 }
 
