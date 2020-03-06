@@ -6,21 +6,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
   right: 0;
-  margin: auto;
+  margin: 0 auto;
   box-shadow: 0 3px 6px 0 darken($color: $grey, $amount: 40%);
   background: $white;
   color: $color-green-dark;
   text-align: center;
-  height: 680px;
+  height: auto;
   width: 80vw;
   padding: 2em;
   @include tablets {
-    height: 590px;
     width: 700px;
     padding: 2em 6em;
   }
@@ -30,7 +30,7 @@
     font-size: $body;
   }
   .contact-form-block {
-    padding: 1em 2em;
+    padding: 1em 0;
   }
   .contact-form__fields {
     @include flexbox;
@@ -59,31 +59,15 @@
   }
 }
 
-.contact-form-member {
-  height: 600px;
-  @include tablets {
-    height: 500px;
-  }
+.inscription-section {
+  background: $grey;
+  position: relative;
+  margin: 0 auto;
 }
 
 .contact-form-inscription {
-  height: 740px;
-  padding: 2em 0;
-  margin: 0 auto 10em;
-  @include tablets {
-    height: auto;
-    padding: 2em 3.5em;
-    margin: 0 auto 5em;
-  }
   @include computers {
     width: 850px;
-    padding: 2em 5em;
-  }
-  .uk-textarea {
-    height: 80px;
-    @include tablets {
-      height: 140px;
-    }
   }
   .contact-form__fields {
     font-size: $body;
@@ -93,7 +77,6 @@
       color: $color-green-regular !important;
     }
     .select-button {
-      margin: 0 1em;
       padding: 0.3em 0.5em;
       border-radius: 0;
       color: $color-green-regular;
@@ -106,23 +89,18 @@
       padding: 0.5em 0;
     }
     label {
-      padding: 0 0.5em;
-      @include tablets {
-        padding: 0.5em;
-      }
+      font-size: 0.9em;
+      padding: 0.5em;
     }
     .uk-checkbox {
       margin: 0 0.5em;
     }
     > div {
-      margin: 1em;
+      margin: 0.2em 1em;
     }
   }
   > .contact-form-block > .contact-form__fields {
-    margin: 1.5em auto 0;
-    @include tablets {
-      margin: 2em auto 0;
-    }
+    margin: 1em auto 0;
   }
 }
 
