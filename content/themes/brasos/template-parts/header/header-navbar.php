@@ -18,30 +18,28 @@
                <?php
                 $menu = wp_nav_menu([
                   'menu' => 'subnav-institucional',
-                  'theme_location' => '',
-                  'container' => '',
-                  'items_wrap' => '<li><a href="%2$s">%3$s</a></li>',
+                  'container' => false,
+                  'items_wrap' => '%3$s',
                   'echo' => true
                 ]);
-                $menu = strip_tags($menu, '');
+                $menu = strip_tags($menu, '<li><a href="%2$s">');
                 echo $menu;
                 ?>
              </ul>
            </div>
          </li>
          <li>
-           <a href="<?php echo home_url( '/eventos/' )?>">Eventos</a>
+           <a href="<?php echo home_url('/eventos/') ?>">Eventos</a>
            <div class="uk-navbar-dropdown">
              <ul class="uk-nav-sub uk-navbar-dropdown-nav">
                <?php
                 $menu = wp_nav_menu([
                   'menu' => 'subnav-eventos',
-                  'theme_location' => '',
-                  'container' => '',
-                  'items_wrap' => '<li><a href="%2$s">%3$s</a></li>',
+                  'container' => false,
+                  'items_wrap' => '%3$s',
                   'echo' => true
                 ]);
-                $menu = strip_tags($menu, '');
+                $menu = strip_tags($menu, '<li><a href="%2$s">');
                 echo $menu;
                 ?>
              </ul>
@@ -50,12 +48,11 @@
          <?php
           $menu = wp_nav_menu([
             'menu' => 'menu-header',
-            'theme_location' => '',
-            'container' => '',
-            'items_wrap' => '<li><a href="%2$s">%3$s</a></li>',
+            'container' => false,
+            'items_wrap' => '%3$s',
             'echo' => true
           ]);
-          $menu = strip_tags($menu, '');
+          $menu = strip_tags($menu, '<li><a href="%2$s">');
           echo $menu;
           ?>
        </ul>
@@ -64,11 +61,11 @@
            <?php
             $menu = wp_nav_menu([
               'menu' => 'flag',
-              'container' => '',
-              'items_wrap' => '<a href="%2$s">%3$s</a>',
+              'container' => false,
+              'items_wrap' => '%3$s',
               'echo' => true
             ]);
-            $menu = strip_tags($menu, '<li></li>');
+            $menu = strip_tags($menu, '<li><a href="%2$s">');
             echo $menu;
             ?>
          </div>
