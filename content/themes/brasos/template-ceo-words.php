@@ -7,8 +7,10 @@ Template Name: Palavras do Presidente
 <?php get_header(); ?>
 
 <section>
-    <div class="message">
-      <h2 class="h2-title">Palavras do presidente</h2>
+
+<div uk-scrollspy="cls: uk-animation-slide-bottom; target: .title; delay: 300; repeat: false">
+    <div class="message title">
+      <h2 class="h2-title title">Palavras do presidente</h2>
       <p class="message__content">
         Caros amigos,
         <br><br>
@@ -38,6 +40,7 @@ Template Name: Palavras do Presidente
         Presidente BRASOS 2017-2020.
       </p>
     </div>
+</div>
   </section>
 
 <?php get_footer(); ?>

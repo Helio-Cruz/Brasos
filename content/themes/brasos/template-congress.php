@@ -6,11 +6,11 @@ Template Name: Congressos
 
 <?php get_header(); ?>
 
-
+<div uk-scrollspy="cls: uk-animation-fade; target: .box; delay: 500; repeat: false">
 <div class="congress__content">
     <h2 class="h2-title">Congressos</h2>
     <div uk-flex uk-flex-center uk-grid>
-      <div class="uk-card uk-card-default">
+      <div class="uk-card uk-card-default box">
         <div class="uk-card-header">
           <h3 class="uk-card-title h3-title"><a href="https://www.isiat2019.com/" target="_blank">ISIAT 2019</a></h3>
         </div>
@@ -21,7 +21,7 @@ Template Name: Congressos
           </p>
         </div>
       </div>
-      <div class="uk-card uk-card-default">
+      <div class="uk-card uk-card-default box">
 
         <div class="uk-card-header">
           <h3 class="uk-card-title h3-title"><a href="http://www.medicinadoesporte.org.br/" target="_blank">31º CONGRESSO BRASILEIRO DE
@@ -37,7 +37,7 @@ Template Name: Congressos
           </p>
         </div>
       </div>
-      <div class="uk-card uk-card-default">
+      <div class="uk-card uk-card-default box">
 
         <div class="uk-card-header">
           <h3 class="uk-card-title h3-title"><a href="https://www.reumatologia.org.br/" target="_blank">XXXVI CONGRESSO BRASILEIRO DE
@@ -52,7 +52,7 @@ Template Name: Congressos
           </p>
         </div>
       </div>
-      <div class="uk-card uk-card-default">
+      <div class="uk-card uk-card-default box">
 
         <div class="uk-card-header">
           <h3 class="uk-card-title h3-title"><a href="www.eularcongress2019.org" target="_blank">EULAR ANNUAL CONGRESS 2019</a></h3> <!--link quebrado-->
@@ -66,7 +66,7 @@ Template Name: Congressos
           </p>
         </div>
       </div>
-      <div class="uk-card uk-card-default">
+      <div class="uk-card uk-card-default box">
 
         <div class="uk-card-header">
           <h3 class="uk-card-title h3-title"><a href="www.portalsbot.org.br" target="_blank"><!--link quebrado-->
@@ -82,7 +82,7 @@ Template Name: Congressos
           </p>
         </div>
       </div>
-      <div class="uk-card uk-card-default">
+      <div class="uk-card uk-card-default box">
 
         <div class="uk-card-header">
           <h3 class="uk-card-title h3-title"><a href="https://oarsi.org/" target="_blank">OARSI 2019 WORLD CONGRESS</a></h3>
@@ -97,6 +97,6 @@ Template Name: Congressos
       </div>
     </div>
   </div>
-
+</div>
 
 <?php get_footer(); ?>
