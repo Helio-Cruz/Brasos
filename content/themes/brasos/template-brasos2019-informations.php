@@ -8,7 +8,7 @@ Template Name: Brasos2019 Informations
 
 <?php get_template_part('template-parts/event/event', 'cover'); ?>
 <?php get_template_part('template-parts/event/event', 'navbar'); ?>
-
+ 
 <div class="blog__content">
     <h3 class="h3-title">Data - 27 a 29 de junho de 2019</h3>
     <h3 class="h3-title">Local</h3>
@@ -110,5 +110,6 @@ Template Name: Brasos2019 Informations
       <br>Gustavo Constantino Campos - Diretor Científico ABETI
     </p>
   </div>
+ 
 
   <?php get_footer(); ?>
