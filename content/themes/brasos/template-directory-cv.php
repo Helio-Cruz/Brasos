@@ -7,11 +7,12 @@ Template Name: Conselho Diretor Curriculum
 <?php get_header(); ?>
 
 <div class="cv-board">
-    <h2 class="h2-title"><a href="directory.html">Conselho diretor</a></h2>
-    <div class="cv-board__content">
-      <div class="background-back">
-        <img src="<?php echo get_template_directory_uri() . '/public/images/board.jpg ' ?>" alt="">
-        <h3 class="h3-title">PAULO CESAR HAMDAN</h3>
+  <h2 class="h2-title"><a href="directory.html">Conselho diretor</a></h2>
+  <div class="cv-board__content">
+    <div class="background-back">
+      <img src="<?php echo get_template_directory_uri() . '/public/images/board.jpg ' ?>" alt="">
+      <h3 class="h3-title">PAULO CESAR HAMDAN</h3>
+      <div class="cards">
         <div class="white-card">
           <p>Presidente
             <br><br>Primeiro Tesoureiro</p>
@@ -37,6 +38,7 @@ Template Name: Conselho Diretor Curriculum
       </div>
     </div>
   </div>
+</div>
 
 
 <?php get_footer(); ?>
