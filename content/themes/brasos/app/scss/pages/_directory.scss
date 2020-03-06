@@ -46,12 +46,12 @@
     z-index: -1;
     box-shadow: 0 0 15px 0 darken($color: $grey, $amount: 30%);
     p {
-      font-size: $body;
+      font-size: 0.8em;
       line-height: 20px;
     }
     .h3-title {
       font-style: normal;
-      font-size: $body-xl;
+      font-size: 0.9em;
     }
   }
 }
