@@ -10,6 +10,7 @@ Template Name: Noticia
 <div class="articles-cards">
   <h2 class="h2-title"><?php the_title(); ?></h2>
   <div class="uk-child-width-1-1" uk-grid>
+
     <?php
     $recent_posts = wp_get_recent_posts(array(
       'orderby' => 'post_date',
@@ -18,11 +19,10 @@ Template Name: Noticia
       'post_status' => 'publish', // Show only the published posts
       'category_name'  => 'Noticia',
       'suppress_filters' => true
-
-
     ));
     foreach ($recent_posts as $post) :
     ?>
+
       <div>
         <div class="uk-card uk-card-default" style="background-image: url('<?php echo get_the_post_thumbnail_url($post['ID']); ?>');">
           <a href="<?php echo get_permalink($post['ID']) ?>">
@@ -41,7 +41,11 @@ Template Name: Noticia
 
 
     <?php
-    $args = ['category_name' => 'Noticia', 'order' => 'ASC'];
+    $args = [
+      'category_name' => 'Noticia',
+      'order' => 'DESC',
+      'offset' => 1
+    ];
     $wp_query = new WP_Query($args);
     if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
     ?>

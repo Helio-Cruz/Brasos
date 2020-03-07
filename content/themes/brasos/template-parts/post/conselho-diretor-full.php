@@ -1,5 +1,5 @@
 <div class="cv-board">
-  <h2 class="h2-title"><?php echo home_url('/conselho_diretor/') ?>Conselho diretor</a></h2>
+  <h2 class="h2-title"><a href="<?php echo home_url('/conselho-diretor/') ?>">Conselho diretor</a></h2>
   <div class="cv-board__content">
     <div class="background-back">
       <img src="<?php the_post_thumbnail_url(); ?>" alt="">
