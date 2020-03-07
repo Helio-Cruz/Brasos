@@ -18,8 +18,6 @@ Template Name: Artigos
         'post_status' => 'publish', // Show only the published posts
         'category_name'  => 'Artigo',
         'suppress_filters' => true
-
-
       ));
       foreach ($recent_posts as $post) :
       ?>
@@ -43,7 +41,11 @@ Template Name: Artigos
 
 
     <?php
-    $args = ['category_name' => 'Artigo'];
+    $args = [
+      'category_name' => 'Artigo',
+      'order' => 'DESC',
+      'offset' => 1
+    ];
     $wp_query = new WP_Query($args);
     if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
     ?>
