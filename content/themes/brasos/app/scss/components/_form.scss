@@ -59,51 +59,6 @@
   }
 }
 
-.inscription-section {
-  background: $grey;
-  position: relative;
-  margin: 0 auto;
-}
-
-.contact-form-inscription {
-  @include computers {
-    width: 850px;
-  }
-  .contact-form__fields {
-    font-size: $body;
-    font-weight: 300;
-    color: $color-green-regular;
-    option {
-      color: $color-green-regular !important;
-    }
-    .select-button {
-      padding: 0.3em 0.5em;
-      border-radius: 0;
-      color: $color-green-regular;
-      border: none;
-      border-bottom: 2px solid $color-green-regular;
-    }
-    .file-button {
-      color: $color-green-regular;
-      text-align: center;
-      padding: 0.5em 0;
-    }
-    label {
-      font-size: 0.9em;
-      padding: 0.5em;
-    }
-    .uk-checkbox {
-      margin: 0 0.5em;
-    }
-    > div {
-      margin: 0.2em 1em;
-    }
-  }
-  > .contact-form-block > .contact-form__fields {
-    margin: 1em auto 0;
-  }
-}
-
 .background-top {
   position: absolute;
   top: 0;

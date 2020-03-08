@@ -24,7 +24,7 @@ Template Name: Conselho Diretor
     $wp_query = new WP_Query($args);
 
     if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
-        get_template_part('template-parts/post/directors', 'excerpt');
+        get_template_part('template-parts/post/conselho-diretor', 'excerpt');
       endwhile;
     endif;
 
