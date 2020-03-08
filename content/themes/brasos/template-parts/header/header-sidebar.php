@@ -18,7 +18,7 @@
         </div>
         <li><a href="<?php echo home_url(); ?>">Home</a></li>
         <li><a href="<?php echo home_url('/aboutBrasos/'); ?>">Institucional</a></li>
-        <li><a href="<?php echo home_url('/events/'); ?>">Eventos</a></li>
+        <li><a href="<?php echo home_url('/eventos/'); ?>">Eventos</a></li>
         <!-- <li class="uk-parent">
          <a href="">Institucional</a>
          <ul class="uk-nav-sub uk-navbar-dropdown-nav">

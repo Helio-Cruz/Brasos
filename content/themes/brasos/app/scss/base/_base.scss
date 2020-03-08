@@ -1,46 +1,62 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100i,300i,400,500i,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto:100i,300i,400,500i,700&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-size: $body;
-    font-family: $body-font-regular;
+  font-size: $body;
+  font-family: $body-font-regular;
 }
 
-h2{
-    font-style: italic;
-    font-weight: 200;
-    color: $color-green-dark;
-    margin: 0 1em ;
-    text-transform: uppercase;
+a {
+  font-weight: bold;
+  color: $color-green-dark;
+  &:hover {
+    text-decoration: none;
+    color: $color-green-regular;
+  }
+}
+
+span {
+  color: $color-green-regular;
+  font-weight: bold;
+}
+
+h2 {
+  font-style: italic;
+  font-weight: 200;
+  color: $color-green-dark;
+  margin: 0 1em;
+  text-transform: uppercase;
 }
 
 .h1-title {
-    color: $color-green-dark;
-    font-size: $headline;
-    font-style: italic;
-    font-weight: 200;
-    text-transform: uppercase;
-    margin: 0 auto;
-    text-align: center;
+  color: $color-green-dark;
+  font-size: $headline;
+  font-style: italic;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin: 0 auto;
+  text-align: center;
 }
-.h2-title {
-    color: $color-green-regular;
-    font-size: $heading;
-    font-style: italic;
-    font-weight: 200;
-    text-transform: uppercase;
-    margin: 0 auto;
-    text-align: center;
+.h2-title,
+h2 {
+  color: $color-green-regular;
+  font-size: $heading;
+  font-style: italic;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin: 0 auto;
+  text-align: center;
 }
-.h3-title {
-    color: $color-green-dark;
-    font-size: $subheading;
-    text-transform: uppercase;
-    margin: 0 auto;
-    text-align: left;
-    font-style: italic;
-    font-weight: 300;
+.h3-title,
+h3 {
+  color: $color-green-dark;
+  font-size: $subheading;
+  text-transform: uppercase;
+  margin: 0 auto;
+  text-align: left;
+  font-style: italic;
+  font-weight: 300;
 }
