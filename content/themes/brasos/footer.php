@@ -49,8 +49,7 @@
      </div>
    </div>
  </div>
- </div>
- <div class="uk-grid-match uk-child-width-expand@s footer-mentions" uk-grid>
+  <div class="uk-grid-match uk-child-width-expand@s footer-mentions" uk-grid>
    <div>
      <p>Copyright@ 2020. Agência Fazer</p>
    </div>
@@ -58,6 +57,8 @@
      <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() . '/public/images/logo.png' ?>" alt=""></a>
    </div>
  </div>
+ </div>
+
 
 <!-- <script src="js/app.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>

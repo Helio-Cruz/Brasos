@@ -156,6 +156,9 @@ class TRP_Advanced_Tab {
         include_once(TRP_PLUGIN_DIR . 'includes/advanced-settings/strip-gettext-post-content.php');
         include_once(TRP_PLUGIN_DIR . 'includes/advanced-settings/strip-gettext-post-meta.php');
         include_once(TRP_PLUGIN_DIR . 'includes/advanced-settings/exclude-words-from-auto-translate.php');
+        include_once(TRP_PLUGIN_DIR . 'includes/advanced-settings/disable-post-container-tags.php');
+        include_once(TRP_PLUGIN_DIR . 'includes/advanced-settings/separators.php');
+        include_once(TRP_PLUGIN_DIR . 'includes/advanced-settings/disable-languages-sitemap.php');
 	}
 
 	/*
@@ -166,8 +169,26 @@ class TRP_Advanced_Tab {
 	}
 
 	/*
-	 * Hooked to trp_settings_navigation_tabs
+	 * Hooked to trp_before_output_advanced_settings_options
 	 */
+    function trp_advanced_settings_content_table(){
+        $advanced_settings_array = $this->get_registered_advanced_settings();
+        $html = '<p id="trp_advanced_tab_content_table">';
+        foreach( $advanced_settings_array as $setting ){
+            if ( $setting['type'] !== 'separator' ){
+                continue;
+            }
+            $html .= '<a class="trp_advanced_tab_content_table_item" href="#' . $setting['name'] . '">' . $setting['label'] . '</a> | ';
+        }
+        $html = rtrim($html, " | ");
+        $html .= '</p>';
+        echo $html;
+    }
+
+
+    /*
+     * Hooked to trp_settings_navigation_tabs
+     */
 	public function output_advanced_options(){
 		$advanced_settings_array = $this->get_registered_advanced_settings();
 		foreach( $advanced_settings_array as $setting ){
@@ -327,11 +348,15 @@ class TRP_Advanced_Tab {
      * @return 'string'
      */
     public function separator_setting( $setting ){
-        $html = "
-             <tr style='border-bottom: 1px solid #ccc;'>
+        $html = "";
+        if  ( !isset( $setting['no-border'] ) || $setting['no-border'] !== true ) {
+             $html .= "
+             <tr id='" . $setting['name'] . "' style='border-bottom: 1px solid #ccc;' >
                 <th scope='row'></th>
                 <td></td>
             </tr>";
+        }
+        $html .="<tr><td><h2>" . $setting['label'] . "<h2></td></tr>";
         return apply_filters('trp_advanced_setting_separator', $html );
     }
 

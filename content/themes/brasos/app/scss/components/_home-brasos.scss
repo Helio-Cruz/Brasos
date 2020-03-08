@@ -1,4 +1,4 @@
-// CAROUSEL SOBRE A BRASOS
+// SOBRE A BRASOS
 .brasos {
   position: relative;
   margin: 2em;
@@ -32,7 +32,7 @@
     }
   }
   &__image img {
-    visibility: hidden;
+  //  visibility: hidden;
     position: absolute;
     object-fit: cover;
     top: 0;

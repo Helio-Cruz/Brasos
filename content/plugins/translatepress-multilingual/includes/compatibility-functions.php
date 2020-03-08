@@ -117,6 +117,25 @@ function trp_use_home_url_in_peepso_ajax( $data ){
 }
 
 /**
+ * Compatibility with Peepso urls having extra / due their link builder not considering home urls having trailing slashes
+ */
+add_filter('peepso_get_page', 'trp_remove_peepso_double_slash', 10, 2);
+function trp_remove_peepso_double_slash( $page, $name){
+
+    // avoid accidentally replacing // from http://
+    $page = str_replace('http://', 'http:/', $page );
+    $page = str_replace('https://', 'https:/', $page );
+
+    $page = str_replace('//', '/', $page );
+
+    // place it back
+    $page = str_replace('https:/', 'https://', $page );
+    $page = str_replace('http:/', 'http://', $page );
+
+    return $page;
+};
+
+/**
  * Filter ginger_iframe_banner and ginger_text_banner to use shortcodes so our conditional lang shortcode works.
  *
  * @since 1.3.1
@@ -522,3 +541,5 @@ function trp_woo_fondy_payment_gateway_exclude_gettext_strings($translation, $te
     }
     return $translation;
 }
+
+

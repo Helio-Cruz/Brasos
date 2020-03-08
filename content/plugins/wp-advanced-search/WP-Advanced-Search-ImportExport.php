@@ -1,125 +1,131 @@
 <?php
+if(!defined('ABSPATH')) exit; // Exclu en cas d'accès direct par l'URL du fichier
+
 // Fonction pour l'exportation (après clic sur le bouton)
 function WP_Advanced_Search_Export() {
-	global $wpdb, $tableName;
+	if(current_user_can('edit_posts')) {
+		global $wpdb, $tableName;
 
-	// Nom des tables à sauvegarder
-	$table1 = $wpdb->prefix.$tableName;
-	$table2 = $wpdb->prefix."autosuggest";
-	$table3 = $wpdb->prefix."autocorrectindex";
+		// Nom des tables à sauvegarder
+		$table1 = $wpdb->prefix.$tableName;
+		$table2 = $wpdb->prefix."autosuggest";
+		$table3 = $wpdb->prefix."autocorrectindex";
 
-	// Création du dump SQL
-	$sqlDB = mysql_dump($wpdb, DB_NAME, array($table1, $table2, $table3));
-	$backupFile = "WP_Advanced_Search-".DB_NAME.'-'.date("d_m_Y_H\hi").".sql";
+		// Création du dump SQL
+		$sqlDB = mysql_dump($wpdb, DB_NAME, array($table1, $table2, $table3));
+		$backupFile = "WP_Advanced_Search-".DB_NAME.'-'.date("d_m_Y_H\hi").".sql";
 
-	// Force le téléchargement
-	header('Content-Disposition: attachment; filename='.$backupFile);
-	header('Content-Type: application/force-download');
-	header('Content-type: application/octet-stream');
-	echo $sqlDB;
+		// Force le téléchargement
+		header('Content-Disposition: attachment; filename='.$backupFile);
+		header('Content-Type: application/force-download');
+		header('Content-type: application/octet-stream');
+		echo $sqlDB;
+	}
 }
 add_action('admin_post_db_export', 'WP_Advanced_Search_Export');
 
 // Fonction pour l'importation (après validation dans les options)
 function WP_Advanced_Search_Import() {
-	global $wpdb, $tableName;
+	if(current_user_can('edit_posts')) {
+		global $wpdb, $tableName;
 
-	// Nom des tables à supprimer (si ce n'est pas le cas dans le Dump)
-	$table1 = $wpdb->prefix.$tableName;
-	$table2 = $wpdb->prefix."autosuggest";
-	$table3 = $wpdb->prefix."autocorrectindex";
-	$tables = array($table1, $table2, $table3); // Tableau des tables
+		// Nom des tables à supprimer (si ce n'est pas le cas dans le Dump)
+		$table1 = $wpdb->prefix.$tableName;
+		$table2 = $wpdb->prefix."autosuggest";
+		$table3 = $wpdb->prefix."autocorrectindex";
+		$tables = array($table1, $table2, $table3); // Tableau des tables
 
-	// Fichier pour l'upload WordPress à utiliser
-	if(!function_exists('wp_handle_upload')) {
-	    require_once(ABSPATH.'wp-admin/includes/file.php');
-	}
+		// Fichier pour l'upload WordPress à utiliser
+		if(!function_exists('wp_handle_upload')) {
+		    require_once(ABSPATH.'wp-admin/includes/file.php');
+		}
 
-	// Début de l'importation du fichier
-	if(isset($_FILES['wp_advanced_search_file_import'])) {
-		
+		// Début de l'importation du fichier
+		if(isset($_FILES['wp_advanced_search_file_import'])) {
+			
 
-		$uploadedfile = $_FILES['wp_advanced_search_file_import']; // Fichier uploadé
-		$upload_overrides = array(
-			'test_form' => false, // Pour WordPress
-			'test_type' => false, // Ne pas bloquer à cause du type MIME (vérifié après)
-		);
-		$movefile = wp_handle_upload($uploadedfile, $upload_overrides); // Déplacement du fichier chargé
+			$uploadedfile = $_FILES['wp_advanced_search_file_import']; // Fichier uploadé
+			$upload_overrides = array(
+				'test_form' => false, // Pour WordPress
+				'test_type' => false, // Ne pas bloquer à cause du type MIME (vérifié après)
+			);
+			$movefile = wp_handle_upload($uploadedfile, $upload_overrides); // Déplacement du fichier chargé
 
-		// Vérification du déplacement du fichier (si OK)
-		if($movefile && !isset($movefile['error'])) {
-			$extension = strrchr($uploadedfile['name'], '.'); // Récupération de l'extension
-			$mimesSQL = array("text/x-sql", "text/sql", "application/sql", "text/plain", "application/octet-stream"); // Types MIME autorisés
-			$mime = mime_content_type($movefile['file']); // Récupération du type MIME véritable
+			// Vérification du déplacement du fichier (si OK)
+			if($movefile && !isset($movefile['error'])) {
+				$extension = strrchr($uploadedfile['name'], '.'); // Récupération de l'extension
+				$mimesSQL = array("text/x-sql", "text/sql", "application/sql", "text/plain", "application/octet-stream"); // Types MIME autorisés
+				$mime = mime_content_type($movefile['file']); // Récupération du type MIME véritable
 
-			// Si le type MIME et l'extension correspondent, on continue...
-			if(in_array($mime, $mimesSQL) && $extension == ".sql") {
-				// Récupération de l'URL du fichier (pour la suppression future)
-				$urlFile = $movefile['file'];
+				// Si le type MIME et l'extension correspondent, on continue...
+				if(in_array($mime, $mimesSQL) && $extension == ".sql") {
+					// Récupération de l'URL du fichier (pour la suppression future)
+					$urlFile = $movefile['file'];
 
-				// Importation SQL
-				$sql = file($urlFile);
-				$cleanSQL = array(); // Tableau des requêtes SQL nettoyées
-				$dropTables = array();
-				$nb = 0; 
-				// Nettoyage des requêtes
-				foreach($sql as $ligne) {
-					// Supprime les espaces inutiles
-					$ligne = trim($ligne);
+					// Importation SQL
+					$sql = file($urlFile);
+					$cleanSQL = array(); // Tableau des requêtes SQL nettoyées
+					$dropTables = array();
+					$nb = 0; 
+					// Nettoyage des requêtes
+					foreach($sql as $ligne) {
+						// Supprime les espaces inutiles
+						$ligne = trim($ligne);
 
-					// Supprime les commentaires et lignes vides inutiles
-					if(substr($ligne, 0, 2) == '--' || substr($ligne, 0, 2) == '/*' || $ligne == '') {
-						continue;
-	        		}
+						// Supprime les commentaires et lignes vides inutiles
+						if(substr($ligne, 0, 2) == '--' || substr($ligne, 0, 2) == '/*' || $ligne == '') {
+							continue;
+		        		}
 
-					// Vérifie que les DROP TABLE sont bien présents (sinon erreur lors de l'importation)
-					if(substr($ligne, 0, 10) == 'DROP TABLE') {
-						$dropTables[] = $ligne;
-	        		}
+						// Vérifie que les DROP TABLE sont bien présents (sinon erreur lors de l'importation)
+						if(substr($ligne, 0, 10) == 'DROP TABLE') {
+							$dropTables[] = $ligne;
+		        		}
 
-	        		// Vérifie si la ligne se termine bien comme une instruction SQL ';'
-					if(substr($ligne, -1, 1) != ';') {
-						$cleanSQL[$nb].= $ligne;
-						continue;
-	        		} else {
-	        			$cleanSQL[$nb].= $ligne;
-	        		}
-	        		$nb++;
-				}
-
-				// Vérifie qu'il y a les DROP TABLE pour les 3 tables de la base
-				if(empty($dropTables) || count($dropTables) != 3) {
-					foreach($tables as $table) {
-						$wpdb->query('DROP TABLE IF EXISTS `'.$table.'`;');
+		        		// Vérifie si la ligne se termine bien comme une instruction SQL ';'
+						if(substr($ligne, -1, 1) != ';') {
+							$cleanSQL[$nb].= $ligne;
+							continue;
+		        		} else {
+		        			$cleanSQL[$nb].= $ligne;
+		        		}
+		        		$nb++;
 					}
-				}
 
-				// Envoi des requêtes une par une dans la BDD
-				foreach($cleanSQL as $query) {
-					$wpdb->query($query);
-				}
+					// Vérifie qu'il y a les DROP TABLE pour les 3 tables de la base
+					if(empty($dropTables) || count($dropTables) != 3) {
+						foreach($tables as $table) {
+							$wpdb->query('DROP TABLE IF EXISTS `'.$table.'`;');
+						}
+					}
 
-		    	// Message de validation
-		    	$msg = "validImport";
-		    } else {
-		    	$msg = "errorMime";
-		    }
+					// Envoi des requêtes une par une dans la BDD
+					foreach($cleanSQL as $query) {
+						$wpdb->query($query);
+					}
 
-		    // Supprime le fichier après l'importation (sécurité)
-		    unlink($urlFile);
-		} else {
-			echo $movefile['error'];
-			if(!empty($uploadedfile['name'])) {
-				$msg = "errorImport";
+			    	// Message de validation
+			    	$msg = "validImport";
+			    } else {
+			    	$msg = "errorMime";
+			    }
+
+			    // Supprime le fichier après l'importation (sécurité)
+			    unlink($urlFile);
 			} else {
-				$msg = "noImport";
-			}
-	    }
-	}
+				echo $movefile['error'];
+				if(!empty($uploadedfile['name'])) {
+					$msg = "errorImport";
+				} else {
+					$msg = "noImport";
+				}
+		    }
+		}
 
-	// Redirection avec message en notice
-	$url = add_query_arg('message', $msg, urldecode(wp_get_referer()));
-    wp_safe_redirect($url);
+		// Redirection avec message en notice
+		$url = add_query_arg('message', $msg, urldecode(wp_get_referer()));
+	    wp_safe_redirect($url);
+	}
 }
 add_action('admin_post_db_import', 'WP_Advanced_Search_Import');
 
