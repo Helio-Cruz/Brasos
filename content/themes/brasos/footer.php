@@ -1,6 +1,6 @@
  <div class="uk-section uk-section-muted footer-nav">
    <div class="uk-container">
-     <h2 class="footer-nav__title title">Faça Parte da Nossa Comunidade</h2>
+     <h2 class="footer-nav__title fadeBottom">Faça Parte da Nossa Comunidade</h2>
      <button class="footer-nav__button">
        <a href="<?php echo esc_url(get_permalink(get_page_by_title('Torne-se Membro'))); ?>"><?php esc_html_e('Torne-se Membro', 'textdomain'); ?></a>
      </button>

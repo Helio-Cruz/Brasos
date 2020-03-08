@@ -10,20 +10,18 @@ Template Name: Eventos
   <h2 class="h2-title"><?php the_title(); ?></h2>
   <div class="uk-child-width-1-3@m" uk-grid>
 
-    <?php
-    $parent_cat = get_category_by_slug( $cat[1] );
-    $args = [
-      'post_type' => 'evento',
-      'parent'    => $parent_cat->term_id,
-      // 'category__in' => 1, // category 1 = parent "evento"
-      'posts_per_page' => -1,
-      'order' => 'DESC'
-    ];
+  <?php
+      $args = [
+        'numberposts' => 1, // Number of recent posts thumbnails to display
+        'category_name'  => 'Artigo',
+      ];
+      foreach ($recent_posts as $post) :
+     
 
 
-    $categories = get_categories( $args );
+    //  $categories = get_categories( $args );
     // loop on the child cats to get the sub cats object
-    foreach ($categories as $post) {
+    // foreach ($categories as $post) {
      
       
 
@@ -35,7 +33,8 @@ Template Name: Eventos
     // endif;
 
     // wp_reset_postdata();
-    ?>
+    endforeach;
+      wp_reset_query(); ?>
 
   </div>
 </div>
