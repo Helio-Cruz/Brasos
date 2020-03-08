@@ -5,7 +5,7 @@ Tags: translate, translation, multilingual, automatic translation, bilingual, fr
 Requires at least: 3.1.0
 Tested up to: 5.3.2
 Requires PHP: 5.6.20
-Stable tag: 1.6.7
+Stable tag: 1.6.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -143,6 +143,17 @@ For more information please check out [TranslatePress - Multilingual plugin docu
 
 
 == Changelog ==
+= 1.6.8 =
+* Added support for All In One SEO
+* Added compatibility with Peepso double slashing translated links
+* Add option in Advanced tab to disable translated links in sitemap
+* Add options to disable post container tags in Advanced Tab.
+* Organize Advanced Tabs by categories.
+* Fix an error regarding the settings class in class-languages.php
+* Fixed a filter in the trp_curpageurl() function
+* Fix fatal error thrown when trying to access the global while it's null in some cases
+* Fixed x-default from advanced not working as expected
+
 = 1.6.7 =
 * Improved the database update queries
 * Fixed an error in mysql regarding post_parent_id meta insert if no id was found

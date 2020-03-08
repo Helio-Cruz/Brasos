@@ -1,4 +1,6 @@
 <?php
+if(!defined('ABSPATH')) exit; // Exclu en cas d'accès direct par l'URL du fichier
+
 /*--------------------------------------------*/
 /*----- Fonction de gestion des extraits -----*/
 /*--------------------------------------------*/
