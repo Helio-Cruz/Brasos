@@ -1,47 +1,60 @@
 .events__cover .uk-card {
   height: 300px;
+  background-color: $color-green-regular;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  // background-color: $color-green-dark;
+  filter: brightness(80%);
+  .h1-title {
+    font-weight: normal;
+  }
 }
 
+.events__layout {
+  margin: 2em auto !important;
+  padding: 2em;
+}
 .events__content {
   margin: 2em 0;
   padding: 2em 0;
   > .event__block {
-    h2,
-    h3 {
-      font-weight: normal;
-      font-style: italic;
-    }
-    h2,
-    h3,
     p {
-      color: $darkgrey;
       padding: 2em;
+      padding-bottom: 4em;
       line-height: 30px;
       @include computers {
         width: 700px;
         margin: 0 auto;
       }
     }
+    h2,
+    h3 {
+      text-align: left;
+      padding: 2em;
+      padding-bottom: 1em;
+      @include computers {
+        width: 900px;
+      }
+    }
     a {
-      color: $color-green-dark;
+      color: $color-green-regular;
       &:hover {
-        color: darken($color: $color-green-dark, $amount: 20%);
+        color: $color-green-dark;
       }
     }
   }
   > .event__block:nth-of-type(odd) {
-    background: lighten($color: $color-green-regular, $amount: 20%);
+    background: $color-green-dark;
+    color: $white;
+    span,
+    a:hover,
+    h2,
+    h3 {
+      color: $white;
+    }
   }
   > .events__block:nth-of-type(even) {
     background: $white;
-    h2,
-    h3 {
-      color: $color-green-dark;
-    }
   }
   img {
     object-fit: cover;
@@ -53,7 +66,6 @@
     }
   }
 }
-
 
 .inscriptions__content img {
   width: 70%;

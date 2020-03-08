@@ -7,7 +7,7 @@ Template Name: Eventos
 
 
 <div class="articles-cards">
-  <h2 class="h2-title">Eventos</h2>
+  <h2 class="h2-title"><?php the_title(); ?></h2>
   <div class="uk-child-width-1-3@m" uk-grid>
 
     <?php
