@@ -19,16 +19,16 @@
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
-define( 'DB_NAME', '' );
+define( 'DB_NAME', 'wp_brasos' );
 
 /** Utilisateur de la base de données MySQL. */
-define( 'DB_USER', '' );
+define( 'DB_USER', 'admin' );
 
 /** Mot de passe de la base de données MySQL. */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', '120688' );
 
 /** Adresse de l’hébergement MySQL. */
-define( 'DB_HOST', '' );
+define( 'DB_HOST', 'localhost' );
 
 /** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
@@ -49,14 +49,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         '' );
-define( 'SECURE_AUTH_KEY',  '' );
-define( 'LOGGED_IN_KEY',    '' );
-define( 'NONCE_KEY',        '' );
-define( 'AUTH_SALT',        '' );
-define( 'SECURE_AUTH_SALT', '' );
-define( 'LOGGED_IN_SALT',   '' );
-define( 'NONCE_SALT',       '' );
+define('AUTH_KEY',         'fc0p8-pzx|X+|LMQv *M8=mQwR]P0iSw|!rjBKs/sp/Et  AyXAqYq%;^k|s->h*');
+define('SECURE_AUTH_KEY',  't<c|XyeC>K$&404o?1h|^K3M =+5EySQpBMs|T h69dljsZm?Px5^J(]+;5+_xKT');
+define('LOGGED_IN_KEY',    'jRV9dngu=#/sL~(7^?0hUXS{R(mS/$hG[~dEF*k0dx^n+c^[M Ok2.sE0fV~/,<l');
+define('NONCE_KEY',        ':[sG|)L@B2JfNezN@Em:;%Tt!L?1xyi8DN1qm~MxE>OVV&h /6Hh>`N>V;VXu!ql');
+define('AUTH_SALT',        'K+/E8U$HV>+3NEQN|Vpm,!G>&:R0.|KJRQMd#vax;)^@^(e@/&X$P/;jn5r6:J$P');
+define('SECURE_AUTH_SALT', 'sg{7M2(-/V<44~<+-UP#WjXK7ikfR[)nk@1_~JpSq|T7]PNDACDQ>+(7S-bH2qJe');
+define('LOGGED_IN_SALT',   'x.8OzoN:>j7C:I=|BVbMh(_R*y6vrw2>y+xg?vc`1J|fke_^bru$0Y[O~D){C4i*');
+define('NONCE_SALT',       'SS|5_bZ(u<15n~[CWtV+Xo*=<efgb)GX1}ue<|>ULb[IQX(&bX6E<n#n;>Kkj pr');
 /**#@-*/
 
 /**
@@ -68,7 +68,7 @@ define( 'NONCE_SALT',       '' );
  */
 $table_prefix = 'wp_';
 
-define('WP_CONTENT_URL', 'http:/mon url à remplacer content');
+define('WP_CONTENT_URL', 'http://localhost/Agencia-Fazer/Brasos/content');
 define('WP_CONTENT_DIR', dirname(__FILE__).'/content');
 /**
  * Pour les développeurs : le mode déboguage de WordPress.

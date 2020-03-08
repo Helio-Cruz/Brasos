@@ -5,7 +5,7 @@
     <div class="white-block">
       <ul class="uk-nav">
         <div class="flag">
-          <?php
+        <?php
           $menu = wp_nav_menu([
             'menu' => 'flag',
             'container' => false,
@@ -49,7 +49,7 @@
             $menu = strip_tags($menu, '');
             echo $menu;
             ?> -->
-        <?php
+            <?php
         $menu = wp_nav_menu([
           'menu' => 'menu-header',
           'container' => false,

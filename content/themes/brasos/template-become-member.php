@@ -7,8 +7,8 @@ Template Name: Torne-se Membro
 <?php get_header(); ?>
 
 <section>
-  <div class="message">
-    <h2 class="h2-title">Torne-se membro da Brasos!</h2>
+  <div class="message fadeBottom">
+    <h2 class="h2-title ">Torne-se membro da Brasos!</h2>
     <p class="message__content">
       Faça parte de uma comunidade de profissionais de medicina com a mesma mentalidade: atualização, aplicação
       prática e pesquisa de novas tecnologias no tratamento da atividade inflamatória descontrolada, através de
@@ -32,7 +32,7 @@ Template Name: Torne-se Membro
     <img src="<?php echo get_template_directory_uri() . '/public/images/contact.jpg' ?>" alt="">
   </div>
   <div class="contact-form contact-form-member">
-    <h2 class="h2-title">Tornar-se membro</h2>
+    <h2 class="h2-title fadeBottom">Tornar-se membro</h2>
     <div class="contact-form-block">
       <?php echo do_shortcode('[contact-form-7 id="132" title="Membro"]'); ?>
     </div>
