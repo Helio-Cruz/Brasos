@@ -23,7 +23,7 @@
     font-size: 25px;
     margin: 70px 150px;
     span {
-      font-size: 20px;
+      font-size: 28px;
       font-weight: bold;
     }
   }
@@ -224,6 +224,7 @@
         right: 0;
         width: 360px;
       }
+ 
     }
     .h2-title {
       text-align: center;
@@ -240,7 +241,7 @@
     width: 90%;
     height: 320px;
     font-size: 0.9em;
-    background: $color-green-regular;
+    background: $color-green-dark;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -258,7 +259,7 @@
     }
     .h3-title {
       font-size: $body-xl;
-      color: $color-green-dark;
+      color: $white;
     }
     p {
       color: $white;
