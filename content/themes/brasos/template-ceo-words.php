@@ -8,8 +8,8 @@ Template Name: Palavras do Presidente
 
 <section>
 
-<div uk-scrollspy="cls: uk-animation-slide-bottom; target: .title; delay: 300; repeat: false">
-    <div class="message title">
+
+    <div class="message">
       <h2 class="h2-title title">Palavras do presidente</h2>
       <p class="message__content">
         Caros amigos,
@@ -40,7 +40,6 @@ Template Name: Palavras do Presidente
         Presidente BRASOS 2017-2020.
       </p>
     </div>
-</div>
   </section>
 
 <?php get_footer(); ?>

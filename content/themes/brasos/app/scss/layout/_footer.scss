@@ -9,7 +9,7 @@
     color: $white;
     font-style: italic;
     font-weight: 200;
-     margin: 1em;
+    margin: 1em;
      bottom: 40px;
   }
   &__button {
@@ -19,7 +19,7 @@
     height: 42px;
     background-color: $white;
     bottom: 40px;
-     color: $white;
+    color: $white;
     a {
       color: $color-green-dark;
       font-size: $body;
@@ -30,14 +30,14 @@
       a {
         color: white;
         text-decoration: none;
-      }    
+      }
     }
   }
   .uk-navbar {
     background-color: $color-green-regular;
     margin: 30px auto;
 
-    a {  
+    a {
       color: $white;
       width: 135px;
       margin: auto;
@@ -55,7 +55,6 @@
     font-weight: 300;
     font-style: italic;
   }
- 
 
   &__logo img {
     width: 140px;
@@ -68,5 +67,5 @@
   color: $color-green-dark;
   text-align: center;
   padding: 0.5em;
-  align-items: center;
+ align-items: center;
 }
