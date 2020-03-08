@@ -1,29 +1,27 @@
 <?php
 
-if (!function_exists('brasos_scripts')):
+if (!function_exists('brasos_scripts')) :
 
     function brasos_scripts()
     {
         wp_enqueue_style(
             'brasos-style-css',
             get_theme_file_uri('/public/css/style.css'),
-       //   get_theme_file_uri('/app/scss/main.scss'),
+            //   get_theme_file_uri('/app/scss/main.scss'),
             [],
             '1.0.1'
         );
-     
+
 
 
         wp_enqueue_script(
             'brasos-js',
-           get_theme_file_uri('/public/js/app.js'),
-         //  get_theme_file_uri('/app/js/app.js'),
+            get_theme_file_uri('/public/js/app.js'),
+            //  get_theme_file_uri('/app/js/app.js'),
             [],
             '1.0.0',
             true
         );
-
-     
     }
 
 endif;
@@ -33,8 +31,8 @@ add_action('wp_enqueue_scripts', 'brasos_scripts');
 
 // custom login page
 function my_login_logo()
-{ 
- ?>
+{
+?>
     <style type="text/css">
         #login h1 a,
         .login h1 a {
@@ -46,40 +44,38 @@ function my_login_logo()
             padding-bottom: 0;
         }
 
-        body.login div#login p#nav a:hover,
+        /* body.login div#login p#nav a:hover,
         body.login div#login p#backtoblog a:hover {
-           /* color: #ff1709 !important;*/
-            /* Your link color. */
-        }
-    </style>
-  <?php
- }
- add_action('login_enqueue_scripts', 'my_login_logo');
-
-
-
-
-
-
- function my_register_stylesheet() {
-?>
-    <style type="text/css">
- 
- 
-     .register-name  {
-        display:flex;
-        width: 270px;
-         padding: 0 0.5em;
-        }
- 
+           color: #ff1709 !important;
+             Your link color. 
+        } */
     </style>
 <?php
-    
- 
 }
-add_action( 'login_enqueue_scripts', 'my_register_stylesheet' );
+add_action('login_enqueue_scripts', 'my_login_logo');
 
- 
+
+
+
+
+
+function my_register_stylesheet()
+{
+?>
+    <style type="text/css">
+        .register-name {
+            display: flex;
+            width: 270px;
+            padding: 0 0.5em;
+        }
+    </style>
+    <?php
+
+
+}
+add_action('login_enqueue_scripts', 'my_register_stylesheet');
+
+
 
 //  function my_login_logo_url_title()
 // {
@@ -132,41 +128,41 @@ add_action('admin_head', 'override_admin_bar_css');
 add_action('wp_head', 'override_admin_bar_css');
 
 
-add_action( 'register_form', 'myplugin_register_form' );
-function myplugin_register_form() {
+add_action('register_form', 'myplugin_register_form');
+function myplugin_register_form()
+{
 
-    $first_name = ( ! empty( $_POST['first_name'] ) ) ? trim( $_POST['first_name'] ) : '';
-    $last_name = ( ! empty( $_POST['last_name'] ) ) ? trim( $_POST['last_name'] ) : '';
+    $first_name = (!empty($_POST['first_name'])) ? trim($_POST['first_name']) : '';
+    $last_name = (!empty($_POST['last_name'])) ? trim($_POST['last_name']) : '';
 
-        ?>
-        <!-- form html o wp-login.php  line 1074 -->
+    ?>
+    <!-- form html o wp-login.php  line 1074 -->
 
-        <?php
+<?php
+}
+add_filter('registration_errors', 'myplugin_registration_errors', 10, 3);
+
+function myplugin_registration_errors($errors, $sanitized_user_login, $user_email)
+{
+
+    if (empty($_POST['first_name']) || !empty($_POST['first_name']) && trim($_POST['first_name']) == '') {
+        $errors->add('first_name_error', __('<strong>ERROR</strong>: You must include a first name.', 'mydomain'));
     }
-    add_filter( 'registration_errors', 'myplugin_registration_errors', 10, 3 );
-
-    function myplugin_registration_errors( $errors, $sanitized_user_login, $user_email ) {
-
-        if ( empty( $_POST['first_name'] ) || ! empty( $_POST['first_name'] ) && trim( $_POST['first_name'] ) == '' ) {
-            $errors->add( 'first_name_error', __( '<strong>ERROR</strong>: You must include a first name.', 'mydomain' ) );
-        }
-        if ( empty( $_POST['last_name'] ) || ! empty( $_POST['last_name'] ) && trim( $_POST['last_name'] ) == '' ) {
-            $errors->add( 'last_name_error', __( '<strong>ERROR</strong>: You must include a first name.', 'mydomain' ) );
-        }
-        return $errors;
+    if (empty($_POST['last_name']) || !empty($_POST['last_name']) && trim($_POST['last_name']) == '') {
+        $errors->add('last_name_error', __('<strong>ERROR</strong>: You must include a first name.', 'mydomain'));
     }
+    return $errors;
+}
 
-    add_action( 'user_register', 'myplugin_user_register' );
-    function myplugin_user_register( $user_id ) {
-        if ( ! empty( $_POST['first_name'] ) ) {
-            update_user_meta( $user_id, 'first_name', trim( $_POST['first_name'] ) );
-            update_user_meta( $user_id, 'last_name', trim( $_POST['last_name'] ) );
-        }
+add_action('user_register', 'myplugin_user_register');
+function myplugin_user_register($user_id)
+{
+    if (!empty($_POST['first_name'])) {
+        update_user_meta($user_id, 'first_name', trim($_POST['first_name']));
+        update_user_meta($user_id, 'last_name', trim($_POST['last_name']));
     }
+}
 
- 
-    /* not sending email registration */
-    remove_action( 'register_new_user', 'wp_send_new_user_notifications' );
 
-     
-    
+/* not sending email registration */
+remove_action('register_new_user', 'wp_send_new_user_notifications');
