@@ -4,11 +4,13 @@ Plugin Name: WP-Advanced-Search
 Plugin URI: http://blog.internet-formation.fr/2013/10/wp-advanced-search/
 Description: Moteur de recherche avancé pour WordPress à la place du moteur initial (mise en surbrillance, trois types de recherche, styles, paginations, algorithme de pertinence optionnel...). (<em>Plugin adds a advanced search engine for WordPress with a lot of options (three type of search, bloded request, three method for pagination, relevancy algorithm...</em>).
 Author: Mathieu Chartier
-Version: 3.3.4
+Version: 3.3.5
 Author URI: http://blog.internet-formation.fr
 Text Domain: wp-advanced-search
 Domain Path: /lang
 */
+
+if(!defined('ABSPATH')) exit; // Exclu en cas d'accès direct par l'URL du fichier
 
 // Instanciation des variables globales
 global $wpdb, $table_WP_Advanced_Search, $tableName, $WP_Advanced_Search_Version;
@@ -16,10 +18,11 @@ $tableName = 'advsh'; // Nom de la table
 $table_WP_Advanced_Search = $wpdb->prefix.$tableName;
 
 // Version du plugin
-$WP_Advanced_Search_Version = "3.3.4";
+$WP_Advanced_Search_Version = "3.3.5";
 
 function WP_Advanced_Search_Lang() {
-	load_plugin_textdomain('wp-advanced-search', false, dirname(plugin_basename( __FILE__ )).'/lang/');
+	// load_plugin_textdomain('wp-advanced-search', false, dirname(plugin_basename( __FILE__ )).'/lang/');
+	load_plugin_textdomain('wp-advanced-search', false, basename(dirname( __FILE__ )).'/lang/');
 }
 add_action('plugins_loaded', 'WP_Advanced_Search_Lang' );
 
