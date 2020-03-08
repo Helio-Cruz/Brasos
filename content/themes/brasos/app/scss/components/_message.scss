@@ -1,14 +1,14 @@
 .message {
   width: 80%;
-  margin: 10% auto;
+  margin: 5em auto;
   position: relative;
   background: $grey;
   @include tablets {
     width: 700px;
-    margin: 5% auto;
+    margin: 6em auto;
   }
   @include computers {
-    width: 1000px;
+    width: 900px;
   }
   .h2-title,
   .h3-title {
@@ -31,8 +31,9 @@
     }
   }
   &__content {
-    padding: 4em 2em;
+    padding: 5.5em 4em 4em;
     line-height: 1.5em;
+    text-align: justify;
   }
   a {
     color: $color-green-regular;

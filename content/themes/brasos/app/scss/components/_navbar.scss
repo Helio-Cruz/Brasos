@@ -119,6 +119,7 @@ img.trp-flag-image {
     width: 650px;
   }
   a {
+    font-weight: 300;
     text-align: center;
     font-style: italic;
   }
@@ -171,6 +172,7 @@ img.trp-flag-image {
   }
   a {
     color: $white;
+    font-weight: 300;
   }
 }
 .green-diagonal {
@@ -192,20 +194,20 @@ img.trp-flag-image {
 // ______________________________________________________
 
 // NAVBAR EVENTS
-.navbar-container-events {
-  box-shadow: none;
-}
 .navbar-events {
   @include flexbox;
   a {
     text-decoration: none;
-    color: $color-green-regular;
-    font-size: 20px;
+    color: $color-green-regular !important;
+    font-size: 30px;
     font-style: italic;
-    font-weight: 300;
+    font-weight: normal;
     text-transform: uppercase !important;
     @include tablets {
       margin-right: 0.5em;
+    }
+    &:hover {
+      color: $color-green-dark !important;
     }
   }
 }
