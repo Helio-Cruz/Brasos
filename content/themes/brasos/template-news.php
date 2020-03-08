@@ -10,7 +10,7 @@ Template Name: Noticia
 <div class="articles-cards">
   <h2 class="h2-title"><?php the_title(); ?></h2>
   <div class="uk-child-width-1-1" uk-grid>
-
+  <div uk-scrollspy="cls: uk-animation-slide-bottom; target: .box; delay: 300; repeat: false">
     <?php
     $recent_posts = wp_get_recent_posts(array(
       'orderby' => 'post_date',
@@ -24,7 +24,7 @@ Template Name: Noticia
     ?>
 
       <div>
-        <div class="uk-card uk-card-default" style="background-image: url('<?php echo get_the_post_thumbnail_url($post['ID']); ?>');">
+        <div class="uk-card uk-card-default box" style="background-image: url('<?php echo get_the_post_thumbnail_url($post['ID']); ?>');">
           <a href="<?php echo get_permalink($post['ID']) ?>">
             <div class="uk-card-body">
               <h3 class="uk-card-title h3-title"><?php echo $post['post_title'] ?></h3>
@@ -36,6 +36,7 @@ Template Name: Noticia
       </div>
     <?php endforeach;
     wp_reset_query(); ?>
+  </div>
   </div>
   <div class="uk-child-width-1-3@m" uk-grid>
 
@@ -49,9 +50,9 @@ Template Name: Noticia
     $wp_query = new WP_Query($args);
     if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
     ?>
-
+     <div uk-scrollspy="cls: uk-animation-slide-bottom; target: .box; delay: 300; repeat: false">
         <?php get_template_part('template-parts/post/article', 'excerpt'); ?>
-
+        </div>
 
     <?php endwhile;
     endif;  ?>
