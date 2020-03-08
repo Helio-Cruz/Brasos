@@ -1,31 +1,60 @@
 .events__cover .uk-card {
   height: 300px;
-  background-size: auto;
+  background-color: $color-green-regular;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
- // background-color: $color-green-dark;
+  filter: brightness(80%);
+  .h1-title {
+    font-weight: normal;
+  }
 }
 
+.events__layout {
+  margin: 2em auto !important;
+  padding: 2em;
+}
 .events__content {
-  box-shadow: 0 0 15px 0 darken($color: $grey, $amount: 10%);
-  margin: 4em;
+  margin: 2em 0;
   padding: 2em 0;
-  @include tablets {
-    width: 600px;
-    margin: 6em auto;
+  > .event__block {
+    p {
+      padding: 2em;
+      padding-bottom: 4em;
+      line-height: 30px;
+      @include computers {
+        width: 700px;
+        margin: 0 auto;
+      }
+    }
+    h2,
+    h3 {
+      text-align: left;
+      padding: 2em;
+      padding-bottom: 1em;
+      @include computers {
+        width: 900px;
+      }
+    }
+    a {
+      color: $color-green-regular;
+      &:hover {
+        color: $color-green-dark;
+      }
+    }
   }
-  @include computers {
-    width: 900px;
-    margin: 8em auto;
+  > .event__block:nth-of-type(odd) {
+    background: $color-green-dark;
+    color: $white;
+    span,
+    a:hover,
+    h2,
+    h3 {
+      color: $white;
+    }
   }
-  .h3-title {
-    padding: 0 2em;
-    padding-top: 1em;
-  }
-  p {
-    padding: 0 3em;
-    line-height: 30px;
-    color: black;
+  > .events__block:nth-of-type(even) {
+    background: $white;
   }
   img {
     object-fit: cover;
@@ -36,4 +65,11 @@
       height: 350px;
     }
   }
+}
+
+.inscriptions__content img {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
 }
