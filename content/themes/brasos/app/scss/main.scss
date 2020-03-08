@@ -4,6 +4,7 @@
 
  @import
   '~reset-css',
+  '~slick-carousel/slick/slick.css',
   '~uikit/dist/css/uikit';
 
 @import
@@ -14,13 +15,15 @@
    'components/accordion',
    'components/blog-cards',
    'components/buttons',
-   'components/carousel',
+   'components/carousel-home-brasos',
+   'components/carousel-home-header',
+   'components/carousel-institutional',
+   'components/carousel-slick',
    'components/form-modal',
    'components/form',
    'components/message',
    'components/navbar',
-   'components/not-found',
-   'components/slick-carousel';
+   'components/not-found';
 
 @import
    'layout/columns',
