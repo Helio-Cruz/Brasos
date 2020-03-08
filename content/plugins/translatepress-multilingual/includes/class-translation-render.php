@@ -320,10 +320,18 @@ class TRP_Translation_Render{
             $this->url_converter = $trp->get_component('url_converter');
         }
 
+
         /* make sure we only translate on the rest_prepare_$post_type filter in REST requests and not the whole json */
-        if( strpos( $this->url_converter->cur_page_url(), get_rest_url() ) !== false && strpos( current_filter(), 'rest_prepare_' ) !== 0){
-            $trpremoved = $this->remove_trp_html_tags( $output );
-	        return $trpremoved;
+
+        /* in certain cases $wp_rewrite is null, so it trows a fatal error. This is just a quick fix. The actual issue is probably in WordPress core
+         * see taskid #2pjped
+         */
+        global $wp_rewrite;
+        if( is_object($wp_rewrite) ) {
+            if( strpos( $this->url_converter->cur_page_url(), get_rest_url() ) !== false && strpos( current_filter(), 'rest_prepare_' ) !== 0){
+                $trpremoved = $this->remove_trp_html_tags( $output );
+                return $trpremoved;
+            }
         }
 
         global $TRP_LANGUAGE;
