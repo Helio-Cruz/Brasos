@@ -3,7 +3,7 @@
   <div class="carousel-images uk-position-relative uk-light" tabindex="-1" uk-slideshow="autoplay:true; autoplay-interval:4000; min-height:300; max-height:600">
     <ul class="uk-slideshow-items">
       <li>
-        <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
+        <div class="uk-position-cover uk-animation-kenburns ">
           <img src="<?= get_theme_mod('brasos_bg_slide_1'); ?>" alt="">
         </div>
         <div class="uk-position-bottom-right uk-position-medium uk-light">
@@ -13,7 +13,7 @@
         </div>
       </li>
       <li>
-        <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
+        <div class="uk-position-cover uk-animation-kenburns">
           <img src="<?= get_theme_mod('brasos_bg_slide_2'); ?>" alt="">
         </div>
         <div class="uk-position-bottom-right uk-position-medium uk-light">
@@ -23,7 +23,7 @@
         </div>
       </li>
       <li>
-        <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
+        <div class="uk-position-cover uk-animation-kenburns">
           <img src="<?= get_theme_mod('brasos_bg_slide_3'); ?>" alt="">
         </div>
         <div class="uk-position-bottom-right uk-position-medium uk-light">
