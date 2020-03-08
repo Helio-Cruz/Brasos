@@ -9,19 +9,7 @@ body {
   font-family: $body-font-regular;
 }
 
-a {
-  font-weight: bold;
-  color: $color-green-dark;
-  &:hover {
-    text-decoration: none;
-    color: $color-green-regular;
-  }
-}
-
-span {
-  color: $color-green-regular;
-  font-weight: bold;
-}
+ 
 
 h2 {
   font-style: italic;
