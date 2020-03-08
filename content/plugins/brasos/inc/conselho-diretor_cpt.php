@@ -1,4 +1,4 @@
-<?php
+<!-- < ?php
 
 /**
  * Post Type: conselho_diretor
@@ -53,4 +53,4 @@ class ConselhoDiretor_cpt {
   public function deactivation() {
     flush_rewrite_rules();
   }
-}
+} -->
