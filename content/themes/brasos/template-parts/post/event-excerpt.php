@@ -1,7 +1,7 @@
 <div>
   <h3 class="h3-title uk-text-center uk-center"><?php the_title(); ?></h3>
   <div class="uk-card uk-card-default articles-cards-events">
-    <a href="<?php the_permalink(); ?>">
+    <a href="<?php echo get_permalink($post['ID']) ?>">
       <img class="articles-cards-image-events" src="<?php the_post_thumbnail_url(); ?>" alt="">
     </a>
   </div>
