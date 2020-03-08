@@ -1,4 +1,4 @@
-
+import 'slick-carousel';
 import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
 import { gsap } from "gsap";
@@ -8,6 +8,12 @@ var app = {
     console.log('init');
     // loads the Icon plugin
     UIkit.use(Icons);
+
+    $(".slick-carousel").slick({
+      autoplay: true,
+      // dots: true,
+      arrows: false
+    });
 
     // $('.navbar-events > li').click(function () {
     //   $(this).addClass('uk-active').siblings().removeclass('uk-active');
