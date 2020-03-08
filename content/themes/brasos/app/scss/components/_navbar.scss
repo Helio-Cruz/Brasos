@@ -16,6 +16,7 @@
 @media (min-width: 1001px) {
   .uk-navbar-container .uk-visible {
     display: flex;
+    height: 100px;
   }
   .menu-mobile {
     display: none;
@@ -37,7 +38,7 @@
   font-style: italic;
   text-transform: none;
   color: $color-green-dark;
-  font-weight: 300;
+ 
 }
 
 /* flags */
@@ -63,14 +64,18 @@ img.trp-flag-image {
 .uk-navbar-dropdown-nav {
   display: flex;
   width: 100vw;
-  a {
+  li{
+      a {
     text-decoration: none;
     color: $color-green-dark;
     margin-right: 0.5em;
     font-size: $body;
     font-style: italic;
     font-weight: 300;
+    margin: 0 18px;
   }
+}
+
 }
 
 .uk-navbar-dropdown-dropbar {
@@ -107,7 +112,11 @@ img.trp-flag-image {
   width: 300px;
   @include tablets {
     left: -450px;
-    width: 450px;
+    width: 550px;
+  }
+  @include computers {
+    
+    width: 650px;
   }
   a {
     font-weight: normal;
@@ -175,7 +184,10 @@ img.trp-flag-image {
   border-bottom: 30px solid $color-green-regular;
   border-right: 300px solid transparent;
   @include tablets {
-    border-right: 450px solid transparent;
+    border-right: 560px solid transparent;
+  }
+  @include computers{
+    border-right: 645px solid transparent;
   }
 }
 
@@ -198,8 +210,4 @@ img.trp-flag-image {
       color: $color-green-dark !important;
     }
   }
-}
-
-.uk-switcher>*>:last-child {
-  margin-bottom: 2em;
 }

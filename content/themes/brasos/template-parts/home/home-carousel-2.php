@@ -1,6 +1,6 @@
 <!-- CAROUSEL -->
 <div class="carousel-small uk-light uk-position-relative" tabindex="-1"
-     uk-slideshow="animation:fade; autoplay:true; autoplay-interval:4000; min-height:120; max-height:120">
+     uk-slideshow=" autoplay:true; autoplay-interval:4000; min-height:120; max-height:120">
     <ul class="uk-slideshow-items">
       <li>
       <div class="uk-position-center uk-position-small uk-text-center uk-light">
