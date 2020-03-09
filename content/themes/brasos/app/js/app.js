@@ -9,11 +9,11 @@ var app = {
     // loads the Icon plugin
     UIkit.use(Icons);
 
-    $(".slick-carousel").slick({
-      autoplay: true,
-      // dots: true,
-      arrows: false
-    });
+    // $(".slick-carousel").slick({
+    //   autoplay: true,
+    //   // dots: true,
+    //   arrows: false
+    // });
 
     $(".slick-carousel-small").slick({
       autoplay: true,
