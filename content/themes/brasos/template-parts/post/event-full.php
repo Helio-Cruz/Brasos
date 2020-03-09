@@ -8,10 +8,11 @@
 
     $args = [
       'post_type' => 'evento',
+      // 'category__in' => 1, // category 1 = parent "evento"
       // 'child_of'                 => $post->ID,
       // 'child_of' => get_the_category( $post->ID ),
       // 'post_parent'    => $post->ID,
-      'category_name'  => 'informacoes-data-local',
+      'category_name'  => 'informacoes-gerais-data-local',
       'posts_per_page' => -1,
       'post_status'    => 'publish',
       'order' => 'ASC'
