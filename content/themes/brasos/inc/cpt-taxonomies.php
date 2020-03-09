@@ -12,7 +12,6 @@ function conselhoDiretor_cpt() {
         "singular_name" => __("conselho_diretor", "custom-post-type-ui"),
         "menu_name" => __("Conselho-Diretor", "custom-post-type-ui"),
     ];
-
     $args = [
         "label" => __("conselho_diretor", "custom-post-type-ui"),
         "labels" => $labels,
@@ -36,7 +35,6 @@ function conselhoDiretor_cpt() {
 		"query_var" => true,
         "supports" => ["title", "editor", "thumbnail", "excerpt", "custom-fields"],
     ];
-
     register_post_type("conselho_diretor", $args);
 }
 
@@ -52,7 +50,6 @@ function eventos_cpt() {
 		"singular_name" => __( "evento", "custom-post-type-ui" ),
         "menu_name" => __("Eventos", "custom-post-type-ui"),
 	];
-
 	$args = [
 		"label" => __( "eventos", "custom-post-type-ui" ),
 		"labels" => $labels,
@@ -71,14 +68,18 @@ function eventos_cpt() {
 		"capability_type" => "post",
 		"map_meta_cap" => true,
 		"hierarchical" => true,
-		"rewrite" => [ "slug" => "evento", "with_front" => true ],
+		"rewrite" => [ 
+            "slug" => "evento", 
+            "with_front" => true,
+            'hierarchical' => true
+        ],
 		"query_var" => true,
 		"menu_icon" => "dashicons-megaphone",
 		"supports" => [ "title", "editor", "thumbnail", "revisions" ],
 		"taxonomies" => [ "category" ],
 	];
-
-	register_post_type( "evento", $args );
+    register_post_type( "evento", $args );
+    
 }
 
 add_action('init', 'conselhoDiretor_cpt');

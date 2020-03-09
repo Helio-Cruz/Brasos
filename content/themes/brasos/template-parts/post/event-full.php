@@ -3,11 +3,13 @@
   <!-- INFORMAÇOES BASICAS -->
   <li>
 
-    <?php 
-    global $post;
+
+
+    <?php
 
     $args = [
       'post_type' => 'evento',
+      // 'parent' => 0,
       // 'category__in' => 1, // category 1 = parent "evento"
       // 'child_of'                 => $post->ID,
       // 'child_of' => get_the_category( $post->ID ),
@@ -20,7 +22,7 @@
     $wp_query = new WP_Query($args);
     if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
     ?>
-
+        <!-- < ?php print_r(get_the_category( $post->ID ));?> -->
         <div class="blog__content events__layout">
           <h2 class="h2-title uk-text-center"><?php the_title(); ?></h2>
           <div class="blog__content-infos">
