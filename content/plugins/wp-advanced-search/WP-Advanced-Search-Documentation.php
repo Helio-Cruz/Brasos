@@ -1,4 +1,6 @@
 <?php
+if(!defined('ABSPATH')) exit; // Exclu en cas d'accès direct par l'URL du fichier
+
 // Fonction d'affichage de la page d'aide et de réglages de l'extension
 function WP_Advanced_Search_Callback_Documentation() {
 
