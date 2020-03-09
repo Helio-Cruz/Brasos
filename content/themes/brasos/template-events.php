@@ -14,7 +14,8 @@ Template Name: Eventos
 
     $args = [
       'post_type' => 'evento',
-      'category__in' => array(31,19,21), // category 1 = parent "evento"
+      'parent' => 0,
+      'category__in' => '31,19,21', // category 1 = parent "evento"
       'posts_per_page' => -1,
       'order' => 'DESC'
     ];
