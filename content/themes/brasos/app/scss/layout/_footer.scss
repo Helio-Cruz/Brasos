@@ -3,6 +3,7 @@
   text-align: center;
   color: $white;
   margin: auto;
+  width: 100vw;
   &__title {
     position: relative;
     font-size: 26px;
@@ -51,9 +52,12 @@
   }
 
   &__contact {
+    position: relative;
     font-size: $body;
     font-weight: 300;
     font-style: italic;
+    top: 25px;
+   
   }
 
   &__logo img {
@@ -67,5 +71,5 @@
   color: $color-green-dark;
   text-align: center;
   padding: 0.5em;
- align-items: center;
+  align-items: center;
 }

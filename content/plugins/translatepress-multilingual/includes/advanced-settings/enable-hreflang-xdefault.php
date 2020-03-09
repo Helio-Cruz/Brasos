@@ -1,5 +1,5 @@
 <?php
-add_filter( 'trp_register_advanced_settings', 'trp_register_enable_hreflang_xdefault', 90 );
+add_filter( 'trp_register_advanced_settings', 'trp_register_enable_hreflang_xdefault', 1100 );
 function trp_register_enable_hreflang_xdefault( $settings_array ){
     $settings_array[] = array(
         'name'          => 'enable_hreflang_xdefault',
