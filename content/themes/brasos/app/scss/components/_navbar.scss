@@ -115,7 +115,6 @@ img.trp-flag-image {
     width: 550px;
   }
   @include computers {
-    
     width: 650px;
   }
   a {
@@ -166,9 +165,9 @@ img.trp-flag-image {
   position: relative;
   li {
     width: 50%;
-    @include tablets {
-      width: 33%;
-    }
+    // @include tablets {
+    //   width: 33%;
+    // }
   }
   a {
     color: $white;

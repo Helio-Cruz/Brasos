@@ -15,6 +15,12 @@ var app = {
       arrows: false
     });
 
+    $(".slick-carousel-small").slick({
+      autoplay: true,
+      // dots: true,
+      arrows: false
+    });
+
     // $('.navbar-events > li').click(function () {
     //   $(this).addClass('uk-active').siblings().removeclass('uk-active');
     //   console.log(this);
