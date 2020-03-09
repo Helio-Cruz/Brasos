@@ -16,7 +16,7 @@
 //     height: 100%;
 //     width: 100vw;
 //     filter: brightness(50%);
- 
+
 //   }
 //   .h1-title {
 //     text-align: right;
@@ -32,23 +32,27 @@
 // CAROUSEL HEADER - SMALL TEXT
 .carousel-small {
   background: $color-green-dark;
-  color: $white;
+  // color: $white;
   height: 150px;
   max-width: 80%;
   margin: auto;
   position: relative;
-  bottom: 60px;
+  bottom: 75px;
   @include TwoK {
     max-width: 60%;
-    
   }
-  p {
-    position: relative;
+  .uk-slideshow-items {
+    position: absolute;
     line-height: 1.1em;
-    font-size: 22px;
-    text-align: center;
     font-style: italic;
     font-weight: 300;
-    top: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    font-size: 14px;
+    @include computers {
+      font-size: 20px;
+    }
   }
 }
