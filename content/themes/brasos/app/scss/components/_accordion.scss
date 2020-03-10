@@ -32,22 +32,63 @@
       width: 300px;
     }
   }
-  .h4-title+.h4-title {
+  .h4-title + .h4-title {
     padding-top: 1.5em;
   }
-  .h4-title > span {
+  h4 {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .h4-title > span,
+  h4 > strong {
     color: $color-green-dark;
   }
-  p > span {
+  figure {
+    margin: 0 auto;
+    @include computers {
+      margin: 3em 0;
+    }
+  }
+  p > span,
+  p > strong {
     color: $color-green-regular;
   }
-  // .uk-accordion-title::before {
-  //   color: $color-green-dark;
-  //   background-image: url("../../images/icons/chevron-down.svg");
-  // }
-  // .uk-open {
-  //   .uk-accordion-title::before {
-  //     background-image: url("../../images/icons/chevron-up.svg");
-  //   }
-  // }
+  strong {
+    font-weight: 300;
+  }
+  em {
+    font-style: italic;
+    color: inherit;
+  }
+  .uk-accordion-title::before {
+    //   color: $color-green-dark;
+    background-image: none;
+    border-style: solid;
+    border-width: 0.25em 0.25em 0 0;
+    content: "";
+    display: inline-block;
+    height: 0.45em;
+    left: -0.15em;
+    position: relative;
+    top: 0.45em;
+    transform: rotate(45deg);
+    vertical-align: middle;
+    width: 0.45em;
+  }
+  .uk-open {
+    .uk-accordion-title::before {
+      background-image: none;
+      border-style: solid;
+      border-width: 0.25em 0.25em 0 0;
+      content: "";
+      display: inline-block;
+      height: 0.45em;
+      left: -0.15em;
+      position: relative;
+      top: 0.23em;
+      transform: rotate(135deg);
+      vertical-align: middle;
+      width: 0.45em;
+    }
+  }
 }
