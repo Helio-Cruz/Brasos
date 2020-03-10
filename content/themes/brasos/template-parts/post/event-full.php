@@ -3,45 +3,50 @@
   <!-- INFORMAÇOES BASICAS -->
   <li>
 
-
-
     <?php
+    $current_page_id = get_the_ID();
 
     $args = [
       'post_type' => 'evento',
+      'post_parent' => $current_page_id,
+      // 'post_type' => 'page',
+      // 'category__in' => 1,
       // 'parent' => 0,
       // 'category__in' => 1, // category 1 = parent "evento"
-      // 'child_of'                 => $post->ID,
+      // 'child_of' => $post->ID,
       // 'child_of' => get_the_category( $post->ID ),
-      // 'post_parent'    => $post->ID,
-      'category_name'  => 'informacoes-gerais-data-local',
+      // 'post_parent' => $post->ID,
+      'category_name'  => 'data-local',
       'posts_per_page' => -1,
       'post_status'    => 'publish',
       'order' => 'ASC'
     ];
     $wp_query = new WP_Query($args);
+
     if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
     ?>
-        <!-- < ?php print_r(get_the_category( $post->ID ));?> -->
+        <!-- < ?php print_r('CATEGORY POST ID : ' . get_the_category( $post->ID ));?>
+        < ?php print_r('PAGE ID' . $current_page_id);?> -->
         <div class="blog__content events__layout">
           <h2 class="h2-title uk-text-center"><?php the_title(); ?></h2>
           <div class="blog__content-infos">
-            <img class="img-event" src="<?php the_post_thumbnail_url(); ?>" alt="">
+            <img class="img-event" src="< ?php the_post_thumbnail_url(); ?>" alt="">
             <div class="text-event"><?php the_content(); ?></div>
           </div>
         </div>
-
 
     <?php endwhile;
     endif;
     wp_reset_postdata();
     ?>
 
-    <!-- MENSAGEM PRESIDENTE -->
+    <!-- MENSAGEM PRESIDENTE  -->
     <?php
+
     $args = [
       'post_type' => 'evento',
-      'category_name'  => 'informacoes-mensagem',
+      'post_parent' => $current_page_id,
+      'category_name'  => 'mensagem',
       'posts_per_page' => -1,
       'post_status'    => 'publish',
       'order' => 'ASC'
@@ -49,7 +54,6 @@
     $wp_query = new WP_Query($args);
     if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
     ?>
-
 
         <div class="message">
           <h2 class="h2-title uk-text-center"><?php the_title(); ?></h2>
@@ -62,11 +66,13 @@
     ?>
 
     <div class="events__content">
-      <!-- COMMISAO + BRASOS -->
+      <!-- COMISSAO ORGANIZADORA -->
       <?php
+
       $args = [
         'post_type' => 'evento',
-        'category_name'  => 'informacoes-outros',
+        'post_parent' => $current_page_id,
+        'category_name'  => 'comissao-organizadora',
         'posts_per_page' => -1,
         'post_status'    => 'publish',
         'order' => 'ASC'
@@ -75,6 +81,31 @@
       if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
       ?>
 
+
+          <div class="event__block">
+            <h2 class="h2-title"><?php the_title(); ?></h2>
+            <div class="event__text"><?php the_content(); ?></div>
+          </div>
+
+      <?php endwhile;
+      endif;
+      wp_reset_postdata();
+      ?>
+
+      <!-- SOBRE O EVENTO -->
+      <?php
+
+      $args = [
+        'post_type' => 'evento',
+        'post_parent' => $current_page_id,
+        'category_name'  => 'sobre-o-evento',
+        'posts_per_page' => -1,
+        'post_status'    => 'publish',
+        'order' => 'ASC'
+      ];
+      $wp_query = new WP_Query($args);
+      if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
+      ?>
 
           <div class="event__block">
             <h2 class="h2-title"><?php the_title(); ?></h2>
@@ -95,8 +126,10 @@
       <ul uk-accordion>
 
         <?php
+
         $args = [
           'post_type' => 'evento',
+          'post_parent' => $current_page_id,
           'category_name'  => 'programacao',
           'posts_per_page' => -1,
           'post_status'    => 'publish',
@@ -123,13 +156,15 @@
 
   </li>
 
-  <!-- CERTIFICATES + PALESTRANTES -->
+  <!-- PALESTRANTES  -->
   <li>
 
     <?php
+
     $args = [
       'post_type' => 'evento',
-      'category_name'  => 'palestrantes',
+      'post_parent' => $current_page_id,
+      'category_name'  => 'palestrantes-convidados',
       // 'category_in' => '18', // category child "palestrantes"
       'posts_per_page' => -1,
       'post_status'    => 'publish',
@@ -152,10 +187,12 @@
     wp_reset_postdata();
     ?>
 
-
+    <!-- CERTIFICADOS -->
     <?php
+
     $args = [
       'post_type' => 'evento',
+      'post_parent' => $current_page_id,
       'category_name'  => 'certificados',
       'posts_per_page' => -1,
       'post_status'    => 'publish',
@@ -174,14 +211,16 @@
 
   </li>
 
-  <!-- INFORMAÇOES DE INSCRIÇAO -->
+  <!-- INFORMAÇOES DE INSCRIÇAO  -->
   <li>
     <div class="blog__content inscriptions__content">
 
       <?php
+
       $args = [
         'post_type' => 'evento',
-        'category_name'  => 'inscricoes-informacoes',
+        'post_parent' => $current_page_id,
+        'category_name'  => 'informacoes-de-pagamento',
         'posts_per_page' => -1,
         'post_status'    => 'publish',
         'order' => 'ASC'
@@ -197,11 +236,13 @@
       wp_reset_postdata();
       ?>
 
-      <!-- INFORMAÇOES DE CURSOS-->
+      <!-- INFORMAÇOES DE CURSOS -->
       <?php
+
       $args = [
         'post_type' => 'evento',
-        'category_name'  => 'inscricoes-cursos',
+        'post_parent' => $current_page_id,
+        'category_name'  => 'cursos-oferecidos',
         'posts_per_page' => -1,
         'post_status'    => 'publish',
         'order' => 'ASC'
@@ -218,13 +259,13 @@
       wp_reset_postdata();
       ?>
 
-
-
-      <!-- FORMULARIO DE INSCRIÇAO -->
+      <!-- FORMULARIO DE INSCRIÇAO  -->
       <?php
+
       $args = [
         'post_type' => 'evento',
-        'category_name'  => 'inscricoes-formulario',
+        'post_parent' => $current_page_id,
+        'category_name'  => 'formulario-de-inscricao',
         'posts_per_page' => -1,
         'post_status'    => 'publish',
         'order' => 'ASC'
