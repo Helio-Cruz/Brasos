@@ -11,13 +11,30 @@
 }
 
 .events__layout {
-  margin: 2em auto !important;
+  margin: 0 auto !important;
   padding: 2em;
+  background: $white;
 }
+
 .events__content {
-  margin: 2em 0;
-  padding: 2em 0;
-  > .event__block {
+  margin: 0;
+  padding: 0;
+  background: $color-green-dark;
+  color: $white;
+  a {
+    color: $color-green-regular;
+  }
+  span,
+  a:hover,
+  h2,
+  h3 {
+    color: $white;
+  }
+  .h2-title {
+    font-weight: 300;
+    color: $white;
+  }
+  .event__block {
     p {
       padding: 2em;
       padding-bottom: 4em;
@@ -36,25 +53,6 @@
         width: 900px;
       }
     }
-    a {
-      color: $color-green-regular;
-      &:hover {
-        color: $color-green-dark;
-      }
-    }
-  }
-  > .event__block:nth-of-type(odd) {
-    background: $color-green-dark;
-    color: $white;
-    span,
-    a:hover,
-    h2,
-    h3 {
-      color: $white;
-    }
-  }
-  > .events__block:nth-of-type(even) {
-    background: $white;
   }
   img {
     object-fit: cover;
@@ -64,6 +62,20 @@
     @include tablets {
       height: 350px;
     }
+  }
+}
+
+.events__content--white {
+  background: $white;
+  color: inherit;
+  span,
+  h2,
+  h3 {
+    color: inherit;
+  }
+  .h2-title {
+    font-weight: 300;
+    color: $color-green-dark;
   }
 }
 
