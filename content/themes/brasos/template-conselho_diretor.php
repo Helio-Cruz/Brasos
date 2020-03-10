@@ -6,9 +6,6 @@ Template Name: Conselho Diretor
 
 <?php get_header(); ?>
 
-
-
-
 <div class="board__content">
   <h2 class="h2-title">Conselho diretor</h2>
   <div class="board__cards">
@@ -31,11 +28,7 @@ Template Name: Conselho Diretor
     wp_reset_postdata();
     ?>
 
-
-
   </div>
 </div>
-
-
 
 <?php get_footer(); ?>
