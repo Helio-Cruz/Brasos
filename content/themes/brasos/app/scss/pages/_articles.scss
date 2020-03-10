@@ -25,8 +25,7 @@
     filter: brightness(60%);
   }
   a {
-    color: black;
-    text-decoration: none;
+    color: inherit;
   }
   .uk-grid {
     margin-left: 0;
@@ -68,6 +67,11 @@
   }
   .uk-card-body {
     padding: 1em;
+    p {
+      margin-top: 0;
+      text-align: justify;
+      padding: 0 0.5em;
+    }
   }
   .uk-card-media-top img {
     height: 160px;

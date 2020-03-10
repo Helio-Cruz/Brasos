@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   flex-flow: column nowrap;
+  filter: brightness(80%);
   .uk-card-title {
     color: $white;
     text-align: center;
@@ -59,7 +60,24 @@
   p {
     padding: 0 3em;
     line-height: 30px;
-    color: black;
+    letter-spacing: 2px;
+  }
+  ul {
+    padding: 0 6em;
+    list-style-type: none;
+  }
+  li {
+    padding: 0 1em;
+    line-height: 30px;
+  }
+  ul li:before {
+    content: '\2014';
+    position: absolute;
+    margin-left: -20px;
+  }
+  ol {
+    list-style-type: decimal;
+    padding: 0 5em;
   }
   img {
     object-fit: cover;

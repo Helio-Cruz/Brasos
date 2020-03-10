@@ -7,13 +7,13 @@ Template Name: Eventos
 <?php get_header(); ?>
 
 <div class="articles-cards">
-  <h2 class="h2-title"><?php the_title(); ?></h2>
+<h2 class="h2-title"><?php the_title(); ?></h2>
   <div class="uk-child-width-1-3@m" uk-grid>
 
     <?php
     $args = [
       'post_type' => 'evento',
-      'category__in' => 1,
+      'category__in' => 1, // category 1 = parent "evento"
       'posts_per_page' => -1,
       'order' => 'DESC'
     ];

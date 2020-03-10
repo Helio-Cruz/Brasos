@@ -2,17 +2,14 @@
 
   <!-- INFORMAÇOES BASICAS -->
   <li>
-
+    <!-- LOCAL E DATA -->
     <?php
     $current_page_id = get_the_ID();
 
     $args = [
       'post_type' => 'evento',
       'post_parent' => $current_page_id,
-      // 'post_type' => 'page',
-      // 'category__in' => 1,
       // 'parent' => 0,
-      // 'category__in' => 1, // category 1 = parent "evento"
       // 'child_of' => $post->ID,
       // 'child_of' => get_the_category( $post->ID ),
       // 'post_parent' => $post->ID,
@@ -30,7 +27,7 @@
         <div class="blog__content events__layout">
           <h2 class="h2-title uk-text-center"><?php the_title(); ?></h2>
           <div class="blog__content-infos">
-            <img class="img-event" src="< ?php the_post_thumbnail_url(); ?>" alt="">
+            <img class="img-event" src="<?php the_post_thumbnail_url(); ?>" alt="">
             <div class="text-event"><?php the_content(); ?></div>
           </div>
         </div>
@@ -65,58 +62,59 @@
     wp_reset_postdata();
     ?>
 
-    <div class="events__content">
-      <!-- COMISSAO ORGANIZADORA -->
-      <?php
+    <!-- COMISSAO ORGANIZADORA -->
+    <?php
 
-      $args = [
-        'post_type' => 'evento',
-        'post_parent' => $current_page_id,
-        'category_name'  => 'comissao-organizadora',
-        'posts_per_page' => -1,
-        'post_status'    => 'publish',
-        'order' => 'ASC'
-      ];
-      $wp_query = new WP_Query($args);
-      if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
-      ?>
+    $args = [
+      'post_type' => 'evento',
+      'post_parent' => $current_page_id,
+      'category_name'  => 'comissao-organizadora',
+      'posts_per_page' => -1,
+      'post_status'    => 'publish',
+      'order' => 'ASC'
+    ];
+    $wp_query = new WP_Query($args);
+    if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
+    ?>
 
-
+        <div class="events__content">
           <div class="event__block">
             <h2 class="h2-title"><?php the_title(); ?></h2>
             <div class="event__text"><?php the_content(); ?></div>
           </div>
+        </div>
 
-      <?php endwhile;
-      endif;
-      wp_reset_postdata();
-      ?>
+    <?php endwhile;
+    endif;
+    wp_reset_postdata();
+    ?>
 
-      <!-- SOBRE O EVENTO -->
-      <?php
+    <!-- SOBRE O EVENTO -->
+    <?php
 
-      $args = [
-        'post_type' => 'evento',
-        'post_parent' => $current_page_id,
-        'category_name'  => 'sobre-o-evento',
-        'posts_per_page' => -1,
-        'post_status'    => 'publish',
-        'order' => 'ASC'
-      ];
-      $wp_query = new WP_Query($args);
-      if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
-      ?>
+    $args = [
+      'post_type' => 'evento',
+      'post_parent' => $current_page_id,
+      'category_name'  => 'sobre-o-evento',
+      'posts_per_page' => -1,
+      'post_status'    => 'publish',
+      'order' => 'ASC'
+    ];
+    $wp_query = new WP_Query($args);
+    if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
+    ?>
 
+        <div class="events__content events__content--white">
           <div class="event__block">
             <h2 class="h2-title"><?php the_title(); ?></h2>
             <div class="event__text"><?php the_content(); ?></div>
           </div>
+        </div>
 
-      <?php endwhile;
-      endif;
-      wp_reset_postdata();
-      ?>
-    </div>
+    <?php endwhile;
+    endif;
+    wp_reset_postdata();
+    ?>
   </li>
 
   <!-- ACCORDION PROGRAMACAO -->
