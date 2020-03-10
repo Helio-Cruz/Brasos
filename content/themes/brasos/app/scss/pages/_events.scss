@@ -11,9 +11,20 @@
 }
 
 .events__layout {
-  margin: 0 auto !important;
+  margin: 0 auto 2em !important;
   padding: 2em;
   background: $white;
+  p {
+    letter-spacing: unset;
+  }
+  a {
+    font-weight: bold;
+    color: $color-green-regular;
+    &:hover {
+      color: $color-green-dark;
+      font-weight: bold;
+    }
+  }
 }
 
 .events__content {
@@ -21,37 +32,46 @@
   padding: 0;
   background: $color-green-dark;
   color: $white;
-  a {
-    color: $color-green-regular;
-  }
-  span,
-  a:hover,
-  h2,
-  h3 {
-    color: $white;
-  }
-  .h2-title {
-    font-weight: 300;
-    color: $white;
-  }
   .event__block {
-    p {
-      padding: 2em;
-      padding-bottom: 4em;
+    padding: 2em 2em 4em;
+    p,
+    h2,
+    h3,
+    h4 {
+      text-align: justify;
+      padding-top: 2em;
       line-height: 30px;
       @include computers {
-        width: 700px;
+        width: 850px;
         margin: 0 auto;
       }
     }
     h2,
-    h3 {
+    h3,
+    h4 {
       text-align: left;
-      padding: 2em;
-      padding-bottom: 1em;
-      @include computers {
-        width: 900px;
-      }
+    }
+    a {
+      font-weight: bold;
+      color: $color-green-regular;
+    }
+    span,
+    strong,
+    a:hover,
+    h2,
+    h3,
+    h4 {
+      font-weight: 300;
+      color: $white;
+    }
+    a:hover, strong {
+      font-weight: bold;
+    }
+    .h2-title {
+      font-weight: 300;
+      color: $white;
+      margin: 0 auto;
+      text-align: center;
     }
   }
   img {
@@ -63,19 +83,24 @@
       height: 350px;
     }
   }
-}
-
-.events__content--white {
-  background: $white;
-  color: inherit;
-  span,
-  h2,
-  h3 {
+  &:nth-of-type(even) {
+    background: $white;
     color: inherit;
-  }
-  .h2-title {
-    font-weight: 300;
-    color: $color-green-dark;
+    .event__block {
+      span,
+      a:hover,
+      h2,
+      h3,
+      h4 {
+        color: $color-green-dark;
+      }
+      .h2-title {
+        color: $color-green-dark;
+      }
+      strong {
+        color: inherit;
+      }
+    }
   }
 }
 

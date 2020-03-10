@@ -62,13 +62,13 @@
     wp_reset_postdata();
     ?>
 
-    <!-- COMISSAO ORGANIZADORA -->
+    <!-- COMISSAO ORGANIZADORA + SOBRE O EVENTO-->
     <?php
 
     $args = [
       'post_type' => 'evento',
       'post_parent' => $current_page_id,
-      'category_name'  => 'comissao-organizadora',
+      'category_name'  => 'comissao-organizadora, sobre-o-evento',
       'posts_per_page' => -1,
       'post_status'    => 'publish',
       'order' => 'ASC'
@@ -88,39 +88,12 @@
     endif;
     wp_reset_postdata();
     ?>
-
-    <!-- SOBRE O EVENTO -->
-    <?php
-
-    $args = [
-      'post_type' => 'evento',
-      'post_parent' => $current_page_id,
-      'category_name'  => 'sobre-o-evento',
-      'posts_per_page' => -1,
-      'post_status'    => 'publish',
-      'order' => 'ASC'
-    ];
-    $wp_query = new WP_Query($args);
-    if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
-    ?>
-
-        <div class="events__content events__content--white">
-          <div class="event__block">
-            <h2 class="h2-title"><?php the_title(); ?></h2>
-            <div class="event__text"><?php the_content(); ?></div>
-          </div>
-        </div>
-
-    <?php endwhile;
-    endif;
-    wp_reset_postdata();
-    ?>
   </li>
 
   <!-- ACCORDION PROGRAMACAO -->
   <li>
     <div class="accordion__content events__layout">
-      <h2 class="h2-title">Programação</h2>
+      <!-- <h2 class="h2-title">Programação</h2> -->
       <ul uk-accordion>
 
         <?php
@@ -150,6 +123,7 @@
         endif;
         wp_reset_postdata();
         ?>
+        </ul>
     </div>
 
   </li>
