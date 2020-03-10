@@ -104,13 +104,12 @@
 }
 
 /* page contact form error */
-div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
   border: none;
-   color: red;
+  color: red;
 }
 
 span.wpcf7-not-valid-tip {
   font-size: 0.8em;
-   
- 
 }
