@@ -56,7 +56,7 @@
       justify-content: flex-end;
       flex-flow: column nowrap;
       color: $white;
-      opacity: 0;
+   
       @include tablets {
         height: 230px;
       }
