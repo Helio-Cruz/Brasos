@@ -77,8 +77,8 @@
     if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
     ?>
 
-        <div class="events__content">
-          <div class="event__block">
+        <div class="events__content" uk-scrollspy="cls: uk-animation-slide-bottom; target: .box; delay: 300; repeat: false">
+          <div class="event__block box">
             <h2 class="h2-title"><?php the_title(); ?></h2>
             <div class="event__text"><?php the_content(); ?></div>
           </div>
@@ -111,7 +111,7 @@
         ?>
 
             <li>
-              <a class="uk-accordion-title uk-accordion-title-xs" href="#">
+              <a class="uk-accordion-title href="#">
                 <h3 class="h3-title"><?php the_title(); ?></h3>
               </a>
               <div class="uk-accordion-content">
@@ -145,10 +145,10 @@
     $wp_query = new WP_Query($args);
     if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
     ?>
-        <div class="columns__list-names">
+        <div class="columns__list-names" uk-scrollspy="cls: uk-animation-fade; target: .box; delay: 500; repeat: true">
           <div class="columns__background">
             <h2 class="h2-title"><?php the_title(); ?></h2>
-            <div class="uk-column-1-1 uk-column-1-3@m">
+            <div class="uk-column-1-1 uk-column-1-3@m box">
               <?php the_content(); ?>
             </div>
           </div>
@@ -212,7 +212,7 @@
 
     <!-- INFORMAÇOES DE CURSOS -->
     <div class="congress__content events__cards">
-      <div uk-flex uk-flex-center uk-grid>
+      <div uk-flex uk-flex-center uk-grid uk-scrollspy="cls: uk-animation-fade; target: .box; delay: 500; repeat: false">
         <?php
 
         $args = [
@@ -228,7 +228,7 @@
         ?>
 
 
-            <div class="uk-card uk-card-default">
+            <div class="uk-card uk-card-default box">
               <div class="uk-card-header">
                 <h3 class="uk-card-title h3-title">
                   <?php the_title(); ?>
