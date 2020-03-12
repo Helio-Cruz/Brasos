@@ -8,9 +8,9 @@ function conselhoDiretor_cpt() {
      */
 
     $labels = [
-        "name" => __("conselho_diretor", "custom-post-type-ui"),
-        "singular_name" => __("conselho_diretor", "custom-post-type-ui"),
-        "menu_name" => __("Conselho-Diretor", "custom-post-type-ui"),
+        "name" => __("Conselho Diretor", "custom-post-type-ui"),
+        "singular_name" => __("Conselho Diretor", "custom-post-type-ui"),
+        "menu_name" => __("Conselho Diretor", "custom-post-type-ui"),
     ];
     $args = [
         "label" => __("conselho_diretor", "custom-post-type-ui"),
@@ -46,8 +46,8 @@ function eventos_cpt() {
 	 */
 
 	$labels = [
-		"name" => __( "eventos", "custom-post-type-ui" ),
-		"singular_name" => __( "evento", "custom-post-type-ui" ),
+		"name" => __( "Eventos", "custom-post-type-ui" ),
+		"singular_name" => __( "Evento", "custom-post-type-ui" ),
         "menu_name" => __("Eventos", "custom-post-type-ui"),
 	];
 	$args = [

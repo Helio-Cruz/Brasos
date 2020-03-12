@@ -43,12 +43,6 @@
   h4 > strong {
     color: $color-green-dark;
   }
-  figure {
-    margin: 0 auto;
-    @include computers {
-      margin: 3em 0;
-    }
-  }
   p > span,
   p > strong {
     color: $color-green-regular;
