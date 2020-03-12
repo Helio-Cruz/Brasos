@@ -123,7 +123,7 @@
         endif;
         wp_reset_postdata();
         ?>
-        </ul>
+      </ul>
     </div>
 
   </li>
@@ -185,88 +185,104 @@
 
   <!-- INFORMAÇOES DE INSCRIÇAO  -->
   <li>
-    <div class="blog__content inscriptions__content">
 
-      <?php
+    <?php
 
-      $args = [
-        'post_type' => 'evento',
-        'post_parent' => $current_page_id,
-        'category_name'  => 'informacoes-de-pagamento',
-        'posts_per_page' => -1,
-        'post_status'    => 'publish',
-        'order' => 'ASC'
-      ];
-      $wp_query = new WP_Query($args);
-      if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
-      ?>
+    $args = [
+      'post_type' => 'evento',
+      'post_parent' => $current_page_id,
+      'category_name'  => 'informacoes-de-pagamento',
+      'posts_per_page' => -1,
+      'post_status'    => 'publish',
+      'order' => 'ASC'
+    ];
+    $wp_query = new WP_Query($args);
+    if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
+    ?>
+
+        <div class="blog__content inscriptions__content">
+          <h2 class="h2-title"><?php the_title(); ?></h2>
+          <?php the_content(); ?>
+        </div>
+
+    <?php endwhile;
+    endif;
+    wp_reset_postdata();
+    ?>
+
+    <!-- INFORMAÇOES DE CURSOS -->
+    <div class="congress__content events__cards">
+      <div uk-flex uk-flex-center uk-grid>
+        <?php
+
+        $args = [
+          'post_type' => 'evento',
+          'post_parent' => $current_page_id,
+          'category_name'  => 'cursos-oferecidos',
+          'posts_per_page' => -1,
+          'post_status'    => 'publish',
+          'order' => 'ASC'
+        ];
+        $wp_query = new WP_Query($args);
+        if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
+        ?>
+
+
+            <div class="uk-card uk-card-default">
+              <div class="uk-card-header">
+                <h3 class="uk-card-title h3-title">
+                  <?php the_title(); ?>
+                </h3>
+              </div>
+              <div class="uk-card-body">
+                <?php the_content(); ?>
+              </div>
+            </div>
+
+        <?php endwhile;
+        endif;
+        wp_reset_postdata();
+        ?>
+      </div>
+
+    </div>
+    <!-- FORMULARIO DE INSCRIÇAO  -->
+    <?php
+
+    $args = [
+      'post_type' => 'evento',
+      'post_parent' => $current_page_id,
+      'category_name'  => 'formulario-de-inscricao',
+      'posts_per_page' => -1,
+      'post_status'    => 'publish',
+      'order' => 'ASC'
+    ];
+    $wp_query = new WP_Query($args);
+    if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
+    ?>
+        <div class="blog__content inscriptions__content">
           <h2 class="h2-title"><?php the_title(); ?></h2>
           <?php the_content(); ?>
 
-      <?php endwhile;
-      endif;
-      wp_reset_postdata();
-      ?>
+          <div class="uk-flex uk-height-small uk-margin uk-text-center">
+            <a class="uk-margin-auto uk-margin-auto-vertical normal-button special-button" href="#modal-form" uk-toggle><?php the_title(); ?></a>
+          </div>
+        </div>
 
-      <!-- INFORMAÇOES DE CURSOS -->
-      <?php
-
-      $args = [
-        'post_type' => 'evento',
-        'post_parent' => $current_page_id,
-        'category_name'  => 'cursos-oferecidos',
-        'posts_per_page' => -1,
-        'post_status'    => 'publish',
-        'order' => 'ASC'
-      ];
-      $wp_query = new WP_Query($args);
-      if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
-      ?>
-
-          <h3 class="h3-title"><?php the_title(); ?></h3>
-          <?php the_content(); ?>
-
-      <?php endwhile;
-      endif;
-      wp_reset_postdata();
-      ?>
-
-      <!-- FORMULARIO DE INSCRIÇAO  -->
-      <?php
-
-      $args = [
-        'post_type' => 'evento',
-        'post_parent' => $current_page_id,
-        'category_name'  => 'formulario-de-inscricao',
-        'posts_per_page' => -1,
-        'post_status'    => 'publish',
-        'order' => 'ASC'
-      ];
-      $wp_query = new WP_Query($args);
-      if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
-      ?>
-          <div class="inscriptions__content">
-            <?php the_content(); ?>
-
-            <div class="uk-flex uk-height-small uk-margin uk-text-center">
-              <a class="uk-margin-auto uk-margin-auto-vertical normal-button special-button" href="#modal-form" uk-toggle><?php the_title(); ?></a>
-            </div>
-
-            <div id="modal-form" class="uk-flex-top" uk-modal>
-              <div class="uk-modal-dialog uk-margin-auto-vertical contact-form contact-form-inscription">
-                <h2 class="h2-title">Inscrição</h2>
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-                <div class="contact-form-block">
-                  <?php echo do_shortcode('[contact-form-7 id="301" title="Inscrição"]'); ?>
-                </div>
-              </div>
+        <div id="modal-form" class="uk-flex-top" uk-modal>
+          <div class="uk-modal-dialog uk-margin-auto-vertical contact-form contact-form-inscription">
+            <h2 class="h2-title">Inscrição</h2>
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="contact-form-block">
+              <?php echo do_shortcode('[contact-form-7 id="301" title="Inscrição"]'); ?>
             </div>
           </div>
+        </div>
 
-      <?php endwhile;
-      endif;
-      wp_reset_postdata();
-      ?>
+    <?php endwhile;
+    endif;
+    wp_reset_postdata();
+    ?>
     </div>
   </li>
 </ul>
