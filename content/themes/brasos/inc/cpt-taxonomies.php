@@ -69,7 +69,7 @@ function eventos_cpt() {
 		"map_meta_cap" => true,
 		"hierarchical" => true,
 		"rewrite" => [ 
-            "slug" => "evento", 
+            "slug" => "eventos", 
             "with_front" => true,
             'hierarchical' => true
         ],

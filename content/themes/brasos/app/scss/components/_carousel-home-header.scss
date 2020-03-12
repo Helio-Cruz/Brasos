@@ -21,18 +21,18 @@
     color: $white;
     text-align: center;
     font-size: 15px;
-    margin: 70px auto;
+    margin: 100px auto;
     @include tablets {
       text-align: right;
       font-size: 20px;
-      margin: 70px 150px;
+      margin: 100px 150px;
     }
     @include large-screens {
       font-size: 25px;
-      margin: 70px 200px;
+      margin: 100px 200px;
     }
     @include TwoK {
-      margin: 70px 400px;
+      margin: 100px 400px;
     }
     span {
       font-size: 23px;

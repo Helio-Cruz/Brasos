@@ -3,7 +3,7 @@
   padding: 0.5em 0;
   width: 80%;
   @include tablets {
-    width: 500px;
+    width: 80%;
     margin-bottom: 6em;
   }
   @include computers {
@@ -22,7 +22,7 @@
   }
   .uk-card-media-top {
     overflow: hidden;
-    filter: brightness(60%);
+    filter: brightness(80%);
   }
   a {
     color: inherit;
@@ -39,12 +39,19 @@
     padding-left: 0;
   }
   .uk-child-width-1-1 {
+    margin-bottom: 30px;
+    @include tablets {
+      margin-bottom: 15px;
+    }
+    a {
+      color: $white;
+    }
     .uk-card {
       background-size: 100%;
       background-repeat: no-repeat;
       background-position: center;
       overflow: hidden;
-      filter: brightness(60%);
+      filter: brightness(80%);
       &:hover {
         background-size: 120%;
         transition: 0.5s;
@@ -55,14 +62,15 @@
       align-items: flex-start;
       justify-content: flex-end;
       flex-flow: column nowrap;
-      color: $white;
-   
+      height: 160px;
       @include tablets {
         height: 230px;
       }
       .uk-card-title {
-        color: $white;
         margin: 0;
+      }
+      p {
+        color: $white;
       }
     }
   }
