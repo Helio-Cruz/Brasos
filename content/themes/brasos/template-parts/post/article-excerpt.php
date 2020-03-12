@@ -7,7 +7,8 @@
              <div class="uk-card-body">
                  <h3 class="uk-card-title h3-title"><?php the_title(); ?></h3>
                  <p>
-                     <?php the_excerpt(); ?>
+                    
+                     <?php  echo substr(get_the_excerpt(), 0,155).'...'; ?>
                  </p>
              </div>
          </a>

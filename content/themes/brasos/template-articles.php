@@ -27,7 +27,7 @@ Template Name: Artigos
             <a href="<?php echo get_permalink($post['ID']) ?>">
               <div class="uk-card-body">
                 <h3 class="uk-card-title h3-title"><?php echo $post['post_title'] ?></h3>
-                <p><?php echo $excerpt = wp_trim_excerpt($post['post_content,   ']);  ?></p> <?php //echo substr(get_the_excerpt(), 0,65).'...'; 
+                <p><?php echo $excerpt = wp_trim_excerpt($post['post_content,   ']);  ?></p> <?php// echo substr(get_the_excerpt(), 0,65).'...'; 
                                                                                               ?>
               </div>
             </a>
@@ -54,7 +54,7 @@ Template Name: Artigos
 
         </div>
     <?php endwhile;
-    endif;  ?>
+    endif;  wp_reset_query();  ?>
   </div>
 </div>
 
