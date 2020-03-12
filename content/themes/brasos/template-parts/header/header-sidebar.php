@@ -16,9 +16,9 @@
           echo $menu;
           ?>
         </div>
-        <li><a href="<?php echo home_url(); ?>">Home</a></li>
-        <li><a href="<?php echo home_url('/aboutBrasos/'); ?>">Institucional</a></li>
-        <li><a href="<?php echo home_url('/eventos/'); ?>">Eventos</a></li>
+        <!-- <li><a href="< ?php echo home_url(); ?>">Home</a></li>
+        <li><a href="< ?php echo home_url('/institucional/'); ?>">Institucional</a></li>
+        <li><a href="< ?php echo home_url('/eventos/'); ?>">Eventos</a></li> -->
         <!-- <li class="uk-parent">
          <a href="">Institucional</a>
          <ul class="uk-nav-sub uk-navbar-dropdown-nav">
@@ -51,7 +51,8 @@
             ?> -->
             <?php
         $menu = wp_nav_menu([
-          'menu' => 'menu-header',
+          // 'menu' => 'menu-header',
+          'menu' => 'menu-mobile',
           'container' => false,
           'items_wrap' => '%3$s',
           'echo' => true

@@ -53,6 +53,27 @@
 // }
 
 // CAROUSEL HEADER - SMALL TEXT
+.slick-carousel-small__title {
+  position: absolute;
+  background: $color-green-dark;
+  color: $white;
+  height: 50px;
+  font-weight: bold;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 165px;
+  z-index: 10;
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include computers {
+    max-width: 60%;
+    bottom: 140px;
+  }
+}
+
 .slick-carousel-small {
   background: $color-green-dark;
   color: $white;
@@ -60,7 +81,7 @@
   margin: auto;
   bottom: 75px;
   max-width: 80%;
-  @include TwoK {
+  @include computers {
     max-width: 60%;
   }
   .slick-slide {
@@ -87,7 +108,7 @@
       font-weight: 300;
       font-size: 14px;
       @include computers {
-        font-size: 20px;
+        font-size: 18px;
       }
     }
   }

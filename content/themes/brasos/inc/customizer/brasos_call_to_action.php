@@ -23,7 +23,7 @@ function brasos_call_to_action($wp_customize) {
 
 
         'type' =>'checkbox',
-        'section' => 'eglise_call_to_action',
+        'section' => 'brasos_call_to_action',
         'label' => 'Activer l\'affichage du main',
         'description' => 'Ativar ou desativar a seçao main'
 
