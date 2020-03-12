@@ -40,7 +40,6 @@
         width: 600px;
       }
     }
-
     &-image {
       position: relative;
       img {
@@ -60,9 +59,18 @@
     &-title {
       margin: 0;
       position: absolute;
-      bottom: 10px;
+      bottom: 50px;
       left: 10px;
       font-size: $subheading;
+      font-weight: 300;
+      color: $white;
+    }
+    &-text {
+      margin: 0;
+      position: absolute;
+      bottom: 20px;
+      left: 10px;
+      font-size: $body;
       font-weight: 300;
       color: $white;
     }

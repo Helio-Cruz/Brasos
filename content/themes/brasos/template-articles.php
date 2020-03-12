@@ -28,7 +28,7 @@ Template Name: Artigos
               <div class="uk-card-body">
                 <h3 class="uk-card-title h3-title"><?php echo $post['post_title'] ?></h3>
                 <!-- <p><//?php //echo substr(get_the_excerpt(), 0,65).'...'; ?></p> -->
-                <p><?php echo $excerpt = wp_trim_excerpt($post['post_content,   ']);  ?></p> 
+                <p><?php echo $excerpt = wp_trim_excerpt($post['post_content,   ']);  ?></p>
               </div>
             </a>
           </div>
@@ -54,7 +54,8 @@ Template Name: Artigos
 
         </div>
     <?php endwhile;
-    endif;  wp_reset_query();  ?>
+    endif;
+    wp_reset_query();  ?>
   </div>
 </div>
 

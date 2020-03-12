@@ -19,7 +19,7 @@ function brasos_customize_register($wp_customize) {
     //SECTION HEADER
     $wp_customize->add_section('brasos_header', [
         'title' => 'Carossel',
-        'panel' => 'oagency_theme_panel'
+        'panel' => 'brasos_theme_panel'
     ]);
 
     //SECTION POSTS

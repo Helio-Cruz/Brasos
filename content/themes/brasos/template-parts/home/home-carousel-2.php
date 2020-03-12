@@ -105,6 +105,9 @@
 
 
  <!-- CAROUSEL -->
+
+
+ <div class="slick-carousel-small__title">Brasit 2020 - Temática Preliminar</div>
  <div class="slick-carousel-small">
     <div>
       <p>Cursos pré-simpósio de Injeções intra-articulares guiadas por Ultrassonografia em
