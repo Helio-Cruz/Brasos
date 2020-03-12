@@ -13,11 +13,9 @@ if (!defined('WPINC')) {die();}
 
 
 require plugin_dir_path(__FILE__) . 'inc/dashboard.php';
-//require plugin_dir_path(__FILE__) . 'inc/brasos.php';
+// require plugin_dir_path(__FILE__) . 'inc/event_cpt.php';
 
-//blog_cpt = new Brasos_cpt();
+// $event_cpt = new Event_cpt();
 
-// A l'activation du plugin... fait ca !
-//register_activation_hook(__FILE__, [$blog_cpt, 'activate']);
-// A la désactivation du plugin... fait ca (mais autre chose) !!
-//register_deactivation_hook(__FILE__, [$blog_cpt, 'deactivate']);
+// register_activation_hook(__FILE__, [$event_cpt, 'activation']);
+// register_deactivation_hook(__FILE__, [$event_cpt, 'deactivation']);
