@@ -1,24 +1,3 @@
-.blog__cover .uk-card {
-  height: 300px;
-  background-size: 100%;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  flex-flow: column nowrap;
-  filter: brightness(80%);
-  .uk-card-title {
-    color: $white;
-    text-align: center;
-    font-weight: bold;
-    font-size: 30px;
-    font-style: italic;
-    text-transform: uppercase;
-    @include tablets {
-      font-size: 50px;
-    }
-  }
-}
-
 .blog__content {
   box-shadow: 0 0 15px 0 darken($color: $grey, $amount: 10%);
   width: 100%;
