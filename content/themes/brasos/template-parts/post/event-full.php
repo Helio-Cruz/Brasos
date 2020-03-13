@@ -79,7 +79,7 @@
 
         <div class="events__comissao" uk-scrollspy="cls: uk-animation-fade; target: .box; delay: 500; repeat: false">
           <h2 class="h2-title"><?php the_title(); ?></h2>
-          <div class="events__comissao__text box uk-text-center uk-text-left@m">
+          <div class="events__comissao__text box uk-text-center">
             <?php the_content(); ?>
           </div>
         </div>
