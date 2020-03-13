@@ -6,8 +6,14 @@
   }
   .uk-column-1-1 {
     margin: 0 auto;
-    width: 100%;
+    width: 80%;
     margin-bottom: 1em;
+    @include tablets {
+      width: 100%;
+    }
+  }
+  .uk-column-1-2 {
+    width: 100%;
   }
   .wpcf7-text,
   .wpcf7-list-item,
@@ -18,6 +24,10 @@
     color: $color-green-regular;
     text-align: center;
     padding: 0.5em 0;
+    width: 98%;
+    @include tablets {
+      width: 100%;
+    }
   }
   .contact-form__fields {
     font-size: $body;

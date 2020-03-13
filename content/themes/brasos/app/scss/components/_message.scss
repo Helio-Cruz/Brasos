@@ -31,9 +31,12 @@
     }
   }
   &__content {
-    padding: 5.5em 4em 4em;
+    padding: 7em 1em 2em;
     line-height: 1.5em;
     text-align: justify;
+    @include tablets {
+      padding: 5.5em 4em 4em;
+    }
   }
   a {
     color: $color-green-regular;
