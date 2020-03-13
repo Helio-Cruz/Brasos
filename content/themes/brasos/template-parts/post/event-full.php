@@ -62,13 +62,40 @@
     wp_reset_postdata();
     ?>
 
-    <!-- COMISSAO ORGANIZADORA + SOBRE O EVENTO-->
+    <!-- COMISSAO ORGANIZADORA -->
     <?php
 
     $args = [
       'post_type' => 'evento',
       'post_parent' => $current_page_id,
-      'category_name'  => 'comissao-organizadora, sobre-o-evento',
+      'category_name'  => 'comissao-organizadora',
+      'posts_per_page' => -1,
+      'post_status'    => 'publish',
+      'order' => 'ASC'
+    ];
+    $wp_query = new WP_Query($args);
+    if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
+    ?>
+
+        <div class="events__comissao" uk-scrollspy="cls: uk-animation-fade; target: .box; delay: 500; repeat: false">
+          <h2 class="h2-title"><?php the_title(); ?></h2>
+          <div class="events__comissao__text box uk-text-center uk-text-left@m">
+            <?php the_content(); ?>
+          </div>
+        </div>
+
+    <?php endwhile;
+    endif;
+    wp_reset_postdata();
+    ?>
+
+    <!-- SOBRE O EVENTO -->
+    <?php
+
+    $args = [
+      'post_type' => 'evento',
+      'post_parent' => $current_page_id,
+      'category_name'  => 'sobre-o-evento',
       'posts_per_page' => -1,
       'post_status'    => 'publish',
       'order' => 'ASC'
@@ -88,6 +115,7 @@
     endif;
     wp_reset_postdata();
     ?>
+
   </li>
 
   <!-- ACCORDION PROGRAMACAO -->
@@ -111,7 +139,7 @@
         ?>
 
             <li>
-              <a class="uk-accordion-title href="#">
+              <a class="uk-accordion-title href=" #">
                 <h3 class="h3-title"><?php the_title(); ?></h3>
               </a>
               <div class="uk-accordion-content">
@@ -265,7 +293,7 @@
           <?php the_content(); ?>
 
           <div class="uk-flex uk-height-small uk-margin uk-text-center">
-            <a class="uk-margin-auto uk-margin-auto-vertical normal-button special-button" href="#modal-form" uk-toggle><?php the_title(); ?></a>
+            <a class="uk-margin-auto uk-margin-auto-vertical normal-button special-button margin-button" href="#modal-form" uk-toggle><?php the_title(); ?></a>
           </div>
         </div>
 

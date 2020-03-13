@@ -33,14 +33,17 @@
       width: 450px;
     }
   }
-  .h4-title + .h4-title {
-    padding-top: 1.5em;
+  // .h3-title + .h3-title {
+  //   padding-top: 1.5em;
+  // }
+  .h3-title {
+    font-size: $body-xl;
   }
   h4 {
     padding-top: 0;
     margin-top: 0;
   }
-  .h4-title > span,
+  // .h3-title > span,
   h4 > strong {
     color: $color-green-dark;
   }
@@ -84,6 +87,18 @@
       transform: rotate(135deg);
       vertical-align: middle;
       width: 0.45em;
+    }
+  }
+}
+
+// estatuto abeti
+.accordion--big {
+  .uk-accordion-title {
+    @include tablets {
+      width: 700px;
+    }
+    @include computers {
+      width: 750px;
     }
   }
 }
