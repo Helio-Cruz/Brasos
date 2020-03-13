@@ -69,23 +69,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em;
-  padding-top: 1.5em;
+  padding: 1.5em;
   @include computers {
-    max-width: 55%;
-    bottom: 140px;
+    max-width: 60%;
+    bottom: 130px;
   }
 }
 
 .slick-carousel-small {
   background: $color-green-dark;
   color: $white;
-  height: 150px;
+  height: 120px;
   margin: auto;
-  bottom: 75px;
+  bottom: 60px;
   max-width: 80%;
   @include computers {
-    max-width: 55%;
+    max-width: 60%;
   }
   .slick-slide {
     height: 100%;
