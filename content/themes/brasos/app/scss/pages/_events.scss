@@ -8,9 +8,13 @@
   .h1-title {
     font-weight: normal;
     color: $white;
+    @include tablets {
+      font-size: 38px;
+    }
   }
 }
 
+// accordion e data/local
 .events__layout {
   margin: 0 auto 2em !important;
   padding: 2em;
@@ -32,11 +36,56 @@
   }
 }
 
-.events__content {
-  margin: 0;
-  padding: 0;
+// commissao organizadora
+.events__comissao {
+  margin: 0 auto;
   background: $color-green-dark;
   color: $white;
+  padding: 4em;
+  .h2-title {
+    font-weight: 300;
+    color: $white;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__text {
+    margin: 4em auto 0;
+    width: 90%;
+    line-height: 30px;
+    @include tablets {
+      width: 700px;
+      column-count: 2;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  a {
+    font-weight: bold;
+    color: $color-green-regular;
+  }
+  span,
+  strong,
+  a:hover,
+  h2,
+  h3,
+  h4 {
+    font-weight: 300;
+    color: $white;
+  }
+  a:hover,
+  strong {
+    font-weight: bold;
+  }
+}
+
+// sobre o evento
+.events__content {
+    // background: $white;
+    // color: inherit;
+  margin: 0;
+  padding: 0;
   .event__block {
     padding: 2em 2em 4em;
     width: 90%;
@@ -44,10 +93,7 @@
     @include computers {
       width: 900px;
     }
-    p,
-    h2,
-    h3,
-    h4 {
+    p, h2, h3, h4 {
       text-align: justify;
       padding-top: 2em;
       line-height: 30px;
@@ -55,34 +101,26 @@
         width: 850px;
       }
     }
-    h2,
-    h3,
-    h4 {
-      text-align: left;
+    h2, h3, h4 {
+      text-align: center;
     }
     a {
-      font-weight: bold;
       color: $color-green-regular;
     }
-    span,
-    strong,
-    a:hover,
-    h2,
-    h3,
-    h4 {
-      font-weight: 300;
-      color: $white;
+    span, a:hover, h2, h3, h4, .h2-title {
+      color: $color-green-dark;
     }
-    a:hover,
-    strong {
+    a, a:hover, strong {
       font-weight: bold;
     }
     .h2-title {
       font-weight: 300;
-      color: $white;
       margin: 0 auto;
       text-align: center;
     }
+    // strong {
+    //   color: inherit;
+    // }
   }
   img {
     object-fit: cover;
@@ -94,26 +132,24 @@
     }
   }
   &:nth-of-type(even) {
-    background: $white;
-    color: inherit;
+    background: $color-green-dark;
+    color: $white;
     .event__block {
       span,
+      strong,
       a:hover,
       h2,
       h3,
-      h4 {
-        color: $color-green-dark;
-      }
+      h4,
       .h2-title {
-        color: $color-green-dark;
-      }
-      strong {
-        color: inherit;
+        // font-weight: 300;
+        color: $white;
       }
     }
   }
 }
 
+// inscriptions : informaçoes de pagamento + formulario de inscripçao
 .inscriptions__content {
   margin: 2em auto;
   padding: 1em;
@@ -141,6 +177,7 @@
   }
 }
 
+// inscriptions : cursos
 .events__cards {
   .uk-grid {
     margin: 4em auto;

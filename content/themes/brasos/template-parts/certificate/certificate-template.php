@@ -11,19 +11,19 @@
     <p>Por favor, digite seu nome para acessar os certificados disponíveis.</p>
  </div> -->
     <div class="diplom__show">
-      <h3 class="h3-title">NOME COMPLETO</h3>
-      <div uk-flex uk-flex-center uk-grid>
-        <?php
-        $args = [
-          'category_name' => 'Certificado'
-          //     //  'posts_per_page'    => 1
-        ];
+      <?php
+      $args = [
+        'category_name' => 'Certificado'
+        //     //  'posts_per_page'    => 1
+      ];
 
-        $wp_query = new WP_Query($args);
+      $wp_query = new WP_Query($args);
 
-        if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
-        ?>
+      if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
+      ?>
 
+          <h3 class="h3-title"><?php the_title(); ?></h3>
+          <div uk-flex uk-flex-center uk-grid>
             <div class="uk-card uk-card-default uk-card-hover">
               <a href="image.jpg" target="_blank">
                 <div class="uk-card-header">
@@ -38,10 +38,10 @@
                 </div>
               </a>
             </div>
+          </div>
         <?php endwhile;
-        endif; ?>
-      </div>
+      endif; ?>
     </div>
   </div>
 </div>
-  <?php get_footer(); ?>
+<?php get_footer(); ?>

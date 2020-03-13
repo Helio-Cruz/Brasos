@@ -3,8 +3,8 @@
 <!-- IMAGE COVER -->
 <div class="events__cover">
   <div class="uk-child-width-1-1" uk-grid>
-    <div class="uk-card uk-card-default uk-text-middle" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
-      <h1 class="h1-title uk-position-center"><?php the_title(); ?></h1>
+    <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+      <h1 class="h1-title"><?php the_title(); ?></h1>
     </div>
   </div>
 </div>
