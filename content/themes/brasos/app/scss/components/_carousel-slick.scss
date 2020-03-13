@@ -73,6 +73,7 @@
   @include computers {
     max-width: 60%;
     bottom: 130px;
+    padding-bottom: 0;
   }
 }
 
@@ -93,6 +94,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100px;
+    bottom: 40px;
   }
   > div {
     width: 100%;
