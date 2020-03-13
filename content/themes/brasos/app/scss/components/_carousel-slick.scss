@@ -53,63 +53,58 @@
 // }
 
 // CAROUSEL HEADER - SMALL TEXT
+.slick-carousel-small__block {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+  height: 170px;
+  bottom: 85px;
+  @include computers {
+    max-width: 60%;
+    height: 130px;
+    bottom: 65px;
+  }
+}
 .slick-carousel-small__title {
   position: absolute;
   background: $color-green-dark;
   color: $white;
+  width: 100%;
   height: 50px;
   font-weight: bold;
-  left: 0;
-  right: 0;
-  margin: auto;
-  bottom: 165px;
-  z-index: 10;
-  max-width: 80%;
+  top: 0;
   display: flex;
   font-size: $body;
   justify-content: center;
   align-items: center;
   padding: 1em;
+  padding-bottom: 0;
   @include tablets {
-    bottom: 150px;
-    padding-bottom: 0;
-  }
-  @include computers {
-    bottom: 130px;
-    max-width: 60%;
     font-size: $subheading;
   }
-    @include TwoK {
-      bottom: 470px;
-    }
 }
-
 .slick-carousel-small {
+  position: absolute;
   background: $color-green-dark;
   color: $white;
   height: 120px;
-  margin: auto;
-  bottom: 60px;
-  max-width: 80%;
+  bottom: 0;
+  width: 100%;
   @include computers {
-    max-width: 60%;
     height: 80px;
-    bottom: 40px;
   }
   .slick-slide {
-    height: 120px;
-    @include computers {
-      height: 80px;
-    }
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     outline: none;
+    height: 120px;
+    @include computers {
+      height: 80px;
+    }
   }
   > div {
-    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
