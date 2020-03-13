@@ -25,7 +25,10 @@
     font-size: $body-xl;
     color: $color-green-dark;
     text-align: center;
-    width: 60%;
+    width: 100%;
+    @include tablets {
+      width: 60%;
+    }
     @include computers {
       width: 450px;
     }
