@@ -79,6 +79,9 @@
     max-width: 60%;
     font-size: $subheading;
   }
+    @include TwoK {
+      bottom: 470px;
+    }
 }
 
 .slick-carousel-small {
