@@ -1,12 +1,9 @@
 <?php get_header(); ?>
 
 <!-- IMAGE COVER -->
-<div class="events__cover">
-  <div class="uk-child-width-1-1" uk-grid>
-    <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
-      <h1 class="h1-title"><?php the_title(); ?></h1>
-    </div>
-  </div>
+<div class="events-cover uk-child-width-1-1" uk-grid>
+  <img class="events-cover__img" src="<?php the_post_thumbnail_url(); ?>">
+  <h1 class="h1-title"><?php the_title(); ?></h1>
 </div>
 
 <!-- NAVIGATION -->

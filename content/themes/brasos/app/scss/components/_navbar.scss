@@ -161,10 +161,13 @@ img.trp-flag-image {
   background: $color-green-regular;
   position: relative;
   li {
-    width: 50%;
+    width: 40%;
     @include tablets {
       width: 35%;
     }
+  }
+  li {
+    padding: 0.5em 0;
   }
   ul:last-of-type {
     @include tablets {

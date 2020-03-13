@@ -74,9 +74,15 @@
         ]);
         $menu = strip_tags($menu, '<li><a href="%2$s">');
         echo $menu;
-        ?>
+        ?></ul>
+        <ul class="uk-nav uk-flex uk-flex-center uk-position-center">
+          <li>
+            <a href="index.html">
+              <img src="<?php echo get_template_directory_uri() . '/public/images/logo.png' ?>" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
       </ul>
     </div>
-    </ul>
   </div>
-</div>
