@@ -21,7 +21,7 @@
 
 .blog__content {
   box-shadow: 0 0 15px 0 darken($color: $grey, $amount: 10%);
-  margin: 4em;
+  width: 100%;
   padding: 2em 0;
   @include tablets {
     width: 600px;
@@ -72,7 +72,7 @@
     letter-spacing: 2px;
   }
   ul li:before {
-    content: '\2014';
+    content: "\2014";
     position: absolute;
     margin-left: -20px;
   }

@@ -1,9 +1,9 @@
 .blog-cards {
   margin: 4em auto 6em;
-  display: flex;
-  flex-flow: column;
-  align-items: flex-start;
-  width: 98%;
+  // display: flex;
+  // flex-flow: column;
+  // align-items: flex-start;
+  width: 300px;
   @include tablets {
     width: 700px;
   }
@@ -14,19 +14,20 @@
     @include flexbox;
   }
   &--title {
+    margin: 0 auto 1em;
+    font-size: 20px;
     @include tablets {
       margin: 0;
       margin-bottom: 1em;
+      font-size: $heading;
     }
-    margin-bottom: 1em;
-    font-size: $heading;
   }
   .card {
-    margin: 0 2em;
+    margin: 0 auto;
     height: 350px;
     overflow: hidden;
+    width: 300px;
     @include tablets {
-      height: 350px;
       margin: 0;
       width: 250px;
       &--smaller {
@@ -34,7 +35,6 @@
       }
     }
     @include computers {
-      margin: 0;
       width: 350px;
       &--smaller {
         width: 600px;
@@ -74,5 +74,8 @@
       font-weight: 300;
       color: $white;
     }
+  }
+  .fade {
+    width: 100%;
   }
 }
