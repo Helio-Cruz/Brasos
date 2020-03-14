@@ -74,7 +74,7 @@ Template Name: Institucional
           <div class="background-grey">
             <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
             <div class="institutional__title">
-              <h2 class="h2-title">Nosso differencial</h2>
+              <h2 class="h2-title">Nosso diferencial</h2>
             </div>
           </div>
           <div class="background-green">
