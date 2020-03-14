@@ -16,6 +16,7 @@
   &--title {
     margin: 0 auto 1em;
     font-size: 20px;
+    text-align: left;
     @include tablets {
       margin: 0;
       margin-bottom: 1em;
