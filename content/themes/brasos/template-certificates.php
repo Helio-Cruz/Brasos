@@ -15,8 +15,9 @@ Template Name: Certificados
     // }
     
     if ( !is_page( 'login' ) && !is_page('register') && !is_user_logged_in() ) {
-        auth_redirect(); 
-    } elseif ( is_user_logged_in() ) {
+        auth_redirect();
+    // } elseif ( current_user_can('subscriber') && is_user_logged_in() ) { 
+    } elseif ( is_user_logged_in() ) { 
         get_template_part('template-parts/certificate/certificate', 'template');
     }
 
