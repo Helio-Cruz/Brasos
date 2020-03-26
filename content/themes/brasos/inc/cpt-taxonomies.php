@@ -119,7 +119,7 @@ function certificados_cpt() {
         ],
 		"query_var" => true,
 		"menu_icon" => "dashicons-welcome-learn-more",
-		"supports" => [ "revisions" ],
+		"supports" => [ "title", "revisions" ],
 		"taxonomies" => [ "category" ],
 	];
     register_post_type( "certificados", $args );

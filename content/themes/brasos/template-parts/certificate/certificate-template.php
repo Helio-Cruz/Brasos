@@ -27,7 +27,12 @@
           <?php
           $current_user = get_current_user_id();
           $selected_user = get_field('nome_do_palestrante');
-          if ($current_user == $selected_user['ID']) : ?>
+          // if logged_in user is the same as the user selected in ACF "user" field
+          // show the post of that user only
+
+          // if logged_in user is an admin
+          // show posts of all users
+          if (($current_user == $selected_user['ID']) || ($current_user == current_user_can('administrator'))) : ?>
 
             <?php if ($selected_user) : ?>
             <h3 class="h3-title"><?php echo $selected_user['display_name']; ?></h3>
