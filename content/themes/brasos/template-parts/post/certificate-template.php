@@ -33,7 +33,7 @@
           // if logged_in user is an admin
           // show posts of all users
           if (($current_user == $selected_user['ID']) || ($current_user == current_user_can('administrator'))) : ?>
-
+          
             <?php if ($selected_user) : ?>
             <h3 class="h3-title"><?php echo $selected_user['display_name']; ?></h3>
             <?php endif; ?>

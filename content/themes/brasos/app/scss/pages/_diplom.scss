@@ -40,7 +40,7 @@
     }
   }
   .diplom__show {
-    margin: 4em auto;
+    margin: 2em auto 4em;
     @include mobiles {
       width: 480px;
     }
@@ -53,7 +53,7 @@
   }
   .diplom__show > .h3-title {
     color: $color-green-dark;
-    padding-bottom: 2em;
+    padding: 2em 0;
   }
   .uk-grid {
     justify-content: center;
