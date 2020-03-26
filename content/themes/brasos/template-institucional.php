@@ -42,7 +42,7 @@ Template Name: Institucional
       <li>
         <div class="institutional__slides">
           <div class="background-grey">
-            <img src=" <?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
+            <img src=" <?php echo get_template_directory_uri() . '/public/images/brasos-2019/23.jpg' ?>" alt="">
             <div class="institutional__title">
               <h2 class="h2-title">Nossa historia</h2>
             </div>
@@ -58,7 +58,7 @@ Template Name: Institucional
       <li>
         <div class="institutional__slides">
           <div class="background-grey">
-            <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
+            <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-2019/25.jpg' ?>" alt="">
             <div class="institutional__title">
               <h2 class="h2-title">Nossa área de atuação</h2>
             </div>
@@ -72,7 +72,7 @@ Template Name: Institucional
       <li>
         <div class="institutional__slides">
           <div class="background-grey">
-            <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
+            <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-2019/12.jpg' ?>" alt="">
             <div class="institutional__title">
               <h2 class="h2-title">Nosso diferencial</h2>
             </div>
@@ -87,7 +87,7 @@ Template Name: Institucional
       <li>
         <div class="institutional__slides">
           <div class="background-grey">
-            <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
+            <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-2019/41.jpg' ?>" alt="">
             <div class="institutional__title">
               <h2 class="h2-title">Nossa MISSÃO</h2>
             </div>
@@ -102,7 +102,7 @@ Template Name: Institucional
       <li>
         <div class="institutional__slides">
           <div class="background-grey">
-            <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
+            <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-2019/20.jpg' ?>" alt="">
             <div class="institutional__title">
               <h2 class="h2-title">Nossa VISÃO</h2>
             </div>
@@ -124,7 +124,7 @@ Template Name: Institucional
       <li>
         <div class="institutional__slides">
           <div class="background-grey">
-            <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
+            <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-2019/16.jpg' ?>" alt="">
             <div class="institutional__title">
               <h2 class="h2-title">Nossos Objetivos</h2>
             </div>
@@ -146,7 +146,7 @@ Template Name: Institucional
       <li>
         <div class="institutional__slides">
           <div class="background-grey">
-            <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
+            <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-2019/07.jpg' ?>" alt="">
             <div class="institutional__title">
               <h2 class="h2-title">Nossos Valores</h2>
             </div>
@@ -167,7 +167,7 @@ Template Name: Institucional
       <li>
         <div class="institutional__slides">
           <div class="background-grey">
-            <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
+            <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-2019/23.jpg' ?>" alt="">
             <div class="institutional__title">
               <h2 class="h2-title">Nossa Visão De Futuro</h2>
             </div>
