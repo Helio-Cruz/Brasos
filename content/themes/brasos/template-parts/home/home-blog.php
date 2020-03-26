@@ -14,10 +14,10 @@
       <div class="card-image">
         <a href="<?php echo get_permalink(get_page_by_path('Eventos')) ?>">
           <div class="fade">
-            <img src="<?php echo get_template_directory_uri() . '/public/images/d.1.jpg' ?>" />
-            <img src="<?php echo get_template_directory_uri() . '/public/images/d.2.jpg' ?>" />
-            <img src="<?php echo get_template_directory_uri() . '/public/images/d.3.jpg' ?>" />
-            <img src="<?php echo get_template_directory_uri() . '/public/images/card-1.jpg' ?>" />
+            <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-2019/21.jpg' ?>" />
+            <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-2019/36.jpg' ?>" />
+            <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-2019/16.jpg' ?>" />
+            <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-2019/23.jpg' ?>" />
           </div>
           <h2 class="card-title">Eventos</h2>
           <p class="card-text">Confira nossos ultimos encontros</p>
