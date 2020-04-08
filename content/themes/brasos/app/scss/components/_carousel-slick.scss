@@ -87,11 +87,12 @@
   position: absolute;
   background: $color-green-dark;
   color: $white;
-  height: 120px;
-  bottom: 0;
+  height: 100px;
+  bottom: 20px;
   width: 100%;
   @include computers {
     height: 80px;
+    bottom: 0;
   }
   .slick-slide {
     display: flex;
@@ -99,7 +100,7 @@
     justify-content: center;
     align-items: center;
     outline: none;
-    height: 120px;
+    height: 100px;
     @include computers {
       height: 80px;
     }
