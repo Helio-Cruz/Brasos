@@ -12,8 +12,13 @@
 .institutional__introduction {
   .h1-title {
     padding: 2em 0;
+    font-size: 26px;
+    line-height: 1.5em;
     text-transform: inherit;
-    line-height: 2em;
+    @include tablets {
+      font-size: 32px;
+      line-height: 2em;
+    }
   }
 }
 
