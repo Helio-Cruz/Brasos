@@ -68,30 +68,3 @@
       uk-slideshow-item="next"></a>
   </div>
 
-<!-- 
-<div class="slick-carousel" >
-  <div>
-    <img src="<?php echo get_template_directory_uri() . '/public/images/d.1.jpg' ?>" alt="" />
-  </div>
-  <div>
-    <img src="<?php echo get_template_directory_uri() . '/public/images/d.2.jpg' ?>" alt="" />
-  </div>
-  <div>
-    <img src="<?php echo get_template_directory_uri() . '/public/images/d.3.jpg' ?>" alt="" />
-  </div>
-  <div>
-    <img src="<?php echo get_template_directory_uri() . '/public/images/d.3.jpg' ?>" alt="" />
-  </div>
-  <div>
-    <img src="<?php echo get_template_directory_uri() . '/public/images/d.3.jpg' ?>" alt="" />
-  </div>
-  <div>
-    <img src="<?php echo get_template_directory_uri() . '/public/images/d.3.jpg' ?>" alt="" />
-  </div>
-</div>
-<div class="slick-carousel__text">
-  <h1 class="h1-title"><span>BRASOS</span><br>
-    Brazilian Society for Osteoarthritis, Osteoporosis and Sarcopenia<br>
-    Sociedade de médicos de diferentes especialidades
-  </h1>
-</div> -->
