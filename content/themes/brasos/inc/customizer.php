@@ -1,11 +1,8 @@
  
 <?php
 require('customizer/brasos_banner_textos.php');
-require('customizer/brasos_header.php');
 require('customizer/brasos_home_images.php');
-require('customizer/brasos_main.php');
-require('customizer/brasos_call_to_action.php');
-require('customizer/brasos_footer.php');
+require('customizer/brasos_carousel_footer.php');
 
 function brasos_customize_register($wp_customize) {
 
@@ -16,30 +13,8 @@ function brasos_customize_register($wp_customize) {
         'priority' => 1,
     ]);
 
-    //SECTION HEADER
-    $wp_customize->add_section('brasos_header', [
-        'title' => 'Carossel',
-        'panel' => 'brasos_theme_panel'
-    ]);
 
-    //SECTION POSTS
-    $wp_customize->add_section('brasos_main', [
-        'title' => 'Posts',
-        'panel' => 'brasos_theme_panel'
-    ]);
 
-      //SECTION FOOTER
-      $wp_customize->add_section('brasos_footer', [
-        'title' => 'Footer',
-        'panel' => 'brasos_theme_panel'
-    ]);
-
-    //SECTION  CALL TO SECTION
-    $wp_customize->add_section('brasos_call_to_action', [
-    'title' => 'Call to action',
-    'panel' => 'brasos_theme_panel',
-     
-    ]);
 
     //SECTION  HOME IMAGES
     $wp_customize->add_section('brasos_home_images', [
@@ -48,26 +23,29 @@ function brasos_customize_register($wp_customize) {
             
     ]);
 
+    
     //SECTION  BANNER TEXTOS
     $wp_customize->add_section('brasos_banner_textos', [
         'title' => 'Brasos Banner Textos',
         'panel' => 'brasos_theme_panel',
             
     ]);
+
+    //SECTION  FOOTER IMAGES
+    $wp_customize->add_section('brasos_carousel_footer', [
+        'title' => 'Brasos Rodapé Imagens',
+        'panel' => 'brasos_theme_panel',
+            
+    ]);
+    
         
 
 
     brasos_banner_textos($wp_customize);
 
-    brasos_header($wp_customize);
-
-    brasos_main($wp_customize);
-
-    brasos_footer($wp_customize);
-
-    brasos_call_to_action($wp_customize);
-
     brasos_home_images($wp_customize);
+
+    brasos_carousel_footer($wp_customize);
  
 }
 
