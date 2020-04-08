@@ -1,4 +1,6 @@
 <?php
+if(!defined('ABSPATH')) exit; // Exclu en cas d'accès direct par l'URL du fichier
+
 /*--------------------------------------------*/
 /*------------ Fonction du moteur ------------*/
 /*--------------------------------------------*/
@@ -67,7 +69,7 @@ function WP_Advanced_Search_Ajax_Results() {
 		function affichage($query, $nbResults, $words) {
 			global $select, $wpdb, $moteur, $wp_rewrite, $correctionsmoteur, $autocorrect, $post;
 
-			$nb = $_GET['nb'];
+			$nb = intval($_GET['nb']);
 
 			foreach($query as $key) { // On lance la boucle d'affichage des résultats (version WordPress)
 				// Récupération du numéro du résultat
@@ -79,15 +81,15 @@ function WP_Advanced_Search_Ajax_Results() {
 				}
 
 				// Trouver les images à la Une, les catégories et les auteurs
-				$tableCible = $wpdb->posts; // Récupération de la table de base de donnée à parcourir (ici, "posts" pour celles des pages et articles)
-				$tableMeta = $wpdb->postmeta; // Récupération des métas pour l'image à la Une
-				$tableRelationship = $wpdb->term_relationships; // Récupération des relations de taxonomie
-				$tableTaxonomy = $wpdb->term_taxonomy; // Récupération des termes de la taxonomie
-				$tableTerms = $wpdb->terms; // Récupération des termes	
-				$tableUsers = $wpdb->users; // Récupération des auteurs
-				$ImageOK = $wpdb->get_results("SELECT * FROM ".$tableCible." AS p INNER JOIN ".$tableMeta." AS m1 ON (m1.post_id = '".$key['ID']."' AND m1.meta_value = p.ID AND m1.meta_key = '_thumbnail_id' AND p.post_type = 'attachment')");	
-				$CategoryOK = $wpdb->get_results("SELECT name FROM ".$tableTerms." AS terms LEFT JOIN ".$tableTaxonomy." AS tax ON (terms.term_id = tax.term_id AND tax.taxonomy = 'category') INNER JOIN ".$tableRelationship." AS rel ON (tax.term_taxonomy_id = rel.term_taxonomy_id) WHERE rel.object_id = '".$key['ID']."'");
-				$AuthorOK = $wpdb->get_results("SELECT users.ID, user_nicename, display_name FROM ".$tableUsers." AS users INNER JOIN ".$tableCible." AS p ON users.ID = p.post_author WHERE p.ID = '".$key['ID']."'");
+				$tableCible = filter_var($wpdb->posts, FILTER_SANITIZE_STRING); // Récupération de la table de base de donnée à parcourir (ici, "posts" pour celles des pages et articles)
+				$tableMeta = filter_var($wpdb->postmeta, FILTER_SANITIZE_STRING); // Récupération des métas pour l'image à la Une
+				$tableRelationship = filter_var($wpdb->term_relationships, FILTER_SANITIZE_STRING); // Récupération des relations de taxonomie
+				$tableTaxonomy = filter_var($wpdb->term_taxonomy, FILTER_SANITIZE_STRING); // Récupération des termes de la taxonomie
+				$tableTerms = filter_var($wpdb->terms, FILTER_SANITIZE_STRING); // Récupération des termes	
+				$tableUsers = filter_var($wpdb->users, FILTER_SANITIZE_STRING); // Récupération des auteurs
+				$ImageOK = $wpdb->get_results("SELECT * FROM ".$tableCible." AS p INNER JOIN ".$tableMeta." AS m1 ON (m1.post_id = '".intval($key['ID'])."' AND m1.meta_value = p.ID AND m1.meta_key = '_thumbnail_id' AND p.post_type = 'attachment')");	
+				$CategoryOK = $wpdb->get_results("SELECT name FROM ".$tableTerms." AS terms LEFT JOIN ".$tableTaxonomy." AS tax ON (terms.term_id = tax.term_id AND tax.taxonomy = 'category') INNER JOIN ".$tableRelationship." AS rel ON (tax.term_taxonomy_id = rel.term_taxonomy_id) WHERE rel.object_id = '".intval($key['ID'])."'");
+				$AuthorOK = $wpdb->get_results("SELECT users.ID, user_nicename, display_name FROM ".$tableUsers." AS users INNER JOIN ".$tableCible." AS p ON users.ID = p.post_author WHERE p.ID = '".intval($key['ID'])."'");
 				
 				// Nombre de catégorie (si plusieurs, on affichera différement)
 				$nbCategory = count($CategoryOK);

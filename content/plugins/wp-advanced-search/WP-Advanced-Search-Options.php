@@ -14,7 +14,15 @@ function WP_Advanced_Search_FullText() {
 	include('class.inc/moteur-php5.5.class-inc.php');
 
 	$alterTable = new alterTableFullText($wpdb, $databaseSearch, $tableSearch, $columnSelectSearch);
-	echo '<script type="application/javascript">alert("'.__('Index FULLTEXT créés avec succès !\nVous pouvez utiliser le type FULLTEXT dorénavant...','wp-advanced-search').'");</script>';
+	if(is_admin()) {
+		add_action('admin_notices', function() {
+			echo '<div class="notice notice-success is-dismissible">';
+			echo '<p>'.__('Index FULLTEXT créés avec succès !\nVous pouvez utiliser le type FULLTEXT dorénavant...','wp-advanced-search').'</p>';
+			echo '</div>';
+		});
+		// echo '<script type="application/javascript">alert("'.__('Index FULLTEXT créés avec succès !\nVous pouvez utiliser le type FULLTEXT dorénavant...','wp-advanced-search').'");</script>';	
+		// wp_add_inline_script('fulltext-answer', 'alert("'.__('Index FULLTEXT créés avec succès !\nVous pouvez utiliser le type FULLTEXT dorénavant...','wp-advanced-search').'");');
+	}
 }
 
 // Mise à jour des données par défaut
@@ -22,20 +30,20 @@ function WP_Advanced_Search_update() {
 	global $wpdb, $tableName; // insérer les variables globales
 
 	// Réglages de base
-	$wp_advanced_search_table			= esc_html($_POST['wp_advanced_search_table']);
-	$wp_advanced_search_name			= esc_html($_POST['wp_advanced_search_name']);
-	$wp_advanced_search_resulttext		= esc_html($_POST['wp_advanced_search_resulttext']);
-	$wp_advanced_search_errortext		= esc_html($_POST['wp_advanced_search_errortext']);
-	$wp_advanced_search_colonneswhere	= $_POST['wp_advanced_search_colonneswhere'];
-	$wp_advanced_search_typesearch		= $_POST['wp_advanced_search_typesearch'];
-	$wp_advanced_search_encoding		= $_POST['wp_advanced_search_encoding'];
-	$wp_advanced_search_exactsearch		= $_POST['wp_advanced_search_exactsearch'];
-	$wp_advanced_search_accents			= $_POST['wp_advanced_search_accents'];
-	$wp_advanced_search_exclusionwords	= $_POST['wp_advanced_search_exclusionwords'];
-	$wp_advanced_search_stopwords		= $_POST['wp_advanced_search_stopwords'];
-	$wp_advanced_search_posttype		= $_POST['wp_advanced_search_posttype'];
-	$wp_advanced_search_idform			= esc_html($_POST['wp_advanced_search_idform']);
-	$wp_advanced_search_placeholder		= esc_html($_POST['wp_advanced_search_placeholder']);
+	$wp_advanced_search_table			= sanitize_text_field($_POST['wp_advanced_search_table']);
+	$wp_advanced_search_name			= sanitize_text_field($_POST['wp_advanced_search_name']);
+	$wp_advanced_search_resulttext		= sanitize_text_field($_POST['wp_advanced_search_resulttext']);
+	$wp_advanced_search_errortext		= sanitize_text_field($_POST['wp_advanced_search_errortext']);
+	$wp_advanced_search_colonneswhere	= sanitize_text_field($_POST['wp_advanced_search_colonneswhere']);
+	$wp_advanced_search_typesearch		= sanitize_text_field($_POST['wp_advanced_search_typesearch']);
+	$wp_advanced_search_encoding		= sanitize_text_field($_POST['wp_advanced_search_encoding']);
+	$wp_advanced_search_exactsearch		= sanitize_text_field($_POST['wp_advanced_search_exactsearch']);
+	$wp_advanced_search_accents			= sanitize_text_field($_POST['wp_advanced_search_accents']);
+	$wp_advanced_search_exclusionwords	= sanitize_text_field($_POST['wp_advanced_search_exclusionwords']);
+	$wp_advanced_search_stopwords		= sanitize_text_field($_POST['wp_advanced_search_stopwords']);
+	$wp_advanced_search_posttype		= sanitize_text_field($_POST['wp_advanced_search_posttype']);
+	$wp_advanced_search_idform			= sanitize_text_field($_POST['wp_advanced_search_idform']);
+	$wp_advanced_search_placeholder		= sanitize_text_field($_POST['wp_advanced_search_placeholder']);
 	
 	// Catégories
 	$wp_advanced_search_categories 		= array();
@@ -43,17 +51,17 @@ function WP_Advanced_Search_update() {
 		array_push($wp_advanced_search_categories, $ctgSave);
 	}
 	if(is_numeric($_POST['wp_advanced_search_numberPerPage']) || !empty($_POST['wp_advanced_search_numberPerPage'])) {
-		$wp_advanced_search_numberPerPage = esc_html($_POST['wp_advanced_search_numberPerPage']);
+		$wp_advanced_search_numberPerPage = sanitize_text_field($_POST['wp_advanced_search_numberPerPage']);
 	} else {
 		$wp_advanced_search_numberPerPage = 0;
 	}
 	
 	// Mise en gras et ordre des résultats
-	$wp_advanced_search_strong		= $_POST['wp_advanced_search_strong'];
-	$wp_advanced_search_orderOK		= $_POST['wp_advanced_search_orderOK'];
-	$wp_advanced_search_orderColumn	= $_POST['wp_advanced_search_orderColumn'];
-	$wp_advanced_search_ascdesc		= $_POST['wp_advanced_search_ascdesc'];
-	$wp_advanced_search_algoOK		= $_POST['wp_advanced_search_algoOK'];
+	$wp_advanced_search_strong		= sanitize_text_field($_POST['wp_advanced_search_strong']);
+	$wp_advanced_search_orderOK		= sanitize_text_field($_POST['wp_advanced_search_orderOK']);
+	$wp_advanced_search_orderColumn	= sanitize_text_field($_POST['wp_advanced_search_orderColumn']);
+	$wp_advanced_search_ascdesc		= sanitize_text_field($_POST['wp_advanced_search_ascdesc']);
+	$wp_advanced_search_algoOK		= sanitize_text_field($_POST['wp_advanced_search_algoOK']);
 		
 	$wp_advanced_search_update = $wpdb->update(
 		$wpdb->prefix.$tableName,

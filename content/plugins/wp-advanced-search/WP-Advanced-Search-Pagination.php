@@ -130,18 +130,18 @@ function WP_Advanced_Search_update_pagination() {
 	global $wpdb, $tableName; // insérer les variables globales
 
 	// Pagination
-	$wp_advanced_search_pagination_active		= $_POST['wp_advanced_search_pagination_active'];
-	$wp_advanced_search_pagination_style		= $_POST['wp_advanced_search_pagination_style'];
-	$wp_advanced_search_pagination_firstlast	= $_POST['wp_advanced_search_pagination_firstlast'];
-	$wp_advanced_search_pagination_prevnext		= $_POST['wp_advanced_search_pagination_prevnext'];
-	$wp_advanced_search_pagination_firstpage	= $_POST['wp_advanced_search_pagination_firstpage'];
-	$wp_advanced_search_pagination_lastpage		= $_POST['wp_advanced_search_pagination_lastpage'];
-	$wp_advanced_search_pagination_prevtext		= $_POST['wp_advanced_search_pagination_prevtext'];
-	$wp_advanced_search_pagination_nexttext		= $_POST['wp_advanced_search_pagination_nexttext'];
-	$wp_advanced_search_pagination_type			= $_POST['wp_advanced_search_pagination_type'];
-	$wp_advanced_search_pagination_nbLimit		= $_POST['wp_advanced_search_pagination_nbLimit'];
-	$wp_advanced_search_pagination_duration		= $_POST['wp_advanced_search_pagination_duration'];
-	$wp_advanced_search_pagination_text			= $_POST['wp_advanced_search_pagination_text'];
+	$wp_advanced_search_pagination_active		= sanitize_text_field($_POST['wp_advanced_search_pagination_active']);
+	$wp_advanced_search_pagination_style		= sanitize_text_field($_POST['wp_advanced_search_pagination_style']);
+	$wp_advanced_search_pagination_firstlast	= sanitize_text_field($_POST['wp_advanced_search_pagination_firstlast']);
+	$wp_advanced_search_pagination_prevnext		= sanitize_text_field($_POST['wp_advanced_search_pagination_prevnext']);
+	$wp_advanced_search_pagination_firstpage	= sanitize_text_field($_POST['wp_advanced_search_pagination_firstpage']);
+	$wp_advanced_search_pagination_lastpage		= sanitize_text_field($_POST['wp_advanced_search_pagination_lastpage']);
+	$wp_advanced_search_pagination_prevtext		= sanitize_text_field($_POST['wp_advanced_search_pagination_prevtext']);
+	$wp_advanced_search_pagination_nexttext		= sanitize_text_field($_POST['wp_advanced_search_pagination_nexttext']);
+	$wp_advanced_search_pagination_type			= sanitize_text_field($_POST['wp_advanced_search_pagination_type']);
+	$wp_advanced_search_pagination_nbLimit		= sanitize_text_field($_POST['wp_advanced_search_pagination_nbLimit']);
+	$wp_advanced_search_pagination_duration		= sanitize_text_field($_POST['wp_advanced_search_pagination_duration']);
+	$wp_advanced_search_pagination_text			= sanitize_text_field($_POST['wp_advanced_search_pagination_text']);
 		
 	$wp_advanced_search_update = $wpdb->update(
 		$wpdb->prefix.$tableName,

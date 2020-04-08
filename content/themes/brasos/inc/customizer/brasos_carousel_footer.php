@@ -208,7 +208,7 @@ function brasos_carousel_footer($wp_customize) {
         [
             'label'    => 'Mude a Imagem 17',
             'section'  => 'brasos_carousel_footer',
-            'settings' => 'brasos_footer_image_12',
+            'settings' => 'brasos_footer_image_17',
         ]
     );
     $footer_image_18 =  new WP_Customize_Image_Control(
@@ -420,7 +420,7 @@ function brasos_carousel_footer($wp_customize) {
         ]
     );
     $wp_customize->add_control($footer_image);
-    $wp_customize->add_control($footer_imag_1);
+    $wp_customize->add_control($footer_image_1);
     $wp_customize->add_control($footer_image_2);
     $wp_customize->add_control($footer_image_3);
     $wp_customize->add_control($footer_image_4);

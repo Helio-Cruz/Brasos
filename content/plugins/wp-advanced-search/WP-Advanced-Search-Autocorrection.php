@@ -181,11 +181,11 @@ function WP_Advanced_Search_update_autocorrection() {
 	global $wpdb, $tableName; // insérer les variables globales
 
 	// Pagination
-	$wp_advanced_search_autocorrection_active	= $_POST['wp_advanced_search_autocorrection_active'];
-	$wp_advanced_search_autocorrection_type		= $_POST['wp_advanced_search_autocorrection_type'];
-	$wp_advanced_search_autocorrection_method	= $_POST['wp_advanced_search_autocorrection_method'];
-	$wp_advanced_search_autocorrection_string	= $_POST['wp_advanced_search_autocorrection_string'];
-	$wp_advanced_search_autocorrection_create	= $_POST['wp_advanced_search_autocorrection_create'];
+	$wp_advanced_search_autocorrection_active	= sanitize_text_field($_POST['wp_advanced_search_autocorrection_active']);
+	$wp_advanced_search_autocorrection_type		= sanitize_text_field($_POST['wp_advanced_search_autocorrection_type']);
+	$wp_advanced_search_autocorrection_method	= sanitize_text_field($_POST['wp_advanced_search_autocorrection_method']);
+	$wp_advanced_search_autocorrection_string	= sanitize_text_field($_POST['wp_advanced_search_autocorrection_string']);
+	$wp_advanced_search_autocorrection_create	= sanitize_text_field($_POST['wp_advanced_search_autocorrection_create']);
 		
 	$wp_advanced_search_update = $wpdb->update(
 		$wpdb->prefix.$tableName,
@@ -209,9 +209,9 @@ function WP_Advanced_Search_Autocorrection_AddWords($datas) {
 
 	// Récupération des mots et expressions dans un tableau de données
     if(is_string($datas)) { // Si c'est une chaîne séparé par des virgules
-        $expressions = array_map('trim', explode(',',htmlspecialchars($datas)));
+        $expressions = array_map('trim', explode(',', sanitize_text_field($datas)));
     } elseif(is_array($datas)) { // Si c'est un tableau de mots (tags, etc.)
-        $expressions = $datas;
+        $expressions = sanitize_text_field($datas);
     }
 
 	// Récupération des mots dans l'index inversé

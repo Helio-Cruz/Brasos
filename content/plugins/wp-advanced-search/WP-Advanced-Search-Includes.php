@@ -13,17 +13,16 @@ function WP_Advanced_Search_AutoCompletion() {
 
 	// Lancement de la fonction d'autocomplétion si activé...
 	if($select->autoCompleteActive == 1) {
-		$urlstyle = plugins_url('class.inc/autocompletion/jquery.autocomplete.css',__FILE__);
-		wp_enqueue_style('js-autocomplete', $urlstyle, false, '1.0');
-		$url = plugins_url('class.inc/autocompletion/jquery.autocomplete.js',__FILE__);
-		wp_enqueue_script('js-autocomplete', $url, array('jquery'), false, true);
+		// Autocomplete style
+		$urlstyle = plugins_url('css/jquery.autocomplete.min.css',__FILE__);
+		wp_enqueue_style('js-autocomplete-style', $urlstyle, false, '1.0');
 	}
 }
 add_action('wp_enqueue_scripts', 'WP_Advanced_Search_AutoCompletion');
 
 // Ajout conditionné du système d'autocomplétion
 function addAutoCompletion() {
-	global $wpdb, $tableName, $link;
+	global $wpdb, $tableName;
 	
 	// Sélection des données dans la base de données		
 	$select = $wpdb->get_row("SELECT * FROM ".$wpdb->prefix.$tableName." WHERE id=1");
@@ -32,32 +31,65 @@ function addAutoCompletion() {
 	if($select->autoCompleteActive == 1) {
 		// Instanciation des variables utiles
 		$selector		= $select->autoCompleteSelector;
-		$dbName			= $select->db;
-		$tableNameAC	= $select->autoCompleteTable;
-		$tableColumn	= $select->autoCompleteColumn;
 		$limitDisplay	= $select->autoCompleteNumber;
-		$multiple		= $select->autoCompleteTypeSuggest;
-		$type			= $select->autoCompleteType;
-		$autoFocus		= $select->autoCompleteAutofocus;
-		$create			= false; // On laisse sur false car la table est créée par ailleurs
-		$encoding		= $select->encoding;
-
-		include_once('class.inc/moteur-php5.5.class-inc.php');
-		$autocompletion = new autoCompletion($wpdb, plugins_url("class.inc/autocompletion/autocompletion-PHP5.5.php", __FILE__ ), $selector, $tableNameAC, $tableColumn, $multiple, $limitDisplay, $type, $autoFocus, $create, $encoding);
+		$multiple		= $select->autoCompleteTypeSuggest ? true : false;
+		$autoFocus		= $select->autoCompleteAutofocus ? true : false;
 
 		// Paramètres Ajax
-		wp_enqueue_script('params-autocomplete', plugins_url("class.inc/autocompletion/params.js", __FILE__ ), array('js-autocomplete'), false, false);
+		wp_enqueue_script('params-autocomplete', plugins_url("js/autocompleteSearch-min.js", __FILE__ ), array('jquery-ui-core', 'jquery-ui-autocomplete'), false, false);
 		$scriptData = array(
+			'ajaxurl' => admin_url('/admin-ajax.php'),
 			'selector' => $selector,
-			'urlDestination' => plugins_url("class.inc/autocompletion/autocompletion-PHP5.5.php", __FILE__ )."?t=".$tableNameAC."&f=".$tableColumn."&l=".$limitDisplay."&type=".$type."&e=".$encoding,
 			'autoFocus' => $autoFocus,
 			'limitDisplay' => $limitDisplay,
-			'multiple' => $multiple
+			'multiple' => $multiple,
 		);
 		wp_localize_script('params-autocomplete', 'ac_param', $scriptData);
 	}
 }
 add_action('wp_enqueue_scripts', 'addAutoCompletion');
+
+/*-----------------------------------------*/
+/*-------- Fonction autocomplétion --------*/
+/*-----------------------------------------*/
+// J'utilise les hooks
+add_action('wp_ajax_wpas_autocomplete', 'WP_Advanced_Search_Autocomplete_Action');
+add_action('wp_ajax_nopriv_wpas_autocomplete', 'WP_Advanced_Search_Autocomplete_Action');
+function WP_Advanced_Search_Autocomplete_Action() {
+	global $wpdb, $tableName;
+	
+	// Sélection des données dans la base de données		
+	$select = $wpdb->get_row("SELECT * FROM ".filter_var($wpdb->prefix.$tableName, FILTER_SANITIZE_STRING)." WHERE id=1");
+
+	// Instanciation des variables utiles
+	$tableNameAC	= htmlspecialchars(filter_var($select->autoCompleteTable, FILTER_SANITIZE_STRING));
+	$tableColumn	= htmlspecialchars(filter_var($select->autoCompleteColumn, FILTER_SANITIZE_STRING));
+	$acQuery 		= sanitize_text_field($_POST['ac_query']);
+	$acQuery		= str_ireplace('"', '&quot;', $acQuery);
+	$type			= htmlspecialchars(filter_var($select->autoCompleteType, FILTER_SANITIZE_STRING));
+	// $encode 		= htmlspecialchars(filter_var($select->encoding, FILTER_SANITIZE_STRING));
+
+	// Détermine le type de requête
+	if($type == 0 || $type > 1) {
+		$arg = "";
+	} else {
+		$arg = "%";	
+	}
+
+	// Requête
+	global $wpdb;
+	$results = $wpdb->get_results("SELECT ".$tableColumn." FROM ".$tableNameAC." WHERE ".$tableColumn." LIKE '".$arg.$acQuery."%'");
+	$items = array();
+	if(!empty($results)) {
+		foreach($results as $result) {
+			$result->words = str_ireplace("&quot;", '"', $result->words);
+			$items[] = $result->words;
+		}
+		sort($items);
+	}
+	echo json_encode($items);
+	die();
+}
 
 /*--------------------------------------------*/
 /*-------- Fonction trigger et scroll --------*/
@@ -104,7 +136,7 @@ function WP_Advanced_Search_InfiniteScroll() {
 	global $wpdb, $tableName, $moteur;
 
 	//Récupération des variables utiles dynamiquement
-	$select		= $wpdb->get_row("SELECT * FROM ".$wpdb->prefix.$tableName." WHERE id=1");
+	$select	= $wpdb->get_row("SELECT * FROM ".$wpdb->prefix.$tableName." WHERE id=1");
 	
 	if($select->paginationType == "infinite") {
 		$nameSearch = $select->nameField;			// Nom du champ
