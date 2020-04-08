@@ -64,16 +64,16 @@
       left: 10px;
       font-size: $subheading;
       font-weight: 300;
-      color: $white;
+      color: $color-green-dark;
     }
     &-text {
       margin: 0;
       position: absolute;
-      bottom: 20px;
+      bottom: 30px;
       left: 10px;
       font-size: $body;
       font-weight: 300;
-      color: $white;
+      color:$color-green-dark;
     }
   }
   .fade {
