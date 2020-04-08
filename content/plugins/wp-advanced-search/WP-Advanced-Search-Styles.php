@@ -146,18 +146,18 @@ function WP_Advanced_Search_update_styles() {
 	global $wpdb, $tableName; // insérer les variables globales
 	
 	// Options d'affichage
-	$wp_advanced_search_nbResultsOK		= $_POST['wp_advanced_search_nbResultsOK'];
-	$wp_advanced_search_numberOK		= $_POST['wp_advanced_search_numberOK'];
-	$wp_advanced_search_style			= $_POST['wp_advanced_search_style'];
-	$wp_advanced_search_formatageDateOK	= $_POST['wp_advanced_search_formatageDateOK'];
-	$wp_advanced_search_dateOK			= $_POST['wp_advanced_search_dateOK'];
-	$wp_advanced_search_authorOK		= $_POST['wp_advanced_search_authorOK'];
-	$wp_advanced_search_categoryOK		= $_POST['wp_advanced_search_categoryOK'];
-	$wp_advanced_search_titleOK			= $_POST['wp_advanced_search_titleOK'];
-	$wp_advanced_search_articleOK		= $_POST['wp_advanced_search_articleOK'];
-	$wp_advanced_search_commentOK		= $_POST['wp_advanced_search_commentOK'];
-	$wp_advanced_search_imageOK			= $_POST['wp_advanced_search_imageOK'];
-	$wp_advanced_search_blocOrder		= $_POST['wp_advanced_search_blocOrder'];
+	$wp_advanced_search_nbResultsOK		= sanitize_text_field($_POST['wp_advanced_search_nbResultsOK']);
+	$wp_advanced_search_numberOK		= sanitize_text_field($_POST['wp_advanced_search_numberOK']);
+	$wp_advanced_search_style			= sanitize_text_field($_POST['wp_advanced_search_style']);
+	$wp_advanced_search_formatageDateOK	= sanitize_text_field($_POST['wp_advanced_search_formatageDateOK']);
+	$wp_advanced_search_dateOK			= sanitize_text_field($_POST['wp_advanced_search_dateOK']);
+	$wp_advanced_search_authorOK		= sanitize_text_field($_POST['wp_advanced_search_authorOK']);
+	$wp_advanced_search_categoryOK		= sanitize_text_field($_POST['wp_advanced_search_categoryOK']);
+	$wp_advanced_search_titleOK			= sanitize_text_field($_POST['wp_advanced_search_titleOK']);
+	$wp_advanced_search_articleOK		= sanitize_text_field($_POST['wp_advanced_search_articleOK']);
+	$wp_advanced_search_commentOK		= sanitize_text_field($_POST['wp_advanced_search_commentOK']);
+	$wp_advanced_search_imageOK			= sanitize_text_field($_POST['wp_advanced_search_imageOK']);
+	$wp_advanced_search_blocOrder		= sanitize_text_field($_POST['wp_advanced_search_blocOrder']);
 		
 	$wp_advanced_search_update = $wpdb->update(
 		$wpdb->prefix.$tableName,

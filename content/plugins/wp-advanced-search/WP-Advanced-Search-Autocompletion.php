@@ -11,7 +11,7 @@ function WP_Advanced_Search_Callback_Autocompletion() {
 		
 		// Création de la table d'index inversé si l'option de création est sur "oui"
 		if(isset($_POST['wp_advanced_search_autocompletion_create']) && $_POST['wp_advanced_search_autocompletion_create'] == true) {
-			$wpdb->query("CREATE TABLE IF NOT EXISTS ".$_POST['wp_advanced_search_autocompletion_table']." (
+			$wpdb->query("CREATE TABLE IF NOT EXISTS ".filter_var($_POST['wp_advanced_search_autocompletion_table'], FILTER_SANITIZE_STRING)." (
 						 idindex INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 						 ".$_POST['wp_advanced_search_autocompletion_column']." VARCHAR(250) NOT NULL)
 						 DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci"
@@ -20,7 +20,7 @@ function WP_Advanced_Search_Callback_Autocompletion() {
 		
 		// Suppression de la table d'index inversé si l'option de suppression est sur "oui"
 		if(isset($_POST['wp_advanced_search_autocompletion_delete']) && $_POST['wp_advanced_search_autocompletion_delete'] == true) {
-			$wpdb->query("DROP TABLE IF EXISTS ".$_POST['wp_advanced_search_autocompletion_table']);
+			$wpdb->query("DROP TABLE IF EXISTS ".filter_var($_POST['wp_advanced_search_autocompletion_table'], FILTER_SANITIZE_STRING));
 		}
 	}
 	
@@ -51,7 +51,7 @@ function WP_Advanced_Search_Callback_Autocompletion() {
 	echo '</div>';
 
 	// Sélection des données dans la base de données		
-	$select = $wpdb->get_row("SELECT * FROM ".$wpdb->prefix.$tableName." WHERE id=1");
+	$select = $wpdb->get_row("SELECT * FROM ".filter_var($wpdb->prefix.$tableName, FILTER_SANITIZE_STRING)." WHERE id=1");
 ?> 
         <form method="post" action="">
        	<div class="block">
@@ -87,9 +87,12 @@ function WP_Advanced_Search_Callback_Autocompletion() {
                 </p>
                 <p class="tr">
                 	<select name="wp_advanced_search_autocompletion_number" id="wp_advanced_search_autocompletion_number">
+                        <option value="0" <?php if($select->autoCompleteNumber == 0) { echo 'selected="selected"'; } ?>><?php _e('Illimité','wp-advanced-search'); ?></option>
                     	<?php for($i = 1; $i < 11; $i++) { ?>
                         <option value="<?php echo $i; ?>" <?php if($select->autoCompleteNumber == $i) { echo 'selected="selected"'; } ?>><?php echo $i; ?></option>
                         <?php } ?>
+                        <option value="15" <?php if($select->autoCompleteNumber == 15) { echo 'selected="selected"'; } ?>>15</option>
+                        <option value="20" <?php if($select->autoCompleteNumber == 20) { echo 'selected="selected"'; } ?>>20</option>
                     </select>
                     <label for="wp_advanced_search_autocompletion_number"><strong><?php _e('Nombre de suggestions affichées','wp-advanced-search'); ?></strong></label>
                 </p>
@@ -214,17 +217,17 @@ function WP_Advanced_Search_update_autocompletion() {
 	global $wpdb, $tableName; // insérer les variables globales
 
 	// Pagination
-	$wp_advanced_search_autocompletion_active		= $_POST['wp_advanced_search_autocompletion_active'];
-	$wp_advanced_search_autocompletion_selector		= $_POST['wp_advanced_search_autocompletion_selector'];
-	$wp_advanced_search_autocompletion_autofocus	= $_POST['wp_advanced_search_autocompletion_autofocus'];
-	$wp_advanced_search_autocompletion_type			= $_POST['wp_advanced_search_autocompletion_type'];
-	$wp_advanced_search_autocompletion_number		= $_POST['wp_advanced_search_autocompletion_number'];
-	$wp_advanced_search_autocompletion_typesuggest	= $_POST['wp_advanced_search_autocompletion_typesuggest'];
-	$wp_advanced_search_autocompletion_create		= $_POST['wp_advanced_search_autocompletion_create'];
-	$wp_advanced_search_autocompletion_table		= $_POST['wp_advanced_search_autocompletion_table'];
-	$wp_advanced_search_autocompletion_column		= $_POST['wp_advanced_search_autocompletion_column'];
-	$wp_advanced_search_autocompletion_generate		= $_POST['wp_advanced_search_autocompletion_generate'];
-	$wp_advanced_search_autocompletion_sizemin		= $_POST['wp_advanced_search_autocompletion_sizemin'];
+	$wp_advanced_search_autocompletion_active		= sanitize_text_field($_POST['wp_advanced_search_autocompletion_active']);
+	$wp_advanced_search_autocompletion_selector		= sanitize_text_field($_POST['wp_advanced_search_autocompletion_selector']);
+	$wp_advanced_search_autocompletion_autofocus	= sanitize_text_field($_POST['wp_advanced_search_autocompletion_autofocus']);
+	$wp_advanced_search_autocompletion_type			= sanitize_text_field($_POST['wp_advanced_search_autocompletion_type']);
+	$wp_advanced_search_autocompletion_number		= sanitize_text_field($_POST['wp_advanced_search_autocompletion_number']);
+	$wp_advanced_search_autocompletion_typesuggest	= sanitize_text_field($_POST['wp_advanced_search_autocompletion_typesuggest']);
+	$wp_advanced_search_autocompletion_create		= sanitize_text_field($_POST['wp_advanced_search_autocompletion_create']);
+	$wp_advanced_search_autocompletion_table		= sanitize_text_field($_POST['wp_advanced_search_autocompletion_table']);
+	$wp_advanced_search_autocompletion_column		= sanitize_text_field($_POST['wp_advanced_search_autocompletion_column']);
+	$wp_advanced_search_autocompletion_generate		= sanitize_text_field($_POST['wp_advanced_search_autocompletion_generate']);
+	$wp_advanced_search_autocompletion_sizemin		= sanitize_text_field($_POST['wp_advanced_search_autocompletion_sizemin']);
 		
 	$wp_advanced_search_update = $wpdb->update(
 		$wpdb->prefix.$tableName,
@@ -250,15 +253,15 @@ function WP_Advanced_Search_Autocompletion_AddWords($datas) {
 	global $wpdb, $tableName; // insérer les variables globales
 
 	// Sélection des données dans les tables de la base de données		
-	$select = $wpdb->get_row("SELECT * FROM ".$wpdb->prefix.$tableName." WHERE id=1");
-	$selectWords = $wpdb->get_results("SELECT ".$select->autoCompleteColumn." FROM ".$select->autoCompleteTable."");
+	$select = $wpdb->get_row("SELECT * FROM ".filter_var($wpdb->prefix.$tableName, FILTER_SANITIZE_STRING)." WHERE id=1");
+	$selectWords = $wpdb->get_results("SELECT ".filter_var($select->autoCompleteColumn, FILTER_SANITIZE_STRING)." FROM ".filter_var($select->autoCompleteTable, FILTER_SANITIZE_STRING)."");
 	$words = $select->autoCompleteColumn;
 	
 	// Récupération des mots et expressions dans un tableau de données
     if(is_string($datas)) { // Si c'est une chaîne séparé par des virgules
-        $expressions = array_map('trim', explode(',',htmlspecialchars($datas)));
+        $expressions = array_map('trim', explode(',', sanitize_text_field($datas)));
     } elseif(is_array($datas)) { // Si c'est un tableau de mots (tags, etc.)
-        $expressions = $datas;
+        $expressions = sanitize_text_field($datas);
     }
 	
 	// Récupération des mots dans l'index inversé
@@ -270,7 +273,7 @@ function WP_Advanced_Search_Autocompletion_AddWords($datas) {
 	foreach($expressions as $exp) {
 		if(strlen($exp) > $select->autoCompleteSizeMin) {						
 			if(!in_array($exp, $selected)) {
-				$wpdb->query("INSERT INTO ".$select->autoCompleteTable."(".$select->autoCompleteColumn.") VALUES ('".$exp."')");
+				$wpdb->query("INSERT INTO ".$select->autoCompleteTable."(".$select->autoCompleteColumn.") VALUES ('".filter_var($exp, FILTER_SANITIZE_STRING)."')");
 			}
 		}
 	}
@@ -280,7 +283,7 @@ function WP_Advanced_Search_Autocompletion_AddWords($datas) {
 function WP_Advanced_Search_Autocompletion_DeleteWords() {
 	global $wpdb, $tableName; // insérer les variables globales
 
-	$tableDelete = $wpdb->get_row("SELECT autoCompleteTable, autoCompleteColumn FROM ".$wpdb->prefix.$tableName, ARRAY_N);
+	$tableDelete = $wpdb->get_row("SELECT autoCompleteTable, autoCompleteColumn FROM ".filter_var($wpdb->prefix.$tableName, FILTER_SANITIZE_STRING), ARRAY_N);
 	$tabWords = $_POST['wp_advanced_search_autocompletion_deletewords'];
 	
 	foreach($tabWords as $word) {
