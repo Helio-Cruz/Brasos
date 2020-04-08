@@ -8,3 +8,13 @@
 [14-Mar-2020 07:53:10 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 31
 [26-Mar-2020 09:34:11 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 31
 [26-Mar-2020 09:34:46 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-news.php on line 31
+[27-Mar-2020 03:46:33 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 31
+[27-Mar-2020 03:47:37 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 31
+[27-Mar-2020 04:02:27 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 31
+[07-Apr-2020 11:52:38 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 31
+[07-Apr-2020 11:52:46 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 31
+[07-Apr-2020 11:53:37 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 31
+[07-Apr-2020 18:57:18 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 31
+[07-Apr-2020 18:57:28 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 31
+[07-Apr-2020 23:46:18 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-news.php on line 31
+[08-Apr-2020 00:15:14 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-news.php on line 31

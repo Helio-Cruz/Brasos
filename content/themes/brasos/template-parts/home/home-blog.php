@@ -4,8 +4,8 @@
     <div class="card">
       <div class="card-image">
         <a href="<?php echo get_permalink(get_page_by_path('Noticias')) ?>">
-          <img src="<?php echo get_template_directory_uri() . '/public/images/card-1.jpg' ?>" />
-          <h2 class="card-title">Notícias</h2>
+          <img src="<?php echo get_template_directory_uri() . '/public/images/news.jpg' ?>" />
+          <h2 class="card-title">Atualidades</h2>
           <p class="card-text">Mantenha-se atualizado</p>
         </a>
       </div>
@@ -13,12 +13,7 @@
     <div class="card card--smaller">
       <div class="card-image">
         <a href="<?php echo get_permalink(get_page_by_path('Eventos')) ?>">
-          <div class="fade">
-            <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-2019/21.jpg' ?>" />
-            <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-2019/36.jpg' ?>" />
-            <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-2019/16.jpg' ?>" />
-            <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-2019/23.jpg' ?>" />
-          </div>
+            <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-tbt2.jpg' ?>" />
           <h2 class="card-title">Eventos</h2>
           <p class="card-text">Confira nossos ultimos encontros</p>
         </a>
@@ -36,7 +31,7 @@
     <div class="card">
       <div class="card-image">
         <a href="<?php echo get_permalink(get_page_by_path('Congressos')) ?>">
-          <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" />
+          <img src="<?php echo get_template_directory_uri() . '/public/images/d.2.jpg' ?>" />
           <h2 class="card-title">Congressos</h2>
           <p class="card-text">Descobre nossas próximas reuniões</p>
         </a>
