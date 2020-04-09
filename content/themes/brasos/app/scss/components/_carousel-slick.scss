@@ -85,11 +85,10 @@
 }
 .slick-carousel-small {
   position: absolute;
-  background: $color-green-dark;
-  color: $white;
-  height: 100px;
-  bottom: 21px;
+  background: none;
+  top: 49px;
   width: 100%;
+  background: $color-green-dark;
   @include computers {
     height: 80px;
     bottom: 0;
@@ -99,8 +98,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: $white;
     outline: none;
-    height: 100px;
+    height: auto;
+    padding: 1em 0;
+    background: $color-green-dark;
     @include computers {
       height: 80px;
     }
