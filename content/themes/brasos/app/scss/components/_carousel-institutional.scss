@@ -21,11 +21,15 @@
       position: absolute;
       object-fit: cover;
       width: 75%;
-      height: 200px;
+      height: 225px;
       top: -15%;
       left: 0;
       right: 0;
       margin: 0 auto;
+      @include tablets {
+        width: 50%;
+        height: 240px;
+      }
       @include computers {
         top: 5%;
         left: -450px;
