@@ -20,7 +20,7 @@ var app = {
       // dots: true,
       arrows: false
     });
-    
+
     $('.fade').slick({
       autoplay: true,
       arrows: false,
@@ -29,6 +29,7 @@ var app = {
       fade: true,
       cssEase: 'linear'
     });
+
 
 
     // $('.navbar-events > li').click(function () {
@@ -87,6 +88,12 @@ var app = {
         .addTo(ctlrManyElementsManyTimes);
     });
 
+    // SCROLL BUTTON
+    $(document).on('click', '#indiceBtn', function (event) {
+      $('html,body').animate({ 
+        scrollTop: "0"
+      }, 1000);
+    });
 
   }
 };
