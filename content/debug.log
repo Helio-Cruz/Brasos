@@ -3,3 +3,92 @@
 [08-Apr-2020 20:56:14 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 31
 [08-Apr-2020 20:56:23 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-news.php on line 31
 [08-Apr-2020 20:56:39 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 31
+[09-Apr-2020 23:01:37 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:01:38 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:01:58 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:02:11 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:02:28 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:02:38 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:02:39 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:02:52 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:02:57 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:03:08 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:03:37 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:03:55 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:03:57 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:04:25 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:04:37 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:04:54 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:04:55 UTC] PHP Notice:  Trying to get property 'post_name' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/post.php on line 6246
+[09-Apr-2020 23:04:55 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/post.php on line 6251
+[09-Apr-2020 23:04:55 UTC] PHP Notice:  Trying to get property 'post_date' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/post.php on line 6289
+[09-Apr-2020 23:04:55 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/post.php on line 6295
+[09-Apr-2020 23:04:55 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2545
+[09-Apr-2020 23:04:55 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2551
+[09-Apr-2020 23:05:37 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:06:05 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:06:05 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2545
+[09-Apr-2020 23:06:05 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2551
+[09-Apr-2020 23:06:07 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:09:16 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:09:18 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:09:39 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:10:17 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:10:39 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:10:44 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:11:17 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:11:30 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:11:39 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:12:17 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:12:54 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:13:07 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:13:17 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:13:19 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:13:19 UTC] PHP Notice:  Trying to get property 'post_name' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/post.php on line 6246
+[09-Apr-2020 23:13:19 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/post.php on line 6251
+[09-Apr-2020 23:13:19 UTC] PHP Notice:  Trying to get property 'post_date' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/post.php on line 6289
+[09-Apr-2020 23:13:19 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/post.php on line 6295
+[09-Apr-2020 23:13:19 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2545
+[09-Apr-2020 23:13:19 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2551
+[09-Apr-2020 23:13:23 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:15:05 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:15:06 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:15:30 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:15:36 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:15:36 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2545
+[09-Apr-2020 23:15:36 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2551
+[09-Apr-2020 23:15:37 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:15:37 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:18:15 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:18:16 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:18:42 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:18:43 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:18:56 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:18:56 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2545
+[09-Apr-2020 23:18:56 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2551
+[09-Apr-2020 23:18:57 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:18:57 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:30:45 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:30:46 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:30:56 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:31:52 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:31:53 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:32:53 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:34:31 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:34:33 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:35:25 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:35:31 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:35:33 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:35:53 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:36:03 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:36:04 UTC] PHP Notice:  Trying to get property 'post_name' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/post.php on line 6246
+[09-Apr-2020 23:36:04 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/post.php on line 6251
+[09-Apr-2020 23:36:04 UTC] PHP Notice:  Trying to get property 'post_date' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/post.php on line 6289
+[09-Apr-2020 23:36:04 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/post.php on line 6295
+[09-Apr-2020 23:36:04 UTC] PHP Notice:  Trying to get property 'post_status' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2545
+[09-Apr-2020 23:36:04 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /var/www/html/Agencia-Fazer/Brasos/wp/wp-includes/class-wp-customize-manager.php on line 2551
+[09-Apr-2020 23:36:06 UTC] PHP Notice:  Undefined variable: footer_image_1 in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/inc/customizer/brasos_carousel_footer.php on line 423
+[09-Apr-2020 23:37:06 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-news.php on line 31
+[09-Apr-2020 23:37:14 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 31
+[09-Apr-2020 23:39:36 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 31
+[09-Apr-2020 23:40:50 UTC] PHP Notice:  Undefined index: post_content,    in /var/www/html/Agencia-Fazer/Brasos/content/themes/brasos/template-articles.php on line 31
