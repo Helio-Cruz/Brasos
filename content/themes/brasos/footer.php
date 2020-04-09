@@ -49,22 +49,25 @@
      </div>
    </div>
  </div>
-  <div class="uk-grid-match uk-child-width-expand@s footer-mentions" uk-grid>
+ <div class="uk-grid-match uk-child-width-expand@s footer-mentions" uk-grid>
    <div>
-     <p>Copyright@ 2020. Agência Fazer</p>
+     <p>Copyright © 2020 Agência Fazer</p>
    </div>
    <div class="footer-nav__logo">
      <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() . '/public/images/logo.png' ?>" alt=""></a>
    </div>
+   <div>
+     <a id="indiceBtn" uk-icon="icon: chevron-up" href="#indice"></a>
+   </div>
  </div>
  </div>
 
 
-<!-- <script src="js/app.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+ <!-- <script src="js/app.js"></script> -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
  <?php wp_footer(); ?>
  </body>
 
