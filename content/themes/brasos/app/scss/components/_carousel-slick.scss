@@ -82,6 +82,7 @@
   padding-bottom: 0;
   @include tablets {
     font-size: $subheading;
+    height: 45px;
   }
 }
 .slick-carousel-small {

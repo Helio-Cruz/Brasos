@@ -181,7 +181,7 @@ Template Name: Institucional
       <li>
         <div class="institutional__slides">
           <div class="background-grey">
-            <img src="<?php echo get_template_directory_uri() . '/public/images/card-3.jpg' ?>" alt="">
+            <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-2019/24.jpg' ?>" alt="">
             <div class="institutional__title">
               <h2 class="h2-title">Nossa Razão De Ser</h2>
             </div>
