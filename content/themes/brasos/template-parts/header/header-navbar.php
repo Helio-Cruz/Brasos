@@ -29,12 +29,12 @@
            </div>
          </li>
          <li>
-           <a>Nome ?</a>
+           <a>Parceiros</a>
            <div class="uk-navbar-dropdown">
              <ul class="uk-nav uk-navbar-dropdown-nav">
                <?php
                 $menu = wp_nav_menu([
-                  'menu' => 'Nome ?',
+                  'menu' => 'Parceiros',
                   'container' => false,
                   'items_wrap' => '%3$s',
                   'echo' => true
