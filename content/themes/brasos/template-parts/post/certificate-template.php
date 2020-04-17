@@ -4,13 +4,7 @@
     <h2 class="h2-title">CERTIFICADOS</h2>
     <h3 class="h3-title">BRASIT 2018 - BRASOStbt 2019</h3>
 
-    <!-- <form class="uk-search uk-search-default">
-      <a href="" class="uk-search-icon-flip" uk-search-icon></a>
-      <input class="uk-search-input" type="search" name="s" placeholder="Search...">
-    </form>
-    <p>Por favor, digite seu nome para acessar os certificados disponíveis.</p>
- </div> -->
-
+ 
 
     <div class="diplom__show">
 

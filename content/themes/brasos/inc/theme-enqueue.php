@@ -7,17 +7,15 @@ if (!function_exists('brasos_scripts')) :
         wp_enqueue_style(
             'brasos-style-css',
             get_theme_file_uri('/public/css/style.css'),
-            //   get_theme_file_uri('/app/scss/main.scss'),
             [],
-            '1.0.1'
+            '1.0.0'
         );
 
-
+ 
 
         wp_enqueue_script(
             'brasos-js',
             get_theme_file_uri('/public/js/app.js'),
-            //  get_theme_file_uri('/app/js/app.js'),
             [],
             '1.0.0',
             true
@@ -44,11 +42,6 @@ function my_login_logo()
             padding-bottom: 0;
         }
 
-        /* body.login div#login p#nav a:hover,
-        body.login div#login p#backtoblog a:hover {
-           color: #ff1709 !important;
-             Your link color. 
-        } */
     </style>
 <?php
 }
@@ -77,11 +70,7 @@ add_action('login_enqueue_scripts', 'my_register_stylesheet');
 
 
 
-//  function my_login_logo_url_title()
-// {
-//     return 'Brasos';
-// }
-// add_filter('login_headertext', 'my_login_logo_url_title');
+ 
 
 
 
