@@ -29,6 +29,23 @@
            </div>
          </li>
          <li>
+           <a>Nome ?</a>
+           <div class="uk-navbar-dropdown">
+             <ul class="uk-nav uk-navbar-dropdown-nav">
+               <?php
+                $menu = wp_nav_menu([
+                  'menu' => 'Nome ?',
+                  'container' => false,
+                  'items_wrap' => '%3$s',
+                  'echo' => true
+                ]);
+                $menu = strip_tags($menu, '<li><a href="%2$s">');
+                echo $menu;
+                ?>
+             </ul>
+           </div>
+         </li>
+         <li>
            <a href="<?php echo home_url('/eventos/') ?>">Eventos</a>
            <div class="uk-navbar-dropdown">
              <ul class="uk-nav-sub uk-navbar-dropdown-nav">

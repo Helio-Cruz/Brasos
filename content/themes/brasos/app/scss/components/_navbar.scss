@@ -25,9 +25,7 @@
 
 .uk-navbar-container {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  // position: relative;
-  // display: flex;
-  // justify-content: center;
+ 
   &:not(.uk-navbar-transparent) {
     background-color: $white;
   }
@@ -108,10 +106,11 @@ img.trp-flag-image {
   left: -300px;
   width: 300px;
   @include tablets {
-    left: -450px;
+   left: -550px;
     width: 550px;
   }
   @include computers {
+    left: -650px;
     width: 650px;
   }
   a {

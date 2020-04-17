@@ -15,7 +15,7 @@
         <a href="<?php echo get_permalink(get_page_by_path('Eventos')) ?>">
             <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-tbt2.jpg' ?>" />
           <h2 class="card-title">Eventos</h2>
-          <p class="card-text">Confira nossos ultimos encontros</p>
+          <p class="card-text">Confira nossos últimos encontros</p>
         </a>
       </div>
     </div>
@@ -24,16 +24,16 @@
         <a href="<?php echo get_permalink(get_page_by_path('Artigos')) ?>">
           <img src="<?php echo get_template_directory_uri() . '/public/images/card-4.jpg' ?>" />
           <h2 class="card-title">Artigos</h2>
-          <p class="card-text">Leia nossas publicações médicais</p>
+          <p class="card-text">Leia nossas publicações</p>
         </a>
       </div>
     </div>
     <div class="card">
       <div class="card-image">
         <a href="<?php echo get_permalink(get_page_by_path('Congressos')) ?>">
-          <img src="<?php echo get_template_directory_uri() . '/public/images/d.2.jpg' ?>" />
+          <img src="<?php echo get_template_directory_uri() . '/public/images/logo-brasos3.jpg' ?>" />
           <h2 class="card-title">Congressos</h2>
-          <p class="card-text">Descobre nossas próximas reuniões</p>
+          <p class="card-text">Descubra nossas próximas reuniões</p>
         </a>
       </div>
     </div>
