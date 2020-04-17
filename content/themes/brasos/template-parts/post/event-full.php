@@ -9,10 +9,6 @@
     $args = [
       'post_type' => 'evento',
       'post_parent' => $current_page_id,
-      // 'parent' => 0,
-      // 'child_of' => $post->ID,
-      // 'child_of' => get_the_category( $post->ID ),
-      // 'post_parent' => $post->ID,
       'category_name'  => 'data-local',
       'posts_per_page' => -1,
       'post_status'    => 'publish',
@@ -22,8 +18,7 @@
 
     if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
     ?>
-        <!-- < ?php print_r('CATEGORY POST ID : ' . get_the_category( $post->ID ));?>
-        < ?php print_r('PAGE ID' . $current_page_id);?> -->
+ 
         <div class="blog__content events__layout">
           <h2 class="h2-title uk-text-center"><?php the_title(); ?></h2>
           <div class="blog__content-infos">
@@ -121,7 +116,6 @@
   <!-- ACCORDION PROGRAMACAO -->
   <li>
     <div class="accordion__content events__layout">
-      <!-- <h2 class="h2-title">Programação</h2> -->
       <ul uk-accordion>
 
         <?php
@@ -165,7 +159,6 @@
       'post_type' => 'evento',
       'post_parent' => $current_page_id,
       'category_name'  => 'palestrantes-convidados',
-      // 'category_in' => '18', // category child "palestrantes"
       'posts_per_page' => -1,
       'post_status'    => 'publish',
       'order' => 'ASC'

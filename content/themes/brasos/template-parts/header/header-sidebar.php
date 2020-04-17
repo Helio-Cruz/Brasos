@@ -16,39 +16,6 @@
           echo $menu;
           ?>
         </div>
-        <!-- <li><a href="< ?php echo home_url(); ?>">Home</a></li>
-        <li><a href="< ?php echo home_url('/institucional/'); ?>">Institucional</a></li>
-        <li><a href="< ?php echo home_url('/eventos/'); ?>">Eventos</a></li> -->
-        <!-- <li class="uk-parent">
-         <a href="">Institucional</a>
-         <ul class="uk-nav-sub uk-navbar-dropdown-nav">
-           < ?php
-            $menu = wp_nav_menu([
-              'menu' => 'subnav-institucional',
-              'theme_location' => '',
-              'container' => '',
-              'items_wrap' => '<li><a href="%2$s">%3$s</a></li>',
-              'echo' => true
-            ]);
-            $menu = strip_tags($menu, '');
-            echo $menu;
-            ?>
-         </ul>
-       </li>
-       <li class="uk-parent">
-         <a href="">Eventos</a>
-         <ul class="uk-nav-sub uk-navbar-dropdown-nav">
-           < ?php
-            $menu = wp_nav_menu([
-              'menu' => 'subnav-eventos',
-              'theme_location' => '',
-              'container' => '',
-              'items_wrap' => '<li><a href="%2$s">%3$s</a></li>',
-              'echo' => true
-            ]);
-            $menu = strip_tags($menu, '');
-            echo $menu;
-            ?> -->
             <?php
         $menu = wp_nav_menu([
           // 'menu' => 'menu-header',
@@ -77,7 +44,7 @@
         ?></ul>
         <ul class="uk-nav uk-flex uk-flex-center uk-position-center">
           <li>
-            <a href="index.html">
+            <a href="<?php echo home_url(); ?>">
               <img src="<?php echo get_template_directory_uri() . '/public/images/logo.png' ?>" alt="">
             </a>
           </li>

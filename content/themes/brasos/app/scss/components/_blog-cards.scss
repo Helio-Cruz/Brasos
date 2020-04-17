@@ -1,8 +1,6 @@
 .blog-cards {
   margin: 4em auto 6em;
-  // display: flex;
-  // flex-flow: column;
-  // align-items: flex-start;
+ 
   width: 300px;
   @include tablets {
     width: 700px;

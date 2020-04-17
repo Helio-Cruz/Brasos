@@ -17,21 +17,23 @@ Template Name: Institucional
   </div>
 
   <div class="institutional__resume fadeBottom">
-    <h2 class="h2-title">Resumo</h2>
+    <h2 class="h2-title">Medicina Personalizada</h2>
     <p>
-      Mantendo suas atividades nos procedimentos de injeção tecidual, a BRASOS agora também incorpora ações teóricas e
-      práticas no campo da pesquisa e principalmente na educação de médicos, profissionais da saúde não médicos e
-      acadêmicos de medicina, voltadas às patologias que afetam a mobilidade humana.
+    
+     <b>A BRASOS</b> , Brazilian Society for <b>Osteoarthritis, Osteoporosis and Sarcopenia</b>,  tem como característica a visão da necessidade de otimização dos
+      tratamentos da osteoartrite, osteoporose e sarcopenia a partir de uma visão interrelacionada dessas patologias através da acoplagem e a promoção da melhor 
+      <b>regulação imunometabólica sistêmica</b> do paciente como um todo e seu sistema locomotor, buscando o necessário entendimento das variáveis e necessidades específicas de cada pessoa.
       <br><br>
-      A BRASOS tem como característica a visão da necessidade de otimização dos tratamentos da osteoasrtrite,
-      osteoporose e sarcopenia através da acoplagem e a promoção da melhor regulação imunometabólica sistêmica e das
-      estruturas do sistema locomotor, buscando o necessário entendimento das variáveis e necessidades específicas de
-      cada pessoa.
+      <b>Osteoartrite, Osteoporose e Sarcopenia</b> apresentam prevalências crescentes no Brasil e no mundo, conforme estudos epidemiológicos recentemente publicados. As pesquisas mostram que 
+      essas patologias estão metabólica e biomecanicamente interligadas, razão pela qual a BRASOS, de forma inovadora, embasada nas evidências das melhores práticas clínicas, percebendo 
+      essa lacuna de informações sobre a integração das 3 doenças,  desenvolve suas atividades de educação médica nas áreas da ortopedia, medicina de reabilitação, reumatologia, geriatria, 
+      medicina esportiva e medicina da imagem, além de profissionais da saúde vinculados a abordagens dessas patologias, como nutricionistas, fisioterapeutas, bioquímicos e farmacêuticos, através 
+      de simpósios anuais para abordar as várias estratégias e opções que podem ser usados de forma  sinérgica e complementar na perspectiva da prevenção, tratamento medicamentoso e de intervenção. 
       <br><br>
-      Assim, nossa temática é sempre composta de abordagnes nas dimensões da patologia do sitema locomotor integrada
-      com as características do terreno biológico do indivíduo nas perspectivas do seu genoma e microbioma.
-      <br><br>
-      Acreditamos que alcançaremos a melhor prática médica com a aplicação da medicina personalizada.
+       A BRASOS valoriza os procedimentos de injeção tecidual, cada vez mais presentes, feitas em tecidos e articulações com medicamentos clássicos e mesmo novas moléculas, para promoção de efeitos
+       anti-inflamatórios tanto como ativadores da regeneração tecidual, sempre otimizados pela busca concomitante da <b>regulação imunometabólica sistêmica</b> do paciente, sendo indispensável abordar o 
+       terreno biológico do indivíduo nas perspectivas do seu genoma e microbioma. Acreditamos que alcançaremos a melhor prática médica para Osteoartrite, Osteoporose e Sarcopenia, caminhando, dentro
+       do que já é possível no momento, na busca da aplicação da medicina personalizada.
     </p>
   </div>
 </div>

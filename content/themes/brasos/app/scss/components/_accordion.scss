@@ -33,9 +33,7 @@
       width: 450px;
     }
   }
-  // .h3-title + .h3-title {
-  //   padding-top: 1.5em;
-  // }
+ 
   .h3-title {
     font-size: $body-xl;
   }
@@ -43,7 +41,7 @@
     padding-top: 0;
     margin-top: 0;
   }
-  // .h3-title > span,
+ 
   h4 > strong {
     color: $color-green-dark;
   }
@@ -59,7 +57,7 @@
     color: inherit;
   }
   .uk-accordion-title::before {
-    //   color: $color-green-dark;
+ 
     background-image: none;
     border-style: solid;
     border-width: 0.15em 0.15em 0 0;
