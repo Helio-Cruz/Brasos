@@ -2,13 +2,13 @@
 <div class="carousel-images uk-position-relative uk-light" tabindex="-1" uk-slideshow="autoplay:true; autoplay-interval:4000; min-height:300; max-height:600">
     <ul class="uk-slideshow-items">
       <li>
-        <div class="  ">
+        <div class="uk-position-cover ">
           <img src="<?= get_theme_mod('brasos_bg_slide_1'); ?>" alt="">
         </div>
         <div class="uk-position-bottom-right uk-position-medium uk-light">
-          <h1 class="h1-title"><span>BRASOS</span><br>
-            Brazilian Society for Osteoarthritis, Osteoporosis and Sarcopenia <br>
-            Sociedade de médicos de diferentes especialidades</h1>
+          <!-- <h1 class="h1-title"><span>BRASOS</span><br>-->
+         <h1 class="h1-title title-banner"> Brazilian Society for Osteoarthritis, Osteoporosis and Sarcopenia <br>
+            Sociedade de médicos de diferentes especialidades</h1> 
         </div>
       </li>
       <li>
@@ -16,9 +16,9 @@
           <img src="<?= get_theme_mod('brasos_bg_slide_2'); ?>" alt="">
         </div>
         <div class="uk-position-bottom-right uk-position-medium uk-light">
-          <h1 class="h1-title"><span>BRASOS</span><br>
+          <!-- <h1 class="h1-title"><span>BRASOS</span><br>
             Brazilian Society for Osteoarthritis, Osteoporosis and Sarcopenia <br>
-            Sociedade de médicos de diferentes especialidades</h1>
+            Sociedade de médicos de diferentes especialidades</h1> -->
         </div>
       </li>
       <li>
@@ -44,9 +44,9 @@
           <img src="<?= get_theme_mod('brasos_bg_slide_6'); ?>" alt="">
         </div>
         <div class="uk-position-bottom-right uk-position-medium uk-light">
-          <h1 class="h1-title"><span>BRASOS</span><br>
+          <!-- <h1 class="h1-title"><span>BRASOS</span><br>
             Brazilian Society for Osteoarthritis, Osteoporosis and Sarcopenia <br>
-            Sociedade de médicos de diferentes especialidades</h1>
+            Sociedade de médicos de diferentes especialidades</h1> -->
         </div>
       </li>
     </ul>
