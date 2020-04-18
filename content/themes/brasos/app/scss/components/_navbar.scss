@@ -148,13 +148,12 @@ img.trp-flag-image {
   @include flexbox;
   flex-direction: column;
   padding: 0;
-  height: 65vh;
+  height: 80vh;
   font-size: $body-xs;
   li {
     padding: 0.2em 0;
   }
   @include tablets {
-    height: 50vh;
     font-size: $body;
     li {
       padding: 0.3em 0;
@@ -170,28 +169,20 @@ img.trp-flag-image {
   padding: 2em 1em;
   background: $color-green-regular;
   position: relative;
-  height: 35vh;
+  height: 20vh;
   font-size: $body-xs;
   @include tablets {
-    height: 50vh;
     font-size: $body;
+  }
+  ul {
+    margin-top: 0;
   }
   li {
     width: 40%;
-    @include tablets {
-      width: 35%;
-    }
-  }
-  li {
     padding: 0.2em 0;
     @include tablets {
       padding: 0.5em 0;
-    }
-  }
-  ul:last-of-type {
-    margin-top: 3em;
-    @include tablets {
-      margin-top: 1em;
+      width: 35%;
     }
   }
   a {
