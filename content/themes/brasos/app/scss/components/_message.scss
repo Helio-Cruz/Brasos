@@ -38,6 +38,21 @@
       padding: 5.5em 4em 4em;
     }
   }
+  &__img {
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 2em;
+    width: 250px;
+    height: auto;
+    @include tablets {
+      float: left;
+      width: 280px;
+      padding: 0 2em 0 0;
+    }
+    @include computers {
+      padding-bottom: 1em;
+    }
+  }
   a {
     color: $color-green-regular;
     &:hover {
