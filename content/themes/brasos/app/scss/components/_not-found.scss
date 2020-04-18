@@ -1,7 +1,7 @@
-.not-found{
+.not-found, .text-alert{
     display: flex;
-    margin: 2em auto;
-    height: calc(33vh - 139px);
+    margin: 2.5em auto;
+    height: calc(100vh - 765px);
     &__text{    
         margin: auto;
         text-align: center;        

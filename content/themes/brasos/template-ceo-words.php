@@ -7,7 +7,7 @@ Template Name: Palavras do Presidente
 <?php get_header(); ?>
 
 <section>
-  <div class="message">
+  <div class="message" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom;">
     <h2 class="h2-title title">Palavras do presidente</h2>
 
     <p class="message__content">
