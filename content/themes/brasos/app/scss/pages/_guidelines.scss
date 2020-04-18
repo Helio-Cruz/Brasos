@@ -1,0 +1,12 @@
+.guidelines{
+    align-items: center;
+ img{
+     border: solid $black 1px;
+ }
+}
+
+/* guideline link */
+.uk-link-toggle:hover .uk-link-heading{
+    color: $color-green-dark;
+    text-decoration: none;
+}
