@@ -59,4 +59,16 @@ h3 {
   font-weight: 300;
 }
 
- 
+/* Parceiros buttons */
+ .general-button{
+  width: 140px;
+  height: 42px;
+  background-color: $color-green-dark;
+  border: none;
+  color: $white;
+  &:hover{
+    background-color: $white;
+    color: $color-green-dark;
+    border: solid $color-green-dark 1px;
+  }
+ }

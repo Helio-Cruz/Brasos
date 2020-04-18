@@ -5,7 +5,6 @@
        <a href="<?php echo esc_url(get_permalink(get_page_by_title('Torne-se Membro'))); ?>"><?php esc_html_e('Torne-se Membro', 'textdomain'); ?></a>
      </button>
    </div>
-
    <div uk-navbar class="footer-nav__menu-fast ">
      <div class="uk-navbar-center">
        <ul class="uk-navbar-nav uk-flex-wrap uk-child-width-expand@s">
