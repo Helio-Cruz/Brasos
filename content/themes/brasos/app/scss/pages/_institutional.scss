@@ -34,19 +34,27 @@
     }
     img {
       padding: 2em;
+      padding-top: 0;
+      padding-bottom: 0;
       height: auto;
       width: auto;
       @include tablets {
         width: 450px;
       }
     }
+    p {
+      margin: 0;
+    }
     figure {
+      margin: 0;
       @include computers {
         order: 2;
       }
     }
     figcaption {
       text-align: center;
+      padding-top: 0.5em;
+      padding-bottom: 1em;
     }
     > p {
       width: 100%;

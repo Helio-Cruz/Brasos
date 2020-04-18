@@ -1,0 +1,11 @@
+@keyframes zoomEffect {
+  from {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.3, 1.3);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}

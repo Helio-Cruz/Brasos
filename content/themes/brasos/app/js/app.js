@@ -12,7 +12,8 @@ var app = {
     $(".slick-carousel-small").slick({
       autoplay: true,
       // dots: true,
-      arrows: false
+      arrows: false,
+      autoplaySpeed: 4000
     });
 
     $('.fade').slick({
