@@ -31,6 +31,13 @@ h2 {
   margin: 0 auto;
   text-align: center;
 }
+.title-banner{
+  @include computers{
+    position: relative;
+    bottom: 380px;
+  }
+  
+}
 .h2-title,
 h2 {
   color: $color-green-regular;
