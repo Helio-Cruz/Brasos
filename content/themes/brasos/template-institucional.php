@@ -24,7 +24,10 @@ Template Name: Institucional
       <b>regulação imunometabólica sistêmica</b> do paciente como um todo e seu sistema locomotor, buscando o necessário entendimento das variáveis e necessidades específicas de cada pessoa.
     </p>
     <div>
-      <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-intro.png' ?>" alt="">
+      <figure>
+        <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-intro.png' ?>" alt="">
+        <figcaption><a href="<?php echo home_url('/conselho-diretor/antonio-martins-tieppo/'); ?>">Antonio Martins Tieppo</a></figcaption>
+      </figure>
       <p>
         <b>Osteoartrite, Osteoporose e Sarcopenia</b> apresentam prevalências crescentes no Brasil e no mundo, conforme estudos epidemiológicos recentemente publicados. As pesquisas mostram que
         essas patologias estão metabólica e biomecanicamente interligadas, razão pela qual a BRASOS, de forma inovadora, embasada nas evidências das melhores práticas clínicas, percebendo

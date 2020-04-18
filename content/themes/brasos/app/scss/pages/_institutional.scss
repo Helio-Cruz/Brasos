@@ -32,16 +32,21 @@
     @include computers {
       flex-direction: row;
     }
-    > img {
+    img {
       padding: 2em;
       height: auto;
       width: auto;
       @include tablets {
         width: 450px;
       }
+    }
+    figure {
       @include computers {
         order: 2;
       }
+    }
+    figcaption {
+      text-align: center;
     }
     > p {
       width: 100%;
@@ -78,6 +83,12 @@
   }
   p {
     text-align: justify;
-    line-height: 1.3em;
+    line-height: 1.5em;
+  }
+  a {
+    color: $color-green-regular;
+    &:hover {
+      color: $color-green-dark;
+    }
   }
 }
