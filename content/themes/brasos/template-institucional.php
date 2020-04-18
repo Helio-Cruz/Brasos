@@ -8,7 +8,7 @@ Template Name: Institucional
 
 
 <div class="institutional__content ">
- 
+
   <div class="institutional__introduction fadeBottom">
     <h1 class="h1-title">
       A BRASOS<br>
@@ -19,25 +19,30 @@ Template Name: Institucional
   <div class="institutional__resume fadeBottom">
     <h2 class="h2-title">Medicina Personalizada</h2>
     <p>
-    
-     <b>A BRASOS</b> , Brazilian Society for <b>Osteoarthritis, Osteoporosis and Sarcopenia</b>,  tem como característica a visão da necessidade de otimização dos
-      tratamentos da osteoartrite, osteoporose e sarcopenia a partir de uma visão interrelacionada dessas patologias através da acoplagem e a promoção da melhor 
+      <b>A BRASOS</b> , Brazilian Society for <b>Osteoarthritis, Osteoporosis and Sarcopenia</b>, tem como característica a visão da necessidade de otimização dos
+      tratamentos da osteoartrite, osteoporose e sarcopenia a partir de uma visão interrelacionada dessas patologias através da acoplagem e a promoção da melhor
       <b>regulação imunometabólica sistêmica</b> do paciente como um todo e seu sistema locomotor, buscando o necessário entendimento das variáveis e necessidades específicas de cada pessoa.
-      <br><br>
-      <b>Osteoartrite, Osteoporose e Sarcopenia</b> apresentam prevalências crescentes no Brasil e no mundo, conforme estudos epidemiológicos recentemente publicados. As pesquisas mostram que 
-      essas patologias estão metabólica e biomecanicamente interligadas, razão pela qual a BRASOS, de forma inovadora, embasada nas evidências das melhores práticas clínicas, percebendo 
-      essa lacuna de informações sobre a integração das 3 doenças,  desenvolve suas atividades de educação médica nas áreas da ortopedia, medicina de reabilitação, reumatologia, geriatria, 
-      medicina esportiva e medicina da imagem, além de profissionais da saúde vinculados a abordagens dessas patologias, como nutricionistas, fisioterapeutas, bioquímicos e farmacêuticos, através 
-      de simpósios anuais para abordar as várias estratégias e opções que podem ser usados de forma  sinérgica e complementar na perspectiva da prevenção, tratamento medicamentoso e de intervenção. 
-      <br><br>
-       A BRASOS valoriza os procedimentos de injeção tecidual, cada vez mais presentes, feitas em tecidos e articulações com medicamentos clássicos e mesmo novas moléculas, para promoção de efeitos
-       anti-inflamatórios tanto como ativadores da regeneração tecidual, sempre otimizados pela busca concomitante da <b>regulação imunometabólica sistêmica</b> do paciente, sendo indispensável abordar o 
-       terreno biológico do indivíduo nas perspectivas do seu genoma e microbioma. Acreditamos que alcançaremos a melhor prática médica para Osteoartrite, Osteoporose e Sarcopenia, caminhando, dentro
-       do que já é possível no momento, na busca da aplicação da medicina personalizada.
+    </p>
+    <div>
+      <img src="<?php echo get_template_directory_uri() . '/public/images/brasos-intro.png' ?>" alt="">
+      <p>
+        <b>Osteoartrite, Osteoporose e Sarcopenia</b> apresentam prevalências crescentes no Brasil e no mundo, conforme estudos epidemiológicos recentemente publicados. As pesquisas mostram que
+        essas patologias estão metabólica e biomecanicamente interligadas, razão pela qual a BRASOS, de forma inovadora, embasada nas evidências das melhores práticas clínicas, percebendo
+        essa lacuna de informações sobre a integração das 3 doenças, desenvolve suas atividades de educação médica nas áreas da ortopedia, medicina de reabilitação, reumatologia, geriatria,
+        medicina esportiva e medicina da imagem, além de profissionais da saúde vinculados a abordagens dessas patologias, como nutricionistas, fisioterapeutas, bioquímicos e farmacêuticos, através
+        de simpósios anuais para abordar as várias estratégias e opções que podem ser usados de forma sinérgica e complementar na perspectiva da prevenção, tratamento medicamentoso e de intervenção.
+      </p>
+    </div>
+    <p>
+      A BRASOS valoriza os procedimentos de injeção tecidual, cada vez mais presentes, feitas em tecidos e articulações com medicamentos clássicos e mesmo novas moléculas, para promoção de efeitos
+      anti-inflamatórios tanto como ativadores da regeneração tecidual, sempre otimizados pela busca concomitante da <b>regulação imunometabólica sistêmica</b> do paciente, sendo indispensável abordar o
+      terreno biológico do indivíduo nas perspectivas do seu genoma e microbioma. Acreditamos que alcançaremos a melhor prática médica para Osteoartrite, Osteoporose e Sarcopenia, caminhando, dentro
+      do que já é possível no momento, na busca da aplicação da medicina personalizada.
     </p>
   </div>
+
 </div>
-</div>
+
 <div uk-slideshow="animation: slide; min-height: 600; max-height: 600; autoplay:true; autoplay-interval:4000;">
   <div class="uk-position-relative uk-visible-toggle" tabindex="-1">
     <ul class="uk-slideshow-items">
@@ -204,50 +209,50 @@ Template Name: Institucional
 </div>
 
 <div uk-scrollspy="cls: uk-animation-fade; target: .box; delay: 500; repeat: true">
-<div class="columns__list-names">
-  <div class="columns__background">
-    <h2 class="h2-title">Fundadores</h2>
-    <div class="uk-flex uk-flex-center uk-flex-wrap">
-      <div class="uk-width-1-3@m box">
-        <div>
-          <h3 class="h3-title">ABMFR – SBMEE – SBR</h3>
-          <p>RJ - Paulo Cesar Hamdan</p>
+  <div class="columns__list-names">
+    <div class="columns__background">
+      <h2 class="h2-title">Fundadores</h2>
+      <div class="uk-flex uk-flex-center uk-flex-wrap">
+        <div class="uk-width-1-3@m box">
+          <div>
+            <h3 class="h3-title">ABMFR – SBMEE – SBR</h3>
+            <p>RJ - Paulo Cesar Hamdan</p>
+          </div>
+          <div>
+            <h3 class="h3-title">ABMFR</h3>
+            <p>SP - Cyro Scala de Almeida Jr.<br>
+              SP - Antonio Martins Tieppo<br>
+              SP - Eduardo de Melo Carvalho Rocha</p>
+          </div>
         </div>
-        <div>
-          <h3 class="h3-title">ABMFR</h3>
-          <p>SP - Cyro Scala de Almeida Jr.<br>
-            SP - Antonio Martins Tieppo<br>
-            SP - Eduardo de Melo Carvalho Rocha</p>
+        <div class="uk-width-1-3@m box">
+          <h3 class="h3-title">SBOT</h3>
+          <p>SP - Gustavo Constantino de Campos<br>
+            SP - Márcia Ushoa de Rezende<br>
+            SP - Caio Gonçalves de Souza<br>
+            SP - Fabiano Gonçalves Cunha<br>
+            RJ - Zartur José Barcelos Menegassi<br>
+            RJ - Marcos Britto<br>
+            RJ - Eduardo Branco de Souza<br>
+            ES - Thanguy Friço</p>
         </div>
-      </div>
-      <div class="uk-width-1-3@m box">
-        <h3 class="h3-title">SBOT</h3>
-        <p>SP - Gustavo Constantino de Campos<br>
-          SP - Márcia Ushoa de Rezende<br>
-          SP - Caio Gonçalves de Souza<br>
-          SP - Fabiano Gonçalves Cunha<br>
-          RJ - Zartur José Barcelos Menegassi<br>
-          RJ - Marcos Britto<br>
-          RJ - Eduardo Branco de Souza<br>
-          ES - Thanguy Friço</p>
-      </div>
-      <div class="uk-width-1-3@m box">
-        <div>
-          <h3 class="h3-title">CBE</h3>
-          <p>RS – Ivan Pacheco</p>
-        </div>
-        <div>
-          <h3 class="h3-title">CBR</h3>
-          <p>RJ - Carlos Bruno Reis Pinheiro<br>
-            RJ - Carlos Marenga<br>
-            CE – Francisco Abaeté</p>
+        <div class="uk-width-1-3@m box">
+          <div>
+            <h3 class="h3-title">CBE</h3>
+            <p>RS – Ivan Pacheco</p>
+          </div>
+          <div>
+            <h3 class="h3-title">CBR</h3>
+            <p>RJ - Carlos Bruno Reis Pinheiro<br>
+              RJ - Carlos Marenga<br>
+              CE – Francisco Abaeté</p>
+          </div>
         </div>
       </div>
     </div>
+
+
   </div>
- 
-
-</div>
 
 
-<?php get_footer(); ?>
+  <?php get_footer(); ?>
