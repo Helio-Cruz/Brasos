@@ -27,7 +27,7 @@
       </div>
       <div class="uk-position-cover cursor-carousel">
         <a href="<?php echo home_url('/eventos/brasostbt-2019/'); ?>">
-          <img uk-tooltip="INFORMAÇÕES GERAIS" src="<?php echo get_template_directory_uri() . '/public/images/cursor.jpg' ?>" alt="">
+          <img uk-tooltip="INFORMAÇÕES GERAIS" src="<?php echo get_template_directory_uri() . '/public/images/cursor.png' ?>" alt="">
         </a>
       </div>
     </li>
