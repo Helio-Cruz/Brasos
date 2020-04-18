@@ -24,6 +24,32 @@
 
 .institutional__resume {
   margin-bottom: 5em;
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include computers {
+      flex-direction: row;
+    }
+    > img {
+      padding: 2em;
+      height: auto;
+      width: auto;
+      @include tablets {
+        width: 450px;
+      }
+      @include computers {
+        order: 2;
+      }
+    }
+    > p {
+      width: 100%;
+      @include computers {
+        width: 50%;
+      }
+    }
+  }
   .h2-title {
     position: relative;
     z-index: 1;
