@@ -31,17 +31,6 @@
     </div>
     <div class="green-block">
       <div class="green-diagonal"></div>
-      <ul class="uk-nav uk-flex uk-flex-center uk-flex-wrap">
-        <?php
-        $menu = wp_nav_menu([
-          'menu' => 'menu-footer',
-          'container' => false,
-          'items_wrap' => '%3$s',
-          'echo' => true
-        ]);
-        $menu = strip_tags($menu, '<li><a href="%2$s">');
-        echo $menu;
-        ?></ul>
         <ul class="uk-nav uk-flex uk-flex-center uk-position-center">
           <li>
             <a href="<?php echo home_url(); ?>">

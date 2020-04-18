@@ -51,11 +51,19 @@
   position: relative;
   img {
     position: absolute;
-    top: 380px;
-    left: 60%;
-    transform: translateY(-40%);
+    top: 200px;
+    left: 70%;
+    transform: translateY(-30%);
     width: 35px;
     height: auto;
     animation: zoomEffect 2s linear infinite;
+    @include tablets {
+      top: 330px;
+    }
+    @include computers {
+      top: 350px;
+      left: 60%;
+      transform: translateY(-40%);
+    }
   }
 }
