@@ -3,5 +3,9 @@
 Template Name:  Guidelines em osteoartrite
 */
 ?>
+<?php get_header(); ?>
 
-<h3> Em construçao</h3>
+
+ 
+
+<?php get_footer(); ?>
