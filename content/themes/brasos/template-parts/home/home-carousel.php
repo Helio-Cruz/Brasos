@@ -3,7 +3,7 @@
   <ul class="uk-slideshow-items">
     <li>
       <div class="uk-position-cover ">
-        <img src="<?= get_theme_mod('brasos_bg_slide_3'); ?>" alt="">
+        <img src="<?= get_theme_mod('brasos_bg_slide_1'); ?>" alt="">
       </div>
       <div class="uk-position-bottom-right uk-position-medium uk-light">
         <!-- <h1 class="h1-title"><span>BRASOS</span><br>-->
@@ -23,11 +23,11 @@
     </li>
     <li>
       <div class="uk-position-cover">
-        <img src="<?= get_theme_mod('brasos_bg_slide_1'); ?>" alt="">
+        <img src="<?= get_theme_mod('brasos_bg_slide_3'); ?>" alt="">
       </div>
       <div class="uk-position-cover cursor-carousel">
         <a href="<?php echo home_url('/eventos/brasostbt-2019/'); ?>">
-          <img src="<?php echo get_template_directory_uri() . '/public/images/cursor.png' ?>" alt="">
+          <img uk-tooltip="INFORMAÇÕES GERAIS" src="<?php echo get_template_directory_uri() . '/public/images/cursor.jpg' ?>" alt="">
         </a>
       </div>
     </li>
