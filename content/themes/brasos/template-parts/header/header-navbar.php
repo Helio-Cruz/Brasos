@@ -62,6 +62,23 @@
              </ul>
            </div>
          </li>
+         <li>
+           <a>Guidelines</a>
+           <div class="uk-navbar-dropdown">
+             <ul class="uk-nav uk-navbar-dropdown-nav">
+               <?php
+                $menu = wp_nav_menu([
+                  'menu' => 'Guidelines',
+                  'container' => false,
+                  'items_wrap' => '%3$s',
+                  'echo' => true
+                ]);
+                $menu = strip_tags($menu, '<li><a href="%2$s">');
+                echo $menu;
+                ?>
+             </ul>
+           </div>
+         </li>
          <?php
           $menu = wp_nav_menu([
             'menu' => 'menu-header',
