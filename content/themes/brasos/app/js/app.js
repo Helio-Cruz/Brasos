@@ -13,7 +13,7 @@ var app = {
       autoplay: true,
       // dots: true,
       arrows: false,
-      autoplaySpeed: 4000
+      autoplaySpeed: 6000
     });
 
     $('.fade').slick({
