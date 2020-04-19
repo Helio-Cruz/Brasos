@@ -12,42 +12,27 @@ Template Name: Congressos
     <div uk-flex uk-flex-center uk-grid>
       <div class="uk-card uk-card-default box">
         <div class="uk-card-header">
-          <h3 class="uk-card-title h3-title"><a href="https://www.isiat2019.com/" target="_blank">ISIAT 2019</a></h3>
+          <h3 class="uk-card-title h3-title"><a href="http://brasos.med.br/" target="_blank">Brasit 2020 <br> Brasos - Brazilian Symposium on Injection Treatment</a></h3>
         </div>
         <div class="uk-card-body">
-          <p>Local: Lisboa - Portugal
+          <p>Local: Centro de  Convenções do Barra Brisa Hotel 
+            <br>
+            <br>
+             Rio de Janeiro - Brasil
             <br><br>
-            Data: 03 a 05 de outubro de 2019
+            Data: 24 - 27 de Setembro de 2020
           </p>
         </div>
       </div>
       <div class="uk-card uk-card-default box">
 
         <div class="uk-card-header">
-          <h3 class="uk-card-title h3-title"><a href="http://www.medicinadoesporte.org.br/" target="_blank">31º CONGRESSO BRASILEIRO DE
-              MEDICINA
-              DO
-              EXERCÍCIO E DO ESPORTE E O XI CONGRESSO SUL-AMERICANO DE MEDICINA DO ESPORTE</a></h3>
+          <h3 class="uk-card-title h3-title"><a href="http://brasos.med.br/" target="_blank">2º SimGeos <br>Simpósio do Grupo de Estudos Em Osteoartrite, Osteoporose e Sarcopenia HCFMUSP - Santa Casa SP </a></h3>
         </div>
         <div class="uk-card-body">
-          <p>Local: Bourbon Convention - Foz do Iguaçu, PR - Brasil
+          <p>Local:  Faculdade de Ciências Médicas da Santa Casa Sao Paulo - Brasil
             <br><br>
-            Data: 29 a 31 de agosto de 2019
-            <br><br>
-          </p>
-        </div>
-      </div>
-      <div class="uk-card uk-card-default box">
-
-        <div class="uk-card-header">
-          <h3 class="uk-card-title h3-title"><a href="https://www.reumatologia.org.br/" target="_blank">XXXVI CONGRESSO BRASILEIRO DE
-              REUMATOLOGIA</a></h3>
-        </div>
-
-        <div class="uk-card-body">
-          <p>Local: Fortaleza, CE - Brasil
-            <br><br>
-            Data: 04 a 07 de setembro de 2019
+            Data: 24 - 27 de Setembro de 2020
             <br><br>
           </p>
         </div>
@@ -55,46 +40,31 @@ Template Name: Congressos
       <div class="uk-card uk-card-default box">
 
         <div class="uk-card-header">
-          <h3 class="uk-card-title h3-title"><a href="www.eularcongress2019.org" target="_blank">EULAR ANNUAL CONGRESS 2019</a></h3> <!--link quebrado-->
-
+          <h3 class="uk-card-title h3-title"><a href="https://www.bradoo.com.br/" target="_blank">9º Bradoo Congresso Brasileiro de Densitometria, Osteoporose e Osteometabolismo</a></h3>
         </div>
+
         <div class="uk-card-body">
-          <p>Local: Madrid - Espanha
+          <p>Local: Centro de Convenções do Windsor Oceânico Hotel - Rio de Janeiro - Brasil
             <br><br>
-            Data: 12 a 15 de junho de 2019
+            Data: 21 - 24 de Outubro de 2020
             <br><br>
           </p>
         </div>
-      </div>
+      </div>  
       <div class="uk-card uk-card-default box">
 
-        <div class="uk-card-header">
-          <h3 class="uk-card-title h3-title"><a href="www.portalsbot.org.br" target="_blank"><!--link quebrado-->
-            XXV CONGRESSO BRASILEIRO DE
-              TRAUMA
-              ORTOPÉDICO</a></h3>
-        </div>
-        <div class="uk-card-body">
-          <p>Local: Curitiba, PR - Brasil
-            <br><br>
-            Data: 09 a 11 de maio de 2019
-            <br><br>
-          </p>
-        </div>
-      </div>
-      <div class="uk-card uk-card-default box">
+<div class="uk-card-header">
+  <h3 class="uk-card-title h3-title"><a href="https://www.bradoo.com.br/" target="_blank">XXVII Congresso Brasileiro de Medicina Fisica e Reabilitaçao</a></h3>
+</div>
 
-        <div class="uk-card-header">
-          <h3 class="uk-card-title h3-title"><a href="https://oarsi.org/" target="_blank">OARSI 2019 WORLD CONGRESS</a></h3>
-        </div>
-        <div class="uk-card-body">
-          <p>Local: Toronto, ON - Canada
-            <br><br>
-            Data: 02 a 05 de maio de 2019
-            <br><br>
-          </p>
-        </div>
-      </div>
+<div class="uk-card-body">
+  <p>Local:  Hotel Bourbon Cataratas - Foz do Iguaçu, Paraná - Brasil
+    <br><br>
+    Data: 6 - 24 de Abril 2021
+    <br><br>
+  </p>
+</div>
+</div>  
     </div>
   </div>
 </div>
