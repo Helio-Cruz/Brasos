@@ -14,11 +14,12 @@ Template Name: Arvore do Conhecimento
  </a>
 <div class="uk-card-body">
         <h3>Professor Henry Okigami</h3>
-        <p>Atenção  Membros da BRASOS, em breve, curso gratuito do professor Henry Okigami.</p>
+        <p><b>Atenção !</b></p> 
+           <p><b> Em Breve, aulas do professor Henry Okigami, para os membros da BRASOS.</b></p>
     <ol class="tree__text">
-        <li>1 - Importância da Regulação Imunometabólica  no tratamento da Osteoartrite;</li>
-        <li>2 - Importância da Regulação Imunometabólica  no tratamento da Oteoporose; </li>
-        <li>3 - Importância da Regulação Imunometabólica  no tratamento da Sarcopenia.</li>
+        <li><b>Aula 1</b> - Regulação Imunometabólica  no tratamento da Osteoartrite</li>
+        <li><b>Aula 2</b> - Regulação Imunometabólica  no tratamento da Oteoporose </li>
+        <li><b>Aula 3</b> - Regulação Imunometabólica  no tratamento da Sarcopenia</li>
     </ol>
         <button class="general-button">
             <a class="uk-link-toggle"  target="blank" href="https://www.arvoredoconhecimento.com.br/henryokigami/cursos">
