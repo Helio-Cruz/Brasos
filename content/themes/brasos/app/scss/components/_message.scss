@@ -10,6 +10,10 @@
   @include computers {
     width: 900px;
   }
+  em {
+    color: inherit;
+    font-style: italic;
+  }
   .h2-title,
   .h3-title {
     position: absolute;

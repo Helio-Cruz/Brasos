@@ -15,29 +15,51 @@ Template Name: Palavras do Presidente
 
       Caros amigos,
       <br><br>
-      A Braziian Society for Osteoarthritis, Osteoporosis and Sarcopenia - BRASOS - uma evolução da Associação
-      Brasileira para Estudos do Tratamento por Infiltração - ABETI - representa uma emergente sociedade médica,
-      cabendo a mim, neste momento acompanhar seus primeiros passos. Nossa tarefa é hercúlea e árdua, porém
-      extremamente cativante e apaixonante. Desta forma, temos metas a curto, médio e a longo prazo. 
+      Há três anos fundamos a Associação Brasileira para Estudos do Tratamento por
+      Infiltração – <strong>ABETI</strong>, uma evolução do mais importante evento nacional, o <strong>ISIAT BRASIL
+      (IB)</strong>, voltado para discussão de protocolos e tratamentos por infiltração e, que já
+      ocorria na Europa, sob o nome <strong>ISIAT</strong>. Como uma emergente sociedade médica, coube
+      a mim, acompanhar seus primeiros passos. Na vida estamos em constante evolução e
+      não poderia ser diferente com a <strong>ABETI</strong>. Então, me permitam lhes contar nossa história.
+      Ocorreram duas edições do <strong>IB</strong>, ambas na cidade do Rio de Janeiro, nos anos de 2014 e
+      2016. Em 2017, é criada a <strong>ABETI</strong> e apresentada internacionalmente, no mesmo ano, no
+      <strong>ISIAT PRAGA</strong>. Em 2018, realizamos o primeiro evento genuinamente nacional sobre
+      tratamento por infiltração, o <strong>BRASIT</strong> – <em>Brazilian Symposium on Injections Treatments</em>.
+      Nossa tarefa ainda era árdua, porém extremamente cativante e apaixonante.
+      Estabelecemos metas a curto, a médio e em longo prazo e, desde então, procuramos
+      realizá-las sendo gratificante dizer que estamos logrando êxito. Realizamos em 2019, o
+      <strong>COBRAVI</strong> – <em>Consenso Brasileiro sobre Viscossuplementação</em>, e a articulação escolhida
+      foi a do joelho. Este documento, rapidamente tornou-se uma referencia nacional entre
+      médicos e fonte de consulta para operadoras de saúde. Temos realizados cursos
+      buscando o aperfeiçoamento nas técnicas de infiltração musculo esquelética; manejos
+      com as principais moléculas utilizadas no tratamento por injeção ou infiltração e, a
+      utilização da ultrassonografia, como ferramenta de auxilio as técnicas de infiltração.
+      Estabelecemos um canal de comunicação, com órgãos públicos e com operadoras de
+      saúde, discutindo políticas de saúde. A <strong>ABETI</strong> cresceu de forma exponencial e, ampliar
+      nossa área de atuação era um passo natural. Assim, entendemos que deveríamos
+      discutir em nossos eventos, não só o tratamento por infiltração, mas também as
+      demais opções terapêuticas no tratamento das doenças musculo esqueléticas.
+      Realizamos em 2019, na cidade do Rio de Janeiro, o <strong>BRASOS TBT</strong> - <em>Brazilian Symposium
+      on Osteoarthritis, Osteoporosis and Sarcopenia - Target Based Treatment</em>, um simpósio
+      para demonstrar uma melhor compreensão e gestão da Osteoartrite e da Sarcopenia
+      exibindo uma proposta de tratamento baseado em alvos. Percebemos nossa evolução
+      e vimos aí, nossa identidade, finalmente revelada e o nome <strong>BRASOS</strong> – <em>Brazilian Society
+      for Osteoarthritis, Osteoporosis and Sarcopenia</em>, foi democraticamente escolhido por
+      nossa diretoria. Somos pró ativos e gradativamente temos representado nossa jovem
+      sociedade em diferentes eventos nacionais e também nosso país, em diferentes
+      eventos internacionais. Buscamos incentivar a pesquisa e a produção cientifica
+      nacional e desenvolvemos importantes projetos, dentre os quais citamos: o <strong><em>INFILTRA
+      BRASIL</em></strong>, com objetivos educacionais e epidemiológicos; a continuação do <strong><em>COBRAVI</em></strong>
+      focando outras articulações; uma revisão sistemática denominada <strong>Incorporação da
+      Viscossuplementação no roll de Procedimentos da ANS</strong>; está em desenvolvimento o
+      <strong>BRAGOT</strong> - <em>Brazilian Guidelines for Osteoarthritis Treatment</em>, com previsão de conclusão
+      para dezembro de 2020.
       <br><br>
-      Temos como tarefa
-      imediata, tornar eficiente a qualidade de serviço a ser prestado pela BRASOS, criando cursos de acreditação,
-      tais como: aperfeiçoamento nas técnicas de infiltração músculo esquelética; manejos com as principais moléculas
-      utilizadas no tratamento por injeção ou infiltração e, a utilização da ultrassonografia, como ferramenta de
-      auxilio às técnicas de infiltração. Um dos nossos diferenciais reside na potencialização das nossas terapias de
-      injeção tecidual através da promoção de medidas para a melhora das atividades imunometabólicas determinantes do
-      anabolismo e catabolisnmo do sistema locomotor do paciente a ser tratado. A médio prazo, buscaremos
-      entendimentos com órgãos públicos e operadoras de saúde, almejando estabelecer políticas de saúde neste sentido.
-      Ainda dentro de nossas metas, em médio à longo prazo, pretendemos alcançar um expressivo número de associados,
-      que nos permita tornarmos reconhecidos em todos os recantos do país. Procuraremos incentivar a pesquisa e a
-      produção cientifica nacional, sobre os temas acima descritos, dentro dos guidelines e diretrizes de centros mais
-      avançados, objetivando descrever os nossos, contudo, dentro de nossa realidade.
-      <br>
-      <br>
-      Aqui segue meu muito obrigado, aos amigos incentivadores para criação da BRASOS (ABETI) e aos meus diletos
-      membros da diretoria. Ponderem, argumentem, interpelem, cobrem! Sintam-se partícipes da gestão!
+      Aqui segue meu muito obrigado, aos amigos incentivadores para criação da ABETI/
+      BRASOS e aos meus diletos membros da diretoria, sempre ativos e competentes.
+      Ninguém realiza nada sozinho e nós realizamos tudo isso!
       <br><br>
-      Forte abraço a todos,
+      Parabéns a todos!
       <br><br>
       <a href="<?php echo home_url('/conselho-diretor/paulo-cesar-hamdan/'); ?>">Paulo Cesar Hamdan</a>
       <br>
