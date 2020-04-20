@@ -22,15 +22,24 @@
   }
   .uk-card-default {
     box-shadow: 10px 10px 15px 0 darken($color: $grey, $amount: 20%);
-    margin: 1em;
-    width: 300px;
-    height: 270px;
-    padding: 1.5em 2em;
+    margin: 1em auto;
+    width: 90%;
+    height: auto;
+    padding: 2em;
     text-align: center;
+    transition: box-shadow .3s;
     @include flexbox;
+    @include tablets {
+      margin: 1em;
+      width: 450px;
+      height: auto;
+    }
+    &:hover {
+      box-shadow: 5px 5px 15px 10px darken($color: $grey, $amount: 20%);
+    }
     .h3-title {
       font-weight: 400;
-      font-size: $body-xl;
+      font-size: 18px;
       text-align: center;
       font-style: normal;
     }
@@ -42,7 +51,12 @@
     .uk-card-body {
       padding: 0;
     }
+    h4 {
+      margin: 0 auto;
+    }
     p {
+      line-height: 1.4em;
+      margin: 0 auto;
       padding: 1em 0;
       font-weight: 300;
       font-size: $body;
