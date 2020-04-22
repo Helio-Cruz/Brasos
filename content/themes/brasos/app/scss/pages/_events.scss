@@ -188,16 +188,12 @@
       width: 450px;
     }
     @include flexbox;
+    align-items: flex-end;
     .h3-title {
       font-weight: 400;
       font-size: $body-xl;
       text-align: center;
       font-style: normal;
-    }
-    .uk-card-header {
-      border: none;
-      padding-left: 0;
-      padding-right: 0;
     }
     .uk-card-body {
       padding: 0;
