@@ -8,6 +8,7 @@ body {
   font-size: $body;
   font-family: $body-font-regular;
   overflow-x: hidden;
+  visibility: hidden;
 }
 
 a:hover {
