@@ -51,7 +51,7 @@ Template Name: Congressos
           <h4>Local</h4>
           <p>Hotel Bourbon Cataratas<br>Foz do Iguaçu, Paraná - Brasil</p>
           <h4>Data</h4>
-          <p>Data: 6 - 24 de Abril 2021</p>
+          <p>6 - 24 de Abril 2021</p>
         </div>
       </div>
     </div>

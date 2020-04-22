@@ -22,17 +22,16 @@
   }
   .uk-card-default {
     box-shadow: 10px 10px 15px 0 darken($color: $grey, $amount: 20%);
+    padding: 1em;
     margin: 1em auto;
     width: 90%;
     height: auto;
-    padding: 2em;
     text-align: center;
-    transition: box-shadow .3s;
+    transition: box-shadow 0.3s;
     @include flexbox;
     @include tablets {
       margin: 1em;
       width: 450px;
-      height: auto;
     }
     &:hover {
       box-shadow: 5px 5px 15px 10px darken($color: $grey, $amount: 20%);
@@ -44,22 +43,36 @@
       font-style: normal;
     }
     .uk-card-header {
+      padding: 1em;
       border: none;
-      padding-left: 0;
-      padding-right: 0;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     .uk-card-body {
-      padding: 0;
+      padding: 1em;
+      width: 100%;
+      background: $color-green-dark;
     }
     h4 {
-      margin: 0 auto;
+      font-size: $body-xl;
+      width: 90%;
+      text-align: left;
+      font-weight: 300;
+      margin: 0;
+      font-style: italic;
+      color: $white;
     }
     p {
       line-height: 1.4em;
-      margin: 0 auto;
+      width: 90%;
+      text-align: left;
+      margin: 0;
       padding: 1em 0;
       font-weight: 300;
-      font-size: $body;
+      font-size: $body-xs;
+      color: $white;
     }
   }
 }
