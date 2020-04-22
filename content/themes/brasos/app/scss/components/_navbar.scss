@@ -62,7 +62,7 @@ img.trp-flag-image {
 .uk-navbar-nav:nth-of-type(2) li:nth-of-type(4) .uk-navbar-dropdown-nav {
   right: 120px;
 }
-.uk-navbar-nav:nth-of-type(2) li:nth-of-type(5) .uk-navbar-dropdown-nav {
+.uk-navbar-nav:nth-of-type(2) li:nth-of-type(6) .uk-navbar-dropdown-nav {
   right: 250px;
 }
 
@@ -237,9 +237,9 @@ img.trp-flag-image {
 
 
 // Removing Links sidebar
-#menu-item-699,
-#menu-item-949,
-#menu-item-969 { 
+#menu-item-699 > a,
+#menu-item-949 > a,
+#menu-item-969 > a { 
   pointer-events: none; 
   cursor: default; 
   &:hover {

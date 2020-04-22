@@ -5,9 +5,16 @@ import Icons from 'uikit/dist/js/uikit-icons';
 
 var app = {
   init: function () {
- //   console.log('init');
+    //   console.log('init');
     // loads the Icon plugin
     UIkit.use(Icons);
+
+    // NAVBAR AND SIDEBAR 
+    $('.uk-navbar-container .uk-navbar-nav:nth-of-type(2) > li:nth-of-type(2) > a').removeAttr("href").css("cursor","default");
+    $('.uk-navbar-container .uk-navbar-nav:nth-of-type(2) > li:nth-of-type(4) > a').removeAttr("href").css("cursor","default");
+    $('.uk-navbar-container .uk-navbar-nav:nth-of-type(2) > li:nth-of-type(6) > a').removeAttr("href").css("cursor","default");
+    $('.uk-navbar-container .sub-menu').addClass('uk-nav uk-navbar-dropdown-nav');
+    $('.uk-navbar-container .sub-menu').wrap('<div class="uk-navbar-dropdown uk-navbar-dropdown-dropbar">');
 
     $(".slick-carousel-small").slick({
       autoplay: true,
@@ -61,7 +68,7 @@ var app = {
 
     // SCROLL BUTTON
     $(document).on('click', '#indiceBtn', function (event) {
-      $('html,body').animate({ 
+      $('html,body').animate({
         scrollTop: "0"
       }, 1000);
     });
