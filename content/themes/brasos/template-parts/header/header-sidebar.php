@@ -5,7 +5,7 @@
     <div class="white-block">
       <ul class="uk-nav">
         <div class="flag">
-        <?php
+          <?php
           $menu = wp_nav_menu([
             'menu' => 'flag',
             'container' => false,
@@ -16,7 +16,7 @@
           echo $menu;
           ?>
         </div>
-            <?php
+        <?php
         $menu = wp_nav_menu([
           // 'menu' => 'menu-header',
           'menu' => 'menu-mobile',
@@ -31,14 +31,14 @@
     </div>
     <div class="green-block">
       <div class="green-diagonal"></div>
-        <ul class="uk-nav uk-flex uk-flex-center uk-position-center">
-          <li>
-            <a href="<?php echo home_url(); ?>">
-              <img src="<?php echo get_template_directory_uri() . '/public/images/logo.png' ?>" alt="">
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul class="uk-nav uk-flex uk-flex-center uk-position-center">
+        <li>
+          <a href="<?php echo home_url(); ?>">
+            <img src="<?php echo get_template_directory_uri() . '/public/images/logo.png' ?>" alt="">
+          </a>
+        </li>
       </ul>
     </div>
+    </ul>
   </div>
+</div>
