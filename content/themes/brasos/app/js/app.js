@@ -9,13 +9,15 @@ var app = {
     // loads the Icon plugin
     UIkit.use(Icons);
 
-    // NAVBAR AND SIDEBAR 
-    $('.uk-navbar-container .uk-navbar-nav:nth-of-type(2) > li:nth-of-type(2) > a').removeAttr("href").css("cursor","default");
-    $('.uk-navbar-container .uk-navbar-nav:nth-of-type(2) > li:nth-of-type(4) > a').removeAttr("href").css("cursor","default");
-    $('.uk-navbar-container .uk-navbar-nav:nth-of-type(2) > li:nth-of-type(6) > a').removeAttr("href").css("cursor","default");
-    $('.uk-navbar-container .sub-menu').addClass('uk-nav uk-navbar-dropdown-nav');
-    $('.uk-navbar-container .sub-menu').wrap('<div class="uk-navbar-dropdown uk-navbar-dropdown-dropbar">');
 
+   // NAVBAR AND SIDEBAR 
+   $('.uk-navbar-container').css('visibility', 'visible');
+   $('.uk-navbar-container .uk-navbar-nav:nth-of-type(2) > li:nth-of-type(2) > a').removeAttr("href").css("cursor", "default");
+   $('.uk-navbar-container .uk-navbar-nav:nth-of-type(2) > li:nth-of-type(4) > a').removeAttr("href").css("cursor", "default");
+   $('.uk-navbar-container .uk-navbar-nav:nth-of-type(2) > li:nth-of-type(6) > a').removeAttr("href").css("cursor", "default");
+   $('.uk-navbar-container .sub-menu').addClass('uk-nav uk-navbar-dropdown-nav');
+   $('.uk-navbar-container .sub-menu').wrap('<div class="uk-navbar-dropdown uk-navbar-dropdown-dropbar">');
+   
     $(".slick-carousel-small").slick({
       autoplay: true,
       // dots: true,
