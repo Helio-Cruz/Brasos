@@ -115,12 +115,12 @@ img.trp-flag-image {
   left: -300px;
   width: 300px;
   @include tablets {
-   left: -550px;
-    width: 550px;
+   left: -400px;
+    width: 400px;
   }
   @include computers {
-    left: -650px;
-    width: 650px;
+    left: -400px;
+    width: 400px;
   }
   a {
     font-weight: normal;

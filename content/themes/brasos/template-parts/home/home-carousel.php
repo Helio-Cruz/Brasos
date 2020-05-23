@@ -1,5 +1,5 @@
 <!-- CAROUSEL -->
-<div class="carousel-images uk-position-relative uk-light" tabindex="-1" uk-slideshow="autoplay:true; autoplay-interval:4000; min-height:300; max-height:600">
+<div class="carousel-images uk-position-relative uk-light" tabindex="-1" uk-slideshow="autoplay:true; autoplay-interval:7000; min-height:300; max-height:600">
   <ul class="uk-slideshow-items">
     <li>
       <div class="uk-position-cover ">
