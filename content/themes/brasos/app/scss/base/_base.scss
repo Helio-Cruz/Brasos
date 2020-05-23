@@ -15,6 +15,8 @@ a:hover {
   text-decoration: none;
 }
 
+ 
+
 h2 {
   font-style: italic;
   font-weight: 200;
@@ -53,7 +55,6 @@ h2 {
 h3 {
   color: $color-green-dark;
   font-size: $subheading;
-  text-transform: uppercase;
   margin: 0 auto;
   text-align: left;
   font-style: italic;
@@ -73,3 +74,4 @@ h3 {
     border: solid $color-green-dark 1px;
   }
  }
+ 
