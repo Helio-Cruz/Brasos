@@ -6,6 +6,6 @@
 <?php  get_template_part('template-parts/home/home', 'brasos'); ?>  
 <?php  get_template_part('template-parts/home/footer', 'images'); ?>  
  
-
+<?php echo do_shortcode( '[Modal-Window id="1"]' ); ?>
 
 <?php get_footer(); ?>
