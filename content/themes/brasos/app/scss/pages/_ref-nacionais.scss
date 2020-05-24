@@ -1,12 +1,12 @@
-.ref-nacionais{
-
-    &__card{
+.ref-nacionais,
+.ref-internacionais {
+    margin: 3em auto;
+    h2 {
+        margin-bottom: 2em;
+    }
+    &__card {
         width: 200px;
         height: 180px;
-        margin: auto;
-     img{
-        justify-content: center;
-     }
-
+        margin: 0 2em;
     }
 }
