@@ -11,8 +11,8 @@
     }
   }
   img {
-     object-fit: cover;
-   // object-position: 50% 30%;
+    object-fit: cover;
+    // object-position: 50% 30%;
     height: 100%;
     width: 100vw;
     filter: brightness(70%);
@@ -48,13 +48,16 @@
 }
 
 .cursor-carousel {
-  position: relative;
+  position: relative; 
   img {
     position: absolute;
+    background: $color-green-dark;
+    border-radius: 50%;
+    padding: 10px;
     top: 200px;
     left: 70%;
     transform: translateY(-30%);
-    width: 35px;
+    width: 45px;
     height: auto;
     animation: zoomEffect 2s linear infinite;
     @include tablets {
