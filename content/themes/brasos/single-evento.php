@@ -3,7 +3,7 @@
 <!-- IMAGE COVER -->
 <div class="events-cover uk-child-width-1-1" uk-grid>
   <img class="events-cover__img" src="<?php the_post_thumbnail_url(); ?>">
-  <h1 class="h1-title"><?php the_title(); ?></h1>
+  <h1 class="h1-title "><?php the_title(); ?></h1>
 </div>
 
 <!-- NAVIGATION -->

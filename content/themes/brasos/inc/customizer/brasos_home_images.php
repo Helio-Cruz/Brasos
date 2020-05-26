@@ -3,6 +3,7 @@
 
 function brasos_home_images($wp_customize) {
 
+ 
 
     $wp_customize->add_setting('brasos_bg_slide_1', []);
 
@@ -18,7 +19,7 @@ function brasos_home_images($wp_customize) {
 
 
 
-
+    
 
     $bg_image =  new WP_Customize_Image_Control(
         $wp_customize,
@@ -81,6 +82,7 @@ function brasos_home_images($wp_customize) {
         ]
     );
 
+  
 
     $wp_customize->add_control($bg_image);
     $wp_customize->add_control($bg_image_2);
@@ -88,6 +90,7 @@ function brasos_home_images($wp_customize) {
     $wp_customize->add_control($bg_image_4);
     $wp_customize->add_control($bg_image_5);
     $wp_customize->add_control($bg_image_6);
+ 
  
 
 }

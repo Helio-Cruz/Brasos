@@ -7,8 +7,8 @@
       </div>
       <div class="uk-position-bottom-right uk-position-medium uk-light">
         <!-- <h1 class="h1-title"><span>BRASOS</span><br>-->
-        <h1 class="h1-title title-banner"> Brazilian Society for Osteoarthritis, Osteoporosis and Sarcopenia <br>
-          Sociedade de médicos de diferentes especialidades</h1>
+        <!-- <h1 class="h1-title title-banner"> Brazilian Society for Osteoarthritis, Osteoporosis and Sarcopenia <br>
+          Sociedade de médicos de diferentes especialidades</h1> -->
       </div>
     </li>
     <li>
@@ -22,7 +22,7 @@
       </div>
     </li>
     <li>
-      <div class="uk-position-cover">
+      <div class="uk-position-cover carousel-brasos-home">
         <img src="<?= get_theme_mod('brasos_bg_slide_3'); ?>" alt="">
       </div>
       <div class="uk-position-cover cursor-carousel">

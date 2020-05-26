@@ -66,6 +66,10 @@ img.trp-flag-image {
   right: 250px;
 }
 
+.uk-navbar-nav:nth-of-type(2) li:nth-of-type(8) .uk-navbar-dropdown-nav {
+  right: 150px;
+}
+
 .uk-navbar-dropdown-nav {
   display: flex;
   width: 100vw;
@@ -101,7 +105,7 @@ img.trp-flag-image {
     content: "";
     position: absolute;
     bottom: 74px;
-    left: -1000px;
+    left: -1140px;
     background: $color-green-dark;
     height: 1px;
     width: 3000px;
@@ -227,7 +231,8 @@ img.trp-flag-image {
     font-weight: normal;
     text-transform: uppercase !important;
     @include tablets {
-      margin-right: 0.5em;
+      margin-right: -0.5em;
+      
     }
     &:hover {
       color: $color-green-dark !important;
@@ -239,7 +244,8 @@ img.trp-flag-image {
 // Removing Links sidebar
 #menu-item-1002 > a,
 #menu-item-949 > a,
-#menu-item-969 > a { 
+#menu-item-969 > a,
+#menu-item-1182 > a  { 
   pointer-events: none; 
   cursor: default; 
   &:hover {
