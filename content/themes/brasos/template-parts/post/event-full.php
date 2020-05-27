@@ -18,12 +18,12 @@
 
     if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
     ?>
- 
-        <div class="blog__content events__layout">
+
+        <div class="blog__content events__layout data-local">
           <h2 class="h2-title uk-text-center"><?php the_title(); ?></h2>
           <div class="blog__content-infos">
-            <img class="img-event" src="<?php the_post_thumbnail_url(); ?>" alt="">
-            <div class="text-event"><?php the_content(); ?></div>
+            <img class="img-event" id="data-local__img" src="<?php the_post_thumbnail_url(); ?>" alt="">
+            <div class="text-event" id="data-local__text"><?php the_content(); ?></div>
           </div>
         </div>
 

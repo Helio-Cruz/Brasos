@@ -2,7 +2,14 @@
 
 <!-- IMAGE COVER -->
 <div class="events-cover uk-child-width-1-1" uk-grid>
-  <img class="events-cover__img" src="<?php the_post_thumbnail_url(); ?>">
+  <img class="events-cover__img" src="<?php if (class_exists('MultiPostThumbnails')) :
+                                          MultiPostThumbnails::the_post_thumbnail(
+                                            get_post_type(),
+                                            'evento-thumbnail-2'
+                                          );
+                                        else :
+                                          the_post_thumbnail_url();
+                                        endif; ?>">
   <h1 class="h1-title "><?php the_title(); ?></h1>
 </div>
 

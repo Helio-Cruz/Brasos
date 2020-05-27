@@ -50,6 +50,15 @@ if (!function_exists('brasos_setup')):
      }
     add_filter('excerpt_more', 'brasos_excerpt_more');
 
+    if (class_exists('MultiPostThumbnails')) {
+        new MultiPostThumbnails(array(
+            'label' => 'Imagem de fundo para o titulo',
+            'id' => 'evento-thumbnail-2',
+            'post_type' => 'evento'
+            )
+        );
+    };
+
 endif;
 
 add_action('after_setup_theme', 'brasos_setup');
