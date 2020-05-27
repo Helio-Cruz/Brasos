@@ -3,11 +3,10 @@
   padding: 0.5em 0;
   width: 80%;
   @include tablets {
-    width: 80%;
     margin-bottom: 6em;
   }
   @include computers {
-    width: 900px;
+    width: 1000px;
   }
   .h2-title {
     padding: 1em 0;
@@ -82,13 +81,17 @@
     width: 100%;
     object-fit: cover;
   }
+  .eventos-cards {
+    @include flexbox;
+  }
   .articles-cards-events {
+    width: 300px;
     box-shadow: 0 3px 6px 0 darken($color: $grey, $amount: 10%);
   }
   .articles-cards-image-events {
-    height: 200px;
+    height: 230px;
     width: 100%;
-    object-fit: cover;
+      object-fit: fill;
   }
 }
 

@@ -8,7 +8,7 @@ Template Name: Eventos
 
 <div class="articles-cards">
 <h2 class="h2-title"><?php the_title(); ?></h2>
-  <div class="uk-child-width-1-3@m" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .box; delay: 300; repeat: false">
+  <div class="eventos-cards" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .box; delay: 300; repeat: false">
 
     <?php
     $args = [
