@@ -23,30 +23,28 @@
 }
 
 // data/local
-.data-local {
-  padding-bottom: 0;
-  #data-local__img {
+#data-local {
+  margin-bottom: 5em !important;
+  &__img {
     width: 300px;
-    height: 300px;
+    height: auto;
     @include tablets {
       float: right;
       order: 2;
       width: 340px;
-      height: 340px;
     }
     @include computers {
       width: 480px;
-      height: 480px;
     }
   }
-}
-#data-local__text {
-  width: 100%;
-  @include tablets {
-    width: 45%;
-  }
-  @include computers {
-    width: 40%;
+  &__text {
+    width: 100%;
+    @include tablets {
+      width: 45%;
+    }
+    @include computers {
+      width: 40%;
+    }
   }
 }
 
