@@ -1,0 +1,60 @@
+#modal-form {
+  .contact-form {
+    position: absolute;
+    top: 10%;
+    padding: 2em;
+  }
+  .uk-column-1-1 {
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 1em;
+    @include tablets {
+      width: 100%;
+    }
+  }
+  .uk-column-1-2 {
+    width: 100%;
+  }
+  .wpcf7-text,
+  .wpcf7-list-item,
+  .wpcf7-textarea {
+    font-weight: 300;
+  }
+  .wpcf7-file {
+    color: $color-green-regular;
+    text-align: center;
+    padding: 0.5em 0;
+    width: 98%;
+    @include tablets {
+      width: 100%;
+    }
+  }
+  .contact-form__fields {
+    font-size: $body;
+    font-weight: 300;
+    color: $color-green-regular;
+    option {
+      color: $color-green-regular !important;
+    }
+    .select-button {
+      margin: 0 0.5em;
+      padding: 0.3em;
+      border-radius: 0;
+      color: $color-green-regular;
+      border: none;
+      border-bottom: 2px solid $color-green-regular;
+      background-color: $white;
+      &:hover {
+        color: $color-green-regular;
+        background-color: $white;
+      }
+    }
+    label {
+      font-size: 0.9em;
+      font-weight: 300;
+    }
+    > div {
+      margin: 0.2em 1em;
+    }
+  }
+}

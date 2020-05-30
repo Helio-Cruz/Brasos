@@ -1,0 +1,66 @@
+.message {
+  width: 80%;
+  margin: 5em auto;
+  position: relative;
+  background: $grey;
+  @include tablets {
+    width: 700px;
+    margin: 6em auto;
+  }
+  @include computers {
+    width: 900px;
+  }
+  em {
+    color: inherit;
+    font-style: italic;
+  }
+  .h2-title,
+  .h3-title {
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    @include tablets {
+      font-size: 2.5em;
+      top: -25px;
+    }
+  }
+  .h3-title {
+    top: -30px;
+    font-size: $subheading;
+    @include tablets {
+      top: -25px;
+      width: 60%;
+    }
+  }
+  &__content {
+    padding: 7em 1em 2em;
+    line-height: 1.5em;
+    text-align: justify;
+    @include tablets {
+      padding: 5.5em 4em 4em;
+    }
+  }
+  &__img {
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 2em;
+    width: 250px;
+    height: auto;
+    @include tablets {
+      float: left;
+      width: 280px;
+      padding: 0 2em 0 0;
+    }
+    @include computers {
+      padding-bottom: 1em;
+    }
+  }
+  a {
+    color: $color-green-regular;
+    &:hover {
+      color: $color-green-dark;
+    }
+  }
+}

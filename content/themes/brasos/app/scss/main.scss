@@ -1,0 +1,50 @@
+@import
+    'abstracts/mixin',
+    'abstracts/variables';
+
+ @import
+  '~reset-css',
+  '~slick-carousel/slick/slick.css',
+  '~uikit/dist/css/uikit';
+
+@import
+   'base/animations',
+   'base/base';
+
+@import
+   'components/accordion',
+   'components/blog-cards',
+   'components/buttons',
+   'components/carousel-footer',
+   'components/home-brasos',
+   'components/carousel-home-header',
+   'components/carousel-institutional',
+   'components/carousel-slick',
+   'components/form-modal',
+   'components/form',
+   'components/message',
+   'components/navbar',
+   'components/not-found';
+
+@import
+   'layout/columns',
+   'layout/cover',
+   'layout/header',
+   'layout/footer';
+ 
+@import
+   'pages/articles',
+   'pages/blog',
+   'pages/congress',
+   'pages/diplom',
+   'pages/directory',
+   'pages/directory-cv',
+   'pages/events',
+   'pages/arvore-conhecimento',
+   'pages/guidelines',
+   'pages/ref-nacionais',
+   'pages/institutional',
+   'pages/news';
+   
+@import
+    'shame';

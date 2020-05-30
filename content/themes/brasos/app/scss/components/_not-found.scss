@@ -1,0 +1,10 @@
+.not-found, .text-alert{
+    display: flex;
+    margin: 2.5em auto;
+    height: calc(100vh - 765px);
+    &__text{    
+        margin: auto;
+        text-align: center;       
+        font-style: normal; 
+    }
+}

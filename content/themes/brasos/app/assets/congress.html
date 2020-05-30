@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpack</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="scss/main.scss" type="text/scss" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container" uk-navbar="dropbar: true;">
+      <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+          <li class="uk-active">
+            <div class="header-nav__logo">
+              <a href="index.html"><img src="./images/logo.png" alt=""></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="uk-navbar-center uk-visible">
+        <ul class="uk-navbar-nav uk-visible">
+          <li class="uk-active"><a href="index.html">Home</a></li>
+          <li>
+            <a href="institutional.html">Institucional</a>
+            <div class="uk-navbar-dropdown">
+              <ul class="uk-nav uk-navbar-dropdown-nav subnav">
+                <li><a href="institutional.html">Brasos</a></li>
+                <li><a href="law.html">Estatuo Abeti</a></li>
+                <li><a href="words.html">Palavras do Presidente</a></li>
+                <li><a href="directory.html">Conselho Diretor</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#">Eventos</a></li>
+          <li><a href="articles.html">Artigos</a></li>
+          <li><a href="contact.html">Contato</a></li>
+          <li><a href="member.html">Torne-se membro</a></li>
+        </ul>
+      </div>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav uk-visible">
+          <div class="flag">
+            <li>
+              <a href="#">
+                <img src="./images/flag/brazil.png" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/flag/usa.png" alt="">
+              </a>
+            </li>
+          </div>
+        </ul>
+        <a href="#" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+      </div>
+    </nav>
+  </div>
+  <div id="sidenav" uk-offcanvas="overlay: true; flip: true">
+    <div class="uk-offcanvas-bar uk-background-default">
+      <button class="uk-offcanvas-close" type="button" uk-close></button>
+      <ul class="uk-nav">
+        <div class="flag">
+          <li>
+            <a href="#">
+              <img src="./images/flag/brazil.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/flag/usa.png" alt="">
+            </a>
+          </li>
+        </div>
+        <li class="uk-nav-divider"></li>
+        <li class="uk-active"><a href="index.html">Home</a></li>
+        <li class="uk-parent">
+          <a href="institutional.html">Institucional</a>
+          <ul class="uk-nav-sub uk-navbar-dropdown-nav">
+            <li><a href="institutional.html">Brasos</a></li>
+            <li><a href="law.html">Estatuto Abeti</a></li>
+            <li><a href="words.html">Palavras do Presidente</a></li>
+            <li><a href="directory.html">Conselho Diretor</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Eventos</a></li>
+        <li><a href="articles.html">Artigos</a></li>
+        <li><a href="contact.html">Contato</a></li>
+        <li><a href="member.html">Torne-se membro</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="congress__content">
+    <h2 class="h2-title">Congressos</h2>
+    <div uk-flex uk-flex-center uk-grid>
+      <div class="uk-card uk-card-default">
+        <div class="uk-card-header">
+          <h3 class="uk-card-title h3-title"><a href="https://www.isiat2019.com/">ISIAT 2019</a></h3>
+        </div>
+        <div class="uk-card-body">
+          <p>Local: Lisboa - Portugal
+            <br><br>
+            Data: 03 a 05 de outubro de 2019
+          </p>
+        </div>
+      </div>
+      <div class="uk-card uk-card-default">
+
+        <div class="uk-card-header">
+          <h3 class="uk-card-title h3-title"><a href="https://www.medicinadoesporte.org.br">31º CONGRESSO BRASILEIRO DE
+              MEDICINA
+              DO
+              EXERCÍCIO E DO ESPORTE E O XI CONGRESSO SUL-AMERICANO DE MEDICINA DO ESPORTE</a></h3>
+        </div>
+        <div class="uk-card-body">
+          <p>Local: Bourbon Convention - Foz do Iguaçu, PR - Brasil
+            <br><br>
+            Data: 29 a 31 de agosto de 2019
+            <br><br>
+          </p>
+        </div>
+      </div>
+      <div class="uk-card uk-card-default">
+
+        <div class="uk-card-header">
+          <h3 class="uk-card-title h3-title"><a href="https://www.reumatologia.org.br">XXXVI CONGRESSO BRASILEIRO DE
+              REUMATOLOGIA</a></h3>
+        </div>
+
+        <div class="uk-card-body">
+          <p>Local: Fortaleza, CE - Brasil
+            <br><br>
+            Data: 04 a 07 de setembro de 2019
+            <br><br>
+          </p>
+        </div>
+      </div>
+      <div class="uk-card uk-card-default">
+
+        <div class="uk-card-header">
+          <h3 class="uk-card-title h3-title"><a href="https://www.eularcongress2019.org">EULAR ANNUAL CONGRESS 2019</a></h3>
+
+        </div>
+        <div class="uk-card-body">
+          <p>Local: Madrid - Espanha
+            <br><br>
+            Data: 12 a 15 de junho de 2019
+            <br><br>
+          </p>
+        </div>
+      </div>
+      <div class="uk-card uk-card-default">
+
+        <div class="uk-card-header">
+          <h3 class="uk-card-title h3-title"><a href="https://www.portalsbot.org.br">XXV CONGRESSO BRASILEIRO DE
+              TRAUMA
+              ORTOPÉDICO</a></h3>
+        </div>
+        <div class="uk-card-body">
+          <p>Local: Curitiba, PR - Brasil
+            <br><br>
+            Data: 09 a 11 de maio de 2019
+            <br><br>
+          </p>
+        </div>
+      </div>
+      <div class="uk-card uk-card-default">
+
+        <div class="uk-card-header">
+          <h3 class="uk-card-title h3-title"><a href="https://www.oarsi.org">OARSI 2019 WORLD CONGRESS</a></h3>
+        </div>
+        <div class="uk-card-body">
+          <p>Local: Toronto, ON - Canada
+            <br><br>
+            Data: 02 a 05 de maio de 2019
+            <br><br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div class="uk-section uk-section-muted footer-nav">
+      <div class="uk-container">
+        <h2 class="footer-nav__title">Faça Parte da Nossa Comunidade</h2>
+        <button class="footer-nav__button">
+          <a href="">Torne-se Membro</a>
+        </button>
+      </div>
+
+      <div uk-navbar class="footer-nav__menu-fast ">
+        <div class="uk-navbar-center">
+          <ul class="uk-navbar-nav uk-flex-wrap uk-child-width-expand@s">
+            <li><a href="#">A Brasos</a></li>
+            <li><a href="#">Conselho Diretor</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Brasit 2020</a></li>
+            <li><a href="#">Congresso</a></li>
+            <li><a href="#">Certificados</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="uk-grid-match uk-child-width-expand@s footer-nav__contact" uk-grid>
+        <div>
+          <p>Responsável Técnico<br><br>
+            <b>Antonio Martins Tieppo<br><br></b>
+            Primeiro Secretário<br><br>
+            CRM/SP: 47.777
+          </p>
+        </div>
+        <div class="footer-nav__media-social">
+          <div class="uk-flex-wrap">
+            <a href="" uk-icon="facebook"></a>
+            <a href="" uk-icon="instagram"></a>
+            <p>secretario@brasos.med.br</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="uk-grid-match uk-child-width-expand@s footer-mentions" uk-grid>
+    <div>
+      <p>Copyright@ 2020. Agência Fazer</p>
+    </div>
+    <div class="footer-nav__logo">
+      <a href=""><img src="./images/logo.png" alt=""></a>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

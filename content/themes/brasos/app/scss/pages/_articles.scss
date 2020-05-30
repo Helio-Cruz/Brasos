@@ -1,0 +1,102 @@
+.articles-cards {
+  margin: 0 auto 3em;
+  padding: 0.5em 0;
+  width: 80%;
+  @include tablets {
+    margin-bottom: 6em;
+  }
+  @include computers {
+    width: 1000px;
+  }
+  .h2-title {
+    padding: 1em 0;
+    font-size: 36px;
+  }
+  .uk-card {
+    overflow: hidden;
+    &:hover img {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+  }
+  .uk-card-media-top {
+    overflow: hidden;
+    filter: brightness(80%);
+  }
+  a {
+    color: inherit;
+  }
+  .uk-grid {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .uk-card-default {
+    box-shadow: 0 3px 6px 0 darken($color: $grey, $amount: 40%);
+    margin: 0.5em;
+  }
+  .uk-grid > * {
+    padding-left: 0;
+  }
+  .uk-child-width-1-1 {
+    margin-bottom: 30px;
+    @include tablets {
+      margin-bottom: 15px;
+    }
+    a {
+      color: $white;
+    }
+    .uk-card {
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      overflow: hidden;
+      filter: brightness(100%);
+      &:hover {
+        background-size: 120%;
+        transition: 0.5s;
+      }
+    }
+    .uk-card-body {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex-flow: column nowrap;
+      height: 160px;
+      @include tablets {
+        height: 230px;
+      }
+      .uk-card-title {
+        margin: 0;
+      }
+      p {
+        color: $color-green-dark;
+      }
+    }
+  }
+  .uk-card-body {
+    padding: 1em;
+  }
+  .uk-card-media-top img {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.uk-card-default .uk-card-title {
+  color: $color-green-dark;
+}
+
+
+.eventos-cards-bloc {
+  .eventos-cards {
+    @include flexbox;
+  }
+  .articles-cards-events {
+    width: 300px;
+    height: 169px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 3px 6px 0 darken($color: $grey, $amount: 10%);
+  }
+}

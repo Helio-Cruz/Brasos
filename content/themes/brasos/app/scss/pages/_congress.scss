@@ -1,0 +1,78 @@
+.congress__content {
+  margin: 0 auto 4em;
+  @include computers {
+    margin: 0 auto 8em;
+    width: 1000px;
+  }
+  .h2-title {
+    padding: 2em;
+  }
+  a {
+    color: $color-green-dark;
+    &:hover {
+      color: $color-green-regular;
+    }
+  }
+  .uk-grid {
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .uk-grid > * {
+    padding-left: 0;
+  }
+  .uk-card-default {
+    box-shadow: 10px 10px 15px 0 darken($color: $grey, $amount: 20%);
+    padding: 1em;
+    margin: 1em auto;
+    width: 90%;
+    height: auto;
+    text-align: center;
+    transition: box-shadow 0.3s;
+    @include flexbox;
+    @include tablets {
+      margin: 1em;
+      width: 450px;
+    }
+    &:hover {
+      box-shadow: 5px 5px 15px 10px darken($color: $grey, $amount: 20%);
+    }
+    .h3-title {
+      font-weight: 400;
+      font-size: 18px;
+      text-align: center;
+      font-style: normal;
+    }
+    .uk-card-header {
+      padding: 1em;
+      border: none;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .uk-card-body {
+      padding: 1em;
+      width: 100%;
+      background: $color-green-dark;
+    }
+    h4 {
+      font-size: $body-xl;
+      width: 90%;
+      text-align: left;
+      font-weight: 300;
+      margin: 0;
+      font-style: italic;
+      color: $white;
+    }
+    p {
+      line-height: 1.4em;
+      width: 90%;
+      text-align: left;
+      margin: 0;
+      padding: 1em 0;
+      font-weight: 300;
+      font-size: $body-xs;
+      color: $white;
+    }
+  }
+}

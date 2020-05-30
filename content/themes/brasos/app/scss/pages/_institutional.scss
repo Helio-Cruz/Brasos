@@ -1,0 +1,103 @@
+.institutional__content {
+  margin: 0 4em 4em;
+  @include tablets {
+    margin: 0 8em 8em;
+  }
+  @include computers {
+    margin: 0 auto;
+    width: 900px;
+  }
+}
+
+.institutional__introduction {
+  .h1-title {
+    padding: 2em 0;
+    font-size: 24px;
+    line-height: 1.5em;
+    text-transform: inherit;
+    @include tablets {
+      font-size: 32px;
+      line-height: 2em;
+    }
+  }
+}
+
+.institutional__resume {
+  margin-bottom: 5em;
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include computers {
+      flex-direction: row;
+    }
+    img {
+      padding: 2em;
+      padding-top: 0;
+      padding-bottom: 0;
+      height: auto;
+      width: auto;
+      @include tablets {
+        width: 450px;
+      }
+    }
+    p {
+      margin: 0;
+    }
+    figure {
+      margin: 0;
+      @include computers {
+        order: 2;
+      }
+    }
+    figcaption {
+      text-align: center;
+      padding-top: 0.5em;
+      padding-bottom: 1em;
+    }
+    > p {
+      width: 100%;
+      @include computers {
+        width: 50%;
+      }
+    }
+  }
+  .h2-title {
+    position: relative;
+    z-index: 1;
+    margin: 1em 0 0;
+    overflow: hidden;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 51%;
+      overflow: hidden;
+      width: 15%;
+      height: 2px;
+      background-color: $color-green-regular;
+    }
+    &::before {
+      text-align: right;
+      margin-left: -20%;
+    }
+    &::after {
+      margin-left: 20px;
+      @include tablets {
+        margin-left: 25px;
+      }
+    }
+  }
+  p {
+    text-align: justify;
+    line-height: 1.5em;
+    margin: 10px auto;
+  }
+  a {
+    color: $color-green-regular;
+    &:hover {
+      color: $color-green-dark;
+    }
+  }
+}

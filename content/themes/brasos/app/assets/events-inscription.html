@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpack</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="scss/main.scss" type="text/scss" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container" uk-navbar="dropbar: true;">
+      <!-- <nav class="uk-container uk-navbar"> -->
+      <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+          <li class="uk-active">
+            <div class="header-nav__logo">
+              <a href="index.html"><img src="./images/logo.png" alt=""></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="uk-navbar-center uk-visible">
+        <ul class="uk-navbar-nav uk-visible">
+          <li class="uk-active"><a href="index.html">Home</a></li>
+          <li>
+            <a href="institutional.html">Institucional</a>
+            <div class="uk-navbar-dropdown">
+              <ul class="uk-nav uk-navbar-dropdown-nav subnav">
+                <li><a href="institutional.html">Brasos</a></li>
+                <li><a href="law.html">Estatuo Abeti</a></li>
+                <li><a href="words.html">Palavras do Presidente</a></li>
+                <li><a href="directory.html">Conselho Diretor</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#">Eventos</a></li>
+          <li><a href="articles.html">Artigos</a></li>
+          <li><a href="contact.html">Contato</a></li>
+          <li><a href="member.html">Torne-se membro</a></li>
+        </ul>
+      </div>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav uk-visible">
+          <div class="flag">
+            <li>
+              <a href="#">
+                <img src="./images/flag/brazil.png" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/flag/usa.png" alt="">
+              </a>
+            </li>
+          </div>
+        </ul>
+        <a href="#" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+      </div>
+    </nav>
+  </div>
+  <div id="sidenav" uk-offcanvas="overlay: true; flip: true">
+    <div class="uk-offcanvas-bar uk-background-default">
+      <button class="uk-offcanvas-close" type="button" uk-close></button>
+      <ul class="uk-nav">
+        <div class="flag">
+          <li>
+            <a href="#">
+              <img src="./images/flag/brazil.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/flag/usa.png" alt="">
+            </a>
+          </li>
+        </div>
+        <li class="uk-nav-divider"></li>
+        <li class="uk-active"><a href="index.html">Home</a></li>
+        <li class="uk-parent">
+          <a href="institutional.html">Institucional</a>
+          <ul class="uk-nav-sub uk-navbar-dropdown-nav">
+            <li><a href="institutional.html">Brasos</a></li>
+            <li><a href="law.html">Estatuto Abeti</a></li>
+            <li><a href="words.html">Palavras do Presidente</a></li>
+            <li><a href="directory.html">Conselho Diretor</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Eventos</a></li>
+        <li><a href="articles.html">Artigos</a></li>
+        <li><a href="contact.html">Contato</a></li>
+        <li><a href="member.html">Torne-se membro</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- IMAGE COVER -->
+  <div class="events__cover">
+    <div class="uk-child-width-1-1" uk-grid>
+      <div class="uk-card uk-card-default" style="background-image: url(images/logo-brasostbt.jpg);">
+      </div>
+    </div>
+  </div>
+
+  <!-- SUBNAV -->
+  <nav class="uk-navbar-container navbar-container-events">
+    <div uk-navbar>
+      <div class="uk-navbar-center">
+        <ul class="uk-navbar-nav navbar-events">
+          <li><a href="events-informations.html">Informações Gerais</a></li>
+          <li><a href="events-diploms.html">Certificados</a></li>
+          <li><a href="events-program.html">Programação</a></li>
+          <li><a href="events-guests.html">Palestrantes convidados</a></li>
+          <li class="uk-active"><a href="events-inscription.html">Inscrições/Pagamento</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="blog__content">
+    <p>Para realizar sua inscrição, primeiro, faça o depósito na conta informada, envie o comprovante, conforme abaixo,
+      depois preencha o cadastro de informações e aguarde entrarmos em contato para confirmação.</p>
+    <h3 class="h3-title">NÃO MEMBROS - VALORES PARA INSCRIÇÕES</h3>
+    <img class="blog__img--xs" src="/images/brasos2019_table1.jpg" alt="">
+    <h3 class="h3-title">MEMBROS - VALORES PARA INSCRIÇÕES</h3>
+    <p><span>Valores exclusivos para membros ABETI!</span>
+      <br>Caso não seja, <a href="become-member.html">realiza seu cadastro</a> para ter direito ao desconto!
+    </p>
+    <img class="blog__img--xs" src="/images/brasos2019_table2.jpg" alt="">
+    <h3 class="h3-title">CursoS Pré-Simpósio</h3>
+    <p>
+      <span>Curso Pré-Simpósio 1 - Microbiota Intestinal na Osteoartrite e Sarcopenia</span>
+      <br>Valores - Membros : R$ R$ 250,00 - Não Membros : R$ R$ 360,00
+      <br>
+      <span>Curso Pré-Simpósio 2 - Plataforma Vibratória nas Doenças Músculo-esqueléticas</span>
+      <br>Valores - Membros : R$ R$ 250,00 - Não Membros : R$ R$ 360,00
+      <br><br>
+      Local: <a href="https://www.brisabarrahotel.com.br/">Brisa Barra Hotel</a> - Rio de Janeiro
+      <br>Avn Lúcio Costa, 5700 - Barra da Tijuca - CEP: 22720-172
+      <br>(21) 34336600
+    </p>
+    <h3 class="h3-title">INSCRIÇÃO / PAGAMENTO</h3>
+    <p>
+      Para realizar sua inscrição, primeiro, faça o depósito na conta informada, envie o comprovante, preencha os campos
+      abaixo e aguarde entrarmos em contato para confirmação.
+      <br><span>Dados bancários</span>
+      <br>Banco: Itaú
+      <br>Razão social: Assoc Brasileira P Es P Infil
+      <br>CNPJ: 28.644.927/0001-83
+      <br>Agência: 0488
+      <br>Conta-corrente: 07696-9
+    </p>
+  </div>
+
+  <section uk-height-viewport class="contact-section inscription-section">
+    <div class="contact-form contact-form-inscription">
+      <h2 class="h2-title">Inscrição</h2>
+      <div class="contact-form-block">
+        <input class="uk-input uk-input-full" type="text" autocomplete="name" placeholder="Nome completo" required>
+        <div class="uk-column-1-2">
+          <div class="contact-form__fields">
+            <input class="uk-input" type="text" placeholder="Nome P/ Crachá (Até 20 Caracteres)" required>
+            <input class="uk-input" type="text" placeholder="Especialidade - CRM" required>
+          </div>
+        </div>
+        <div class="uk-column-1-2">
+          <div class="contact-form__fields">
+            <input class="uk-input" type="email" autocomplete="email" placeholder="Email" required>
+            <input class="uk-input" type="tel" autocomplete="tel" placeholder="Telefone P/Contato" required>
+          </div>
+        </div>
+        <textarea class="uk-textarea" placeholder="Mensagem / Observação"></textarea>
+
+        <div class="uk-column-1-1">
+          <div class="contact-form__fields">
+            <div uk-form-custom="target: > * > span:first-child">
+              Membro da ABETI
+              <select class="uk-select">
+                <option value="1">Sim</option>
+                <option value="2">Não</option>
+              </select>
+              <button class="normal-button select-button" type="button" tabindex="-1">
+                <span></span>
+                <span uk-icon="icon: chevron-down"></span>
+              </button>
+            </div>
+            <div uk-form-custom="target: > * > span:first-child">
+              Tipo De Inscrição
+              <select class="uk-select">
+                <option value="1">Médico</option>
+                <option value="2">Odontologista</option>
+                <option value="3">Residente</option>
+                <option value="4">Pós Graduando</option>
+                <option value="5">Outro Profissional De Saúde</option>
+              </select>
+              <button class="normal-button select-button" type="button" tabindex="-1">
+                <span></span>
+                <span uk-icon="icon: chevron-down"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form__fields">
+          Escolha os itens p/inscrição
+          <label><input class="uk-checkbox" type="checkbox">Simpósio</label>
+          <label><input class="uk-checkbox" type="checkbox">Curso Pré-Simpósio 1</label>
+          <label><input class="uk-checkbox" type="checkbox">Curso Pré-Simpósio 2</label>
+        </div>
+
+        <div class="contact-form__fields">
+          Comprovante de pagamento
+          <div uk-form-custom="target: true">
+            <input type="file">
+            <input class="normal-button file-button" type="text" placeholder="Escolher arquivo" disabled>
+          </div>
+        </div>
+
+        <button class="normal-button special-button" type="button">Enviar</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="uk-section uk-section-muted footer-nav">
+    <div class="uk-container">
+      <h2 class="footer-nav__title">Faça Parte da Nossa Comunidade</h2>
+      <button class="footer-nav__button">
+        <a href="">Torne-se Membro</a>
+      </button>
+    </div>
+
+    <div uk-navbar class="footer-nav__menu-fast ">
+      <div class="uk-navbar-center">
+        <ul class="uk-navbar-nav uk-flex-wrap uk-child-width-expand@s">
+          <li><a href="#">A Brasos</a></li>
+          <li><a href="#">Conselho Diretor</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Brasit 2020</a></li>
+          <li><a href="#">Congresso</a></li>
+          <li><a href="#">Certificados</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="uk-grid-match uk-child-width-expand@s footer-nav__contact" uk-grid>
+      <div>
+        <p>Responsável Técnico<br>
+          <b>Antonio Martins Tieppo<br></b>
+          Primeiro Secretário<br>
+          CRM/SP: 47.777
+        </p>
+      </div>
+      <div class="footer-nav__media-social">
+        <div class="uk-flex-wrap">
+          <a href="" uk-icon="facebook"></a>
+          <a href="" uk-icon="instagram"></a>
+          <p>secretario@brasos.med.br</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div class="uk-grid-match uk-child-width-expand@s footer-mentions" uk-grid>
+    <div>
+      <p>Copyright@ 2020. Agência Fazer</p>
+    </div>
+    <div class="footer-nav__logo">
+      <a href=""><img src="./images/logo.png" alt=""></a>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

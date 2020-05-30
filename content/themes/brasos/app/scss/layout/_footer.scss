@@ -1,0 +1,75 @@
+.footer-nav {
+  background-color: $color-green-dark;
+  text-align: center;
+  color: $white;
+  margin: auto;
+  width: 100%;
+  &__title {
+    position: relative;
+    font-size: 26px;
+    color: $white;
+    font-style: italic;
+    font-weight: 200;
+    margin: 1em;
+     bottom: 40px;
+  }
+  &__button {
+    position: relative;
+    border: none;
+    width: 140px;
+    height: 42px;
+    background-color: $white;
+    bottom: 40px;
+    color: $white;
+    a {
+      color: $color-green-dark;
+      font-size: $body;
+    }
+    &:hover {
+      background-color: $color-green-regular;
+      transition: ease-in $duration-medium;
+      a {
+        color: white;
+      }
+    }
+  }
+  .uk-navbar {
+    background-color: $color-green-regular;
+    margin: 30px auto;
+
+    a {
+      color: $white;
+      width: 135px;
+      margin: auto;
+      &:hover {
+        color: $color-green-dark;
+      }
+    }
+  }
+  &__link {
+    color: $white;
+  }
+
+  &__contact {
+    position: relative;
+    font-size: $body;
+    font-weight: 300;
+    font-style: italic;
+    top: 25px;
+   
+  }
+
+  &__logo img {
+    width: 140px;
+  }
+}
+.footer-mentions {
+  height: 80px;
+  font-size: $body-xs;
+  background-color: $white;
+  color: $color-green-dark;
+  text-align: center;
+  padding: 0.5em;
+  align-items: center;
+}
+ 

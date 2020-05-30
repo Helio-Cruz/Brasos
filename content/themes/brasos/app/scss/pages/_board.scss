@@ -1,0 +1,55 @@
+.board__content {
+  margin: 0 auto 4em;
+  @include mobiles {
+    width: 480px;
+  }
+  @include tablets {
+    width: 600px;
+  }
+  @include computers {
+    margin: 0 auto 8em;
+    width: 1000px;
+  }
+  .h2-title {
+    padding: 2em;
+    padding-top: 3.5em;
+  }
+  a {
+    font-weight: 300 !important;
+  }
+  .uk-grid {
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .uk-grid > * {
+    padding-left: 0;
+  }
+  .uk-card {
+    position: relative;
+    border-radius: 3px;
+    margin: 2em 2.5em;
+    width: 250px;
+    height: 340px;
+  }
+  .uk-border-circle {
+   position: relative;
+    width: 425px;
+    height: 240px;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+  .uk-card-body {
+    padding: 1em 0.5em;
+    border-radius: 3px;
+    > * {
+      text-align: center;
+      font-size: $body;
+    }
+    .h3-title {
+ 
+      margin: 0;
+      padding: 0;
+      font-size: $body-xl;
+    }
+  }
+}

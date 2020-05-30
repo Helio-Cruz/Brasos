@@ -1,0 +1,82 @@
+.blog-cards {
+  margin: 4em auto 6em;
+  width: 90%;
+  @include mobiles {
+    width: 450px;
+  }
+  @include tablets {
+    width: 700px;
+  }
+  @include computers {
+    width: 950px;
+  }
+  .row {
+    @include flexbox;
+  }
+  &--title {
+    margin: 0 auto 1em;
+    font-size: 20px;
+    text-align: left;
+    @include tablets {
+      margin: 0;
+      margin-bottom: 1em;
+      font-size: $heading;
+    }
+  }
+  .card {
+    margin: 0 auto;
+    height: 350px;
+    overflow: hidden;
+    width: 98%;
+    @include tablets {
+      margin: 0;
+      width: 250px;
+      &--smaller {
+        width: 450px;
+      }
+    }
+    @include computers {
+      width: 350px;
+      &--smaller {
+        width: 600px;
+      }
+    }
+    &-image {
+      position: relative;
+      img {
+        width: 600px;
+        height: 350px;
+        object-fit: cover;
+        @include tablets {
+          height: 350px;
+          border-radius: 0;
+        }
+      }
+      &:hover img {
+        transform: scale(1.1);
+        transition: 0.5s;
+      }
+    }
+    &-title {
+      margin: 0;
+      position: absolute;
+      bottom: 50px;
+      left: 10px;
+      font-size: $subheading;
+      font-weight: 300;
+      color: $color-green-dark;
+    }
+    &-text {
+      margin: 0;
+      position: absolute;
+      bottom: 30px;
+      left: 10px;
+      font-size: $body;
+      font-weight: 300;
+      color:$color-green-dark;
+    }
+  }
+  .fade {
+    width: 100%;
+  }
+}
