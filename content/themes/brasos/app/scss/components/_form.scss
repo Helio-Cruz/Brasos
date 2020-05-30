@@ -113,3 +113,6 @@ div.wpcf7-acceptance-missing {
 span.wpcf7-not-valid-tip {
   font-size: 0.8em;
 }
+
+/* captcha v3 hide */
+.grecaptcha-badge { visibility: hidden; }

@@ -81,20 +81,22 @@
     width: 100%;
     object-fit: cover;
   }
+}
+
+.uk-card-default .uk-card-title {
+  color: $color-green-dark;
+}
+
+
+.eventos-cards-bloc {
   .eventos-cards {
     @include flexbox;
   }
   .articles-cards-events {
     width: 300px;
+    height: 169px;
+    display: flex;
+    align-items: center;
     box-shadow: 0 3px 6px 0 darken($color: $grey, $amount: 10%);
   }
-  .articles-cards-image-events {
-    height: 230px;
-    width: 100%;
-    object-fit: fill;
-  }
-}
-
-.uk-card-default .uk-card-title {
-  color: $color-green-dark;
 }

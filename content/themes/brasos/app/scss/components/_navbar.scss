@@ -70,6 +70,8 @@ img.trp-flag-image {
   right: 150px;
 }
 
+ 
+
 .uk-navbar-dropdown-nav {
   display: flex;
   width: 100vw;
@@ -115,17 +117,18 @@ img.trp-flag-image {
 
 // SIDENAV
 .uk-offcanvas-bar {
+  overflow-x: hidden;
   padding: 0;
   left: -300px;
   width: 300px;
-  @include tablets {
-   left: -400px;
-    width: 400px;
-  }
-  @include computers {
-    left: -400px;
-    width: 400px;
-  }
+  // @include tablets {
+  //  left: -400px;
+  //   width: 400px;
+  // }
+  // @include computers {
+  //   left: -400px;
+  //   width: 400px;
+  // }
   a {
     font-weight: normal;
     text-align: center;
@@ -242,13 +245,24 @@ img.trp-flag-image {
 
 
 // Removing Links sidebar
+
+// #menu-item-695 > a, // local 
+// #menu-item-699 > a, // local 
 #menu-item-1002 > a,
 #menu-item-949 > a,
 #menu-item-969 > a,
 #menu-item-1182 > a  { 
   pointer-events: none; 
-  cursor: default; 
+  cursor: default;
+  padding-left: 16px;
   &:hover {
     color: $color-green-dark;
   }
-} 
+}
+// Links sidebar dropdown
+.white-block .sub-menu {
+  display: none;
+}
+.white-block .sub-menu-show {
+  display: block;
+}

@@ -2,6 +2,7 @@
 
 //CAROUSEL HEADER - BIG IMAGES
 .carousel-images {
+  backdrop-filter: brightness(70%);
   .uk-slideshow-items {
     height: calc(100vh - 200px);
     @include TwoK {
@@ -11,7 +12,7 @@
     }
   }
   img {
-    object-fit: cover;
+    object-fit: contain;
     // object-position: 50% 30%;
     height: 100%;
     width: 100vw;

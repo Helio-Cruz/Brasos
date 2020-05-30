@@ -1,0 +1,23 @@
+.post-news {
+    @include flexbox;
+    @include tablets {
+        flex-direction: column;
+    }
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 30px;
+        color: $color-green-dark;
+    }
+    p {
+        text-align: justify;
+        line-height: 1.5em;
+        max-width: 1024px;
+    }
+    .wp-block-image {
+        margin: 0 auto;
+    }
+    img {
+        padding: 0;
+    }
+}
