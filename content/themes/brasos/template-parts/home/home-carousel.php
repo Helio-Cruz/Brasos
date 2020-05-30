@@ -25,9 +25,9 @@
       <div class="uk-position-cover carousel-brasos-home">
         <img src="<?= get_theme_mod('brasos_bg_slide_3'); ?>" alt="">
       </div>
-      <div class="uk-position-cover cursor-carousel">
+      <div class="uk-position-large uk-position-center cursor-carousel">
         <a href="<?php echo home_url('/eventos/brasostbt-2019/'); ?>">
-          <img uk-tooltip="INFORMAÇÕES GERAIS" src="<?php echo get_template_directory_uri() . '/public/images/cursor.png' ?>" alt="">
+          <button class="normal-button carousel-button">ACESSAR AS INFORMAÇÕES<br>GERAIS DO EVENTO</button>
         </a>
       </div>
     </li>
