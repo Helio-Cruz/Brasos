@@ -6,7 +6,7 @@ Template Name: Artigos
 <?php get_header(); ?>
 
 <div class="articles-cards">
-  <h2 class="h2-title"><?php the_title(); ?></h2>
+  <h2 class="h2-title">Artigos em Osteoartrite, Osteoporose e Sarcopenia</h2>
 
   <div class="uk-child-width-1-1" uk-grid>
     <div uk-scrollspy="cls: uk-animation-slide-bottom; target: .box; delay: 300; repeat: false">

@@ -10,7 +10,7 @@
                                         else :
                                           the_post_thumbnail_url();
                                         endif; ?>">
-  <h1 class="h1-title "><?php the_title(); ?></h1>
+  <!-- <h1 class="h1-title "><//?php the_title(); ?></h1>-->
 </div>
 
 <!-- NAVIGATION -->
