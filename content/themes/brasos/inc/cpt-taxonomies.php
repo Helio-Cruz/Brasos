@@ -75,7 +75,7 @@ function eventos_cpt() {
         ],
 		"query_var" => true,
 		"menu_icon" => "dashicons-megaphone",
-		"supports" => [ "title", "page-attributes", "post-formats", "editor", "thumbnail", "revisions" ],
+		"supports" => [ "title", "revisions" ],
 		"taxonomies" => [ "category" ],
 	];
     register_post_type( "evento", $args );
