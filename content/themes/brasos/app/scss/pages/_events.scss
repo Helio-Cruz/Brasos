@@ -1,7 +1,7 @@
 // accordion e data/local
 .events__layout {
   margin: 0 auto 2em !important;
-  padding: 2em;
+  padding: 1em;
   width: 90%;
   background: $white;
   @include computers {
@@ -46,9 +46,13 @@
       width: 40%;
     }
   }
+  .blog__content-infos {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
-// commissao organizadora
+// comissao organizadora
 .events__comissao {
   margin: 0 auto;
   background: $color-green-dark;
@@ -94,8 +98,8 @@
 
 // sobre o evento
 .events__content {
-  background: $white;
-  color: inherit;
+  background: $color-green-regular;
+  color: $white;
   margin: 0;
   padding: 0;
   .event__block {
@@ -125,22 +129,20 @@
       text-align: center;
     }
     a {
-      color: $color-green-regular;
+      color: $color-green-dark;
     }
     span,
     h2,
     h3,
     h4,
+    a:hover,
     .h2-title {
-      color: $color-green-dark;
+      color: $white;
     }
     a,
     a:hover,
     strong {
       font-weight: bold;
-    }
-    a:hover {
-      color: $color-green-dark;
     }
     .h2-title {
       font-weight: 300;
@@ -158,11 +160,11 @@
     }
   }
   &:nth-of-type(even) {
-    background: $color-green-regular;
-    color: $white;
+    background: $white;
+    color: inherit;
     .event__block {
       a {
-        color: $color-green-dark;
+        color: $color-green-regular;
       }
       span,
       strong,
@@ -171,7 +173,7 @@
       h3,
       h4,
       .h2-title {
-        color: $white;
+        color: $color-green-dark;
       }
     }
   }

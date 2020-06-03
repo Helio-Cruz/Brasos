@@ -30,11 +30,14 @@ function conselhoDiretor_cpt() {
         "capability_type" => "post",
         "map_meta_cap" => true,
         "hierarchical" => false,
-        "rewrite" => ["slug" => "conselho-diretor", "with_front" => true],
+        "rewrite" => [
+					"slug" => "conselho-diretor", 
+					"with_front" => true
+				],
         "menu_icon" => "dashicons-groups",
-		"query_var" => true,
-        "supports" => ["title", "editor", "thumbnail", "excerpt", "custom-fields"],
-    ];
+				"query_var" => true,
+						"supports" => ["title", "editor", "thumbnail", "excerpt", "custom-fields"],
+				];
     register_post_type("conselho_diretor", $args);
 }
 
@@ -75,8 +78,7 @@ function eventos_cpt() {
         ],
 		"query_var" => true,
 		"menu_icon" => "dashicons-megaphone",
-		"supports" => [ "title", "revisions" ],
-		"taxonomies" => [ "category" ],
+		"supports" => [ "title", "revisions", "custom-fields" ]
 	];
     register_post_type( "evento", $args );
     
@@ -119,7 +121,7 @@ function certificados_cpt() {
         ],
 		"query_var" => true,
 		"menu_icon" => "dashicons-welcome-learn-more",
-		"supports" => [ "title", "revisions" ],
+		"supports" => [ "title", "revisions", "custom-fields" ],
 		"taxonomies" => [ "category" ],
 	];
     register_post_type( "certificados", $args );
