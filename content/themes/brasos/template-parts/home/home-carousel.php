@@ -27,7 +27,7 @@
       </div>
       <div class="uk-position-large uk-position-center cursor-carousel">
         <a href="<?php echo home_url('/eventos/brasostbt-2019/'); ?>">
-          <button class="normal-button carousel-button">ACESSAR AS INFORMAÇÕES<br>GERAIS DO EVENTO</button>
+          <button class="normal-button special-button carousel-button">ACESSAR AS INFORMAÇÕES<br>GERAIS DO EVENTO</button>
         </a>
       </div>
     </li>
