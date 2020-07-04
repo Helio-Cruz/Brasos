@@ -16,4 +16,5 @@
       </div>
     </a>
   </div>
+  <hr style="padding:1em; width: 100%;"></div>
 <?php endif; ?>
