@@ -19,7 +19,7 @@ Template Name: Producao Cientifica
 
     if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
         
-        get_template_part('template-parts/post/news', 'excerpt');
+        get_template_part('template-parts/post/cientifica', 'excerpt');
 
     endwhile;
     endif;

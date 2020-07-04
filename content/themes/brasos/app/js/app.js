@@ -15,6 +15,7 @@ var app = {
    $('.uk-navbar-container .uk-navbar-nav:nth-of-type(2) > li:nth-of-type(2) > a').removeAttr("href").css("cursor", "default");
    $('.uk-navbar-container .uk-navbar-nav:nth-of-type(2) > li:nth-of-type(3) > a').removeAttr("href").css("cursor", "default");
    $('.uk-navbar-container .uk-navbar-nav:nth-of-type(2) > li:nth-of-type(4) > a').removeAttr("href").css("cursor", "default");
+   $('.uk-navbar-container .uk-navbar-nav:nth-of-type(2) > li:nth-of-type(5) > a').removeAttr("href").css("cursor", "default");
    $('.uk-navbar-container .uk-navbar-nav:nth-of-type(2) > li:nth-of-type(6) > a').removeAttr("href").css("cursor", "default");
    $('.uk-navbar-container .uk-navbar-nav:nth-of-type(2) > li:nth-of-type(8) > a').removeAttr("href").css("cursor", "default");
    $('.uk-navbar-container .sub-menu').addClass('uk-nav uk-navbar-dropdown-nav');
@@ -22,8 +23,10 @@ var app = {
    
    // sidebar dropdown
    $('#menu-item-1002 > a').attr( "uk-icon", "icon: triangle-down" );
+   $('#menu-item-695 > a').attr( "uk-icon", "icon: triangle-down" );
    $('#menu-item-949 > a').attr( "uk-icon", "icon: triangle-down" );
    $('#menu-item-969 > a').attr( "uk-icon", "icon: triangle-down" );
+   $('#menu-item-693 > a').attr( "uk-icon", "icon: triangle-down" );
    $('#menu-item-1182 > a').attr( "uk-icon", "icon: triangle-down" );
    // $('#menu-item-699 > a').attr( "uk-icon", "icon: triangle-down" ); //local
    // $('#menu-item-695 > a').attr( "uk-icon", "icon: triangle-down" ); //local
