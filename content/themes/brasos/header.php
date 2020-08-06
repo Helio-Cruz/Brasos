@@ -18,7 +18,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
   <?php get_template_part('template-parts/header/header', 'navbar'); ?>
   <?php get_template_part('template-parts/header/header', 'navbarmobile'); ?>
   <?php get_template_part('template-parts/header/header', 'sidebar'); ?>
