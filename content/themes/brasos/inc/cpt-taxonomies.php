@@ -84,6 +84,50 @@ function eventos_cpt() {
     
 }
 
+function congressos_cpt() {
+
+	/**
+	 * Post Type: congressos
+   	 * Post URL: congressos
+	 */
+
+	$labels = [
+		"name" => __( "Congressos", "custom-post-type-ui" ),
+		"singular_name" => __( "Congresso", "custom-post-type-ui" ),
+    	"menu_name" => __("Congressos", "custom-post-type-ui"),
+	];
+	$args = [
+		"label" => __( "Congressos", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => [ 
+            "slug" => "congressos", 
+            "with_front" => true,
+        ],
+		"query_var" => true,
+		"menu_icon" => "dashicons-money",
+		"supports" => [ "title", "revisions", "custom-fields" ],
+		"taxonomies" => [ "category" ],
+	];
+    register_post_type( "congressos", $args );
+    
+}
+
+
 function certificados_cpt() {
 
 	/**
@@ -130,4 +174,5 @@ function certificados_cpt() {
 
 add_action( 'init', 'conselhoDiretor_cpt' );
 add_action( 'init', 'eventos_cpt' );
+add_action( 'init', 'congressos_cpt' );
 add_action( 'init', 'certificados_cpt' );
