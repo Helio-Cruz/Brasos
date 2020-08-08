@@ -63,6 +63,71 @@ if (!function_exists('brasos_setup')) :
     };
     */
 
+    function my_login_stylesheet() { ?>
+        <style type="text/css">
+            body.login {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgb(255, 255, 255);
+                background: linear-gradient(
+                    160deg,
+                    rgba(255, 255, 255, 1) 0%,
+                    rgba(109, 160, 165, 1) 65%,
+                    rgba(0, 110, 120, 1) 100%
+                );
+            }
+
+            body.login div#login {
+                border-radius: 2px;
+                text-align: center;
+                background: rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 600px;
+                padding: 40px 0;
+                @media (min-width: 350px) {
+                    width: 80%;
+                    padding: 40px 20px;
+                }
+            }
+            body.login #login a {
+                width: 300px;
+            }
+            body.login form#loginform,
+            body.login form#lostpasswordform,
+            body.login form#registerform {
+                background: white;
+                max-width: 300px;
+                margin: auto;
+                text-align: left;
+                margin-top: 1em;
+            }
+            body.login #login_error,
+            body.login .message,
+            body.login .message register {
+                max-width: 320px;
+                margin: auto;
+            }
+
+            body.login div#login a {
+                color: white;
+            }
+            body.login div#login a:hover {
+                color: #006e78;
+            }
+            body.login div#login input#wp-submit {
+                background: #006e78;
+            }
+            body.login input:focus {
+                border-color: #006e78;
+            }
+            body.login input[type="checkbox"]:checked::before {
+                color: #006e78;
+            }
+        </style>
+    <?php }
+    add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+
 endif;
 
 add_action('after_setup_theme', 'brasos_setup');
