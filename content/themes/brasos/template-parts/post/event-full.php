@@ -3,18 +3,17 @@
   <li uk-scrollspy="cls: uk-animation-slide-bottom; target: .events-informations; delay: 300; repeat: false">
     <?php if (have_rows('informacoes_basicas') || have_rows('mensagem_do_presidente') || get_field('comissao_organizadora') || get_field('sobre_o_evento') || get_field('turismo')) : ?>
       <div class="events-informations">
-        <h1 class="events-informations__title"><?php the_title() ?></h1>
         <!-- DATA / LOCAL -->
         <?php if (have_rows('informacoes_basicas')) : while (have_rows('informacoes_basicas')) : the_row();
             $dateEvent = get_sub_field('data_do_evento');
             $localEvent = get_sub_field('local_do_evento');
         ?>
             <?php if ($dateEvent) : ?>
-              <h2 class="events-informations__subtitle">DATA - <?php echo $dateEvent; ?></h2>
+              <h2 class="events-informations__subtitle center">DATA - <?php echo $dateEvent; ?></h2>
             <?php endif ?>
             <?php if ($localEvent) : ?>
-              <h2 class="events-informations__subtitle">LOCAL</h2>
-              <address><?php echo $localEvent; ?></address>
+              <h2 class="events-informations__subtitle center">LOCAL</h2>
+              <address class="center"><?php echo $localEvent; ?></address>
             <?php endif ?>
         <?php endwhile;
         endif; ?>
