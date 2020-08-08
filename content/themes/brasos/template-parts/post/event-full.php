@@ -1,84 +1,65 @@
 <ul class="uk-switcher">
   <!-- INFORMAÇOES BASICAS -->
-  <li>
-    <!-- LOCAL E DATA -->
-    <?php if (have_rows('informacoes_basicas')) : while (have_rows('informacoes_basicas')) : the_row();
-        $dateAddressEvent = get_sub_field('data_local_do_evento');
-        $imgEvent = get_sub_field('imagem_do_evento');
-    ?>
-        <div class="blog__content events__layout" id="data-local">
-          <!-- <h2 class="h2-title uk-text-center">INFORMAÇÕES GERAIS</h2> -->
-          <div class="blog__content-infos">
-            <?php if ($imgEvent) : ?>
-              <img class="img-event" id="data-local__img" src="<?php echo $imgEvent['url']; ?>" alt="">
+  <li uk-scrollspy="cls: uk-animation-slide-bottom; target: .events-informations; delay: 300; repeat: false">
+    <?php if (have_rows('informacoes_basicas') || have_rows('mensagem_do_presidente') || get_field('comissao_organizadora') || have_rows('sobre_o_evento') || get_field('turismo')) : ?>
+      <div class="events-informations">
+        <!-- DATA / LOCAL -->
+        <?php if (have_rows('informacoes_basicas')) : while (have_rows('informacoes_basicas')) : the_row();
+            $dateEvent = get_sub_field('data_do_evento');
+            $localEvent = get_sub_field('local_do_evento');
+        ?>
+            <?php if ($dateEvent) : ?>
+              <h2 class="events-informations__title">DATA - <?php echo $dateEvent; ?></h2>
             <?php endif ?>
-            <?php if ($dateAddressEvent) : ?>
-              <div class="text-event" id="data-local__text"><?php echo $dateAddressEvent; ?></div>
+            <?php if ($localEvent) : ?>
+              <h2 class="events-informations__title">LOCAL</h2>
+              <address><?php echo $localEvent; ?></address>
             <?php endif ?>
-          </div>
-        </div>
-    <?php endwhile;
-    endif; ?>
+        <?php endwhile;
+        endif; ?>
 
-    <!-- MENSAGEM PRESIDENTE  -->
-    <?php if (have_rows('mensagem_do_presidente')) : while (have_rows('mensagem_do_presidente')) : the_row();
-        $titleMessageCEO = get_sub_field('titulo_do_mensagem');
-        $contentMessageCEO = get_sub_field('conteudo_do_mensagem');
-    ?>
-        <div class="message">
-          <?php if ($titleMessageCEO) : ?>
-            <h2 class="h2-title uk-text-center"><?php echo $titleMessageCEO; ?></h2>
-          <?php endif ?>
-          <?php if ($contentMessageCEO) : ?>
-            <div class="message__content"><?php echo $contentMessageCEO; ?></div>
-          <?php endif ?>
-        </div>
-    <?php endwhile;
-    endif; ?>
+        <!-- MENSAGEM PRESIDENTE  -->
+        <?php if (have_rows('mensagem_do_presidente')) : while (have_rows('mensagem_do_presidente')) : the_row();
+            $titleMessageCEO = get_sub_field('titulo_do_mensagem');
+            $contentMessageCEO = get_sub_field('conteudo_do_mensagem');
+        ?>
+            <?php if ($titleMessageCEO) : ?>
+              <h2 class="events-informations__title"><?php echo $titleMessageCEO; ?></h2>
+            <?php endif ?>
+            <?php if ($contentMessageCEO) : ?>
+              <blockquote class="content-message-ceo"><?php echo $contentMessageCEO; ?></blockquote>
+            <?php endif ?>
+        <?php endwhile;
+        endif; ?>
 
-    <!-- COMISSAO ORGANIZADORA -->
-    <?php if (get_field('comissao_organizadora')) : ?>
-      <div class="events__comissao" uk-scrollspy="cls: uk-animation-fade; target: .box; delay: 500; repeat: false">
-        <h2 class="h2-title">COMISSÃO ORGANIZADORA</h2>
-        <div class="events__comissao__text box uk-text-center">
-          <?php the_field('comissao_organizadora'); ?>
-        </div>
+        <!-- COMISSAO ORGANIZADORA -->
+        <?php if (get_field('comissao_organizadora')) : ?>
+          <h2 class="events-informations__title">COMISSÃO ORGANIZADORA</h2>
+          <div><?php the_field('comissao_organizadora'); ?></div>
+        <?php endif; ?>
+
+        <!-- SOBRE O EVENTO -->
+        <?php if (have_rows('sobre_o_evento')) : while (have_rows('sobre_o_evento')) : the_row();
+            $nameEvent = get_sub_field('nome_do_evento');
+            $descriptionEvent = get_sub_field('descricao_do_evento');
+        ?>
+            <?php if ($nameEvent) : ?>
+              <h2 class="events-informations__title-about"><?php echo $nameEvent; ?></h2>
+            <?php endif; ?>
+            <?php if ($descriptionEvent) : ?>
+              <?php echo $descriptionEvent ?>
+            <?php endif; ?>
+        <?php endwhile;
+        endif; ?>
+
+        <!-- TOURISM -->
+        <?php if (get_field('turismo')) : ?>
+          <h2 class="events-informations__title">TURISMO</h2>
+          <div><?php the_field('turismo'); ?></div>
+        <?php endif; ?>
+
       </div>
     <?php endif; ?>
-
-    <!-- SOBRE O EVENTO -->
-    <?php if (have_rows('sobre_o_evento')) : while (have_rows('sobre_o_evento')) : the_row();
-        $nameEvent = get_sub_field('nome_do_evento');
-        $descriptionEvent = get_sub_field('descricao_do_evento');
-    ?>
-        <div class="events__content" uk-scrollspy="cls: uk-animation-slide-bottom; target: .box; delay: 300; repeat: false">
-          <div class="event__block box">
-            <h2 class="h2-title">Sobre o evento</h2>
-            <div class="event__text">
-              <?php if ($nameEvent) : ?>
-                <h3><?php echo $nameEvent; ?></h3>
-              <?php endif; ?>
-              <?php if ($descriptionEvent) : ?>
-                <?php echo $descriptionEvent ?>
-              <?php endif; ?>
-            </div>
-          </div>
-        </div>
-    <?php endwhile;
-    endif; ?>
-
-    <!-- TOURISM -->
-    <?php if (get_field('turismo')) : ?>
-      <div class="events__content" uk-scrollspy="cls: uk-animation-fade; target: .box; delay: 500; repeat: false">
-        <div class="event__block box">
-          <h2 class="h2-title">TURISMO</h2>
-          <div class="event__text">
-            <?php the_field('turismo'); ?>
-          </div>
-        </div>
-      </div>
-    <?php endif; ?>
-
   </li>
 
   <!-- ACCORDION PROGRAMACAO -->

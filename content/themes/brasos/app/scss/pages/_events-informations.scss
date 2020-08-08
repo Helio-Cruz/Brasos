@@ -1,0 +1,57 @@
+.uk-switcher {
+  li.uk-active,
+  li:focus {
+    color: $color-green-dark !important;
+  }
+  .events-informations {
+    margin: 2em auto;
+    width: 90%;
+    max-width: 1000px;
+    border: 1px solid $grey;
+    box-shadow: 10px 10px 12px -2px rgba(117, 117, 117, 1);
+    padding: 2em;
+    @include tablets {
+      padding: 2em 4em;
+    }
+    > * {
+      line-height: 1.5em;
+      font-weight: normal;
+      color: #4d4d4d;
+      text-align: left;
+    }
+    &__title {
+      font-style: normal;
+      text-align: left;
+      font-size: 18px;
+      padding: 1em 0;
+      color: $color-green-dark;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+    h3,
+    strong,
+    &__title-about {
+      color: $black;
+      text-transform: none;
+      font-style: normal;
+      font-size: 1em;
+      font-weight: 700;
+      color: inherit;
+    }
+    a {
+      color: $color-green-dark;
+      font-weight: 700;
+      &:hover {
+        color: $color-green-regular;
+      }
+    }
+    .content-message-ceo {
+      line-height: 1.5em;
+      color: #4d4d4d;
+      font-style: italic;
+      font-weight: lighter;
+      padding: 0 2em;
+      font-size: inherit;
+    }
+  }
+}
