@@ -1,3 +1,55 @@
+// cover events
+.events-cover {
+  height: 380px;
+  position: relative;
+  margin: auto;
+  &__img {
+    padding: 10px 0;
+    height: 100%;
+    background-color: $white;
+    object-fit: contain;
+    object-position: center;
+    filter: brightness(90%);
+  }
+  /*
+  .h1-title {
+    position: absolute;
+    z-index: 10;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    font-weight: bold;
+    font-size: 30px;
+    @include tablets {
+      font-size: 50px;
+    }
+  }
+  */
+}
+
+// NAVBAR EVENTS
+.navbar-events {
+  @include flexbox;
+  a {
+    color: $color-green-regular !important;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: normal;
+    text-transform: uppercase !important;
+    @include tablets {
+      margin-right: -0.5em;
+    }
+    &:hover {
+      color: $color-green-dark !important;
+    }
+    &[aria-expanded="true"] {
+      color: $color-green-dark !important;
+    }
+  }
+}
+
 // accordion
 .events__layout {
   margin: 0 auto 2em !important;

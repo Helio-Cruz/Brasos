@@ -223,27 +223,6 @@ img.trp-flag-image {
 // }
 
 // ______________________________________________________
-
-// NAVBAR EVENTS
-.navbar-events {
-  @include flexbox;
-  a {
-    color: $color-green-regular !important;
-    font-size: 30px;
-    font-style: italic;
-    font-weight: normal;
-    text-transform: uppercase !important;
-    @include tablets {
-      margin-right: -0.5em;
-      
-    }
-    &:hover {
-      color: $color-green-dark !important;
-    }
-  }
-}
-
-
 // Removing Links sidebar
 
 // #menu-item-695 > a, // local 

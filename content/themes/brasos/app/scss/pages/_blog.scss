@@ -1,3 +1,31 @@
+// cover
+.article-cover {
+  height: 300px;
+  position: relative;
+  &__img {
+    height: 100%;
+    background-color: $color-green-regular;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(80%);
+  }
+  .h1-title {
+    position: absolute;
+    z-index: 10;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    font-weight: bold;
+    font-size: 30px;
+    @include tablets {
+      font-size: 50px;
+    }
+  }
+}
+
+// post
 .blog__content {
   box-shadow: 0 0 15px 0 darken($color: $grey, $amount: 10%);
   width: 100%;
