@@ -11,22 +11,6 @@
     object-position: center;
     // filter: brightness(90%);
   }
-  /*
-  .h1-title {
-    position: absolute;
-    z-index: 10;
-    margin: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: $white;
-    font-weight: bold;
-    font-size: 30px;
-    @include tablets {
-      font-size: 50px;
-    }
-  }
-  */
 }
 
 // NAVBAR EVENTS
@@ -81,6 +65,7 @@
   width: 95%;
   @include computers {
     width: 70%;
+    max-width: 1000px;
     margin: 2em auto 4em;
   }
   img {
