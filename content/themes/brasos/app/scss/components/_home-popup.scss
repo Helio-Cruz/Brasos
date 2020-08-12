@@ -1,5 +1,4 @@
 #modal-media-image {
-  position: relative;
   img {
     max-width: 80vw;
     max-height: 80vh;
@@ -9,15 +8,14 @@
   }
   .popup-link {
     position: absolute;
-    top: 70%;
-    left: 45%;
-    transform: translate(-30%, -55%);
+    top: 60%;
+    left: 28%;
     width: 300px;
-    font-size: 1.6em;
+    font-size: 2em;
     font-weight: bold;
     color: $white;
     &:hover {
-      color: $color-green-regular;
+      color: $color-green-dark;
     }
     &::before {
       content: "⮕";
