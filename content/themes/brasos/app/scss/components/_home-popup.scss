@@ -1,9 +1,32 @@
 #modal-media-image {
+  position: relative;
   img {
     max-width: 80vw;
     max-height: 80vh;
   }
   &.uk-modal {
     background-color: rgba(0, 0, 0, 0.8);
+  }
+  .popup-link {
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    transform: translate(-30%, -55%);
+    width: 300px;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: $white;
+    &:hover {
+      color: $color-green-regular;
+    }
+    &::before {
+      content: "⮕";
+      position: absolute;
+      top: 20%;
+      left: -15%;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: $white;
+    }
   }
 }
