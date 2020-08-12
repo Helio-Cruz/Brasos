@@ -9,3 +9,15 @@
     transform: scale(1, 1);
   }
 }
+
+@keyframes bounce {
+  from {
+    left:-15%;
+  }
+  50% {
+    left:-18%;
+  }
+  to {
+    left:-15%;
+  }
+}
