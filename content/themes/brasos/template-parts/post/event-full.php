@@ -65,7 +65,7 @@
             <li>
               <?php if ($titleProgram) : ?>
                 <a class="uk-accordion-title" href="#">
-                  <h3 class="h3-title"><?php echo $titleProgram; ?></h3>
+                  <h2><?php echo $titleProgram; ?></h2>
                 </a>
               <?php endif; ?>
               <?php if ($contentProgram) : ?>

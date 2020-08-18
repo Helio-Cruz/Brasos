@@ -6,7 +6,7 @@ Template Name: Estatuto Abeti
 
 <?php get_header(); ?>
 
-<div class="accordion__content accordion--big">
+<div class="accordion__content">
     <h2 class="h2-title">Ata de fundaçao - ABETI</h2>
     <p>Às 20:00 horas do dia 25 de junho de 2017, reuniram-se a Diretoria, com finalidade de fundar a Associação
       Brasileira para Estudos do Tratamento por Infiltração – A.B.E.T.I., que será regido pelo estatuto (abaixo)que após

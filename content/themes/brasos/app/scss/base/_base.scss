@@ -15,16 +15,6 @@ a:hover {
   text-decoration: none;
 }
 
- 
-
-h2 {
-  font-style: italic;
-  font-weight: 200;
-  color: $color-green-dark;
-  margin: 0 1em;
-  text-transform: uppercase;
-}
-
 .h1-title {
   color: $color-green-dark;
   font-size: $headline;
@@ -39,7 +29,10 @@ h2 {
     position: relative;
     bottom: 380px;
   }
-  
+}
+h2 {
+  color: $color-green-dark;
+  margin: 0 1em;
 }
 .h2-title,
 h2 {
