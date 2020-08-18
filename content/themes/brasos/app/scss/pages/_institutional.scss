@@ -101,3 +101,40 @@
     }
   }
 }
+
+.columns__list-names {
+  padding: 4em 0 0;
+  margin: 5em 0 0;
+  background: $color-green-regular;
+  text-align: center;
+  .columns__background .uk-flex-wrap {
+    padding: 2em;
+    @include tablets {
+      margin: 0 auto;
+      width: 760px;
+    }
+    @include computers {
+      margin: 0 auto;
+      width: 900px;
+    }
+  }
+  .columns__background {
+    background: $grey;
+  }
+  .uk-width-1-3\@m {
+    padding: 0 1em;
+  }
+  .h2-title {
+    padding: 2em 0;
+  }
+  .h3-title {
+    font-size: $body-xl;
+    text-align: center;
+  }
+  .uk-flex > div {
+    padding: 0 1em;
+  }
+  p {
+    line-height: 1.5em;
+  }
+}

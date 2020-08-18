@@ -83,12 +83,9 @@
   <!-- PALESTRANTES  -->
   <li>
     <?php if (get_field('palestrantes')) : ?>
-      <div class="columns__list-names" uk-scrollspy="cls: uk-animation-fade; target: .box; delay: 500; repeat: true">
-        <div class="columns__background">
-          <h2 class="h2-title">PALESTRANTES CONVIDADOS</h2>
-          <div class="uk-column-1-1 uk-column-1-3@m box">
-            <?php the_field('palestrantes'); ?>
-          </div>
+      <div class="palestrantes uk-scrollspy="cls: uk-animation-fade; target: .box; delay: 500; repeat: true">
+        <div class="wrapper">
+          <?php the_field('palestrantes'); ?>
         </div>
       </div>
     <?php endif; ?>

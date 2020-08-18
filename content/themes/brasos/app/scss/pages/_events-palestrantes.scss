@@ -1,0 +1,35 @@
+.palestrantes {
+  padding-bottom: 4em;
+  background: $grey;
+  .rounded {
+    border-radius: 50%;
+  }
+  .wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    @include tablets {
+      width: 500px;
+    }
+    @include computers {
+      width: 1100px;
+    }
+  }
+  h2 {
+    margin: 2em auto;
+    width: 100%;
+  }
+  p {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.5em;
+    width: 300px;
+    @include computers {
+      margin: 2em auto;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
