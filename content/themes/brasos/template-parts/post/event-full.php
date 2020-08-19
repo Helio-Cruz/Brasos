@@ -83,7 +83,7 @@
   <!-- PALESTRANTES  -->
   <li>
     <?php if (get_field('palestrantes')) : ?>
-      <div class="palestrantes uk-scrollspy="cls: uk-animation-fade; target: .box; delay: 500; repeat: true">
+      <div class="palestrantes" uk-scrollspy="cls: uk-animation-fade; target: p; delay: 500; repeat: true">
         <div class="wrapper">
           <?php the_field('palestrantes'); ?>
         </div>
