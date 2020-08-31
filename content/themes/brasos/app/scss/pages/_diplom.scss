@@ -32,7 +32,10 @@
   }
   .uk-search-icon-flip {
     background: $color-green-regular;
+    border: none;
     border-radius: 0 3px 0 0;
+    border-bottom: 1px solid $color-green-regular;
+    width: 40px;
     color: $darkgrey;
     &:hover {
       color: $white;
