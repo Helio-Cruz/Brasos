@@ -14,11 +14,29 @@
     display: flex;
     justify-content: center;
   }
+  h2:not(.h2-title), h3:not(.h3-title), h4, h5, h6 {
+    font-size: inherit;
+    color: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    text-transform: inherit;
+  }
+  strong {
+    font-weight: bolder;
+    color: inherit;
+    text-transform: inherit;
+  }
+  em {
+    color: inherit;
+    font-style: italic;
+    text-transform: inherit;
+  }
+  p {
+    letter-spacing: inherit;
+  }
   .h2-title {
     margin: 0 auto;
     text-align: center;
-  }
-  h2 {
     font-style: normal;
     margin: 1em auto;
     color: $color-green-dark;

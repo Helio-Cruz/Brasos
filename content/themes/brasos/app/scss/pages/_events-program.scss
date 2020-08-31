@@ -10,12 +10,28 @@
   .rounded {
     border-radius: 50%;
   }
+  h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    color: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    text-transform: inherit;
+  }
   strong {
-    font-weight: 600;
+    font-weight: bolder;
+    color: inherit;
+    text-transform: inherit;
   }
   em {
-    font-style: italic;
     color: inherit;
+    font-style: italic;
+    text-transform: inherit;
+  }
+  p > span,
+  p > strong,
+  h4 > strong {
+    color: inherit;
+    text-transform: inherit;
   }
   .uk-accordion-title h2 {
     font-style: normal;
@@ -34,11 +50,11 @@
       width: 450px;
     }
   }
-  p {
-    letter-spacing: unset;
-    font-size: 1em;
-    line-height: 1.2em;
-  }
+  // p {
+  //   letter-spacing: unset;
+  //   font-size: 1em;
+  //   line-height: 1.2em;
+  // }
   a {
     font-weight: bold;
     color: $color-green-regular;
