@@ -1,36 +1,42 @@
 <?php get_header(); ?>
+
+<?php
+$args = [
+  'post_type' => 'certificados',
+  'posts_per_page' => -1,
+  'order' => 'ASC',
+];
+$wp_query = new WP_Query($args); ?>
+
 <div class="diplom__content">
   <div class="diplom__research">
     <h2 class="h2-title">CERTIFICADOS</h2>
     <h3 class="h3-title">BRASIT 2018 - BRASOStbt 2019</h3>
 
- 
+    <?php if ($wp_query->have_posts()) : ?>
+      <form action="" class="uk-search uk-search-default" method="post">
+        <input class="uk-search-input" type="search" placeholder="Procure seu nome..." list="people" name="person" id="person">
+        <datalist id="">
+          <?php while ($wp_query->have_posts()) : $wp_query->the_post();
+            $users = get_field('nome_do_palestrante');
+            $users = $users["display_name"];
+          ?>
+            <option value="<?= $users; ?>"><?= $users; ?></option>
+          <?php endwhile; ?>
+        </datalist>
+        <button class="uk-search-icon-flip"><input name="person-submit" type="submit" uk-search-icon></button>
+      </form>
+    <?php endif; ?>
 
     <div class="diplom__show">
 
-      <?php
-      $args = [
-        'post_type' => 'certificados',
-        'posts_per_page' => -1,
-        'order' => 'ASC',
-      ];
-      $wp_query = new WP_Query($args); ?>
+      <?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
+          $user = $_POST['person'];
+          $users = get_field('nome_do_palestrante')['display_name'];
 
-      <?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+          if ($user === $users) : ?>
 
-          <?php
-          $current_user = get_current_user_id();
-          $selected_user = get_field('nome_do_palestrante');
-          // if logged_in user is the same as the user selected in ACF "user" field
-          // show the post of that user only
-
-          // if logged_in user is an admin
-          // show posts of all users
-          if (($current_user == $selected_user['ID']) || ($current_user == current_user_can('administrator'))) : ?>
-          
-            <?php if ($selected_user) : ?>
-            <h3 class="h3-title"><?php echo $selected_user['display_name']; ?></h3>
-            <?php endif; ?>
+            <h3 class="h3-title"><?php echo $users; ?></h3>
 
             <div uk-flex uk-flex-center uk-grid>
               <?php if (have_rows('certificados')) : while (have_rows('certificados')) : the_row(); ?>
@@ -52,12 +58,12 @@
               <?php endwhile;
               endif; ?>
             </div>
-
-          <?php endif; ?>
+          <?php endif;  ?>
 
       <?php endwhile;
       endif; ?>
     </div>
   </div>
 </div>
+
 <?php get_footer(); ?>

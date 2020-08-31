@@ -82,10 +82,83 @@
 
   <!-- PALESTRANTES  -->
   <li>
-    <?php if (get_field('palestrantes')) : ?>
+    <?php if (have_rows('palestrantes_internacionais')) : ?>
+
+
+      <div class="palestrantes uk-flex uk-flex-column uk-flex-center" uk-scrollspy="cls: uk-animation-fade; target: .fadein; delay: 500; repeat: true">
+        <h2>CONVIDADOS INTERNACIONAIS</h2>
+        <?php $i = 1; ?>
+        <?php while (have_rows('palestrantes_internacionais')) : the_row();
+          $photo = get_sub_field('foto_de_perfil');
+          $flag = get_sub_field('bandeira_do_pais');
+          $title = get_sub_field('nome');
+          $text = get_sub_field('cv');
+        ?>
+
+          <?php if ($text) : echo '
+          <a class="uk-align-center" href="#cv-internacionais-' . $i . '" uk-toggle>
+          <div id="cv-internacionais-' . $i . '" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" style="color: black !important;">
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+                <p>' . $text . '</p>
+            </div>
+          </div>';
+          else : echo '<div class="uk-align-center">';
+          endif; ?>
+          <div class="fadein uk-card uk-card-hover uk-card-default uk-card-body uk-margin-small">
+            <?php if ($photo) : ?>
+              <img class="uk-align-center	rounded" src="<?php echo esc_url($photo['url']); ?>" alt="<?php echo esc_attr($photo['alt']); ?>" />
+            <?php endif; ?>
+            <?php if ($flag) : ?>
+              <img class="uk-align-center flag" src="<?php echo esc_url($flag['url']); ?>" alt="<?php echo esc_attr($flag['alt']); ?>" />
+            <?php endif; ?>
+            <?php if ($title) : ?>
+              <p class="uk-text-center"><strong><?= $title ?></strong></p>
+            <?php endif; ?>
+          </div>
+        <?php if ($text) : echo '</a>';
+          else : echo '</div>';
+          endif;
+          $i++;
+        endwhile; ?>
+      </div>
+    <?php
+    endif; ?>
+
+    <?php if (have_rows('palestrantes_nacionais')) : ?>
       <div class="palestrantes" uk-scrollspy="cls: uk-animation-fade; target: .fadein; delay: 500; repeat: true">
-        <div class="wrapper">
-          <?php the_field('palestrantes'); ?>
+        <h2>CONVIDADOS NACIONAIS</h2>
+        <div class="uk-child-width-1-3@m uk-grid-match uk-text-center fadein" uk-grid>
+          <?php while (have_rows('palestrantes_nacionais')) : the_row();
+            $photo = get_sub_field('foto_de_perfil');
+            $title = get_sub_field('nome');
+            $text = get_sub_field('cv');
+          ?>
+
+            <?php if ($text) : echo '
+            <a href="#cv-nacionais-' . $i . '" uk-toggle>
+            <div id="cv-nacionais-' . $i . '" class="uk-flex-top" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" style="color: black !important;">
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+                <p>' . $text . '</p>
+              </div>
+            </div>';
+            else : echo '<div >';
+            endif; ?>
+
+            <div class="uk-card uk-card-body">
+              <?php if ($photo) : ?>
+                <img class="rounded" src="<?php echo esc_url($photo['url']); ?>" alt="<?php echo esc_attr($photo['alt']); ?>" />
+              <?php endif; ?>
+              <?php if ($title) : ?>
+                <p><strong><?= $title ?></strong></p>
+              <?php endif; ?>
+            </div>
+          <?php if ($text) : echo '</a>';
+            else : echo '</div>';
+            endif;
+            $i++;
+          endwhile; ?>
         </div>
       </div>
     <?php endif; ?>
