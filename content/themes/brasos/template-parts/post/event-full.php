@@ -86,7 +86,7 @@
 
 
       <div class="palestrantes uk-flex uk-flex-column uk-flex-center" uk-scrollspy="cls: uk-animation-fade; target: .fadein; delay: 500; repeat: true">
-        <h2>CONVIDADOS INTERNACIONAIS</h2>
+        <h2 class="h2-title">CONVIDADOS INTERNACIONAIS</h2>
         <?php $i = 1; ?>
         <?php while (have_rows('palestrantes_internacionais')) : the_row();
           $photo = get_sub_field('foto_de_perfil');
@@ -127,7 +127,7 @@
 
     <?php if (have_rows('palestrantes_nacionais')) : ?>
       <div class="palestrantes" uk-scrollspy="cls: uk-animation-fade; target: .fadein; delay: 500; repeat: true">
-        <h2>CONVIDADOS NACIONAIS</h2>
+        <h2 class="h2-title">CONVIDADOS NACIONAIS</h2>
         <div class="uk-child-width-1-3@m uk-grid-match uk-text-center fadein" uk-grid>
           <?php while (have_rows('palestrantes_nacionais')) : the_row();
             $photo = get_sub_field('foto_de_perfil');

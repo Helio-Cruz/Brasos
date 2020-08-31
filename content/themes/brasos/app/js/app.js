@@ -111,14 +111,14 @@ var app = {
     var diplomsInput = $("#person");
     var diplomsDatalist = $("datalist");
 
-    diplomsInput.addEventListener("keyup", (e) => {
-      // enter at least 3 letters to show name
-      if (e.target.value.length >= 3) {
-        diplomsDatalist.setAttribute("id", "people");
-      } else {
-        diplomsDatalist.setAttribute("id", "");
-      }
-    });
+    // diplomsInput.addEventListener("keyup", (e) => {
+    //   // enter at least 3 letters to show name
+    //   if (e.target.value.length >= 3) {
+    //     diplomsDatalist.setAttribute("id", "people");
+    //   } else {
+    //     diplomsDatalist.setAttribute("id", "");
+    //   }
+    // });
   }
 };
 
