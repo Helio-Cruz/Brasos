@@ -83,8 +83,7 @@
   <!-- PALESTRANTES  -->
   <li>
     <?php if (have_rows('palestrantes_internacionais')) : ?>
-
-      <div class="palestrantes uk-grid-collapse uk-flex-center uk-margin-small uk-text-center fadein" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .fadein; delay: 500; repeat: true">
+      <div class="palestrantes uk-grid-collapse uk-flex-center uk-margin-small uk-text-center fadein" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .fadein; delay: 500; repeat: false">
         <h2 class="h2-title">CONVIDADOS INTERNACIONAIS</h2>
         <?php $i = 1; ?>
         <?php while (have_rows('palestrantes_internacionais')) : the_row();
@@ -140,7 +139,7 @@
     endif; ?>
 
     <?php if (have_rows('palestrantes_nacionais')) : ?>
-      <div class="palestrantes" uk-scrollspy="cls: uk-animation-fade; target: .fadein; delay: 500; repeat: true">
+      <div class="palestrantes" uk-scrollspy="cls: uk-animation-fade; target: .fadein; delay: 500; repeat: false">
         <h2 class="h2-title">CONVIDADOS NACIONAIS</h2>
         <div class="uk-child-width-1-3@m uk-grid-match uk-text-center fadein" uk-grid>
           <?php while (have_rows('palestrantes_nacionais')) : the_row();
@@ -187,6 +186,16 @@
         </div>
       </div>
     <?php endif; ?>
+
+    <?php if (get_field('palestrantes')) : ?>
+      <div class="palestrantes" uk-scrollspy="cls: uk-animation-fade; target: .fadein; delay: 500; repeat: false">
+        <h2 class="h2-title">CONVIDADOS</h2>
+        <p class="uk-column-1-3@m uk-flex-center fadein uk-scrollspy-inview uk-animation-fade" style="text-align: center; line-height: 2em;">
+          <?php the_field('palestrantes'); ?>
+        </p>
+      </div>
+    <?php endif; ?>
+
     <!-- CERTIFICADOS -->
     <?php if (get_field('buttao_para_certificados') == 'Sim') : ?>
       <?php echo do_shortcode('[certificados]'); ?>
