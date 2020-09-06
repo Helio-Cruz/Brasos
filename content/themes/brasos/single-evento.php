@@ -20,6 +20,7 @@
   <!-- < ?php if (have_rows('valores') || have_rows('cursos') || get_field('formulario_de_inscricao')) : ?> -->
     <li><a href="#">INSCRIÇÕES/PAGAMENTO</a></li>
   <!-- < ?php endif; ?> -->
+    <a href="<?php echo site_url('/certificados/'); ?>">CERTIFICADOS</a>
 </ul>
 
 <?php

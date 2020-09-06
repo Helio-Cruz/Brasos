@@ -200,11 +200,6 @@
         </p>
       </div>
     <?php endif; ?>
-
-    <!-- CERTIFICADOS -->
-    <?php if (get_field('buttao_para_certificados') == 'Sim') : ?>
-      <?php echo do_shortcode('[certificados]'); ?>
-    <?php endif; ?>
   </li>
 
   <!-- INFORMAÇOES DE INSCRIÇAO  -->

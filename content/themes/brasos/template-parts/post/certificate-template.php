@@ -11,11 +11,10 @@ $wp_query = new WP_Query($args); ?>
 <div class="diplom__content">
   <div class="diplom__research">
     <h2 class="h2-title">CERTIFICADOS</h2>
-    <h3 class="h3-title">BRASIT 2018 - BRASOStbt 2019</h3>
-
+    <p>Insira seu nome completo com as iniciais em maiúsculo</p>
     <?php if ($wp_query->have_posts()) : ?>
       <form action="" class="uk-search uk-search-default" method="post">
-        <input class="uk-search-input" type="search" placeholder="Procure seu nome..." list="people" name="person" id="person">
+        <input class="uk-search-input" type="search" placeholder="Digite seu nome completo..." list="people" name="person" id="person">
         <datalist id="">
           <?php while ($wp_query->have_posts()) : $wp_query->the_post();
             $users = get_field('nome_do_palestrante');
