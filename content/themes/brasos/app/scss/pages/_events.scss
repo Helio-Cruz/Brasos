@@ -18,7 +18,7 @@
   @include flexbox;
   a {
     color: $color-green-dark !important;
-    font-size: 30px;
+    font-size: 14px;
     font-weight: bold;
     text-transform: uppercase !important;
     @include tablets {

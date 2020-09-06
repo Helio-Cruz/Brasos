@@ -1,16 +1,12 @@
 .diplom__content {
   .diplom__research {
-    background: $grey;
     padding: 2em 0 1em;
   }
   .h2-title {
+    color: $color-green-dark;
     padding: 2em 0 1em;
-  }
-  .h3-title {
-    font-size: $body-xl;
-    text-align: center;
-    text-transform: unset;
-    color: inherit;
+    font-style: normal;
+    font-weight: bold;
   }
   form {
     width: 250px;
