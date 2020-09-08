@@ -15,14 +15,13 @@ $wp_query = new WP_Query($args); ?>
     <?php if ($wp_query->have_posts()) : ?>
       <form action="" class="uk-search uk-search-default" method="post">
         <input class="uk-search-input" type="search" placeholder="Digite seu nome completo..." list="people" name="person" id="person">
-        <datalist id="">
-          <?php while ($wp_query->have_posts()) : $wp_query->the_post();
+        <!-- <datalist id="">
+          < ?php while ($wp_query->have_posts()) : $wp_query->the_post();
             $users = get_field('nome_do_palestrante');
-            $users = $users["display_name"];
           ?>
-            <option value="<?= $users; ?>"><?= $users; ?></option>
-          <?php endwhile; ?>
-        </datalist>
+            <option value="< ?= $users; ?>">< ?= $users; ?></option>
+          < ?php endwhile; ?>
+        </datalist> -->
         <button class="uk-search-icon-flip"><input name="person-submit" type="submit" uk-search-icon></button>
       </form>
     <?php endif; ?>
@@ -31,7 +30,7 @@ $wp_query = new WP_Query($args); ?>
 
       <?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
           $user = $_POST['person'];
-          $users = get_field('nome_do_palestrante')['display_name'];
+          $users = get_field('nome_do_palestrante');
 
           if ($user === $users) : ?>
 

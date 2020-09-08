@@ -8,6 +8,12 @@
     font-style: normal;
     font-weight: bold;
   }
+  .h3-title {
+    font-size: $body-xl;
+    text-align: center;
+    text-transform: unset;
+    color: inherit;
+  }
   form {
     width: 250px;
     margin: 3em auto 1em;
