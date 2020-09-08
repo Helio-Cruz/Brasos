@@ -16,19 +16,39 @@
 // NAVBAR EVENTS
 .navbar-events {
   @include flexbox;
-  a {
+  li a,
+  .last-link {
+    border: 1px solid $grey;
+    border-radius: 3px;
     color: $color-green-dark !important;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase !important;
-    @include tablets {
-      margin-right: -0.5em;
-    }
+    background-color: $white;
+    font-size: $body;
+    margin: 1em auto;
+    padding: 0.5em 2em;
     &:hover {
-      color: $black !important;
+      color: $white !important;
+      background-color: $color-green-dark;
+      transition: ease-in $duration-medium;
+    }
+    @include tablets {
+      padding: 0 !important;
+      margin: 0 !important;
+      background: none;
+      border: none;
+      font-weight: bold;
+      text-transform: uppercase !important;
+      &:hover {
+        color: $black !important;
+        background-color: $white;
+      }
     }
     &[aria-expanded="true"] {
       color: $black !important;
+    }
+  }
+  .last-link {
+    @include tablets {
+      padding-left: 20px !important;
     }
   }
 }
