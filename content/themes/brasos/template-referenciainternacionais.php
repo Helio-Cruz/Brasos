@@ -6,7 +6,7 @@ Template Name: Refêrencias Internacionais
 <?php get_header(); ?>
 <div class="ref-internacionais">
   <h2>Referências Internacionais</h2>
-  <div class=" uk-align-center uk-flex uk-flex-center" uk-grid>
+  <div class="uk-align-center uk-flex uk-flex-center" uk-grid>
 
     <?php
     $args = [
