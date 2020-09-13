@@ -24,6 +24,7 @@ $wp_query = new WP_Query($args); ?>
         </datalist> -->
         <button class="uk-search-icon-flip"><input name="person-submit" type="submit" uk-search-icon></button>
       </form>
+      <p class="diplom-error-message">Seu nome não foi encontrado.</p>
     <?php endif; ?>
 
     <div class="diplom__show">

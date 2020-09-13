@@ -107,7 +107,14 @@ var app = {
 
 
     $('#person').val('');
+    var diplomDIV = $('.diplom__show');
+    var diplomErrorMsg = $('.diplom-error-message');
 
+    if (diplomDIV.children().length > 0) {
+      diplomErrorMsg.hide();
+    } else {
+      diplomErrorMsg.show();
+    }
     // var diplomsInput = $("#person");
     // var diplomsDatalist = $("datalist");
 
