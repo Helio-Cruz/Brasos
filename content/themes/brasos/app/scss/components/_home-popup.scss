@@ -25,14 +25,16 @@
     &:hover {
       color: $color-green-dark;
     }
-    &::before {
-      content: "\2B95";
-      position: absolute;
-      top: 20%;
-      font-size: 1.2em;
-      font-weight: bold;
-      color: $white;
-      animation: bounce 1s ease infinite;
+    @include tablets {
+      &::before {
+        content: "\2B95";
+        position: absolute;
+        top: 20%;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: $white;
+        animation: bounce 1s ease infinite;
+      }
     }
   }
 }
