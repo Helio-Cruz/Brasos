@@ -1,8 +1,12 @@
 .palestrantes {
   margin: 0 auto;
   padding: 2em 4em;
-  line-height: 1.5em;
+  line-height: 1.1em;
   width: 80%;
+  font-size: 0.9em;
+&__card{
+  padding: 2px;
+}
   @include computers {
     width: 1100px;
   }
@@ -11,9 +15,11 @@
   }
   .uk-card {
     font-size: 0.9em;
-    color: $black !important;
+    // color: $black !important;
+    color:$color-green-dark;
     width: 320px;
-    height: 150px;
+    height: 180px;
+     font-family: 'Quicksand', sans-serif !important; 
   }
   h2,
   h3,
@@ -53,7 +59,7 @@
     font-style: inherit;
     margin: 2em auto;
     width: 100%;
-    color: #6da0a5;
+    color:$color-green-dark;
     font-size: 28px;
     font-weight: 200;
     text-transform: uppercase;
@@ -63,4 +69,26 @@
   ul li {
     list-style-type: "– ";
   }
+}
+
+/*palestrantes text */
+.pls{
+  &__text{
+    font-family: 'Quicksand', sans-serif !important; 
+    
+  } 
+}
+
+/* Palestrantes Nacionais */
+.palestrantes-nacionais{
+  text-align: center;
+  &__image{
+    width: 55% !important;
+    height: auto;
+  }
+ 
+}
+/* card size */
+.palestrantes-card{
+    padding: 2px !important;
 }

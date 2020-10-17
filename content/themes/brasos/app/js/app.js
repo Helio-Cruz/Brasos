@@ -47,7 +47,6 @@ var app = {
     });
 
 
-
     $(".slick-carousel-small").slick({
       autoplay: true,
       // dots: true,
@@ -107,9 +106,16 @@ var app = {
 
 
     $('#person').val('');
+    var diplomDIV = $('.diplom__show');
+    var diplomErrorMsg = $('.diplom-error-message');
 
-    var diplomsInput = $("#person");
-    var diplomsDatalist = $("datalist");
+    if (diplomDIV.children().length > 0) {
+      diplomErrorMsg.hide();
+    } else {
+      diplomErrorMsg.show();
+    }
+    // var diplomsInput = $("#person");
+    // var diplomsDatalist = $("datalist");
 
     // diplomsInput.addEventListener("keyup", (e) => {
     //   // enter at least 3 letters to show name

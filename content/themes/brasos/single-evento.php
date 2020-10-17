@@ -7,21 +7,29 @@
 </div>
 
 <!-- NAVIGATION -->
+
+<div class="uk-subnav navbar-events">
+  <a class="normal-link normal-link-one" target="_blank" href="https://regency.iweventos.com.br/site/brasit2020/inscreva-se">INSCRIÇÕES 2nd Brasit</a>
+</div>
 <ul class="uk-subnav navbar-events" uk-switcher>
   <!-- < ?php if (have_rows('informacoes_basicas') || have_rows('mensagem_do_presidente') || get_field('comissao_organizadora') || have_rows('sobre_o_evento') || get_field('turismo')) : ?> -->
-    <li><a href="#">INFORMAÇÕES GERAIS</a></li>
+  <li><a href="#">INFORMAÇÕES GERAIS</a></li>
   <!-- < ?php endif; ?> -->
   <!-- < ?php if (have_rows('programacao')) : ?> -->
-    <li><a href="#">PROGRAMAÇÃO</a></li>
+  <li><a href="#">PROGRAMAÇÃO</a></li>
   <!-- < ?php endif; ?> -->
   <!-- < ?php if (get_field('palestrantes')) : ?> -->
-    <li><a href="#">PALESTRANTES CONVIDADOS</a></li>
+  <li><a href="#">PALESTRANTES CONVIDADOS</a></li>
   <!-- < ?php endif; ?> -->
   <!-- < ?php if (have_rows('valores') || have_rows('cursos') || get_field('formulario_de_inscricao')) : ?> -->
-    <li><a href="#">INSCRIÇÕES/PAGAMENTO</a></li>
+  <!-- <li><a href="#">INSCRIÇÕES/PAGAMENTO</a></li> -->
+  <!-- <a class="last-link" target="_blank" href="https://regency.iweventos.com.br/site/brasit2020/inscreva-se">INSCRIÇÕES 2nd Brasit</a> -->
   <!-- < ?php endif; ?> -->
-    <a class="last-link" href="<?php echo site_url('/certificados/'); ?>">CERTIFICADOS</a>
 </ul>
+<div class="uk-subnav navbar-events">
+  <a class="normal-link" href="<?php echo site_url('/certificados/'); ?>">CERTIFICADOS</a>
+</div>
+
 
 <?php
 $current_page_id = get_the_ID();

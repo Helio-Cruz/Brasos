@@ -1,6 +1,7 @@
 <ul class="uk-switcher">
+  
   <!-- INFORMAÇOES BASICAS -->
-  <li uk-scrollspy="cls: uk-animation-slide-bottom; target: .events-informations; delay: 300; repeat: false">
+  <li class="no-formating" uk-scrollspy="cls: uk-animation-slide-bottom; target: .events-informations; delay: 300; repeat: false">
     <?php if (have_rows('informacoes_basicas') || have_rows('mensagem_do_presidente') || get_field('comissao_organizadora') || get_field('sobre_o_evento') || get_field('turismo')) : ?>
       <div class="events-informations">
         <!-- DATA / LOCAL -->
@@ -95,26 +96,31 @@
 
           <?php if ($text) : ?>
             <a class="uk-align-center" href="#cv-internacionais-<?= $i; ?>" uk-toggle>
+              <?php
+              /**
+               * Palestrante internacionais
+               */
+              ?>
               <div id="cv-internacionais-<?= $i; ?>" class="uk-flex-top" uk-modal>
                 <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" style="color: black !important; line-height: 1.5em;">
                   <button class="uk-modal-close-default" type="button" uk-close></button>
                   <div class="uk-align-center">
                     <div class="uk-flex uk-flex-center uk-flex-middle uk-card uk-grid-collapse">
                       <div class="uk-card-media-left">
-                        <?php if ($photo) : ?><img class="rounded" src="<?= esc_url($photo['url']); ?>" alt="<?= esc_attr($photo['alt']); ?>"><?php endif; ?>
+                        <?php if ($photo) : ?><img src="<?= esc_url($photo['url']); ?>" alt="<?= esc_attr($photo['alt']); ?>"><?php endif; ?>
                       </div>
-                      <div class="uk-card-body uk-width-1-2">
+                      <div class="uk-card-body uk-width-1-2 pls">
                         <?php if ($flag) : ?><img class="flag" src="<?= esc_url($flag['url']); ?>" alt="<?= esc_attr($flag['alt']); ?>"><?php endif; ?>
                         <?php if ($title) : ?><p><strong><?= $title; ?></strong></p><?php endif; ?>
                       </div>
                     </div>
                   </div>
-                  <p><?= $text; ?></p>
+                  <p class="pls__text"><?= $text; ?></p>
                 </div>
               </div>
             <?php else : echo '<div class="uk-align-center">';
           endif; ?>
-            <div class="fadein uk-flex uk-flex-center uk-flex-middle uk-card uk-card-hover uk-card-default uk-grid-collapse">
+            <div class=" uk-flex uk-flex-center uk-flex-middle uk-card uk-card-hover uk-card-default uk-grid-collapse">
               <div class="uk-card-media-left">
                 <?php if ($photo) : ?>
                   <img class="rounded" src="<?php echo esc_url($photo['url']); ?>" alt="<?php echo esc_attr($photo['alt']); ?>">
@@ -138,6 +144,11 @@
     <?php endif; ?>
 
     <?php if (have_rows('palestrantes_nacionais')) : ?>
+      <?php
+      /**
+       * Palestrante Nacionais 
+       */
+      ?>
       <div class="palestrantes uk-grid-collapse uk-flex-center uk-margin-small uk-text-center fadein" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .fadein; delay: 500; repeat: false">
         <h2 class="h2-title">CONVIDADOS NACIONAIS</h2>
         <?php $i = 1; ?>
@@ -146,42 +157,49 @@
           $flag = get_sub_field('bandeira_do_pais');
           $title = get_sub_field('nome');
           $text = get_sub_field('cv');
+          $estado = get_sub_field('estado');
         ?>
 
           <?php if ($text) : ?>
-            <a class="uk-align-center" href="#cv-nacionais-<?= $i; ?>" uk-toggle>
+            <a class="uk-align-center pls" href="#cv-nacionais-<?= $i; ?>" uk-toggle>
               <div id="cv-nacionais-<?= $i; ?>" class="uk-flex-top" uk-modal>
                 <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" style="color: black !important; line-height: 1.5em;">
                   <button class="uk-modal-close-default" type="button" uk-close></button>
                   <div class="uk-align-center">
                     <div class="uk-flex uk-flex-center uk-flex-middle uk-card uk-grid-collapse">
-                      <div class="uk-card-media-left">
-                        <?php if ($photo) : ?><img class="rounded" src="<?= esc_url($photo['url']); ?>" alt="<?= esc_attr($photo['alt']); ?>"><?php endif; ?>
+                      <div class="uk-card-media-left palestrantes-nacionais">
+                        <?php if ($photo) : ?><img class="palestrantes-nacionais__image" src="<?= esc_url($photo['url']); ?>" alt="<?= esc_attr($photo['alt']); ?>"><?php endif; ?>
                       </div>
                       <div class="uk-card-body uk-width-1-2">
                         <?php if ($flag) : ?><img class="flag" src="<?= esc_url($flag['url']); ?>" alt="<?= esc_attr($flag['alt']); ?>"><?php endif; ?>
-                        <?php if ($title) : ?><p><strong><?= $title; ?></strong></p><?php endif; ?>
+                        <p><strong>
+                            <?php if ($title) : ?><?= $title; ?><?php endif; ?>
+                            <br />
+                            <?php if ($estado) : ?><?= $estado; ?><?php endif; ?>
+                          </strong></p>
                       </div>
                     </div>
                   </div>
-                  <p><?= $text; ?></p>
+                  <p class="pls__text"><?= $text; ?></p>
                 </div>
               </div>
             <?php else : echo '<div class="uk-align-center">';
           endif; ?>
-            <div class="fadein uk-flex uk-flex-center uk-flex-middle uk-card uk-card-hover uk-card-default uk-grid-collapse">
+            <div class=" uk-flex uk-flex-center uk-flex-middle uk-card uk-card-hover uk-card-default uk-grid-collapse">
               <div class="uk-card-media-left">
                 <?php if ($photo) : ?>
-                  <img class="rounded" src="<?php echo esc_url($photo['url']); ?>" alt="<?php echo esc_attr($photo['alt']); ?>">
+                  <img src="<?php echo esc_url($photo['url']); ?>" alt="<?php echo esc_attr($photo['alt']); ?>">
                 <?php endif; ?>
               </div>
-              <div class="uk-card-body uk-width-1-2">
+              <div class="uk-card-body palestrantes-card uk-width-1-2">
                 <?php if ($flag) : ?>
                   <img class="flag" src="<?php echo esc_url($flag['url']); ?>" alt="<?php echo esc_attr($flag['alt']); ?>" />
                 <?php endif; ?>
-                <?php if ($title) : ?>
-                  <p><strong><?= $title ?></strong></p>
-                <?php endif; ?>
+                <p><strong>
+                    <?php if ($title) : ?><?= $title; ?><?php endif; ?>
+                    <br />
+                    <?php if ($estado) : ?><?= $estado; ?><?php endif; ?>
+                  </strong></p>
               </div>
             </div>
           <?php if ($text) : echo '</a>';
@@ -202,86 +220,91 @@
     <?php endif; ?>
   </li>
 
+
+
+
   <!-- INFORMAÇOES DE INSCRIÇAO  -->
-  <li>
+  <!-- <li>
     <!-- PRICES INFOS -->
-    <?php if (have_rows('valores')) : ?>
+  <!--
+    <//?php if (have_rows('valores')) : ?>
       <div class="blog__content inscriptions__content">
         <h2 class="h2-title">INSCRIÇÃO / PAGAMENTO</h2>
-        <?php while (have_rows('valores')) : the_row();
+        <//?php while (have_rows('valores')) : the_row();
           $titleValues = get_sub_field('titulo');
           $textValues = get_sub_field('texto');
           $imgValues = get_sub_field('imagem');
         ?>
-          <?php if ($titleValues) : ?>
-            <h3 class="h3-title"><?php echo $titleValues; ?></h3>
-          <?php endif; ?>
-          <?php if ($textValues) : ?>
-            <p><?php echo $textValues; ?></p>
-          <?php endif; ?>
-          <?php if ($imgValues) : ?>
-            <img src="<?php echo $imgValues['url']; ?>" alt="">
-          <?php endif; ?>
-        <?php endwhile; ?>
+          <//?php if ($titleValues) : ?>
+            <h3 class="h3-title"><//?php echo $titleValues; ?></h3>
+          <//?php endif; ?>
+          <//?php if ($textValues) : ?>
+            <p><//?php echo $textValues; ?></p>
+          <//?php endif; ?>
+          <//?php if ($imgValues) : ?>
+            <img src="<//?php echo $imgValues['url']; ?>" alt="">
+          <//?php endif; ?>
+        <//?php endwhile; ?>
       </div>
-    <?php endif; ?>
+    <//?php endif; ?>-->
 
-    <!-- INFORMAÇOES DE CURSOS -->
-    <?php if (have_rows('cursos')) : ?>
+  <!-- INFORMAÇOES DE CURSOS -->
+  <!-- <//?php if (have_rows('cursos')) : ?>
       <div class="congress__content events__cards">
         <div uk-flex uk-flex-center uk-grid uk-scrollspy="cls: uk-animation-fade; target: .box; delay: 500; repeat: false">
-          <?php while (have_rows('cursos')) : the_row();
+          <//?php while (have_rows('cursos')) : the_row();
             $nameCourse = get_sub_field('nome_do_curso');
             $detailsCourse = get_sub_field('detalhes');
           ?>
             <div class="uk-card uk-card-default box">
-              <?php if ($nameCourse) : ?>
+              <//?php if ($nameCourse) : ?>
                 <div class="uk-card-header">
                   <h3 class="uk-card-title h3-title">
-                    <?php echo $nameCourse; ?>
+                    <//?php echo $nameCourse; ?>
                   </h3>
                 </div>
-              <?php endif; ?>
-              <?php if ($detailsCourse) : ?>
+              <//?php endif; ?>
+              <//?php if ($detailsCourse) : ?>
                 <div class="uk-card-body">
-                  <?php echo $detailsCourse; ?>
+                  <//?php echo $detailsCourse; ?>
                 </div>
-              <?php endif; ?>
+              <//?php endif; ?>
             </div>
-          <?php endwhile; ?>
+          <//?php endwhile; ?>
         </div>
       </div>
-    <?php endif; ?>
+    <//?php endif; ?> -->
 
-    <!-- FORMULARIO DE INSCRIÇAO  -->
-    <?php global $post;
+  <!-- FORMULARIO DE INSCRIÇAO  -->
+
+  <!-- <//?php global $post;
     if ($post->ID == 1419) : ?>
-      <?php if (get_field('formulario_de_inscricao')) : ?>
+      <//?php if (get_field('formulario_de_inscricao')) : ?>
         <div class="blog__content inscriptions__content">
           <h2 class="h2-title">FORMULARIO DE INSCRIÇÃO</h2>
-          <?php the_field('formulario_de_inscricao'); ?>
+          <//?php the_field('formulario_de_inscricao'); ?>
           <div class="uk-flex uk-height-small uk-margin uk-text-center">
-            <a class="uk-margin-auto uk-margin-auto-vertical normal-button special-button margin-button" href="#modal-form" uk-toggle><?php the_title(); ?></a>
+            <a class="uk-margin-auto uk-margin-auto-vertical normal-button special-button margin-button" href="#modal-form" uk-toggle><//?php the_title(); ?></a>
           </div>
         </div>
-        <!-- FORM BUTTON -->
+        <!-- FORM BUTTON  
+
         <div id="modal-form" class="uk-flex-top" uk-modal>
           <div class="uk-modal-dialog uk-margin-auto-vertical contact-form contact-form-inscription">
             <h2 class="h2-title">Inscrição</h2>
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="contact-form-block">
-              <?php echo do_shortcode('[contact-form-7 id="301" title="Inscrição"]'); ?>
+              <//?php echo do_shortcode('[contact-form-7 id="301" title="Inscrição"]'); ?>
             </div>
           </div>
         </div>
-      <?php endif; ?>
-    <?php else : ?>
-      <?php if (get_field('formulario_de_inscricao')) : ?>
+      <//?php endif; ?>
+    <//?php else : ?>
+      <//?php if (get_field('formulario_de_inscricao')) : ?>
         <div class="blog__content inscriptions__content">
-          <?php the_field('formulario_de_inscricao'); ?>
-        <?php endif; ?>
-      <?php endif; ?>
-  </li>
-
+          <//?php the_field('formulario_de_inscricao'); ?>
+        <//?php endif; ?>
+      <//?php endif; ?> -->
+  <!--</li> -->
 
 </ul>

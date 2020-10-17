@@ -5,40 +5,23 @@ Template Name:  Guidelines em osteoartrite
 ?>
 <?php get_header(); ?>
 
-<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m uk-flex tree guidelines uk-card-hover">
-<div class="uk-card-body ">
-<img data-src="<?php echo get_template_directory_uri() . '/public/images/orasi.jpg' ?>"   alt="" uk-img>
-</div>
-<div class="uk-card-body  ">
-        <h3>Osteoarthrithis and Cartilage</h3>
-        <p>Oarsi Guideline for the non-surgical management of Knee, Hip, and Polyarticular Osteoarthrithis 2019</p>
-        <button class="general-button">
-         <a class="uk-link-toggle"  target="blank" href="https://www.sciencedirect.com/science/article/pii/S1063458419311161">
-        <span class="uk-link-heading">Baixe o PDF</span>
-        </a>
-        </button>
-</div>
-</div>
+<?php
+$args = [
+        'post_type' => 'guidelines',
+        'category_name' => 'Guideline Osteoartrite',
+        'posts_per_page' => -1,
+        'post_status'    => 'publish',
+        'order' => 'DESC'
+];
 
-<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m uk-flex tree guidelines uk-card-hover">
-<div class="uk-card-body  ">
-<img data-src="<?php echo get_template_directory_uri() . '/public/images/artrite.jpeg' ?>"   alt="" uk-img>
-</div>
-<div class="uk-card-body">
-        <h3>Arthritis & Rheumatism</h3>
-        <p>
-            An updated algorithm recommendation for the management of knee osteoarthritis <br>
-            from the European Society for  Clinical and Aspects of 
-             Osteoporosis, Osteoarthritis and Musculoskeletal Diseases (ESCEO).
-        </p>
+$wp_query = new WP_Query($args);
+if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
 
-        <button class="general-button">
-         <a class="uk-link-toggle"  target="blank" href="https://www.sciencedirect.com/science/article/pii/S0049017219300435">
-        <span class="uk-link-heading">Baixe o PDF</span>
-        </a>
-        </button>
-</div>
-</div>
- 
+                get_template_part('template-parts/post/guidelines', 'full');
+
+        endwhile;
+endif;
+wp_reset_query();
+?>
 
 <?php get_footer(); ?>

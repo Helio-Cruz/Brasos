@@ -33,8 +33,9 @@
 
 .uk-navbar-nav > li > a {
   font-family: "Roboto";
-  font-style: italic;
+ // font-style: italic;
   text-transform: none;
+  font-weight: 600;
   color: $color-green-dark;
 }
 
@@ -80,9 +81,9 @@ img.trp-flag-image {
     a {
       color: $color-green-dark;
       margin-right: 0.5em;
-      font-size: $body;
-      font-style: italic;
-      font-weight: 300;
+      font-size:13px;
+      // font-style: italic;
+      font-weight: 500;
       margin: 0 18px;
     }
   }
@@ -132,7 +133,7 @@ img.trp-flag-image {
   a {
     font-weight: normal;
     text-align: center;
-    font-style: italic;
+    //font-style: italic;
   }
   a,
   .uk-offcanvas-close {

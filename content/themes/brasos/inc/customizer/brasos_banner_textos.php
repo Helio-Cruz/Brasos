@@ -3,7 +3,7 @@
 
 function brasos_banner_textos($wp_customize) {
  
-
+    $wp_customize->add_setting('brasos_call_to_content-0', []);
     $wp_customize->add_setting('brasos_call_to_content-1', []);
     $wp_customize->add_setting('brasos_call_to_content-2', []);
     $wp_customize->add_setting('brasos_call_to_content-3', []);
@@ -20,7 +20,12 @@ function brasos_banner_textos($wp_customize) {
     $wp_customize->add_setting('brasos_call_to_content-14', []);
 
  
-
+    $wp_customize->add_control('brasos_call_to_content-0', [
+        'type' => 'textarea',
+        'section' => 'brasos_banner_textos',
+        'label' => 'titulo'
+       
+    ]);
     $wp_customize->add_control('brasos_call_to_content-1', [
         'type' => 'textarea',
         'section' => 'brasos_banner_textos',

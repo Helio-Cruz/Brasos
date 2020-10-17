@@ -6,34 +6,28 @@ Template Name: Refêrencias Internacionais
 <?php get_header(); ?>
 <div class="ref-internacionais">
   <h2>Referências Internacionais</h2>
-  <div class=" uk-align-center uk-flex uk-flex-center" uk-grid>
-    <div class="uk-flex uk-flex-middle uk-card uk-card-default uk-card-body ref-nacionais__card">
-    <a href="http://www.esceo.org/" target="blank">
-     <img data-src="<?php echo get_template_directory_uri() . '/public/images/referencias/internacionais/A8HR6Y.jpg' ?>" alt="" uk-img>
-    </a>
-     
-    </div>
-    <div class="uk-flex uk-flex-middle uk-card uk-card-default uk-card-body ref-nacionais__card">
-    <a href="https://www.isiat2019.com/" target="blank">
-     <img data-src="<?php echo get_template_directory_uri() . '/public/images/referencias/internacionais/OBCrHw.jpg' ?>" alt="" uk-img>
-    </a>
-     
-    </div>
-  </div>
-
   <div class="uk-align-center uk-flex uk-flex-center" uk-grid>
-    <div class="uk-flex uk-flex-middle uk-card uk-card-default uk-card-body ref-nacionais__card">
-    <a href="https://www.oarsi.org/" target="blank">
-    <img data-src="<?php echo get_template_directory_uri() . '/public/images/referencias/internacionais/uRv0Mh.jpg' ?>" alt="" uk-img>
-    </a>
-      
-    </div>
-    <div class="uk-flex uk-flex-middle uk-card uk-card-default uk-card-body ref-nacionais__card">
-    <a href="https://www.iofbonehealth.org/" target="blank">
-    <img data-src="<?php echo get_template_directory_uri() . '/public/images/referencias/internacionais/zJRGns.png' ?>" alt="" uk-img>
-    </a>
-      
-    </div>
+
+    <?php
+    $args = [
+      'post_type' => 'referencias',
+      'category_name' => 'Referencias Internacionais',
+      'posts_per_page' => -1,
+      'post_status'    => 'publish',
+      'order' => 'DESC'
+    ];
+
+    $wp_query = new WP_Query($args);
+
+    if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
+
+        get_template_part('template-parts/post/referencias', 'full');
+
+      endwhile;
+    endif;
+    wp_reset_query();
+    ?>
+    
   </div>
 </div>
 <?php get_footer(); ?>

@@ -1,8 +1,11 @@
 // cover events
 .events-cover {
-  height: 380px;
+  height: 280px;
   position: relative;
   margin: auto;
+  @include tablets {
+    height: 380px;
+  }
   &__img {
     padding: 10px 0;
     height: 100%;
@@ -17,7 +20,7 @@
 .navbar-events {
   @include flexbox;
   li a,
-  .last-link {
+  .normal-link {
     border: 1px solid $grey;
     border-radius: 3px;
     color: $color-green-dark !important;
@@ -32,7 +35,7 @@
     }
     @include tablets {
       padding: 0 !important;
-      margin: 0 !important;
+      // margin: 0 !important;
       background: none;
       border: none;
       font-weight: bold;
@@ -46,9 +49,31 @@
       color: $black !important;
     }
   }
-  .last-link {
+}
+
+ul.navbar-events {
+  margin: 0 auto;
+  @include tablets {
+    display: inline-flex;
+  }
+  li {
+    padding-left: 0;
+  }
+  li + li {
     @include tablets {
       padding-left: 20px !important;
     }
   }
+}
+
+div.navbar-events {
+  margin: 0 auto;
+  @include tablets {
+    display: inline;
+    margin: 1em;
+  }
+}
+
+.single-evento {
+  text-align: center;
 }

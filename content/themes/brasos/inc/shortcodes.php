@@ -11,7 +11,7 @@ function link_popup($atts)
   $text = isset( $atts['text'] )? $atts['text'] : '';
   $link = isset( $atts['link'] )? $atts['link'] : '';
   
-  $html = '<a href="' . $link . '" target="_blank" class="popup-link">' . $text . '</a>';
+  $html = '<a href="' . $link . '"" class="popup-link">' . $text . '</a>';
 
   return $html;
 }

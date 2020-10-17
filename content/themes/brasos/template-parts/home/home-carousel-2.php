@@ -1,6 +1,6 @@
 <!-- CAROUSEL -->
 <div class="slick-carousel-small__block">
-  <div class="slick-carousel-small__title">Brasit 2020 - Temática Preliminar</div>
+  <div class="slick-carousel-small__title">Brasit 2020 - Temática Preliminar<?= get_theme_mod('brasos_call_to_content-0'); ?></div>
   <div class="slick-carousel-small">
     <div>
       <p>
