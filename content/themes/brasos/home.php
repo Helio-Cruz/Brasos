@@ -1,7 +1,8 @@
 <?php get_header();
+// $setCookie = $_COOKIE['my_setcookie'];
 $popup = get_theme_mod('brasos_popup_image');
 $default = null;
-$img = !empty($popup) ? $popup : $default;
+$img = !empty($popup) && isset($_COOKIE['popup_cookie']) ? $popup : $default;
 ?>
 <!-- POP UP -->
 <!-- This is a button toggling the modal with the outside close button -->

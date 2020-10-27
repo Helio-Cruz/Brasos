@@ -127,6 +127,22 @@ if (!function_exists('brasos_setup')) :
         </style>
     <?php }
     add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+/*
+    add_action('init', function() {
+        $min = 2;
+        if (!isset($_COOKIE['the_popup'])) {
+            setcookie('my_cookie', 'some default value', strtotime("+{$min} minutes"));
+        }
+    });*/
+
+    add_action( 'init', 'my_setcookie' );
+            function my_setcookie() {
+               // $expires = - 10;
+                setcookie( 'popup_cookie', true , time() + (86400 * 21), '/'  );
+               //  return $expires;
+}
+
+ 
 
 endif;
 

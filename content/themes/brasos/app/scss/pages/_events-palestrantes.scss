@@ -75,13 +75,14 @@
 .pls{
   &__text{
     font-family: 'Quicksand', sans-serif !important; 
+    text-align: left;
     
   } 
 }
 
 /* Palestrantes Nacionais */
 .palestrantes-nacionais{
-  text-align: center;
+//  text-align: center;
   &__image{
     width: 55% !important;
     height: auto;
