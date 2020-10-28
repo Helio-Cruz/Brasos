@@ -1,75 +1,66 @@
- 
-
 // CAROUSEL HEADER - SMALL TEXT
 .slick-carousel-small__block {
-  position: relative;
-  max-width: 80%;
+  position: absolute;
+   height: 100vh;
+   top: 0;
+  max-width: 100%;
   margin: 0 auto;
-  height: 170px;
-  bottom: 85px;
-  background-color: $color-green-dark;
+  background: rgb(0,110,120);
+  background: linear-gradient(0deg, rgba(0,110,120,0.3841911764705882) 0%, rgba(0,110,120,1) 0%, rgba(0,110,120,0.4318102240896359) 15%, rgba(0,110,120,0) 23%);
   @include computers {
-    max-width: 60%;
-    height: 130px;
-    bottom: 65px;
   }
 }
+.slick-carousel-small__position{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  position: relative;
+  top: 750px;
+}
 .slick-carousel-small__title {
-  position: absolute;
-  background: $color-green-dark;
+  font-style: none;
   color: $white;
   width: 100%;
   height: 50px;
   font-weight: bold;
-  top: 0;
-  display: flex;
   font-size: $body;
-  justify-content: center;
-  align-items: center;
-  padding: 1.8em;
-  padding-bottom: 0;
+  text-align: left;
+  padding: 1.8em 1.5em;
+   padding-bottom: 0;
   @include tablets {
     font-size: $subheading;
     height: 45px;
   }
 }
 .slick-carousel-small {
-  position: absolute;
-  background: none;
-  top: 49px;
   width: 100%;
-  background: $color-green-dark;
   @include computers {
-    height: 80px;
-    bottom: 0;
+    //  height: 80px;
+    // bottom: 0;
   }
   .slick-slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+   // display: flex;
+   // flex-direction: column;
+ //   justify-content: left;
+  //  align-items: center;
     color: $white;
     outline: none;
     height: auto;
     padding: 1em 0;
-    background: $color-green-dark;
     @include computers {
       height: 80px;
     }
   }
   > div {
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    p {
+    text-align: left;
+    li {
+      text-align: left;
       width: 100%;
-      padding: 0 10px;
+//padding: 0 10px;
       margin: 0 auto !important;
-      line-height: 1.1em;
-      font-weight: 300;
+      line-height: 0.2em;
+      font-weight: 600;
       font-size: $body-xs;
       @include computers {
         font-size: 17px;

@@ -2,9 +2,10 @@
 
 //CAROUSEL HEADER - BIG IMAGES
 .carousel-images {
-  backdrop-filter: brightness(70%);
+ // backdrop-filter: brightness(70%);
+ 
   .uk-slideshow-items {
-    height: calc(100vh - 200px);
+    height: calc(111vh - 200px);
     @include TwoK {
       max-height: 70vh;
       max-width: 80vw;
@@ -12,43 +13,48 @@
     }
   }
   img {
-    object-fit: contain;
-    // object-position: 50% 30%;
+    object-fit:cover;
+    object-position: 50% 10%;
     height: 100%;
     width: 100vw;
-    filter: brightness(70%);
+    // filter: brightness(70%);
   }
-  .h1-title {
-    z-index: 1;
-    color: $white;
-    text-align: right;
-    font-size: 10px;
-    margin: 100px auto;
-    @include tablets {
-      font-size: 18px;
-      margin: 100px 60px;
-    }
-    @include large-screens {
-      font-size: 25px;
-      margin: 100px 150px;
-    }
-    @include TwoK {
-      margin: 100px 400px;
-    }
-    span {
-      font-size: 16px;
-      @include tablets {
-        font-size: 23px;
-      }
-      font-weight: bold;
-      @include computers {
-        font-size: 28px;
-      }
-    }
-  }
+//   .h1-title {
+//     z-index: 1;
+//     color: $white;
+//     text-align: right;
+//     font-size: 10px;
+//     margin: 100px auto;
+//     @include tablets {
+//       font-size: 18px;
+//       margin: 100px 60px;
+//     }
+//     @include large-screens {
+//       font-size: 25px;
+//       margin: 100px 150px;
+//     }
+//     @include TwoK {
+//       margin: 100px 400px;
+//     }
+//     span {
+//       font-size: 16px;
+//       @include tablets {
+//         font-size: 23px;
+//       }
+//       font-weight: bold;
+//       @include computers {
+//         font-size: 28px;
+//       }
+//     }
+//   }
 }
 
 .cursor-carousel {
   position: absolute;
   top: 70%;
+ 
 }
+ .uk-slidenav-next, .uk-slidenav-previous{
+   z-index: 10;
+   color: $color-green-dark !important;
+ }
