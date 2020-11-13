@@ -1,5 +1,5 @@
 <!-- SIDEBAR -->
-<div id="sidenav" uk-offcanvas="overlay: true; flip: true">
+<div id="sidenav"   uk-offcanvas="overlay: true; flip: true">
   <div class="uk-offcanvas-bar uk-background-default">
     <button class="uk-offcanvas-close" type="button" uk-close></button>
     <div class="white-block">

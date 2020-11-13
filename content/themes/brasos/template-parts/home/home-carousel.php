@@ -7,33 +7,24 @@ $slide5 = get_theme_mod('brasos_bg_slide_5', '');
 $slide6 = get_theme_mod('brasos_bg_slide_6', '');
 ?>
 <!-- CAROUSEL -->
-<div class="carousel-images uk-position-relative uk-light" tabindex="-1" uk-slideshow="autoplay:true; autoplay-interval:7000; min-height:300; max-height:600">
+<div class="carousel-images uk-position-relative uk-light" tabindex="-1" uk-slideshow="autoplay:true; autoplay-interval:7000; min-height:100; max-height:600; animation: fade">
+  
   <ul class="uk-slideshow-items">
-  <?php if ( $slide1 != '') : ?>
+    <?php if ($slide1 != '') : ?>
       <li>
         <div class="uk-position-cover ">
           <img src="<?= $slide1; ?>" alt="">
         </div>
-        <div class="uk-position-bottom-right uk-position-medium uk-light">
-          <!-- <h1 class="h1-title"><span>BRASOS</span><br>-->
-          <!-- <h1 class="h1-title title-banner"> Brazilian Society for Osteoarthritis, Osteoporosis and Sarcopenia <br>
-          Sociedade de médicos de diferentes especialidades</h1> -->
-        </div>
       </li>
     <?php endif; ?>
-    <?php if ( $slide2 != '') : ?>
+    <?php if ($slide2 != '') : ?>
       <li>
         <div class="uk-position-cover ">
           <img src="<?= $slide2; ?>" alt="">
         </div>
-        <div class="uk-position-bottom-right uk-position-medium uk-light">
-          <!-- <h1 class="h1-title"><span>BRASOS</span><br>
-            Brazilian Society for Osteoarthritis, Osteoporosis and Sarcopenia <br>
-            Sociedade de médicos de diferentes especialidades</h1> -->
-        </div>
       </li>
     <?php endif; ?>
-    <?php if ( $slide3 != '') : ?>
+    <?php if ($slide3 != '') : ?>
       <li>
         <div class="uk-position-cover carousel-brasos-home">
           <img src="<?= $slide3; ?>" alt="">
@@ -45,33 +36,137 @@ $slide6 = get_theme_mod('brasos_bg_slide_6', '');
         </div>
       </li>
     <?php endif; ?>
-    <?php if ( $slide4 != '') : ?>
+    <?php if ($slide4 != '') : ?>
       <li>
         <div class="uk-position-cover ">
           <img src="<?= $slide4; ?>" alt="">
         </div>
       </li>
     <?php endif; ?>
-    <?php if ( $slide5 != '') : ?>
+    <?php if ($slide5 != '') : ?>
       <li>
         <div class="uk-position-cover">
           <img src="<?= $slide5; ?>" alt="">
         </div>
       </li>
     <?php endif; ?>
-    <?php if ( $slide16 != '') : ?>
+    <?php if ($slide16 != '') : ?>
       <li>
         <div class="uk-position-cover  ">
           <img src="<?= $slide6; ?>" alt="">
         </div>
-        <div class="uk-position-bottom-right uk-position-medium uk-light">
-          <!-- <h1 class="h1-title"><span>BRASOS</span><br>
-            Brazilian Society for Osteoarthritis, Osteoporosis and Sarcopenia <br>
-            Sociedade de médicos de diferentes especialidades</h1> -->
-        </div>
       </li>
     <?php endif; ?>
+
   </ul>
+  <!-- Carousel buttons -->
   <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
   <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+  <!-- Carousel text -->
+  <div class="slick-carousel-small__block">
+    <div class="slick-carousel-small__position">
+      <h2 class="slick-carousel-small__title"><?= get_theme_mod('brasos_call_to_content-0'); ?></h2>
+      <ul class="slick-carousel-small">
+        <li>
+          <div>
+            <p>
+              <?= get_theme_mod('brasos_call_to_content-1'); ?>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>
+              <?= get_theme_mod('brasos_call_to_content-2'); ?>
+
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>
+              <?= get_theme_mod('brasos_call_to_content-3'); ?>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>
+              <?= get_theme_mod('brasos_call_to_content-4'); ?>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>
+              <?= get_theme_mod('brasos_call_to_content-5'); ?>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>
+              <?= get_theme_mod('brasos_call_to_content-6'); ?>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>
+              <?= get_theme_mod('brasos_call_to_content-7'); ?>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>
+              <?= get_theme_mod('brasos_call_to_content-8'); ?>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>
+              <?= get_theme_mod('brasos_call_to_content-9'); ?>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>
+              <?= get_theme_mod('brasos_call_to_content-10'); ?>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>
+              <?= get_theme_mod('brasos_call_to_content-11'); ?>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>
+              <?= get_theme_mod('brasos_call_to_content-12'); ?>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>
+              <?= get_theme_mod('brasos_call_to_content-13'); ?>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>
+              <?= get_theme_mod('brasos_call_to_content-14'); ?>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>

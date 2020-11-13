@@ -35,7 +35,7 @@
             ?>
          </div>
        </ul>
-       <a href="#" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+       <a href="#" class="uk-navbar-toggle sidenav" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
      </div>
    </nav>
  </div>

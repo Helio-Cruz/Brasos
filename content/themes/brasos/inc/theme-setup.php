@@ -137,9 +137,9 @@ if (!function_exists('brasos_setup')) :
 
     add_action( 'init', 'my_setcookie' );
             function my_setcookie() {
-               // $expires = - 10;
-                setcookie( 'popup_cookie', true , time() + (86400 * 21), '/'  );
-               //  return $expires;
+                $expires =  time() - (86400 * 21);
+                setcookie( 'popup_cookie', $expires, true , time() + 3600, '/' );
+                
 }
 
  

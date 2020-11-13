@@ -1,9 +1,36 @@
 <?php get_header();
-// $setCookie = $_COOKIE['my_setcookie'];
+
+ $setCookie = $_COOKIE['my_setcookie'];
 $popup = get_theme_mod('brasos_popup_image');
 $default = null;
 $img = !empty($popup) && isset($_COOKIE['popup_cookie']) ? $popup : $default;
+$img = !empty($popup) ? $popup : $default;
+
+// if(isset($$setCookie)) {
+//  // $setCookie = $_COOKIE['my_setcookie'];
+ 
+//   echo $popup;
+//   var_dump($popup);
+// } else {
+//   $default;
+//   echo $default;
+// }
+ 
 ?>
+<?php 
+// $cookie_name = "user";
+// $cookie_value = "John Doe";
+//  $setCookie = $_COOKIE['my_setcookie'];
+//  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+
+//  if(!isset($_COOKIE[$cookie_name])) {
+//   echo "Cookie '" . $cookie_name . "' is set!<br>";
+//   echo "Value is: " . $_COOKIE[$cookie_name];
+// } else {
+//   echo "Cookie named '" . $cookie_name . "' is not set!";
+// }
+?>
+ 
 <!-- POP UP -->
 <!-- This is a button toggling the modal with the outside close button -->
 <div id="modal-media-image" class="uk-flex-top" uk-modal>
@@ -15,7 +42,6 @@ $img = !empty($popup) && isset($_COOKIE['popup_cookie']) ? $popup : $default;
 </div>
 
 <?php get_template_part('template-parts/home/home', 'carousel'); ?>
-<?php get_template_part('template-parts/home/home', 'carousel-2'); ?>
 <?php get_template_part('template-parts/home/home', 'blog'); ?>
 <?php get_template_part('template-parts/home/home', 'brasos'); ?>
 <?php get_template_part('template-parts/home/footer', 'images'); ?>
