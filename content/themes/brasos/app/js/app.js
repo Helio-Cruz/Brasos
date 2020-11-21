@@ -8,7 +8,8 @@ var app = {
     //   console.log('init');
     // loads the Icon plugin
     UIkit.use(Icons);
-
+    UIkit.responsive(UIkit.util.$('iframe'));
+    
     if ($('body').hasClass('home')) {
       var popup = $('.modal-image').attr('src');
       if (popup != '') {

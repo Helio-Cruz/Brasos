@@ -16,6 +16,14 @@
       stroke-width: 2px;
     }
   }
+  h1 {
+    font-weight: 600;
+  }
+  hr {
+    max-width: 500px;
+    border: 1px solid $color-green-dark;
+    margin: auto;
+  }
 }
 
 .bw-videos {
@@ -27,8 +35,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     h3 {
+      text-align: center;
       color: $black;
       font-weight: 600;
       font-style: normal;

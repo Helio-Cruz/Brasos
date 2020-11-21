@@ -22,13 +22,10 @@ get_header(); ?>
             echo '<p class="login-msg"><strong>ERROR:</strong> Username and/or Password is empty.</p>';
         } elseif ($login === "false") {
             echo '<p class="login-msg"><strong>ERROR:</strong> You are logged out.</p>';
-        }
+        } else
 
-        
-        ?>
-        <?php
         $args = array(
-            'redirect' => home_url(),
+            'redirect' => home_url('/membros'),
             // 'form_id' => 'loginform-custom',
            'label_username' => __('Email'),
             'id_username' => 'user',
