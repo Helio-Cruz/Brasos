@@ -125,6 +125,9 @@ var app = {
     //     diplomsDatalist.setAttribute("id", "");
     //   }
     // });
+
+    $('#user').attr('placeholder', 'User Name');
+    $('#pass').attr('placeholder', 'Password');
   }
 };
 

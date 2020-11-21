@@ -20,7 +20,11 @@
           $menu = strip_tags($menu, '<li><a href="%2$s">');
           echo $menu;
           ?>
+         <li>
+           <a uk-toggle="target: #my-id">Membros</a> 
+         </li>
        </ul>
+       
        <ul class="uk-navbar-nav">
          <div class="flag">
            <?php
@@ -39,3 +43,5 @@
      </div>
    </nav>
  </div>
+
+ <?php  get_template_part( 'page-login' ); ?>

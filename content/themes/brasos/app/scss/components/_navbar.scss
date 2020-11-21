@@ -24,8 +24,8 @@
 }
 
 .uk-navbar-container {
+  z-index: 100;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  // visibility: hidden;
   &:not(.uk-navbar-transparent) {
     background-color: $white;
   }
@@ -33,7 +33,6 @@
 
 .uk-navbar-nav > li > a {
   font-family: "Roboto";
- // font-style: italic;
   text-transform: none;
   font-weight: 600;
   color: $color-green-dark;
@@ -81,9 +80,6 @@ img.trp-flag-image {
     a {
       color: $color-green-dark;
       margin-right: 0.5em;
-    //  font-size:13px;
-      // font-style: italic;
-      //font-weight: 600;
       margin: 0 18px;
     }
   }
@@ -119,7 +115,6 @@ img.trp-flag-image {
 // SIDENAV
 .sidenav{
      @include computers {
-      //display: none;
     }
 }
 .uk-offcanvas-bar {
@@ -127,18 +122,9 @@ img.trp-flag-image {
   padding: 0;
   left: -300px;
   width: 300px;
-  // @include tablets {
-  //  left: -400px;
-  //   width: 400px;
-  // }
-  // @include computers {
-  //   left: -400px;
-  //   width: 400px;
-  // }
   a {
     font-weight: normal;
     text-align: center;
-    //font-style: italic;
   }
   a,
   .uk-offcanvas-close {
@@ -189,7 +175,6 @@ img.trp-flag-image {
 .green-block {
   width: 100%;
   padding: 2em 1em;
-  //background: $color-green-regular;
   position: relative;
   height: 20vh;
   font-size: $body-xs;
@@ -212,22 +197,6 @@ img.trp-flag-image {
     font-weight: normal;
   }
 }
-// .green-diagonal {
-//   position: absolute;
-//   top: -30px;
-//   left: 0;
-//   width: 0;
-//   height: 0;
-//   border-bottom: 30px solid $color-green-regular;
-//   border-right: 300px solid transparent;
-//   @include tablets {
-//     border-right: 550px solid transparent;
-//   }
-//   @include computers {
-//     border-right: 645px solid transparent;
-//   }
-// }
-
 // ______________________________________________________
 // Removing Links sidebar
 

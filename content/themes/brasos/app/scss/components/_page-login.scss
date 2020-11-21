@@ -1,0 +1,47 @@
+.page-login {
+  margin: auto;
+  font-weight: 600;
+  color: $color-green-dark;
+  padding: 5em;
+  p {
+    text-align: center;
+    font-size: 1.3em;
+  }
+}
+
+.uk-inline {
+  width: 260px;
+}
+#my-id .uk-modal-title {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+#loginform {
+  text-align: center;
+  margin: auto;
+  padding: 1em;
+  .login-username label,
+  .login-password label {
+    display: none;
+  }
+  .login-username input,
+  .login-password input {
+    border: none;
+    width: 70%;
+    padding: 1em;
+  }
+  .login-remember {
+    margin: left;
+    text-align: left;
+    font-size: 1em;
+  }
+  .login-submit input {
+    border: none;
+    color: $white;
+    background: $color-green-dark;
+    padding: 0.6em;
+    cursor: pointer;
+    font-weight: 600;
+  }
+}
