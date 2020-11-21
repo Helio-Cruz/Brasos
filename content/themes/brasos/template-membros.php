@@ -15,17 +15,16 @@ if (!is_user_logged_in()) {
     (wp_redirect('membros'));
 ?>
     <div class="page-membros">
-        <?php
-        printf(__('Ola %s', 'textdomain'), esc_html($current_user->user_firstname)) . '<br />';  ?>
 
-        <a href="<?php echo wp_logout_url(home_url()); ?>" title="Logout">Sair <span uk-icon="icon: sign-out"></span>
-</a>
-
-     
-            <?php get_template_part('template-parts/post/membros', 'content'); ?>
+        <div class="page-membros__header">
+            <?php printf(__('Bem Vindo, %s', 'textdomain'), esc_html($current_user->user_firstname)) . '.' ; ?>
+            <a href="<?php echo wp_logout_url(home_url()); ?>" title="Logout">Sair <span uk-icon="icon: sign-out"></span></a>
         </div>
 
-    <?php
+        <?php get_template_part('template-parts/post/membros', 'content'); ?>
+    </div>
+
+<?php
 
 }
 
