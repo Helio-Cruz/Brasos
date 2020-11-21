@@ -255,9 +255,48 @@ function referencias_cpt() {
     
 }
 
+function area_de_membros_cpt() {
+
+	/**
+	 * Post Type: area_de_membros
+	 */
+
+	$labels = [
+		"name" => __( "areas de membros", "custom-post-type-ui" ),
+		"singular_name" => __( "area de membros", "custom-post-type-ui" ),
+	];
+
+	$args = [
+		"label" => __( "areas de membros", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => [ "slug" => "membros", "with_front" => true ],
+		"query_var" => true,
+		"menu_icon" => "dashicons-universal-access",
+		"supports" => [ "title", "thumbnail", "custom-fields", "revisions" ],
+	];
+
+	register_post_type( "area_de_membros", $args );
+}
+
 add_action( 'init', 'conselhoDiretor_cpt' );
 add_action( 'init', 'eventos_cpt' );
 add_action( 'init', 'congressos_cpt' );
 add_action( 'init', 'certificados_cpt' );
 add_action( 'init', 'guidelines_cpt' );
 add_action( 'init', 'referencias_cpt' );
+add_action( 'init', 'area_de_membros_cpt' );
