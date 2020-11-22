@@ -262,12 +262,12 @@ function area_de_membros_cpt() {
 	 */
 
 	$labels = [
-		"name" => __( "areas de membros", "custom-post-type-ui" ),
-		"singular_name" => __( "area de membros", "custom-post-type-ui" ),
+		"name" => __( "Area de membros", "custom-post-type-ui" ),
+		"singular_name" => __( "Area de membros", "custom-post-type-ui" ),
 	];
 
 	$args = [
-		"label" => __( "areas de membros", "custom-post-type-ui" ),
+		"label" => __( "Area de membros", "custom-post-type-ui" ),
 		"labels" => $labels,
 		"description" => "",
 		"public" => true,
