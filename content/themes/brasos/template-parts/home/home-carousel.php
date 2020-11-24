@@ -8,7 +8,7 @@ $slide6 = get_theme_mod('brasos_bg_slide_6', '');
 ?>
 <!-- CAROUSEL -->
 <div class="carousel-images uk-position-relative uk-light" tabindex="-1" uk-slideshow="autoplay:true; autoplay-interval:7000; min-height:100; max-height:600; animation: fade">
-  
+
   <ul class="uk-slideshow-items">
     <?php if ($slide1 != '') : ?>
       <li>
@@ -29,11 +29,6 @@ $slide6 = get_theme_mod('brasos_bg_slide_6', '');
         <div class="uk-position-cover carousel-brasos-home">
           <img src="<?= $slide3; ?>" alt="">
         </div>
-        <div class="uk-position-large uk-position-center cursor-carousel">
-          <a href="<?php echo home_url('/eventos/brasostbt-2019/'); ?>">
-            <button class="normal-button special-button carousel-button">ACESSAR AS INFORMAÇÕES<br>GERAIS DO EVENTO</button>
-          </a>
-        </div>
       </li>
     <?php endif; ?>
     <?php if ($slide4 != '') : ?>
@@ -46,11 +41,14 @@ $slide6 = get_theme_mod('brasos_bg_slide_6', '');
     <?php if ($slide5 != '') : ?>
       <li>
         <div class="uk-position-cover">
+          <div class="informations-button">
+            <a uk-toggle="target: #my-information" href="">Mais informaçoes, Acesse</a>
+          </div>
           <img src="<?= $slide5; ?>" alt="">
         </div>
       </li>
     <?php endif; ?>
-    <?php if ($slide16 != '') : ?>
+    <?php if ($slide6 != '') : ?>
       <li>
         <div class="uk-position-cover  ">
           <img src="<?= $slide6; ?>" alt="">
@@ -170,3 +168,5 @@ $slide6 = get_theme_mod('brasos_bg_slide_6', '');
     </div>
   </div>
 </div>
+
+<?php get_template_part('template-parts/info/info', 'information'); ?>

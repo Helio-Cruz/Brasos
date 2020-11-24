@@ -157,23 +157,35 @@ add_action('wp_head', 'override_admin_bar_css');
 remove_action('register_new_user', 'wp_send_new_user_notifications');
  
 
-function login_failed() {
-    $login_page  = home_url( '/login/' );
-    wp_redirect( $login_page . '?login=failed' );
-    exit;
-  }
-  add_action( 'wp_login_failed', 'login_failed' );
+// function login_failed() {
+//     $login_page  = home_url( '/login/' );
+//     wp_redirect( $login_page . '?login=failed' );
+//     exit;
+//   }
+//   add_action( 'wp_login_failed', 'login_failed' );
    
-  function verify_username_password( $user, $username, $password ) {
-    $login_page  = home_url( '/login/' );
-      if( $username == "" || $password == "" ) {
-          wp_redirect( $login_page . "?login=empty" );
+//   function verify_username_password( $user, $username, $password ) {
+//     $login_page  = home_url( '/login/' );
+//       if( $username == "" || $password == "" ) {
+//           wp_redirect( $login_page . "?login=empty" );
+//           exit;
+//       }
+//   }
+
+add_action( 'wp_login_failed', 'my_front_end_login_fail' ); 
+ 
+function my_front_end_login_fail( $username ) {
+     $referrer = $_SERVER['HTTP_REFERER'];
+     if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') ) {
+          wp_redirect( $referrer . '?login=failed' ); 
           exit;
-      }
-  }
+     }
+}
 
+ 
+ 
 
-        /* Remove admin bar for subscribers */
+/* Remove admin bar for subscribers */
   if ( ! current_user_can( 'manage_options' ) ) { show_admin_bar( false ); }
 
 

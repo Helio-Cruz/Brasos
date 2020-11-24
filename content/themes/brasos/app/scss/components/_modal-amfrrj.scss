@@ -1,0 +1,27 @@
+.amfrrj {
+  margin: auto;
+  p {
+    font-weight: 600;
+    line-height: 1.2em;
+  }
+}
+.informations-button {
+  a {
+    position: absolute;
+   top: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    color: $color-green-dark !important;
+    font-weight: 600;
+    cursor: pointer;
+    @include tablets {
+        top: 30px;
+    }
+    @include computers {
+      font-size: 1.8em;
+    }
+    
+  }
+}
