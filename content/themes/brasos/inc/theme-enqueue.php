@@ -17,8 +17,15 @@ if (!function_exists('brasos_scripts')) :
             'brasos-js',
             get_theme_file_uri('/public/js/app.js'),
             [],
-            '1.0.0',
+            '1.1.0',
             true
+        );
+
+
+        wp_localize_script( 
+            'brasos-js', 
+            'ajaxurl', 
+            admin_url( 'admin-ajax.php' )
         );
     }
 
@@ -172,15 +179,18 @@ remove_action('register_new_user', 'wp_send_new_user_notifications');
 //       }
 //   }
 
-add_action( 'wp_login_failed', 'my_front_end_login_fail' ); 
+// add_action( 'wp_login_failed', 'my_front_end_login_fail' ); 
  
-function my_front_end_login_fail( $username ) {
-     $referrer = $_SERVER['HTTP_REFERER'];
-     if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') ) {
-          wp_redirect( $referrer . '?login=failed' ); 
-          exit;
-     }
-}
+// function my_front_end_login_fail( $username ) {
+//      $referrer = $_SERVER['HTTP_REFERER'];
+//      if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') ) {
+//           wp_redirect( $referrer . '?login=failed' ); 
+//           exit;
+//      }
+// }
+
+
+
 
  
  
