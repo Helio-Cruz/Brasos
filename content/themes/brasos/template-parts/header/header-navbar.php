@@ -10,6 +10,9 @@
          </li>
        </ul>
        <ul class="uk-navbar-nav">
+          <li>
+           <a href="<?php echo home_url(); ?>">Home</a> 
+         </li>
          <?php
           $menu = wp_nav_menu([
             'menu' => 'menu-header',

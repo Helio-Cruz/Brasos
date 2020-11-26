@@ -9,7 +9,7 @@ var app = {
     // loads the Icon plugin
     UIkit.use(Icons);
     UIkit.responsive(UIkit.util.$('iframe'));
-    
+
     if ($('body').hasClass('home')) {
       var popup = $('.modal-image').attr('src');
       if (popup != '') {
@@ -129,6 +129,54 @@ var app = {
 
     $('#user').attr('placeholder', 'User Name');
     $('#pass').attr('placeholder', 'Password');
+
+
+    /*
+        function clearForm() {
+          $('#user').val('');
+          $('#pass').val('');
+          $("#form_output").hide();
+        }
+    */
+    $("#wp-submit").on('click', function (event) {
+
+      event.preventDefault();
+      var formMessage = $("#form_output");
+      var log = $('#user').val();
+      var pwd = $('#pass').val();
+      formMessage.show();
+      var serialized = $(this).serialize();
+
+      // var input_data = $('#wp_login_form').serialize();
+
+      if (serialized.indexOf('=&') > -1 || serialized.substr(serialized.length - 1) == '=') {
+        formMessage.addClass('inputs__output-error').html('Merci de compléter les champs vides');
+        console.log('empty');
+      } else {
+        $.ajax({
+          type: "POST",
+          //	url:  '<//?php  (wp_redirect('membros')) ?>',
+          url: ajaxurl,
+          dataType: 'json',
+          data: {
+            log: log,
+            pwd: pwd,
+            action: 'ajax_login'
+          },
+          success: function (response, data) {
+            console.log('ok');
+            console.log(response);
+            console.log(data);
+            // window.location = ' ';
+          },
+          error: function (errorThrown) {
+            formMessage.addClass('login-error').html('Une erreur s\'est produite. Veuillez réessayer.');
+            console.log('not ok');
+            console.log(errorThrown);
+          }
+        });
+      }
+    });
   }
 };
 

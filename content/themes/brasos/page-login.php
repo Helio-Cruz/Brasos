@@ -13,35 +13,35 @@ Template Name: Page Login
 add_action('wp_ajax_nopriv_ajax_login', 'ajax_login');
 add_action('wp_ajax_ajax_login', 'ajax_login');
 
-	global $user_ID;
-	if (!$user_ID)
-	{
-		if($_POST)
-		{
-			$username = $wpdb->escape($_REQUEST['log']);
-			$password = $wpdb->escape($_REQUEST['pwd']);
+function ajax_login()
+{
+
+    global $user_ID, $wpdb;
+
+    if (!$user_ID) {
+        if ($_POST) {
+            $username = $wpdb->escape($_REQUEST['log']);
+            $password = $wpdb->escape($_REQUEST['pwd']);
             $remember = $wpdb->escape($_REQUEST['remember-me']);
-            
+
 
             if (empty($username) || empty($password)) {
                 $err = 'Merci de compléter les champs.';
                 if (!empty($err)) :  echo '<p class="inputs__output-error">PHP' . $err . '</p>';
                 endif;
             } else {
-
-        
                 $remember = "false";
                 $login_data = array();
                 $login_data['user_login'] = $username;
                 $login_data['user_password'] = $password;
                 $login_data['remember'] = $remember;
-                $user_verify = wp_signon( $login_data, true );
+                $user_verify = wp_signon($login_data, true);
             }
- 
 
 
 
-/*
+
+            /*
 			if($remember) $remember = "true";
 			else $remember = "false";
 			$login_data = array();
@@ -49,30 +49,30 @@ add_action('wp_ajax_ajax_login', 'ajax_login');
 			$login_data['user_password'] = $password;
 			$login_data['remember'] = $remember;
 			$user_verify = wp_signon( $login_data, true );*/
- 
-			if ( is_wp_error($user_verify) ) 
-			{
-				echo "<span style='color:#FF0000'>Invalid username or password. Please try again!</span>";
-				exit();
-			} 
-			else 
-			{	
-				echo "<script type='text/javascript'>window.location='". get_bloginfo('url') ."'</script>";
-				exit();
-			}
-		}
-	}
-?>
- 
 
- <!-- This is the modal  -->
+            if (is_wp_error($user_verify)) {
+                echo "<span style='color:#FF0000'>Invalid username or password. Please try again!</span>";
+                exit();
+            } else {
+                echo "<script type='text/javascript'>window.location='" . get_bloginfo('url') . "'</script>";
+                exit();
+            }
+        }
+    }
+    die();
+}
+
+?>
+
+
+<!-- This is the modal  -->
 <div id="my-id" uk-modal>
     <div class="uk-modal-dialog uk-modal-body page-login">
         <p>Área exclusiva para Membros</p>
         <!-- <div id="result" style="color:#FF0000"></div>    -->
         <div id="form_output"></div>
         <?php
-/*
+        /*
         $login  = (isset($_GET['login'])) ? $_GET['login'] : 0;
 
         if ($login === "failed") {
@@ -91,63 +91,21 @@ add_action('wp_ajax_ajax_login', 'ajax_login');
             'id_password' => 'pass'
         ); */
         ?>
-    
-    <?php 
-      $args = array(
-        'redirect' => home_url('/membros'),
-        // 'form_id' => 'loginform-custom',
-       'label_username' => __('Email'),
-        'id_username' => 'user',
-        'id_password' => 'pass'
-    ); 
-    
-    wp_login_form($args); ?>
+
+        <?php
+        $args = array(
+            'redirect' => home_url('/membros'),
+            // 'form_id' => 'loginform-custom',
+            'label_username' => __('Email'),
+            'id_username' => 'user',
+            'id_password' => 'pass'
+        );
+
+        wp_login_form($args); ?>
     </div>
- 
+
 </div>
 
- 
-<script type="text/javascript">  
-
-function clearForm() {
-    $('#user').val('');
-      $('#pass').val('');
-    $("#form_output").hide();
-}
-
-$("#wp-submit").click(function(event) {
-
-    var formMessage = $("#form_output");
-    event.preventDefault();
-    var log = $('#user').val();
-    var pwd = $('#pass').val();
-    formMessage.show();
-    var serialized = $(this).serialize();
-
-    // var input_data = $('#wp_login_form').serialize();
-
-    if (serialized.indexOf('=&') > -1 || serialized.substr(serialized.length - 1) == '=') {
-        formMessage.addClass('inputs__output-error').html('Merci de compléter les champs vides');
-    }
-	$.ajax({
-		type: "POST",
-    //	url:  '<//?php  (wp_redirect('membros')) ?>',
-        url: ajaxurl,
-        data: {
-             log,
-             pwd,
-                action: 'ajax_login'
-        },
-		success: function(response){
-            window.location= ' ';
-        },
-        error: function (){
-            formMessage.addClass('login-error').html('Une erreur s\'est produite. Veuillez réessayer.');
-        }
-	});
-	return false;
-});
-</script>	
 
 
 <!--
@@ -207,4 +165,3 @@ $("#btnsubmit").click(function() {
 </script>	
 
 -->
- 
