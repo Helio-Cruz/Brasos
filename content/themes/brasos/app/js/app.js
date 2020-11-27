@@ -127,9 +127,6 @@ var app = {
     //   }
     // });
 
-    $('#user').attr('placeholder', 'User Name');
-    $('#pass').attr('placeholder', 'Password');
-
 
     /*
         function clearForm() {
@@ -138,44 +135,49 @@ var app = {
           $("#form_output").hide();
         }
     */
-    $("#wp-submit").on('click', function (event) {
 
-      event.preventDefault();
+
+    $("#loginform").on('submit', function (event) {
+
       var formMessage = $("#form_output");
-      var log = $('#user').val();
-      var pwd = $('#pass').val();
-      formMessage.show();
-      var serialized = $(this).serialize();
+      var userID = $('#user').val();
+      var userPWD = $('#pass').val();
+      var remember = $('#rememberme').val();
+      var security = $('#security').val();
+      var datas = $(this).serialize();
 
-      // var input_data = $('#wp_login_form').serialize();
+      // if (datas.indexOf('=&') > -1 || datas.substr(datas.length - 1) == '=') {
+      //   formMessage.addClass('inputs__output-error').html('Merci de compléter les champs vides');
+      // } else {
 
-      if (serialized.indexOf('=&') > -1 || serialized.substr(serialized.length - 1) == '=') {
-        formMessage.addClass('inputs__output-error').html('Merci de compléter les champs vides');
-        console.log('empty');
-      } else {
-        $.ajax({
-          type: "POST",
-          //	url:  '<//?php  (wp_redirect('membros')) ?>',
-          url: ajaxurl,
-          dataType: 'json',
-          data: {
-            log: log,
-            pwd: pwd,
-            action: 'ajax_login'
-          },
-          success: function (response, data) {
-            console.log('ok');
-            console.log(response);
-            console.log(data);
-            // window.location = ' ';
-          },
-          error: function (errorThrown) {
-            formMessage.addClass('login-error').html('Une erreur s\'est produite. Veuillez réessayer.');
-            console.log('not ok');
-            console.log(errorThrown);
+      $.ajax({
+        type: "POST",
+        url: ajax_login_object.ajaxurl,
+        dataType: 'json',
+        data: {
+          //datas,
+          'log': userID,
+          'pwd': userPWD,
+          'rememberme': remember,
+          'security': security,
+          action: 'login_member'
+        },
+
+        success: function (data) {
+
+          if (data.loggedin == true) {
+            document.location.href = ajax_login_object.redirecturl;
+          } else {
+            formMessage.addClass('uk-text-danger').html(data.message);
           }
-        });
-      }
+
+        },
+        error: function () {
+          formMessage.addClass('uk-text-danger').html('Occoreu um erro, tente de novo mais tarde.');
+        }
+      });
+      event.preventDefault();
+      // }
     });
   }
 };

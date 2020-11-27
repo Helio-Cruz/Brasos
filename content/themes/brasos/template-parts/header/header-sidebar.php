@@ -18,7 +18,6 @@
         </div>
         <?php
         $menu = wp_nav_menu([
-          // 'menu' => 'menu-header',
           'menu' => 'menu-mobile',
           'container' => false,
           'items_wrap' => '%3$s',
@@ -27,6 +26,13 @@
         $menu = strip_tags($menu, '<li><a href="%2$s">');
         echo $menu;
         ?>
+           <li>
+           <?php if (!is_user_logged_in()) { ?>
+             <a uk-toggle="target: #my-id">Membros</a>
+           <?php } else {  ?>
+             <a href="<?php echo home_url('/membros'); ?>">Membros</a> 
+            <?php  } ?>
+         </li>
       </ul>
     </div>
     <div class="green-block">

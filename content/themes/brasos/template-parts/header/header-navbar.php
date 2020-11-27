@@ -10,8 +10,8 @@
          </li>
        </ul>
        <ul class="uk-navbar-nav">
-          <li>
-           <a href="<?php echo home_url(); ?>">Home</a> 
+         <li>
+           <a href="<?php echo home_url(); ?>">Home</a>
          </li>
          <?php
           $menu = wp_nav_menu([
@@ -23,12 +23,17 @@
           $menu = strip_tags($menu, '<li><a href="%2$s">');
           echo $menu;
           ?>
+
          <li>
-           <a uk-toggle="target: #my-id">Membros</a> 
+           <?php if (!is_user_logged_in()) { ?>
+             <a uk-toggle="target: #my-id">Membros</a>
+           <?php } else {  ?>
+             <a href="<?php echo home_url('/membros'); ?>">Membros</a>
+           <?php  } ?>
          </li>
        </ul>
-       
-       <ul class="uk-navbar-nav">
+
+       <ul class=" uk-navbar-nav">
          <div class="flag">
            <?php
             $menu = wp_nav_menu([
@@ -47,4 +52,4 @@
    </nav>
  </div>
 
- <?php  get_template_part( 'page-login' ); ?>
+ <?php get_template_part('page-login'); ?>

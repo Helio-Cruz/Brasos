@@ -2,39 +2,43 @@
   margin: auto;
   font-weight: 600;
   color: $color-green-dark;
-  padding: 5em;
+  padding: 4em 0;
   p {
     text-align: center;
     font-size: 1.3em;
   }
-}
-
-.uk-inline {
-  width: 260px;
-}
-#my-id .uk-modal-title {
-  text-align: center;
-  margin-bottom: 1em;
+  .uk-text-danger {
+    font-weight: normal;
+    text-align: center;
+    margin: 0.5em auto;
+  }
 }
 
 #loginform {
   text-align: center;
   margin: auto;
-  padding: 1em;
-  .login-username label,
-  .login-password label {
-    display: none;
+  padding: 1em 0 0;
+  .uk-inline {
+    width: 350px;
+  }
+  .uk-form-icon-flip {
+    right: 30px;
+    color: $darkgrey;
   }
   .login-username input,
   .login-password input {
-    border: none;
-    width: 70%;
+    width: 90%;
     padding: 1em;
   }
-  .login-remember {
-    margin: left;
-    text-align: left;
-    font-size: 1em;
+  input[type="text"],
+  input[type="password"] {
+    background: $white;
+    border: 1px solid $darkgrey;
+    &:active,
+    &:focus {
+      background: $white;
+      border: 1px solid $darkgrey;
+    }
   }
   .login-submit input {
     border: none;

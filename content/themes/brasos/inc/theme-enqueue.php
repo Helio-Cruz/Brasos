@@ -11,7 +11,7 @@ if (!function_exists('brasos_scripts')) :
             '1.0.0'
         );
 
- 
+
 
         wp_enqueue_script(
             'brasos-js',
@@ -22,10 +22,13 @@ if (!function_exists('brasos_scripts')) :
         );
 
 
-        wp_localize_script( 
-            'brasos-js', 
-            'ajaxurl', 
-            admin_url( 'admin-ajax.php' )
+        wp_localize_script(
+            'brasos-js',
+            'ajax_login_object',
+            array(
+                'ajaxurl' => admin_url('admin-ajax.php'),
+                'redirecturl' => home_url('/membros')
+            )
         );
     }
 
@@ -48,7 +51,6 @@ function my_login_logo()
             background-repeat: no-repeat;
             padding-bottom: 0;
         }
-
     </style>
 <?php
 }
@@ -77,7 +79,7 @@ add_action('login_enqueue_scripts', 'my_register_stylesheet');
 
 
 
- 
+
 
 
 
@@ -116,7 +118,7 @@ function override_admin_bar_css()
                 }
             }
         </style>
-    <?php }
+<?php }
 }
 // on backend area
 add_action('admin_head', 'override_admin_bar_css');
@@ -162,7 +164,7 @@ add_action('wp_head', 'override_admin_bar_css');
 
 /* not sending email registration */
 remove_action('register_new_user', 'wp_send_new_user_notifications');
- 
+
 
 // function login_failed() {
 //     $login_page  = home_url( '/login/' );
@@ -170,7 +172,7 @@ remove_action('register_new_user', 'wp_send_new_user_notifications');
 //     exit;
 //   }
 //   add_action( 'wp_login_failed', 'login_failed' );
-   
+
 //   function verify_username_password( $user, $username, $password ) {
 //     $login_page  = home_url( '/login/' );
 //       if( $username == "" || $password == "" ) {
@@ -180,7 +182,7 @@ remove_action('register_new_user', 'wp_send_new_user_notifications');
 //   }
 
 // add_action( 'wp_login_failed', 'my_front_end_login_fail' ); 
- 
+
 // function my_front_end_login_fail( $username ) {
 //      $referrer = $_SERVER['HTTP_REFERER'];
 //      if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') ) {
@@ -192,11 +194,15 @@ remove_action('register_new_user', 'wp_send_new_user_notifications');
 
 
 
- 
- 
+
+
 
 /* Remove admin bar for subscribers */
-  if ( ! current_user_can( 'manage_options' ) ) { show_admin_bar( false ); }
+if (!current_user_can('manage_options')) {
+    show_admin_bar(false);
+}
 
 
-  add_filter( 'authenticate', 'verify_username_password', 1, 3);
+
+
+add_filter('authenticate', 'verify_username_password', 1, 3);
