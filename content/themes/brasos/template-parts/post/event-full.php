@@ -1,5 +1,4 @@
 <ul class="uk-switcher">
-  
   <!-- INFORMAÇOES BASICAS -->
   <li class="no-formating" uk-scrollspy="cls: uk-animation-slide-bottom; target: .events-informations; delay: 300; repeat: false">
     <?php if (have_rows('informacoes_basicas') || have_rows('mensagem_do_presidente') || get_field('comissao_organizadora') || get_field('sobre_o_evento') || get_field('turismo')) : ?>

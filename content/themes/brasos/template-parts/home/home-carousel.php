@@ -7,50 +7,47 @@ $slide5 = get_theme_mod('brasos_bg_slide_5', '');
 $slide6 = get_theme_mod('brasos_bg_slide_6', '');
 ?>
 <!-- CAROUSEL -->
-<div class="carousel-images uk-position-relative uk-light" tabindex="-1" uk-slideshow="autoplay:true; autoplay-interval:7000; min-height:100; max-height:600; animation: fade">
-
+<div class="carousel-images uk-position-relative uk-light" tabindex="-1" uk-slideshow="autoplay:true; autoplay-interval:7000; height:100; max-height:600; animation: fade">
   <ul class="uk-slideshow-items">
     <?php if ($slide1 != '') : ?>
       <li>
-        <div class="uk-position-cover ">
-          <img src="<?= $slide1; ?>" alt="">
-        </div>
+        <img src="<?= $slide1; ?>" alt="">
       </li>
     <?php endif; ?>
     <?php if ($slide2 != '') : ?>
       <li>
-        <div class="uk-position-cover ">
-          <img src="<?= $slide2; ?>" alt="">
+      <div class="popup-brasit   uk-overlay" uk-toggle="target: #modal-media-brasit2020">
+          <!-- <p>2° Brasit Web Version 2020</p> -->
+          <!-- <div>⇲</div> -->
+          <button class="uk-button uk-button-default"><span>&#187;</span> Reveja as Palestras <span>&#171;</span></button>
         </div>
+          <img src="<?= $slide2; ?>" alt="">
       </li>
     <?php endif; ?>
     <?php if ($slide3 != '') : ?>
       <li>
-        <div class="uk-position-cover carousel-brasos-home">
+        <div class=" carousel-brasos-home">
           <img src="<?= $slide3; ?>" alt="">
         </div>
       </li>
     <?php endif; ?>
     <?php if ($slide4 != '') : ?>
       <li>
-        <div class="uk-position-cover ">
+        <div class=" ">
           <img src="<?= $slide4; ?>" alt="">
         </div>
       </li>
     <?php endif; ?>
     <?php if ($slide5 != '') : ?>
       <li>
-        <div class="uk-position-cover">
-          <div class="informations-button">
-            <a uk-toggle="target: #my-information" href="">Mais informaçoes, Acesse</a>
-          </div>
+        <div class="">
           <img src="<?= $slide5; ?>" alt="">
         </div>
       </li>
     <?php endif; ?>
     <?php if ($slide6 != '') : ?>
       <li>
-        <div class="uk-position-cover  ">
+        <div class="  ">
           <img src="<?= $slide6; ?>" alt="">
         </div>
       </li>
@@ -168,5 +165,3 @@ $slide6 = get_theme_mod('brasos_bg_slide_6', '');
     </div>
   </div>
 </div>
-
-<?php get_template_part('template-parts/info/info', 'information'); ?>

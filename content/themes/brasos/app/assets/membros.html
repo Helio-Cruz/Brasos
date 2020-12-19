@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Webpack</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="scss/main.scss" type="text/scss" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky;">
+        <nav class="uk-navbar-container" uk-navbar="dropbar: true;">
+            <div class="uk-navbar-center uk-visible">
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <div class="header-nav__logo">
+                            <a href="index.html"><img src="./images/logo.png" alt=""></a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="institutional.html">Institucional</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href="institutional.html">Brasos</a></li>
+                                <li><a href="law.html">Estatuo Abeti</a></li>
+                                <li><a href="words.html">Palavras do Presidente</a></li>
+                                <li><a href="directory.html">Conselho Diretor</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="institutional.html">Parceiros</a></li>
+                    <li>
+                        <a href="#">Eventos</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav-sub uk-navbar-dropdown-nav">
+                                <li><a href="">BRASIT 2020</a></li>
+                                <li><a href="">BRASOStbt 2019</a></li>
+                                <li><a href="">BRASIT 2018</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="articles.html">Artigos</a></li>
+                    <li><a href="articles.html">Guidelines</a></li>
+                    <li><a href="articles.html">Congressos</a></li>
+                    <li><a href="contact.html">Referências</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="member.html">Torne-se membro</a></li>
+                </ul>
+                <ul class="uk-navbar-nav">
+                    <div class="flag">
+                        <li>
+                            <a href=""><img src="./images/flag/brazil.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="./images/flag/usa.png" alt=""></a>
+                        </li>
+                    </div>
+                </ul>
+                <a href="#" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+            </div>
+        </nav>
+    </div>
+    <div id="sidenav" uk-offcanvas="overlay: true; flip: true">
+        <div class="uk-offcanvas-bar uk-background-default">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <div class="white-block">
+                <ul class="uk-nav">
+                    <div class="flag">
+                        <li>
+                            <a href="#">
+                                <img src="./images/flag/brazil.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/flag/usa.png" alt="">
+                            </a>
+                        </li>
+                    </div>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="institutional.html">Institucional</a></li>
+                    <li><a href="institutional.html">Parceiros</a></li>
+                    <li><a href="events.html">Eventos</a></li>
+                    <li><a href="articles.html">Artigos</a></li>
+                    <li><a href="articles.html">Guidelines</a></li>
+                    <li><a href="articles.html">Congressos</a></li>
+                    <li><a href="contact.html">Referências</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="member.html">Torne-se membro</a></li>
+                </ul>
+            </div>
+            <div class="green-block">
+                <div class="green-diagonal"></div>
+                <ul class="uk-nav uk-flex uk-flex-center uk-flex-wrap">
+                    <li><a href="institutional.html">A Brasos</a></li>
+                    <li><a href="directory.html">Conselho Diretor</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="#">BRASIT 2020</a></li>
+                    <li><a href="congress.html">Congressos</a></li>
+                    <li><a href="certificates.html">Certificados</a></li>
+                </ul>
+                <ul class="uk-nav uk-flex uk-flex-center uk-position-center">
+                    <li>
+                        <a href="index.html">
+                            <img src="./images/logo.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MENU MOBILE -->
+    <div class="menu-mobile" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky;">
+        <div class="header-nav__logo">
+            <a href="index.html"><img src="./images/logo.png" alt=""></a>
+        </div>
+        <a href="#" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+    </div>
+
+    <!-- <main class="page-membros">
+    <!-- <h2 class="uk-text-large uk-text-uppercase uk-text-center uk-margin-medium">2° Brasit Web 2020</h2>
+    <hr>
+    <div class="uk-height-big uk-flex uk-flex-column uk-flex-center uk-flex-middle uk-margin-medium">
+        <iframe src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" width="640" height="360" frameborder="0"uk-responsive uk-video="automute: true"></iframe>
+        <p class="uk-margin-medium uk-width-xlarge">Lorem Ipsum</p>
+      </div> 
+</main> -->
+
+<div class="page-membros__header">
+    Bem Vindo
+    <a href="#" title="Logout">Sair <span uk-icon="icon: sign-out"></span></a>
+</div>
+
+    <div uk-grid class="uk-flex-center">     
+        <div class="uk-width-auto@m uk-flex-last@m">
+            <ul class="uk-nav uk-nav-default uk-tab-right members-sidenav "
+                uk-switcher="connect: #component-nav; animation: uk-animation-fade">
+                <li><a href="#">Bem vindo</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">Outros</a></li>
+            </ul>
+            <ul class="uk-nav uk-nav-default uk-tab-right members-sidenav "
+                uk-switcher="connect: #component-nav; animation: uk-animation-fade">
+                <li><a href="#">Bem vindo</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">Outros</a></li>
+            </ul>
+        </div>
+        <div class="uk-width-auto@m uk-margin-medium ">
+            <ul id="component-nav" class="uk-switcher page-membros">
+                <li>
+                    <div class="uk-width-1-1 uk-margin-large">
+                        <h2 class="uk-text-large uk-text-uppercase uk-text-center">Bem Vindo a Area de Membros da Brasos</h2>
+                        <hr>
+                    </div>
+                    <p class="uk-margin-medium uk-width-xlarge">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
+                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised 
+                        in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                        like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                    <p class="uk-margin-medium uk-width-xlarge">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
+                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised 
+                        in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                        like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                    <p class="uk-margin-medium uk-width-xlarge">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
+                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised 
+                        in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                        like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                    <p class="uk-margin-medium uk-width-xlarge">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
+                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised 
+                        in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                        like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                    <p class="uk-margin-medium uk-width-xlarge">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
+                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised 
+                        in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                        like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                    <p class="uk-margin-medium uk-width-xlarge">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
+                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised 
+                        in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                        like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                </li>
+                <li>
+                    <div class="uk-width-1-1 uk-margin-large">
+                        <h2 class="uk-text-large uk-text-uppercase uk-text-center">2° Brasit Web 2020</h2>
+                        <hr>
+                    </div>                
+                    <div class="uk-height-big uk-flex uk-flex-column uk-flex-center uk-flex-middle uk-margin-medium">
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
+                            width="900" height="460" frameborder="0" allowfullscreen uk-responsive uk-video="automute: true">
+                        </iframe>
+                        <p class="uk-margin-medium uk-width-xlarge">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
+                            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised 
+                            in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                            like Aldus PageMaker including versions of Lorem Ipsum
+                        </p>
+                        <p class="uk-margin-medium uk-width-xlarge">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
+                            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised 
+                            in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                            like Aldus PageMaker including versions of Lorem Ipsum
+                        </p>
+                        <p class="uk-margin-medium uk-width-xlarge">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
+                            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised 
+                            in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                            like Aldus PageMaker including versions of Lorem Ipsum
+                        </p>
+                        <p class="uk-margin-medium uk-width-xlarge">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
+                            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised 
+                            in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                            like Aldus PageMaker including versions of Lorem Ipsum
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <h2 class="uk-text-large uk-text-uppercase uk-text-center uk-margin-medium">Bem Vindo a Area de Membros da Brasos</h2>
+                    <p class="uk-margin-medium uk-width-xlarge">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
+                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised 
+                        in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                        like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                    <p class="uk-margin-medium uk-width-xlarge">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
+                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised 
+                        in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                        like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                    <p class="uk-margin-medium uk-width-xlarge">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
+                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised 
+                        in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                        like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                    <p class="uk-margin-medium uk-width-xlarge">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
+                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised 
+                        in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                        like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                    <p class="uk-margin-medium uk-width-xlarge">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
+                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised 
+                        in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                        like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                    <p class="uk-margin-medium uk-width-xlarge">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
+                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised 
+                        in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                        like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <!--Footer-->
+    <div class="uk-section uk-section-muted footer-nav">
+        <div class="uk-container">
+            <h2 class="footer-nav__title fadeBottom">Faça Parte da Nossa Comunidade</h2>
+            <button class="footer-nav__button">
+                <a href="become-member.html">Torne-se Membro</a>
+            </button>
+        </div>
+        <div uk-navbar class="footer-nav__menu-fast ">
+            <div class="uk-navbar-center">
+                <ul class="uk-navbar-nav uk-flex-wrap uk-child-width-expand@s">
+                    <li><a href="institutional.html">A Brasos</a></li>
+                    <li><a href="directory.html">Conselho Diretor</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="#">Brasit 2020</a></li>
+                    <li><a href="congress.html">Congresso</a></li>
+                    <li><a href="certificates.html">Certificados</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="uk-grid-match uk-child-width-expand@s footer-nav__contact" uk-grid>
+            <div>
+                <p>Responsável Técnico<br>
+                    <b>Antonio Martins Tieppo<br></b>
+                    Primeiro Secretário<br>
+                    CRM/SP: 47.777
+                </p>
+            </div>
+            <div class="footer-nav__media-social">
+                <div class="uk-flex-wrap">
+                    <a href="" uk-icon="linkedin"></a>
+                    <p>secretario@brasos.med.br</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="uk-grid-match uk-child-width-expand@s footer-mentions" uk-grid>
+        <div>
+            <p>Copyright@ 2020. Agência Fazer</p>
+        </div>
+        <div class="footer-nav__logo">
+            <a href=""><img src="./images/logo.png" alt=""></a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
