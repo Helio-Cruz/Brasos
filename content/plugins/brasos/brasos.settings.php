@@ -13,9 +13,7 @@ if (!defined('WPINC')) {die();}
 
 
 require plugin_dir_path(__FILE__) . 'inc/dashboard.php';
-// require plugin_dir_path(__FILE__) . 'inc/event_cpt.php';
+require plugin_dir_path(__FILE__) . 'inc/members-form.php';
 
-// $event_cpt = new Event_cpt();
 
-// register_activation_hook(__FILE__, [$event_cpt, 'activation']);
-// register_deactivation_hook(__FILE__, [$event_cpt, 'deactivation']);
+ 

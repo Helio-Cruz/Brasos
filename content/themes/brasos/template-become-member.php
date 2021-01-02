@@ -32,9 +32,11 @@ Template Name: Torne-se Membro
     <img src="<?php echo get_template_directory_uri() . '/public/images/contact.jpg' ?>" alt="">
   </div>
   <div class="contact-form contact-form-member">
+  <div id="form_output"></div>
     <h2 class="h2-title fadeBottom">Tornar-se membro</h2>
     <div class="contact-form-block">
-      <?php echo do_shortcode('[contact-form-7 id="132" title="Membro"]'); ?>
+      <!-- <//?php echo do_shortcode('[contact-form-7 id="132" title="Membro"]'); ?> -->
+      <?php echo do_shortcode('[brasos_form_members]');?> 
     </div>
   </div>
   <div class="background-right"></div>

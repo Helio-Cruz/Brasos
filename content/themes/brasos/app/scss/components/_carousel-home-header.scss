@@ -6,12 +6,15 @@
   background: $color-green-dark;
   @include tablets {
     background: none;
-    max-height: calc(100vh - 100px);
-    max-width: 1600px;
+  max-height: calc(100vh - 100px);
+   // max-width: 1600px;
     margin: auto;
+  //  max-height: unset;
   }
   @include TwoK {
-    max-height: unset;
+   // max-height: unset;
+    max-width: 1600px;
+    max-height: calc(100vh - 100px);
     //max-width: 1500px;
   }
   .uk-slideshow-items {
@@ -24,15 +27,18 @@
   img {
     height: 100% !important;
     width: 100%;
-    object-fit: contain;
-    object-position: center;
+    object-fit: cover;
+    //object-position: center;
+    object-position: top;
     filter: brightness(90%);
     @include tablets {
       object-fit: cover;
-      max-height: calc(100vh - 100px);
+     max-height: calc(100vh - 100px);
+     // max-height: unset;
     }
     @include TwoK {
-      max-height: unset;
+     // max-height: unset;
+      max-height: calc(100vh - 100px);
     }
   }
   //   .h1-title {

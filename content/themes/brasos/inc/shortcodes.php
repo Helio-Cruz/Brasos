@@ -29,3 +29,10 @@ function link_brasit2020($atts)
 add_shortcode('link_brasit2020', 'link_brasit2020');
 
 
+function brasos_form_members($atts) {
+	ob_start();
+	require_once(dirname( __DIR__ ) . '../../../plugins/brasos/templates/form.php' );
+	$output = ob_get_clean();
+	return $output;
+}
+add_shortcode('brasos_form_members', 'brasos_form_members');

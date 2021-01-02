@@ -28,7 +28,7 @@
  // 2K (2560*1440)
 @mixin TwoK {
     // @media (min-width : 2560px) {
-        @media (min-width : 2400px) {
+        @media (min-width : 2000px) {
         @content;
     }
 }
