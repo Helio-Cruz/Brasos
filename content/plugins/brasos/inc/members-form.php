@@ -17,26 +17,15 @@ class BecomeMember
         $this->userstable = $wpdb->prefix . 'users';
         $this->usersmeta = $wpdb->prefix . 'usermeta';
 
-        //  add_action('init', [$this, 'createTable'], 20);
-        // add_action('wp_footer', [$this, 'printForm'], 20);
-        add_action('init', [$this, 'onFormSubmit'], 20);
+
+        add_action('init', [$this, 'ajax_onFormSubmit'], 20);
+
+        add_action('wp_ajax_nopriv_ajax_onFormSubmit', 'ajax_onFormSubmit');
+        add_action('wp_ajax_ajax_onFormSubmit', 'ajax_onFormSubmit');
     }
 
-    public function removeTable()
-    {
 
-        $sql = "DROP TABLE {$this->userstable};";
-
-        $this->wpdb->query($sql);
-    }
-    /*
-    public function printForm()
-    {
-
-        require __DIR__ . '/../templates/form.php';
-    }*/
-    public function onFormSubmit()
-    {
+    public function ajax_onFormSubmit() {
 
         if (empty($_POST['members_form_submit'])) {
             return;
@@ -128,7 +117,29 @@ class BecomeMember
                        ('$id', 'other_professions', '$other_professions')
                    ");
             }
+
+            $success = 'Obrigado por se inscrever';
+            if(!empty($success)) {
+                echo '<p>' . $success . '</p>';
+
+               /**
+                * Email sending confirmation
+                */
+                $to = $email;
+                $subject = "Confirmaçao de inscriçao";
+                $headers = [
+                'Content-Type: text/html; charset=UTF-8',
+                'From: noreply@brasos.com.br'
+                ];
+                $body = 'Bem vindo a Brasos,' . "\n";
+                $body .= 'Obrigado por se inscrever como membro brasos.' . "\n\n";
+                $body .= '---------------' . "\n\n";
+                $body .= 'Este email é automatico, Por favor nao responder.' . "\n";
+
+                wp_mail($to, $subject, $body, $headers);
+            }       
         }
+       
     }
 
     public function alreadyExists($email)
