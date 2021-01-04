@@ -178,6 +178,7 @@ class BecomeMember
     {
         flush_rewrite_rules();
     }
+
 }
 
 $becomeMember = new BecomeMember();

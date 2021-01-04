@@ -7,4 +7,4 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 require __DIR__.'./inc/members-form.php';
 
 $becomeMember = new BecomeMember();
-$becomeMember->removeTable();
+// $becomeMember->removeTable();
