@@ -6,6 +6,7 @@ class BecomeMember
     private $wpdb;
     private $userstable;
     private $usersmeta;
+    // private $form_post_id;
 
     public function __construct()
     {
@@ -16,16 +17,69 @@ class BecomeMember
         $this->wpdb = $wpdb;
         $this->userstable = $wpdb->prefix . 'users';
         $this->usersmeta = $wpdb->prefix . 'usermeta';
+        // $this->form_post_id =  (int) $_GET['fid'];
 
 
+    
+        
         add_action('init', [$this, 'ajax_onFormSubmit'], 20);
 
         add_action('wp_ajax_nopriv_ajax_onFormSubmit', 'ajax_onFormSubmit');
         add_action('wp_ajax_ajax_onFormSubmit', 'ajax_onFormSubmit');
+        
+        add_action('admin_menu', [$this, 'addAdminMembersContent']);
     }
 
+    /*
+    public function prepare_items() {
+        $this->form_post_id =  (int) $_GET['fid'];
+        $search = empty( $_REQUEST['s'] ) ? false :  esc_sql( $_POST['s'] );
+        echo $this->search;
+        $this->userstable;
+        $form_post_id  = $this->form_post_id;
+       
+       // $table   = apply_filters( 'users', $this->usertable );
+      //  $table_name  = $this->prefix.'usermeta';
+        //$form_post_id  = $this->form_post_id;
 
-    public function ajax_onFormSubmit() {
+       // $perPage     = 100;
+
+        if ( ! empty($search) ) {
+
+            $totalItems  = get_var("SELECT COUNT(*) FROM $this->userstable WHERE form_value LIKE '%$search%' AND form_post_id = '$form_post_id' ");
+        }else{
+
+            $totalItems  = get_var("SELECT COUNT(*) FROM $this->userstable WHERE form_post_id = '$form_post_id'");
+        }
+    }*/
+
+    /**
+     * Members Lists
+    */
+    public function addAdminMembersContent()
+    {
+        add_menu_page(
+            'Lista de Membros',
+            'Lista de Membros',
+            'manage_options',
+            __FILE__,
+            array( __CLASS__, 'members_content' ),
+            'dashicons-wordpress',
+            3
+        );
+        
+    }
+
+    public function members_content()
+    {
+        require __DIR__ . './../templates/list.php';
+    }
+
+    /**
+     * Members Form
+     */
+    public function ajax_onFormSubmit()
+    {
 
         if (empty($_POST['members_form_submit'])) {
             return;
@@ -46,7 +100,7 @@ class BecomeMember
             $other_professions = $this->wpdb->escape(trim($_POST['other_professions']));
             $message =  $this->wpdb->escape(trim($_POST['message']));
 
-           
+
             // error message on empty inputs
             if (empty($email) || empty($fullname) || empty($phone)) {
                 $error = 'Por favor complete os campos restantes!';
@@ -87,7 +141,7 @@ class BecomeMember
             /* find me the last ID cretated on wp_users data */
             $id = $this->getUsersId();
 
-                /*INSERT manipulation Language */
+            /*INSERT manipulation Language */
             $this->wpdb->query("
             INSERT INTO $this->usersmeta
                     (user_id, meta_key, meta_value)
@@ -119,17 +173,17 @@ class BecomeMember
             }
 
             $success = 'Obrigado por se inscrever';
-            if(!empty($success)) {
+            if (!empty($success)) {
                 echo '<p>' . $success . '</p>';
 
-               /**
-                * Email sending confirmation
-                */
+                /**
+                 * Email sending confirmation
+                 */
                 $to = $email;
                 $subject = "Confirmaçao de inscriçao";
                 $headers = [
-                'Content-Type: text/html; charset=UTF-8',
-                'From: noreply@brasos.com.br'
+                    'Content-Type: text/html; charset=UTF-8',
+                    'From: noreply@brasos.com.br'
                 ];
                 $body = 'Bem vindo a Brasos,' . "\n";
                 $body .= 'Obrigado por se inscrever como membro brasos.' . "\n\n";
@@ -137,11 +191,13 @@ class BecomeMember
                 $body .= 'Este email é automatico, Por favor nao responder.' . "\n";
 
                 wp_mail($to, $subject, $body, $headers);
-            }       
+            }
         }
-       
     }
 
+    /**
+     * Email validations
+     * */ 
     public function alreadyExists($email)
     {
         $prepared = $this->wpdb->prepare(
@@ -168,6 +224,9 @@ class BecomeMember
         return $this->wpdb->get_var($prepared);
     }
 
+    /**
+     * Plugin activation and deactivation
+     */
 
     public function activate()
     {
@@ -178,7 +237,6 @@ class BecomeMember
     {
         flush_rewrite_rules();
     }
-
 }
 
 $becomeMember = new BecomeMember();
