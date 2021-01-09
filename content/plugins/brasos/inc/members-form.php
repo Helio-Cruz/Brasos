@@ -1,61 +1,40 @@
+
 <?php
 
 class BecomeMember
 {
-
     private $wpdb;
-    private $userstable;
-    private $usersmeta;
-    // private $form_post_id;
+    //  private $usersTable;
+    // private $usermetaTable;
 
     public function __construct()
     {
 
-
-        global $wpdb;
+        global $wpdb; // access the database
 
         $this->wpdb = $wpdb;
-        $this->userstable = $wpdb->prefix . 'users';
-        $this->usersmeta = $wpdb->prefix . 'usermeta';
-        // $this->form_post_id =  (int) $_GET['fid'];
+        $this->usersTable = $wpdb->prefix . 'users';
+        $this->usermetaTable = $wpdb->prefix . 'usermeta';
 
+        // add_action('init', [$this, 'ajax_onFormSubmit'], 20);
 
-    
-        
-        add_action('init', [$this, 'ajax_onFormSubmit'], 20);
+        add_action('wp_enqueue_scripts', [$this, 'init_jsForm'], 20);
 
-        add_action('wp_ajax_nopriv_ajax_onFormSubmit', 'ajax_onFormSubmit');
-        add_action('wp_ajax_ajax_onFormSubmit', 'ajax_onFormSubmit');
-        
+        add_action('wp_ajax_nopriv_ajax_onFormSubmit', [$this, 'ajax_onFormSubmit'], 20);
+        add_action('wp_ajax_ajax_onFormSubmit', [$this, 'ajax_onFormSubmit'], 20);
+
         add_action('admin_menu', [$this, 'addAdminMembersContent']);
+
+        // Add action hook only if action=download_csv
+        if (isset($_GET['action']) && $_GET['action'] == 'download_csv') {
+            // Handle CSV Export
+            add_action('init', [$this, 'exportCsv']);
+        }
     }
 
-    /*
-    public function prepare_items() {
-        $this->form_post_id =  (int) $_GET['fid'];
-        $search = empty( $_REQUEST['s'] ) ? false :  esc_sql( $_POST['s'] );
-        echo $this->search;
-        $this->userstable;
-        $form_post_id  = $this->form_post_id;
-       
-       // $table   = apply_filters( 'users', $this->usertable );
-      //  $table_name  = $this->prefix.'usermeta';
-        //$form_post_id  = $this->form_post_id;
-
-       // $perPage     = 100;
-
-        if ( ! empty($search) ) {
-
-            $totalItems  = get_var("SELECT COUNT(*) FROM $this->userstable WHERE form_value LIKE '%$search%' AND form_post_id = '$form_post_id' ");
-        }else{
-
-            $totalItems  = get_var("SELECT COUNT(*) FROM $this->userstable WHERE form_post_id = '$form_post_id'");
-        }
-    }*/
-
     /**
-     * Members Lists
-    */
+     * Members Lists 
+     */
     public function addAdminMembersContent()
     {
         add_menu_page(
@@ -63,11 +42,10 @@ class BecomeMember
             'Lista de Membros',
             'manage_options',
             __FILE__,
-            array( __CLASS__, 'members_content' ),
+            array(__CLASS__, 'members_content'),
             'dashicons-wordpress',
             3
         );
-        
     }
 
     public function members_content()
@@ -75,164 +53,283 @@ class BecomeMember
         require __DIR__ . './../templates/list.php';
     }
 
+
+    public function init_jsForm()
+    {
+        wp_enqueue_script(
+            'init_jsForm',
+            plugin_dir_url(__DIR__) . 'public/js/jsForm.js',
+            [],
+            '1.0.0',
+            true
+        );
+
+        wp_localize_script(
+            'init_jsForm',
+            'ajax_formMembers',
+            [
+                'ajaxurl' => admin_url('admin-ajax.php'),
+                'nonce' => wp_create_nonce('ajax_nonce')
+            ]
+        );
+    }
+
     /**
      * Members Form
      */
     public function ajax_onFormSubmit()
     {
+        $error = '';
+        $success = '';
 
-        if (empty($_POST['members_form_submit'])) {
-            return;
-        }
+        // sécurité pour vérifier l’authenticité des requêtes
+        check_ajax_referer('ajax_nonce', 'nonce');
 
-        if (isset($_POST['email'],
-        $_POST['full_name'],
-        $_POST['phone'],
-        $_POST['especiality'],
-        $_POST['crm'],
-        $_POST['other_professions'],
-        $_POST['message'])) {
-            $email =  $this->wpdb->escape(trim($_POST['email']));
+        if (false) {
+            $error = 'Occoreu um erro, tente de novo mais tarde.';
+            echo '<div id="formMembers_error" class="uk-text-danger">' . $error . '</div>';
+            exit;
+        } else {
             $fullname =  $this->wpdb->escape(trim($_POST['full_name']));
+            // https://www.w3schools.com/php/filter_validate_email.asp
+            // Remove all illegal characters from email
+            $email =  $this->wpdb->escape(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL));
             $phone =  $this->wpdb->escape(trim($_POST['phone']));
             $especiality =  $this->wpdb->escape(trim($_POST['especiality']));
             $crm =  $this->wpdb->escape(trim($_POST['crm']));
             $other_professions = $this->wpdb->escape(trim($_POST['other_professions']));
             $message =  $this->wpdb->escape(trim($_POST['message']));
 
+            // champs obligatoires
+            // si nom et email sont complétés "et" (spécialité + crm "ou" profession)
+            if (!empty($fullname) && !empty($email) && ((!empty($especiality) && !empty($crm)) || !empty($other_professions))) {
+                // If email is not valid
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $error = $email . ' é um endereço de email invalido, favor tentar de novo.';
+                    echo '<div id="formMembers_error" class="uk-text-danger">' . $error . '</div>';
+                } else {
+                    // if email is valid, check if user is not already registered
+                    $userExists = $this->checkRegisteredUser($email);
 
-            // error message on empty inputs
-            if (empty($email) || empty($fullname) || empty($phone)) {
-                $error = 'Por favor complete os campos restantes!';
-                if (!empty($error)) :  echo '<p>' . $error . '</p>';
-                endif;
-            } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $error = 'Endereço de email invalido, favor tentar de novo.';
-                if (!empty($error)) :  echo '<p>' . $error . '</p>';
-                endif;
-            } else if (preg_match('/^?\(?([0-9]{3})\)?([ .-]?)([0-9]{3})([ .-]?)([0-9]{2})/', $phone)) {
-                $error = 'Numero invalido por favor tente novamente';
-                if (!empty($error)) :  echo '<p>' . $error . '</p>';
-                endif;
-            }
-        }
+                    if ($userExists) {
+                        $error = 'Email ja existente em nosso banco de dados!';
+                        echo '<div id="formMembers_error" class="uk-text-danger">' . $error . '</div>';
+                    } else {
+                        // if user is not registered & fields are ok
+                        // add user to db
+                        $this->wpdb->insert(
+                            $this->usersTable,
+                            [
+                                'user_email' => $email,
+                                'user_registered' => current_time('mysql')
+                            ],
+                            [
+                                '%s',
+                                '%s',
+                            ]
+                        );
+                        /* find the last ID created in wp_users */
+                        $id = $this->getUserId($email);
 
-        // If  an email exist on database
-        $exist = $this->alreadyExists($_POST['email']);
+                        for ($number = 0; $number < 6000; $number++) {
+                            $userCustomId = 'MB000' . $number;
+                        }
 
-        if ($exist) {
-            $error = 'Este Endereço de email ja existe em nossa base de dados';
-            if (!empty($error)) :  echo '<p style="color:red">' . $error . '</p>';
-            endif;
-        } else {
 
-            // Sinon je l'ajoute
-            $this->wpdb->insert(
-                $this->userstable,
-                [
-                    'user_email' => $email,
-                    'user_registered' => current_time('mysql')
-                ],
-                [
-                    '%s',
-                    '%s',
-                ]
-            );
-            /* find me the last ID cretated on wp_users data */
-            $id = $this->getUsersId();
+                        if ($_POST['area'] === 'Medica') {
 
-            /*INSERT manipulation Language */
-            $this->wpdb->query("
-            INSERT INTO $this->usersmeta
-                    (user_id, meta_key, meta_value)
-                        VALUES
-                        ('$id', 'wp_capabilities', 'a:1:{s:10:\"subscriber\";b:1;}'),
-                        ('$id', 'full_name', '$fullname'),
-                        ('$id', 'message', '$message'),
-                        ('$id', 'phone', '$phone')
-            ");
-
-            /* MEDICA condition */
-            if (!empty($crm) && !empty($especiality)) {
-                $this->wpdb->query("
-                        INSERT INTO $this->usersmeta
-                                (user_id, meta_key, meta_value)
+                            $this->wpdb->query("
+                                INSERT INTO $this->usermetaTable
+                                    (user_id, meta_key, meta_value)
                                     VALUES
+                                    ('$id', 'wp_capabilities', 'a:1:{s:10:\"subscriber\";b:1;}'),
+                                    ('$id', 'full_name', '$fullname'),
+                                    ('$id', 'message', '$message'),
+                                    ('$id', 'phone', '$phone'),
                                     ('$id', 'especiality', '$especiality'),
-                                    ('$id', 'crm', '$crm')
+                                    ('$id', 'crm', '$crm'),
+                                    ('$id', 'BRASOS_ID', '$userCustomId')
                                 ");
-            }
-            /* OUTROS condition */
-            if (!empty($other_professions)) {
-                $this->wpdb->query("
-                INSERT INTO $this->usersmeta
-                   (user_id, meta_key, meta_value)
-                       VALUES
-                       ('$id', 'other_professions', '$other_professions')
-                   ");
-            }
+                        } else {
+                            $this->wpdb->query("
+                                INSERT INTO $this->usermetaTable
+                                    (user_id, meta_key, meta_value)
+                                    VALUES
+                                    ('$id', 'wp_capabilities', 'a:1:{s:10:\"subscriber\";b:1;}'),
+                                    ('$id', 'full_name', '$fullname'),
+                                    ('$id', 'message', '$message'),
+                                    ('$id', 'phone', '$phone'),
+                                    ('$id', 'other_professions', '$other_professions'),
+                                    ('$id', 'BRASOS_ID', '$userCustomId')
+                                ");
+                        }
 
-            $success = 'Obrigado por se inscrever';
-            if (!empty($success)) {
-                echo '<p>' . $success . '</p>';
+                        $success = 'Obrigado por se inscrever';
+                        echo '<div id="formMembers_error" class="uk-text-success">' . $success . '</div>';
 
-                /**
-                 * Email sending confirmation
-                 */
-                $to = $email;
-                $subject = "Confirmaçao de inscriçao";
-                $headers = [
-                    'Content-Type: text/html; charset=UTF-8',
-                    'From: noreply@brasos.com.br'
-                ];
-                $body = 'Bem vindo a Brasos,' . "\n";
-                $body .= 'Obrigado por se inscrever como membro brasos.' . "\n\n";
-                $body .= '---------------' . "\n\n";
-                $body .= 'Este email é automatico, Por favor nao responder.' . "\n";
+                        /**
+                         * Email sending confirmation
+                         */
+                        $to = $email;
+                        $subject = "Confirmaçao de inscriçao";
+                        $headers = [
+                            'Content-Type: text/html; charset=UTF-8',
+                            'From: noreply@brasos.com.br'
+                        ];
+                        $body = 'Bem vindo a Brasos,' . "\n";
+                        $body .= 'Obrigado por se inscrever como membro brasos.' . "\n\n";
+                        $body .= '---------------' . "\n\n";
+                        $body .= 'Este email é automatico, Por favor nao responder.' . "\n";
 
-                wp_mail($to, $subject, $body, $headers);
+                        wp_mail($to, $subject, $body, $headers);
+                    }
+                }
+            } else {
+                $error = 'Por favor complete os campos obrigatorios!';
+                echo '<div id="formMembers_error" class="uk-text-danger">' . $error . '</div>';
             }
         }
+        wp_die(); // terminate immediately and return a proper response /!\ required !
     }
 
-    /**
-     * Email validations
-     * */ 
-    public function alreadyExists($email)
+    public function checkRegisteredUser($email)
     {
-        $prepared = $this->wpdb->prepare(
+        $getRegisteredUser = $this->wpdb->prepare(
             "
               SELECT id
-              FROM {$this->userstable}
+              FROM {$this->usersTable}
               WHERE user_email = %s;
             ",
             $email
         );
 
-        return $this->wpdb->get_var($prepared);
-    }
-    public function getUsersId()
-    {
-        $prepared = $this->wpdb->prepare(
-            "
-              SELECT max(ID)
-              FROM {$this->userstable}
-            "
-        );
-        print_r($this->wpdb->get_var($prepared));
-        var_dump($prepared);
-        return $this->wpdb->get_var($prepared);
+        return $this->wpdb->get_var($getRegisteredUser);
     }
 
-    /**
-     * Plugin activation and deactivation
-     */
+    public function getUserId($email)
+    {
+        $getLastRegisteredUser = $this->wpdb->prepare(
+            "
+              SELECT max(ID)
+              FROM {$this->usersTable}
+              WHERE user_email = %s;
+            ",
+            $email
+        );
+
+        return $this->wpdb->get_var($getLastRegisteredUser);
+    }
+
+    public function IdentificationIncrement()
+    {
+
+        for ($number = 0; $number < 6000; $number++) {
+            echo 'MB000' . $number . '<br />';
+        }
+    }
+
+
+    public function exportCsv()
+    {
+        // Check for current user privileges 
+        if (!current_user_can('manage_options')) {
+            return false;
+        }
+        // Check if we are in WP-Admin
+        if (!is_admin()) {
+            return false;
+        }
+
+        // Nonce Check
+        $nonce = isset($_GET['_wpnonce']) ? $_GET['_wpnonce'] : '';
+        if (!wp_verify_nonce($nonce, 'download_csv')) {
+            die('Not Valid.. Download nonce..!! ');
+        }
+
+        ob_start();
+        $userstable = $this->usersTable;
+        $usermetaTable = $this->usermetaTable;
+
+        $domain = $_SERVER['SERVER_NAME'];
+        // $filename = $this->usersTable . $domain . '-' . time() . '.csv';
+        $filename =  $domain . '-' . time() . '.csv';
+
+        $header_row = array(
+            'Email',
+            'Nome Completo',
+            'Telefone',
+            'Especialidade',
+            'CRM',
+            'Profissao',
+            'Mensagem',
+            'Data de registro',
+
+        );
+        $data_rows = array();
+        // $sql = "SELECT u.ID, u.user_email, u.user_registered, um.user_id FROM  $userstable u JOIN  $usermetaTable um ON u.ID = um.user_id  ";
+        //  $sql = "SELECT u.*, um.* FROM $userstable u, $usermetaTable um WHERE u.ID = um.user_id and um.meta_key IN ('full_name', 'phone', 'message')" ;
+        /*
+       $sql = "SELECT 'u.ID' = 'um.user_id' FROM 
+        $userstable u, $usermetaTable um  
+        WHERE 'u.ID '= 'um.user_id'";
+        
+        
+       // $sql = "SELECT * FROM  $userstable ";
+       
+       
+        $sql = "SELECT * from $this->usermetaTable WHERE meta_key = 'wp_capabilities' AND meta_value = 'a:1:{s:10:\"subscriber\";b:1;}'";
+        $getData = $this->wpdb->get_users( $sql, 'ARRAY_A'  );
+        foreach ($getData as $user) {
+            $row = array(
+                $user['user_email'],
+                $user['full_name'],
+                $user['phone'],
+                $user['especiality'],
+                $user['crm'],
+                $user['other_professions'],
+                $user['message'],
+                $user['user_registered'],
+            );
+            $data_rows[] = $row;
+        }
+        
+*/
+
+        $args = array(
+            'role'    => 'subscriber',
+            'order'   => 'DESC'
+        );
+        $getUsers = get_users($args);
+        foreach ($getUsers as $user) {
+            $row = array(
+                $user->user_email,
+                $user->full_name,
+                $user->phone,
+                $user->especiality,
+                $user->crm,
+                $user->other_professions,
+                $user->message,
+                $user->user_registered
+            );
+            $data_rows[] = $row;
+        }
+
+        ob_end_clean();
+        $fh = @fopen('php://output', 'w');
+        header("Content-Disposition: attachment; filename={$filename}");
+        fputcsv($fh, $header_row);
+        foreach ($data_rows as $data_row) {
+            fputcsv($fh, $data_row);
+        }
+        fclose($fh);
+        die();
+    }
 
     public function activate()
     {
-
         flush_rewrite_rules();
     }
+
     public function deactivation()
     {
         flush_rewrite_rules();

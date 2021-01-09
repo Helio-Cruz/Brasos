@@ -1,4 +1,5 @@
-<form action="" method="post">
+<div id="formMembers_output"></div>
+<form id="formMembers">
     <div class="uk-column-1-2@s uk-margin-small-bottom">
         <div class="contact-form__fields">
             <input class="uk-input" type="text" name="full_name" autocomplete="name" placeholder="Nome Completo" required>
@@ -16,7 +17,7 @@
         <ul class="uk-margin-small-left@s uk-subnav uk-subnav-pill uk-flex uk-flex-middle" uk-switcher="animation: uk-animation-fade">
             
             <li>
-                <a href="#">Médica</a>
+                <a href="#">Medica</a>
             </li>
             <li>
                 <a href="#">Outros</a>
@@ -34,11 +35,7 @@
             </li>
         </ul>
     </div>
-    <textarea class="uk-textarea" placeholder="Mensagem" type="text" name="message"></textarea>
-    <input type="hidden" name="members_form_submit" value="1">
+    <textarea class="uk-textarea" placeholder="Mensagem" type="text" id="formMembersMessage" name="message"></textarea>
+    <!-- <input type="hidden" name="members_form_submit" value="1"> -->
     <button type="submit" class="normal-button special-button" type="button">Enviar</button>
-    
 </form>
-
- 
- 

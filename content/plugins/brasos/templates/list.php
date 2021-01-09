@@ -12,13 +12,16 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
 </div>
 <div class="tablenav top">
     <div class="alignleft">
-        <a href="" style="float:right; margin:0;" class="button">Export CSV</a> </div>
+        <a href="<?php echo admin_url('admin.php?page=myplugin-settings-page') ?>&action=download_csv&_wpnonce=<?php echo wp_create_nonce('download_csv') ?>" style="float:right; margin:0;" class="button"><?php _e('Export CSV', 'my-plugin-slug'); ?>
+        </a>
+    </div>
     <div class="tablenav-pages one-page"><span class="displaying-num">35 itens</span>
         <span class="pagination-links"><span class="tablenav-pages-navspan button disabled" aria-hidden="true">«</span>
             <span class="tablenav-pages-navspan button disabled" aria-hidden="true">‹</span>
             <span class="paging-input"><label for="current-page-selector" class="screen-reader-text">Página atual</label><input class="current-page" id="current-page-selector" type="text" name="paged" value="1" size="1" aria-describedby="table-paging"><span class="tablenav-paging-text"> de <span class="total-pages">1</span></span></span>
             <span class="tablenav-pages-navspan button disabled" aria-hidden="true">›</span>
-            <span class="tablenav-pages-navspan button disabled" aria-hidden="true">»</span></span></div>
+            <span class="tablenav-pages-navspan button disabled" aria-hidden="true">»</span></span>
+    </div>
     <br class="clear">
 </div>
 <br />
@@ -39,38 +42,61 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td class="has-row-actions column-primary">Claire Cruz
-                    <button type="button" class="toggle-row"><span class="screen-reader-text">Mostrar mais detalhes</span></button>
-                </td>
-                <td>1</td>
-                <td>helio-cruz@hotmail.com </td>
-                <td>11 98454-4545</td>
-                <td>Ortopedia</td>
-                <td>CRM-11111</td>
-                <td>null</td>
-                <td>Bom dia este é um teste</td>
-                <td>12/12/2020 18:30</td>
-            </tr>
-            <?php
 
+            <?php
+            $managers = array(
+                ['Paulo Cesar Hamdan', 'MB0005999',  'null',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
+                ['Marcos Britto da Silva', 'MB0005999',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
+                ['Antonio Martins Tieppo', 'MB0005999',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
+                ['Cyro Scala de Almeida Jr.', 'MB0005999',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
+                ['Fabiano Gonçalves Cunha',' MB0005999',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
+                ['Gustavo Constantino de Campos', 'MB0005999',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
+                ['Zartur José Barcelos Menegassi', 'MB0005999',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
+                ['Caio Gonçalvez de Souza', 'MB0005999',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null']
+            );
+            foreach ($managers as $manager) {
+                echo '<tr>';
+                foreach ($manager as $array) {
+                    echo   '<td class="has-row-actions column-primary">' . $array . '</td>';
+                }
+                echo '</tr>';
+                //'<td class="has-row-actions column-primary">'  . $value  . '</td>';
+
+                // '</tr>' .
+                // '<td class="has-row-actions column-primary">' .  '<b>'  . ($manager->Nome_Completo) . '</b>' . ' <button type="button" class="toggle-row"><span class="screen-reader-text">Mostrar mais detalhes</span></button>' . '</td>',
+                // '<td>' .   ($manager->ID) . '</td>',
+                // '<td>'   . ($manager->Email) . '</td>',
+                // '<td>'   . ($manager->Telefone) . '</td>',
+                // '<td>'   . ($manager->Especialidade) . '</td>',
+                // '<td>'   . ($manager->CRM) . '</td>',
+                // '<td>'   . ($manager->Profissão) . '</td>',
+                // '<td>'   . ($manager->Mensagem) . '</td>',
+                // '<td>'   . ($manager->data_registro) . '</td>'
+                // . '</tr>';
+
+
+                //  print_r( $managerCounsils );
+            }
+            ?>
+
+
+            <?php
+            
             $args = array(
                 'role'    => 'subscriber',
-                //'orderby' => 'last_name',
-                'order'   => 'DESC'
+                'order'   => 'DESC',
+
             );
             //   $usermeta = array();
-
             // $userData = get_user_meta($user->ID);
-
             $users = get_users($args);
             // Array of WP_User objects.
             foreach ($users as $user) {
                 echo
                     ' <tr>' .
-                        '<td class="has-row-actions column-primary">' . '<b>'  . ($user->full_name) . '</b>' . 
+                        '<td class="has-row-actions column-primary">' . '<b>'  . ($user->full_name) . '</b>' .
                         ' <button type="button" class="toggle-row"><span class="screen-reader-text">Mostrar mais detalhes</span></button>' . '</td>',
-                    '<td>' . esc_html($user->ID) . '</td>',
+                    '<td>' . esc_html($user->BRASOS_ID) . '</td>',
                     '<td>'   . ($user->user_email) . '</td>',
                     '<td>'   . ($user->phone) . '</td>',
                     '<td>'   . ($user->especiality) . '</td>',
@@ -80,6 +106,7 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
                     '<td>'   . ($user->user_registered) . '</td>'
                         . '</tr>';
             }
+            
             ?>
         </tbody>
     </table>
