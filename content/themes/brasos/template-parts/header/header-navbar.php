@@ -1,5 +1,6 @@
  <!-- NAVBAR -->
- <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky;">
+ <!-- <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky;"> -->
+  
    <nav class="uk-navbar-container" uk-navbar="dropbar: true;">
      <div class="uk-navbar-center uk-visible">
        <ul class="uk-navbar-nav">
@@ -50,5 +51,4 @@
        <a href="#" class="uk-navbar-toggle sidenav" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
      </div>
    </nav>
- </div>
  <?php get_template_part('page-login'); ?>
