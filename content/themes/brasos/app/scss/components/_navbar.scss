@@ -80,6 +80,7 @@ img.trp-flag-image {
       color: $color-green-dark;
       margin-right: 0.5em;
       margin: 0 18px;
+      font-weight: 600;
     }
   }
 }
@@ -220,4 +221,8 @@ img.trp-flag-image {
 }
 .white-block .sub-menu-show {
   display: block;
+}
+
+.uk-icon{
+  color: $color-green-dark;
 }

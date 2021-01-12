@@ -13,7 +13,7 @@ function brasos_dashboard_widget_function()
 {
     ?>
     <!-- <h3>Agencia Fazer</h3> -->
-    <img src="<?php echo get_template_directory_uri() . '/public/images/agencia-fazer.png' ?>" alt="" style="height:100px; position:relative; left: 45px">
+    <!-- <img src="<//?php echo get_template_directory_uri() . '/public/images/agencia-fazer.png' ?>" alt="" style="height:100px; position:relative; left: 45px"> -->
     <!-- <p>Telefone:</p>
     <p>Email:</p>
     <p>Site: agenciafazer.com.br</p> -->

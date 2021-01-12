@@ -51,5 +51,4 @@
      </div>
    </nav>
  </div>
-
  <?php get_template_part('page-login'); ?>

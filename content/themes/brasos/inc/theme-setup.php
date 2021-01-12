@@ -52,7 +52,7 @@ if (!function_exists('brasos_setup')) :
     }
     add_filter('excerpt_more', 'brasos_excerpt_more');
     
-    /*
+  /*
     if (class_exists('MultiPostThumbnails')) {
         new MultiPostThumbnails(array(
             'label' => 'Imagem de fundo para o titulo',
@@ -61,8 +61,8 @@ if (!function_exists('brasos_setup')) :
             )
         );
     };
-    */
-
+    
+*/
     function my_login_stylesheet() { ?>
         <style type="text/css">
             body.login {

@@ -21,3 +21,16 @@
     left:-15%;
   }
 }
+
+@keyframes colorChanging {
+  from {
+    background:  $color-green-dark;;
+  }
+
+  50% {
+    background: red;
+  }
+  to {
+    background: $color-green-dark;
+  }
+}

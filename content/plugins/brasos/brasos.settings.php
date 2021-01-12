@@ -13,5 +13,7 @@ if (!defined('WPINC')) {die();}
 
 
 require plugin_dir_path(__FILE__) . 'inc/dashboard.php';
-require plugin_dir_path(__FILE__) . 'inc/login-members.php';
-require plugin_dir_path(__FILE__) . 'inc/members.php';
+require plugin_dir_path(__FILE__) . 'inc/members-form.php';
+
+
+ 

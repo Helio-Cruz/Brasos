@@ -35,7 +35,7 @@ if ( is_page('membros') && !is_user_logged_in() ) {
 
         if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
 
-                get_template_part('template-parts/post/membros-content', 'excerpt');
+                get_template_part('template-parts/post/membros-content', 'full');
 
             endwhile;
         endif;
