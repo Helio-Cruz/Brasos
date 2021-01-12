@@ -131,10 +131,8 @@ class BecomeMember
                         /* find the last ID created in wp_users */
                         $id = $this->getUserId($email);
 
-                        for ($number = 0; $number < 6000; $number++) {
-                            $userCustomId = 'MB000' . $number;
-                        }
-
+                        //Join string MB0 to $id 
+                        $userCustomId = 'MB'. $id;
 
                         if ($_POST['area'] === 'Medica') {
 
@@ -148,7 +146,7 @@ class BecomeMember
                                     ('$id', 'phone', '$phone'),
                                     ('$id', 'especiality', '$especiality'),
                                     ('$id', 'crm', '$crm'),
-                                    ('$id', 'BRASOS_ID', '$userCustomId')
+                                    ('$id', 'brasos_id', '$userCustomId')
                                 ");
                         } else {
                             $this->wpdb->query("
@@ -160,7 +158,7 @@ class BecomeMember
                                     ('$id', 'message', '$message'),
                                     ('$id', 'phone', '$phone'),
                                     ('$id', 'other_professions', '$other_professions'),
-                                    ('$id', 'BRASOS_ID', '$userCustomId')
+                                    ('$id', 'brasos_id', '$userCustomId')
                                 ");
                         }
 
@@ -170,18 +168,18 @@ class BecomeMember
                         /**
                          * Email sending confirmation
                          */
-                        $to = $email;
-                        $subject = "Confirmaçao de inscriçao";
-                        $headers = [
-                            'Content-Type: text/html; charset=UTF-8',
-                            'From: noreply@brasos.com.br'
-                        ];
-                        $body = 'Bem vindo a Brasos,' . "\n";
-                        $body .= 'Obrigado por se inscrever como membro brasos.' . "\n\n";
-                        $body .= '---------------' . "\n\n";
-                        $body .= 'Este email é automatico, Por favor nao responder.' . "\n";
+                        // $to = $email;
+                        // $subject = "Confirmaçao de inscriçao";
+                        // $headers = [
+                        //     'Content-Type: text/html; charset=UTF-8',
+                        //     'From: noreply@brasos.com.br'
+                        // ];
+                        // $body = 'Bem vindo a Brasos,' . "\n";
+                        // $body .= 'Obrigado por se inscrever como membro brasos.' . "\n\n";
+                        // $body .= '---------------' . "\n\n";
+                        // $body .= 'Este email é automatico, Por favor nao responder.' . "\n";
 
-                        wp_mail($to, $subject, $body, $headers);
+                        // wp_mail($to, $subject, $body, $headers);
                     }
                 }
             } else {
@@ -220,14 +218,6 @@ class BecomeMember
         return $this->wpdb->get_var($getLastRegisteredUser);
     }
 
-    public function IdentificationIncrement()
-    {
-
-        for ($number = 0; $number < 6000; $number++) {
-            echo 'MB000' . $number . '<br />';
-        }
-    }
-
 
     public function exportCsv()
     {
@@ -256,6 +246,7 @@ class BecomeMember
 
         $header_row = array(
             'Email',
+            'ID',
             'Nome Completo',
             'Telefone',
             'Especialidade',
@@ -303,6 +294,7 @@ class BecomeMember
         foreach ($getUsers as $user) {
             $row = array(
                 $user->user_email,
+                $user->brasos_id,
                 $user->full_name,
                 $user->phone,
                 $user->especiality,

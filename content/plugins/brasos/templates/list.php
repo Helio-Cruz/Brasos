@@ -45,14 +45,14 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
 
             <?php
             $managers = array(
-                ['Paulo Cesar Hamdan', 'MB0005999',  'null',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
-                ['Marcos Britto da Silva', 'MB0005999',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
-                ['Antonio Martins Tieppo', 'MB0005999',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
-                ['Cyro Scala de Almeida Jr.', 'MB0005999',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
-                ['Fabiano Gonçalves Cunha',' MB0005999',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
-                ['Gustavo Constantino de Campos', 'MB0005999',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
-                ['Zartur José Barcelos Menegassi', 'MB0005999',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
-                ['Caio Gonçalvez de Souza', 'MB0005999',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null']
+                ['Paulo Cesar Hamdan', 'MB01',  'null',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
+                ['Marcos Britto da Silva', 'MB02',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
+                ['Cyro Scala de Almeida Jr.', 'MB03',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
+                ['Fabiano Gonçalves Cunha',' MB04',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
+                ['Gustavo Constantino de Campos', 'MB05',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
+                ['Zartur José Barcelos Menegassi', 'MB06',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
+                ['Antonio Martins Tieppo', 'MB07',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
+                ['Caio Gonçalvez de Souza', 'MB08',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null']
             );
             foreach ($managers as $manager) {
                 echo '<tr>';
@@ -60,22 +60,6 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
                     echo   '<td class="has-row-actions column-primary">' . $array . '</td>';
                 }
                 echo '</tr>';
-                //'<td class="has-row-actions column-primary">'  . $value  . '</td>';
-
-                // '</tr>' .
-                // '<td class="has-row-actions column-primary">' .  '<b>'  . ($manager->Nome_Completo) . '</b>' . ' <button type="button" class="toggle-row"><span class="screen-reader-text">Mostrar mais detalhes</span></button>' . '</td>',
-                // '<td>' .   ($manager->ID) . '</td>',
-                // '<td>'   . ($manager->Email) . '</td>',
-                // '<td>'   . ($manager->Telefone) . '</td>',
-                // '<td>'   . ($manager->Especialidade) . '</td>',
-                // '<td>'   . ($manager->CRM) . '</td>',
-                // '<td>'   . ($manager->Profissão) . '</td>',
-                // '<td>'   . ($manager->Mensagem) . '</td>',
-                // '<td>'   . ($manager->data_registro) . '</td>'
-                // . '</tr>';
-
-
-                //  print_r( $managerCounsils );
             }
             ?>
 
@@ -84,7 +68,8 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
             
             $args = array(
                 'role'    => 'subscriber',
-                'order'   => 'DESC',
+                'orderby' => 'id',
+                'order'   => 'ASC',
 
             );
             //   $usermeta = array();
@@ -96,7 +81,7 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
                     ' <tr>' .
                         '<td class="has-row-actions column-primary">' . '<b>'  . ($user->full_name) . '</b>' .
                         ' <button type="button" class="toggle-row"><span class="screen-reader-text">Mostrar mais detalhes</span></button>' . '</td>',
-                    '<td>' . esc_html($user->BRASOS_ID) . '</td>',
+                    '<td>' . esc_html($user->brasos_id) . '</td>',
                     '<td>'   . ($user->user_email) . '</td>',
                     '<td>'   . ($user->phone) . '</td>',
                     '<td>'   . ($user->especiality) . '</td>',
