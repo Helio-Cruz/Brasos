@@ -4,8 +4,7 @@
     display: none;
   }
   .menu-mobile {
-    //background-color: $white;
-    background: rgba(0, 0, 0, 0.5);
+    background-color: $white;
     padding: 0 8%;
     display: flex;
     flex-direction: row nowrap;
@@ -26,13 +25,8 @@
 
 .uk-navbar-container {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  z-index: 99;
   &:not(.uk-navbar-transparent) {
-    //background-color: $white;
-    background: rgba(0,0,0, 0.3);
+    background-color: $white;
   }
 }
 
@@ -40,8 +34,7 @@
   font-family: "Roboto";
   text-transform: none;
   font-weight: 600;
-  //color: $color-green-dark;
-  color: $white;
+  color: $color-green-dark;
 }
 
 /* flags */
