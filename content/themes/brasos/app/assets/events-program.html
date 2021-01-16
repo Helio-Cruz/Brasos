@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="scss/main.scss" type="text/scss" />
 </head>
 
-<body>
+<body class="single-evento">
   <!-- NAVBAR -->
   <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
     <nav class="uk-navbar-container" uk-navbar="dropbar: true;">
@@ -97,28 +97,34 @@
     </div>
   </div>
 
-  <!-- SUBNAV -->
-  <nav class="uk-navbar-container navbar-container-events">
-    <div uk-navbar>
-      <div class="uk-navbar-center">
-        <ul class="uk-navbar-nav navbar-events">
-          <li><a href="events-informations.html">Informações Gerais</a></li>
-          <li><a href="events-diploms.html">Certificados</a></li>
-          <li class="uk-active"><a href="events-program.html">Programação</a></li>
-          <li><a href="events-guests.html">Palestrantes convidados</a></li>
-          <li><a href="events-inscription.html">Inscrições/Pagamento</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+
+  <!-- IMAGE COVER -->
+  <div class="events-cover uk-child-width-1-1" uk-grid>
+    <img class="events-cover__img" src="./images/brasit-foto.jpg" alt="">
+  </div>
+
+  <!-- NAVIGATION -->
+  <div class="uk-subnav navbar-events">
+    <a class="normal-link normal-link-one" target="_blank"
+      href="https://regency.iweventos.com.br/site/brasit2020/inscreva-se">INSCRIÇÕES 2nd Brasit</a>
+  </div>
+  <ul class="uk-subnav navbar-events" uk-switcher>
+    <li><a href="#">INFORMAÇÕES GERAIS</a></li>
+    <li><a href="#">PROGRAMAÇÃO</a></li>
+    <li><a href="#">PALESTRANTES CONVIDADOS</a></li>
+  </ul>
+  <div class="uk-subnav navbar-events">
+    <a class="normal-link" href="">CERTIFICADOS</a>
+  </div>
+
 
   <!-- ACCORDION -->
-  <div class="accordion__content">
-    <h2 class="h2-title">BRASOStbt 2019 - Programação</h2>
+  <div class="accordion__content events__layout">
+    <!-- <h2 class="h2-title">BRASOStbt 2019 - Programação</h2> -->
     <ul uk-accordion>
       <li class="uk-open">
-        <a class="uk-accordion-title uk-accordion-title-xs" href="#">
-          <h3 class="h3-title">5ª FEIRA - 27/06/2019</h3>
+        <a class="uk-accordion-title" href="#">
+          <h2>5ª FEIRA - 27/06/2019</h2>
         </a>
         <div class="uk-accordion-content">
           <h4 class="h4-title"><span>15:00 – 18:00h</span> : Curso Pré-Simpósio 1 - Microbiota Intestinal na
@@ -168,7 +174,7 @@
       </li>
       <li>
         <a class="uk-accordion-title uk-accordion-title-xs" href="#">
-          <h3 class="h3-title">5ª FEIRA - 27/06/2019</h3>
+          <h2>5ª FEIRA - 27/06/2019</h2>
         </a>
         <div class="uk-accordion-content">
           <h4 class="h4-title">
@@ -196,7 +202,7 @@
       </li>
       <li>
         <a class="uk-accordion-title uk-accordion-title-xs" href="#">
-          <h3 class="h3-title">5ª FEIRA - 27/06/2019</h3>
+          <h2>5ª FEIRA - 27/06/2019</h2>
         </a>
         <div class="uk-accordion-content">
           <h4 class="h4-title">
@@ -230,7 +236,7 @@
       </li>
       <li>
         <a class="uk-accordion-title uk-accordion-title-xs" href="#">
-          <h3 class="h3-title">6ª FEIRA - 28/06/2019</h3>
+          <h2>6ª FEIRA - 28/06/2019</h2>
         </a>
         <div class="uk-accordion-content">
           <h4 class="h4-title">
@@ -382,7 +388,7 @@
       </li>
       <li>
         <a class="uk-accordion-title uk-accordion-title-xs" href="#">
-          <h3 class="h3-title">SÁBADO - 29/06/2019</h3>
+          <h2>SÁBADO - 29/06/2019</h2>
         </a>
         <div class="uk-accordion-content">
           <h4 class="h4-title">

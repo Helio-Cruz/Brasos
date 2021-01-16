@@ -5,7 +5,7 @@
   width: 90%;
   background: $white;
   @include computers {
-    width: 900px;
+    width: 75%;
   }
   .rounded {
     border-radius: 50%;
@@ -63,34 +63,34 @@
       font-weight: bold;
     }
   }
-  .uk-accordion-title::before {
-    background-image: none;
-    border-style: solid;
-    border-width: 0.15em 0.15em 0 0;
-    content: "";
-    display: inline-block;
-    height: 0.45em;
-    left: -0.5em;
-    position: relative;
-    top: 0.45em;
-    transform: rotate(45deg);
-    vertical-align: middle;
-    width: 0.45em;
-  }
-  .uk-open {
-    .uk-accordion-title::before {
-      background-image: none;
-      border-style: solid;
-      border-width: 0.15em 0.15em 0 0;
-      content: "";
-      display: inline-block;
-      height: 0.45em;
-      left: -0.5em;
-      position: relative;
-      top: 0.23em;
-      transform: rotate(135deg);
-      vertical-align: middle;
-      width: 0.45em;
-    }
-  }
+ // .uk-accordion-title::before {
+    // background-image: none;
+    // border-style: solid;
+    // border-width: 0.15em 0.15em 0 0;
+    // content: "";
+    // display: inline-block;
+    // height: 0.45em;
+    // left: -0.5em;
+    // position: relative;
+    // top: 0.45em;
+    // transform: rotate(45deg);
+    // vertical-align: middle;
+    // width: 0.45em;
+ // }
+ // .uk-open {
+  //  .uk-accordion-title::before {
+      // background-image: none;
+      // border-style: solid;
+      // border-width: 0.15em 0.15em 0 0;
+      // content: "";
+      // display: inline-block;
+      // height: 0.45em;
+      // left: -0.5em;
+      // position: relative;
+      // top: 0.23em;
+      // transform: rotate(135deg);
+      // vertical-align: middle;
+      // width: 0.45em;
+  //  }
+  ///}
 }

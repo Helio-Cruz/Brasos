@@ -21,33 +21,24 @@
   @include flexbox;
   li a,
   .normal-link {
-    border: 1px solid $grey;
-    border-radius: 3px;
-    color: $color-green-dark !important;
-    background-color: $white;
+  //  border: 1px solid $grey;
+    border-radius: 8px;
+    color: $white !important;
+    background-color:  $color-green-dark;
     font-size: $body;
     margin: 1em auto;
-    padding: 0.5em 2em;
+    padding: 0.7em 2em;
+    font-weight: 600;
     &:hover {
-      color: $white !important;
-      background-color: $color-green-dark;
+      // color: $white !important;
+    background-color: $color-green-regular;
+ 
       transition: ease-in $duration-medium;
     }
-    @include tablets {
-      padding: 0 !important;
-      // margin: 0 !important;
-      background: none;
-      border: none;
-      font-weight: bold;
-      text-transform: uppercase !important;
-      &:hover {
-        color: $black !important;
-        background-color: $white;
-      }
-    }
-    &[aria-expanded="true"] {
-      color: $black !important;
-    }
+    @include tablets {}
+   // &[aria-expanded="true"] {
+      //color: $black !important;
+  //  }
   }
 }
 
