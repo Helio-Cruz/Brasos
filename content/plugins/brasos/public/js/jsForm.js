@@ -38,7 +38,7 @@ formMembers.addEventListener('submit', (event) => {
      displayMessage.html(data);
     },
     error: function () {
-      displayMessage.addClass('uk-text-danger').html('Occoreu um erro, tente de novo mais tarde.');
+      displayMessage.addClass('uk-text-danger uk-alert').html('Occoreu um erro, tente de novo mais tarde.');
     }
   });
 

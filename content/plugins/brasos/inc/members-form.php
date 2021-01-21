@@ -105,15 +105,21 @@ class BecomeMember
             if (!empty($fullname) && !empty($email) && ((!empty($especiality) && !empty($crm)) || !empty($other_professions))) {
                 // If email is not valid
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                    $error = $email . ' é um endereço de email invalido, favor tentar de novo.';
-                    echo '<div id="formMembers_error" class="uk-text-danger">' . $error . '</div>';
+                    $error = $email . 'Endereço de email invalido, favor tente de novo.';
+                    echo '<div id="formMembers_error" class="uk-alert-danger" uk-alert>' .
+                    '<a class="uk-alert-close" uk-close></a>' .
+                    '<p>' . $error . '</p>' .
+                    '</div>';
                 } else {
                     // if email is valid, check if user is not already registered
                     $userExists = $this->checkRegisteredUser($email);
 
                     if ($userExists) {
-                        $error = 'Email ja existente em nosso banco de dados!';
-                        echo '<div id="formMembers_error" class="uk-text-danger">' . $error . '</div>';
+                        $error = 'Email ja existente em nosso banco de dados, por favor insira outro e-mail!';
+                        echo '<div id="formMembers_error" class="uk-alert-danger" uk-alert>' .
+                            '<a class="uk-alert-close" uk-close></a>' .
+                            '<p>' . $error . '</p>' .
+                            '</div>';
                     } else {
                         // if user is not registered & fields are ok
                         // add user to db
@@ -132,7 +138,7 @@ class BecomeMember
                         $id = $this->getUserId($email);
 
                         //Join string MB0 to $id 
-                        $userCustomId = 'MB'. $id;
+                        $userCustomId = 'MB' . $id;
 
                         if ($_POST['area'] === 'Medica') {
 
@@ -163,7 +169,10 @@ class BecomeMember
                         }
 
                         $success = 'Obrigado por se inscrever';
-                        echo '<div id="formMembers_error" class="uk-text-success">' . $success . '</div>';
+                        echo '<div id="formMembers_error" class="uk-alert-success" uk-alert>' .
+                            '<a class="uk-alert-close" uk-close></a>' .
+                            '<p>' . $success . '</p>' .
+                            '</div>';
 
                         /**
                          * Email sending confirmation
@@ -184,7 +193,10 @@ class BecomeMember
                 }
             } else {
                 $error = 'Por favor complete os campos obrigatorios!';
-                echo '<div id="formMembers_error" class="uk-text-danger">' . $error . '</div>';
+                echo '<div id="formMembers_error" class="uk-alert-danger" uk-alert>' .
+                    '<a class="uk-alert-close" uk-close></a>' .
+                    '<p>' . $error . '</p>' .
+                    '</div>';
             }
         }
         wp_die(); // terminate immediately and return a proper response /!\ required !

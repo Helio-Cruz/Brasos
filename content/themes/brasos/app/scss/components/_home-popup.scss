@@ -51,9 +51,7 @@
   cursor: pointer;
   left: 5%;
   @include tablets {
-    //  color: $color-green-dark;
     top: 240px;
-    //left: 400px;
     font-size: 20px;
     width: 320px;
     left: 40%;
@@ -63,7 +61,6 @@
     left: 65%;
     width: 700px;
     top: 300px;
-    // left: 750px;
     font-size: 50px;
   }
   .uk-button-default {
@@ -77,15 +74,40 @@
     @include tablets {
       width: 400px;
       height: 42px;
+      font-size: 18px;
     }
+    /*
     &:hover,
     &:active {
       border: none;
       // background: #00b2d2;
       background-color: $color-green-dark;
-    }
+    }*/
     span {
       font-size: 22px;
     }
+  }
+}
+
+.popup-message{
+  font-size: 15px;
+  text-align: center;
+  color: black;
+  &__title{
+    font-weight: 600;
+    top: 40px;
+    position: relative;
+  }
+  span{
+    border-bottom: solid $red 1px;
+    font-weight: 600;
+  }
+}
+
+
+.uk-modal-close-outside {
+  color: #fff !important;
+  svg {
+    transform: scale(1.5);
   }
 }

@@ -1,6 +1,6 @@
 <?php get_header();
 
- $setCookie = $_COOKIE['my_setcookie'];
+$setCookie = $_COOKIE['my_setcookie'];
 $popup = get_theme_mod('brasos_popup_image');
 $default = null;
 $img = !empty($popup) && isset($_COOKIE['popup_cookie']) ? $popup : $default;
@@ -8,16 +8,16 @@ $img = !empty($popup) ? $popup : $default;
 
 // if(isset($$setCookie)) {
 //  // $setCookie = $_COOKIE['my_setcookie'];
- 
+
 //   echo $popup;
 //   var_dump($popup);
 // } else {
 //   $default;
 //   echo $default;
 // }
- 
+
 ?>
-<?php 
+<?php
 // $cookie_name = "user";
 // $cookie_value = "John Doe";
 //  $setCookie = $_COOKIE['my_setcookie'];
@@ -30,7 +30,7 @@ $img = !empty($popup) ? $popup : $default;
 //   echo "Cookie named '" . $cookie_name . "' is not set!";
 // }
 ?>
- 
+
 <!-- POP UP -->
 <!-- This is a button toggling the modal with the outside close button -->
 <div id="modal-media-image" class="uk-flex-top" uk-modal>
@@ -45,13 +45,19 @@ $img = !empty($popup) ? $popup : $default;
 
 <!-- POP UP  brasit2020 media-->
 <!-- This is a button toggling the modal with the outside close button -->
-<div id="modal-media-brasit2020"  class="uk-flex-top" uk-modal>
+<div id="modal-media-brasit2020" class="uk-flex-top" uk-modal>
   <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
     <button class="uk-modal-close-outside" type="button" uk-close></button>
-      <iframe
-          src="https://www.youtube.com/embed/pKxNDvlUX3M?showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
-          width="1000" height="560" frameborder="0" allowfullscreen uk-responsive uk-video="autoplay=false">
-      </iframe>
+    <iframe src="https://www.youtube.com/embed/pKxNDvlUX3M?showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" width="1000" height="560" frameborder="0" allowfullscreen uk-responsive uk-video="autoplay=false">
+    </iframe>
+
+    <div class="popup-message">
+      <h4 class="popup-message__title">ATENÇÃO !</h4>
+      <br />
+      <p>
+        Os conteúdos de aulas com técnicas de <br /> INJEÇÃO INTRA-ARTICULAR são <span> atos médicos exclusivos</span>.
+      </p>
+    </div>
   </div>
 </div>
 

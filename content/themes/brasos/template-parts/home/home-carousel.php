@@ -16,12 +16,17 @@ $slide6 = get_theme_mod('brasos_bg_slide_6', '');
     <?php endif; ?>
     <?php if ($slide2 != '') : ?>
       <li>
-      <div class="popup-brasit   uk-overlay" uk-toggle="target: #modal-media-brasit2020">
+        <div class="popup-brasit   uk-overlay" uk-toggle="target: #modal-media-brasit2020">
           <!-- <p>2° Brasit Web Version 2020</p> -->
           <!-- <div>⇲</div> -->
           <button class="uk-button uk-button-default"><span>&#187;</span> Reveja as Palestras <span>&#171;</span></button>
+          <!-- <p>
+            Atenção !
+            <br />
+            Os conteudos de aulas com técnicas de <br />Injeção Intra-Articular são atos médicos exclusivos.
+          </p> -->
         </div>
-          <img src="<?= $slide2; ?>" alt="">
+        <img src="<?= $slide2; ?>" alt="">
       </li>
     <?php endif; ?>
     <?php if ($slide3 != '') : ?>

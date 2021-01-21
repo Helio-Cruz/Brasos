@@ -2,8 +2,8 @@
 <form id="formMembers">
     <div class="uk-column-1-2@s uk-margin-small-bottom">
         <div class="contact-form__fields">
-            <input class="uk-input" type="text" name="full_name" autocomplete="name" placeholder="Nome Completo" required>
-            <input class="uk-input" type="email" name="email" autocomplete="email" placeholder="Email" required>
+            <input class="uk-input" type="text" name="full_name" autocomplete="name" placeholder="Nome Completo *" required>
+            <input class="uk-input" type="email" name="email" autocomplete="email" placeholder="Email *" required>
         </div>
     </div>
 
@@ -26,12 +26,12 @@
         <ul class="uk-switcher">
             <li class="uk-column-1-2@s">
                 <div class="contact-form__fields">
-                    <input class="uk-input" type="text" name="especiality" autocomplete="name" placeholder="Especialidade">
-                    <input class="uk-input" type="text" name="crm" autocomplete="name" placeholder="CRM">
+                    <input class="uk-input" type="text" name="especiality" autocomplete="name" placeholder="Especialidade *">
+                    <input class="uk-input" type="text" name="crm" autocomplete="name" placeholder="CRM *">
                 </div>
             </li>
             <li>
-                <input class="uk-input" type="text" name="other_professions" autocomplete="name" placeholder="Profissao">
+                <input class="uk-input" type="text" name="other_professions" autocomplete="name" placeholder="Profissão *">
             </li>
         </ul>
     </div>
