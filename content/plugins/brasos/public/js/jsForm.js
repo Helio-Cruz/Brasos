@@ -13,9 +13,16 @@ formMembers.addEventListener('submit', (event) => {
   const phone = $('input[name="phone"]').val();
   const especiality = $('input[name="especiality"]').val();
   const crm = $('input[name="crm"]').val();
-  const other_professions = $('input[name="other_professions"]').val();
-  const message = $('#formMembersMessage').val();
   const area = $('#formMembers .uk-active a').text();
+
+  function clearForm() {
+    $( 'input[name="full_name"]').val('');
+    $('input[name="email"]').val('');
+    $('input[name="phone"]').val('');
+    $('input[name="especiality"]').val('');
+    $('input[name="crm"]').val('');
+    $('#formMembers_output').hide();
+  }
 
   $.ajax({
     type: 'POST',
@@ -28,17 +35,16 @@ formMembers.addEventListener('submit', (event) => {
       phone: phone,
       especiality: especiality,
       crm: crm,
-      other_professions: other_professions,
-      message: message,
       area: area,
       nonce: ajax_formMembers.nonce,
       action: 'ajax_onFormSubmit',
     },
     success: function (data) {
      displayMessage.html(data);
+     setTimeout(clearForm, 3000);
     },
     error: function () {
-      displayMessage.addClass('uk-text-danger uk-alert').html('Occoreu um erro, tente de novo mais tarde.');
+      displayMessage.addClass('uk-text-danger').html('Occoreu um erro, tente de novo mais tarde.');
     }
   });
 

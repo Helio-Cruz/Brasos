@@ -36,23 +36,23 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
                 <th scope="col">Telefone</th>
                 <th scope="col">Especialidade</th>
                 <th scope="col">CRM</th>
-                <th scope="col">Profissão</th>
-                <th scope="col">Mensagem</th>
-                <th scope="col">data/registro</th>
+                 <th scope="col">data/registro</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
 
             <?php
             $managers = array(
-                ['Paulo Cesar Hamdan', 'MB01',  'null',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
-                ['Marcos Britto da Silva', 'MB02',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
-                ['Cyro Scala de Almeida Jr.', 'MB03',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
-                ['Fabiano Gonçalves Cunha',' MB04',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
-                ['Gustavo Constantino de Campos', 'MB05',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
-                ['Zartur José Barcelos Menegassi', 'MB06',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
-                ['Antonio Martins Tieppo', 'MB07',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null'],
-                ['Caio Gonçalvez de Souza', 'MB08',  'null ',  'null', "Ortopedia",  'null',  'null',  'null', 'null']
+                ['Paulo Cesar Hamdan', 'MB01',  'none',  'none', "Ortopedia",  'none',  'none',  '', ''],
+                ['Marcos Britto da Silva', 'MB02',  'none',  'none', "Ortopedia",  'none',  'none',  '', ''],
+                ['Cyro Scala de Almeida Jr.', 'MB03',  'none',  'none', "Ortopedia",  'none',  'none',  '', ''],
+                ['Fabiano Gonçalves Cunha',' MB04',  'none',  'none', "Ortopedia",  'none',  'none',  '', ''],
+                ['Gustavo Constantino de Campos', 'MB05',  'none',  'none', "Ortopedia",  'none',  'none',  '', ''],
+                ['Zartur José Barcelos Menegassi', 'MB06',  'none',  'none', "Ortopedia",  'none',  'none',  '', ''],
+                ['Antonio Martins Tieppo', 'MB07',  'none',  'none', "Ortopedia",  'none',  'none',  '', ''],
+                ['Caio Gonçalvez de Souza', 'MB08',  'none',  'none', "Ortopedia",  'none',  'none',  '', '']
             );
             foreach ($managers as $manager) {
                 echo '<tr>';
@@ -86,10 +86,10 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
                     '<td>'   . ($user->phone) . '</td>',
                     '<td>'   . ($user->especiality) . '</td>',
                     '<td>'   . ($user->crm) . '</td>',
-                    '<td>'   . ($user->other_professions) . '</td>',
-                    '<td>'   . ($user->message) . '</td>',
-                    '<td>'   . ($user->user_registered) . '</td>'
-                        . '</tr>';
+                    '<td>'   . ($user->user_registered) . '</td>',
+                    '<td>'   . '</td>',
+                    '<td>'   . '</td>',
+                        '</tr>';
             }
             
             ?>

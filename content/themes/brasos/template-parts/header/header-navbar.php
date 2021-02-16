@@ -24,13 +24,13 @@
           echo $menu;
           ?>
 
-         <li>
-           <?php if (!is_user_logged_in()) { ?>
+         <!-- <li>
+           <//?php if (!is_user_logged_in()) { ?>
              <a uk-toggle="target: #my-id">Membros</a>
-           <?php } else {  ?>
-             <a href="<?php echo home_url('/membros'); ?>">Membros</a>
-           <?php  } ?>
-         </li>
+           <//?php } else {  ?>
+             <a href="<//?php echo home_url('/membros'); ?>">Membros</a>
+           <//?php  } ?>
+         </li> -->
        </ul>
 
        <ul class=" uk-navbar-nav">

@@ -1,5 +1,5 @@
-
-<?php
+ 
+ <?php
 
 class BecomeMember
 {
@@ -97,12 +97,10 @@ class BecomeMember
             $phone =  $this->wpdb->escape(trim($_POST['phone']));
             $especiality =  $this->wpdb->escape(trim($_POST['especiality']));
             $crm =  $this->wpdb->escape(trim($_POST['crm']));
-            $other_professions = $this->wpdb->escape(trim($_POST['other_professions']));
-            $message =  $this->wpdb->escape(trim($_POST['message']));
 
             // champs obligatoires
             // si nom et email sont complétés "et" (spécialité + crm "ou" profession)
-            if (!empty($fullname) && !empty($email) && ((!empty($especiality) && !empty($crm)) || !empty($other_professions))) {
+            if (!empty($fullname) && !empty($email) && ((!empty($especiality) && !empty($crm)))) {
                 // If email is not valid
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     $error = $email . 'Endereço de email invalido, favor tente de novo.';
@@ -140,7 +138,7 @@ class BecomeMember
                         //Join string MB0 to $id 
                         $userCustomId = 'MB' . $id;
 
-                        if ($_POST['area'] === 'Medica') {
+                      
 
                             $this->wpdb->query("
                                 INSERT INTO $this->usermetaTable
@@ -148,26 +146,12 @@ class BecomeMember
                                     VALUES
                                     ('$id', 'wp_capabilities', 'a:1:{s:10:\"subscriber\";b:1;}'),
                                     ('$id', 'full_name', '$fullname'),
-                                    ('$id', 'message', '$message'),
                                     ('$id', 'phone', '$phone'),
                                     ('$id', 'especiality', '$especiality'),
                                     ('$id', 'crm', '$crm'),
                                     ('$id', 'brasos_id', '$userCustomId')
                                 ");
-                        } else {
-                            $this->wpdb->query("
-                                INSERT INTO $this->usermetaTable
-                                    (user_id, meta_key, meta_value)
-                                    VALUES
-                                    ('$id', 'wp_capabilities', 'a:1:{s:10:\"subscriber\";b:1;}'),
-                                    ('$id', 'full_name', '$fullname'),
-                                    ('$id', 'message', '$message'),
-                                    ('$id', 'phone', '$phone'),
-                                    ('$id', 'other_professions', '$other_professions'),
-                                    ('$id', 'brasos_id', '$userCustomId')
-                                ");
-                        }
-
+                       
                         $success = 'Obrigado por se inscrever';
                         echo '<div id="formMembers_error" class="uk-alert-success" uk-alert>' .
                             '<a class="uk-alert-close" uk-close></a>' .
@@ -192,7 +176,7 @@ class BecomeMember
                     }
                 }
             } else {
-                $error = 'Por favor complete os campos obrigatorios!';
+                $error = 'Por favor complete os campos obrigatórios !';
                 echo '<div id="formMembers_error" class="uk-alert-danger" uk-alert>' .
                     '<a class="uk-alert-close" uk-close></a>' .
                     '<p>' . $error . '</p>' .
@@ -263,8 +247,6 @@ class BecomeMember
             'Telefone',
             'Especialidade',
             'CRM',
-            'Profissao',
-            'Mensagem',
             'Data de registro',
 
         );
@@ -311,8 +293,6 @@ class BecomeMember
                 $user->phone,
                 $user->especiality,
                 $user->crm,
-                $user->other_professions,
-                $user->message,
                 $user->user_registered
             );
             $data_rows[] = $row;

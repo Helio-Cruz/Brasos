@@ -90,17 +90,21 @@
 }
 
 .popup-message{
+  margin: -20px;
   font-size: 15px;
   text-align: center;
   color: black;
   &__title{
     font-weight: 600;
-    top: 40px;
+    top: 25px;
     position: relative;
   }
   span{
     border-bottom: solid $red 1px;
     font-weight: 600;
+  }
+  p{
+    margin: 0 0 30px;
   }
 }
 

@@ -12,30 +12,16 @@
             <input class="uk-input" type="text" name="phone" autocomplete="tel" placeholder="Telefone">
         </div>
     </div>
-    <div class="uk-margin">
+    <div class="uk-margin formMembers">
         <span class=" uk-flex uk-flex-middle">Area de Atuação:</span>
-        <ul class="uk-margin-small-left@s uk-subnav uk-subnav-pill uk-flex uk-flex-middle" uk-switcher="animation: uk-animation-fade">
-            
-            <li>
-                <a href="#">Medica</a>
-            </li>
-            <li>
-                <a href="#">Outros</a>
-            </li>
-        </ul>
-        <ul class="uk-switcher">
+        <ul>
             <li class="uk-column-1-2@s">
-                <div class="contact-form__fields">
+                <div class="contact-form__fields" uk-flex uk-flex-middle>
                     <input class="uk-input" type="text" name="especiality" autocomplete="name" placeholder="Especialidade *">
                     <input class="uk-input" type="text" name="crm" autocomplete="name" placeholder="CRM *">
                 </div>
             </li>
-            <li>
-                <input class="uk-input" type="text" name="other_professions" autocomplete="name" placeholder="Profissão *">
-            </li>
         </ul>
     </div>
-    <textarea class="uk-textarea" placeholder="Mensagem" type="text" id="formMembersMessage" name="message"></textarea>
-    <!-- <input type="hidden" name="members_form_submit" value="1"> -->
     <button type="submit" class="normal-button special-button" type="button">Enviar</button>
 </form>

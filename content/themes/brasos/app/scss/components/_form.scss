@@ -21,8 +21,8 @@
   width: 80vw;
   padding: 2em;
   @include tablets {
-    width: 700px;
-    padding: 2em 6em;
+    width: 600px;
+    padding: 2em 3em;
   }
   .black-text {
     line-height: 1.5em;
@@ -116,3 +116,11 @@ span.wpcf7-not-valid-tip {
 
 /* captcha v3 hide */
 .grecaptcha-badge { visibility: hidden; }
+
+.formMembers ul {
+  padding-left: 0!important;
+}
+
+.contact-form .uk-alert-close {
+  top: 15px;
+}
