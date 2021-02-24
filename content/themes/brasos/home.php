@@ -4,11 +4,11 @@
 $popup = get_theme_mod('brasos_popup_image');
 if (isset($_COOKIE['the_popupcookie'])) {
 
-  echo 'cookie is set';
+ // echo 'cookie is set';
   $default;
   $img = null;
 } else {
-  echo 'cookie is not set';
+  //echo 'cookie is not set';
   $img = !empty($popup) ? $popup : $default;
 }
 ?>
