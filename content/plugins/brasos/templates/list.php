@@ -36,7 +36,7 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
                 <th scope="col">Telefone</th>
                 <th scope="col">Especialidade</th>
                 <th scope="col">CRM</th>
-                 <th scope="col">data/registro</th>
+                <th scope="col">data/registro</th>
                 <th scope="col"></th>
                 <th scope="col"></th>
             </tr>
@@ -48,7 +48,7 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
                 ['Paulo Cesar Hamdan', 'MB01',  'none',  'none', "Ortopedia",  'none',  'none',  '', ''],
                 ['Marcos Britto da Silva', 'MB02',  'none',  'none', "Ortopedia",  'none',  'none',  '', ''],
                 ['Cyro Scala de Almeida Jr.', 'MB03',  'none',  'none', "Ortopedia",  'none',  'none',  '', ''],
-                ['Fabiano Gonçalves Cunha',' MB04',  'none',  'none', "Ortopedia",  'none',  'none',  '', ''],
+                ['Fabiano Gonçalves Cunha', ' MB04',  'none',  'none', "Ortopedia",  'none',  'none',  '', ''],
                 ['Gustavo Constantino de Campos', 'MB05',  'none',  'none', "Ortopedia",  'none',  'none',  '', ''],
                 ['Zartur José Barcelos Menegassi', 'MB06',  'none',  'none', "Ortopedia",  'none',  'none',  '', ''],
                 ['Antonio Martins Tieppo', 'MB07',  'none',  'none', "Ortopedia",  'none',  'none',  '', ''],
@@ -65,6 +65,91 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
 
 
             <?php
+
+            global $wpdb; // access the database
+
+         
+            $usersTable = $wpdb->prefix . 'users';
+            $usermetaTable = $wpdb->prefix . 'usermeta';
+
+
+            /*
+            $sql = "SELECT u.ID, um.user_id
+            FROM $usersTable u, $usermetaTable um
+            WHERE um.meta_key = 'wp_capabilities'
+            AND um.meta_value LIKE 'a:1:{s:10:\"subscriber\";b:1;}' ";
+        */
+
+            
+            $sql = "SELECT u.ID, u.user_email, u.user_registered,
+                    (SELECT um.meta_value
+                    FROM   $usermetaTable um 
+                    WHERE um.user_id = u.ID
+                    AND um.meta_key = 'full_name') 
+                    AS full_name,
+                    (SELECT um.meta_value
+                    FROM   $usermetaTable um 
+                    WHERE um.user_id = u.ID
+                    AND um.meta_key = 'phone') 
+                    AS phone,
+                    (SELECT um.meta_value
+                    FROM   $usermetaTable um 
+                    WHERE um.user_id = u.ID
+                    AND um.meta_key = 'especiality') 
+                    AS especiality,
+                    (SELECT um.meta_value
+                    FROM   $usermetaTable um 
+                    WHERE um.user_id = u.ID
+                    AND um.meta_key = 'crm') 
+                    AS crm,
+                    (SELECT um.meta_value
+                    FROM   $usermetaTable um 
+                    WHERE um.user_id = u.ID
+                    AND um.meta_key = 'brasos_id') 
+                    AS brasos_id
+            FROM $usersTable  u
+            INNER JOIN $usermetaTable um 
+            ON  um.user_id  = u.ID
+            WHERE um.meta_key = 'wp_capabilities'
+            AND um.meta_value LIKE 'a:1:{s:10:\"subscriber\";b:1;}' ";
+            
+            /*
+            $sql = "SELECT  *
+            FROM $usermetaTable um 
+            INNER JOIN  $usersTable  u
+            ON um.user_id  = u.id 
+            WHERE um.meta_key = 'wp_capabilities'
+            AND um.meta_value LIKE 'a:1:{s:10:\"subscriber\";b:1;}' ";*/
+        
+
+            //   $sql = "SELECT id FROM  {$this->userstable} WHERE user_email = %s";
+            //var_dump($sql);
+
+            //   $sql = "SELECT * from $this->usermetaTable WHERE meta_key = 'wp_capabilities' AND meta_value = 'a:1:{s:10:\"subscriber\";b:1;}'";
+
+            $getData = $wpdb->get_results($sql);
+
+            foreach ($getData as $user) {
+
+                echo
+
+                ' <tr>' .
+                   '<td class="has-row-actions column-primary">' . '<b>'  . ($user->full_name) . '</b>' .
+                 //   '<td class="has-row-actions column-primary">' . '<b>'  . $user['full_name'] . '</b>' .
+                    ' <button type="button" class="toggle-row"><span class="screen-reader-text">Mostrar mais detalhes</span></button>' . '</td>',
+                '<td>' . esc_html($user->brasos_id) . '</td>',
+                '<td>'   . ($user->user_email) . '</td>',
+                '<td>'   . ($user->phone) . '</td>',
+                '<td>'   . ($user->especiality) . '</td>',
+                '<td>'   . ($user->crm) . '</td>',
+                '<td>'   . ($user->user_registered) . '</td>',
+                '<td>'   . '</td>',
+                '<td>'   . '</td>',
+                '</tr>';
+                //var_dump($user);
+            }
+
+            /*
             
             $args = array(
                 'role'    => 'subscriber',
@@ -90,8 +175,8 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
                     '<td>'   . '</td>',
                     '<td>'   . '</td>',
                         '</tr>';
-            }
-            
+            }*/
+
             ?>
         </tbody>
     </table>

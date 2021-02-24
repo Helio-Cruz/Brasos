@@ -253,6 +253,8 @@ class BecomeMember
         $data_rows = array();
         // $sql = "SELECT u.ID, u.user_email, u.user_registered, um.user_id FROM  $userstable u JOIN  $usermetaTable um ON u.ID = um.user_id  ";
         //  $sql = "SELECT u.*, um.* FROM $userstable u, $usermetaTable um WHERE u.ID = um.user_id and um.meta_key IN ('full_name', 'phone', 'message')" ;
+
+        
         /*
        $sql = "SELECT 'u.ID' = 'um.user_id' FROM 
         $userstable u, $usermetaTable um  

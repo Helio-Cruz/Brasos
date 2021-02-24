@@ -51,8 +51,8 @@ if (!function_exists('brasos_setup')) :
         return '...';
     }
     add_filter('excerpt_more', 'brasos_excerpt_more');
-    
-  /*
+
+    /*
     if (class_exists('MultiPostThumbnails')) {
         new MultiPostThumbnails(array(
             'label' => 'Imagem de fundo para o titulo',
@@ -63,19 +63,18 @@ if (!function_exists('brasos_setup')) :
     };
     
 */
-    function my_login_stylesheet() { ?>
+    function my_login_stylesheet()
+    { ?>
         <style type="text/css">
             body.login {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 background: rgb(255, 255, 255);
-                background: linear-gradient(
-                    160deg,
-                    rgba(255, 255, 255, 1) 0%,
-                    rgba(109, 160, 165, 1) 65%,
-                    rgba(0, 110, 120, 1) 100%
-                );
+                background: linear-gradient(160deg,
+                        rgba(255, 255, 255, 1) 0%,
+                        rgba(109, 160, 165, 1) 65%,
+                        rgba(0, 110, 120, 1) 100%);
             }
 
             body.login div#login {
@@ -85,14 +84,17 @@ if (!function_exists('brasos_setup')) :
                 width: 100%;
                 max-width: 600px;
                 padding: 40px 0;
+
                 @media (min-width: 350px) {
                     width: 80%;
                     padding: 40px 20px;
                 }
             }
+
             body.login #login a {
                 width: 300px;
             }
+
             body.login form#loginform,
             body.login form#lostpasswordform,
             body.login form#registerform {
@@ -102,6 +104,7 @@ if (!function_exists('brasos_setup')) :
                 text-align: left;
                 margin-top: 1em;
             }
+
             body.login #login_error,
             body.login .message,
             body.login .message register {
@@ -112,39 +115,43 @@ if (!function_exists('brasos_setup')) :
             body.login div#login a {
                 color: white;
             }
+
             body.login div#login a:hover {
                 color: #006e78;
             }
+
             body.login div#login input#wp-submit {
                 background: #006e78;
             }
+
             body.login input:focus {
                 border-color: #006e78;
             }
+
             body.login input[type="checkbox"]:checked::before {
                 color: #006e78;
             }
         </style>
-    <?php }
-    add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
-/*
-    add_action('init', function() {
-        $min = 2;
-        if (!isset($_COOKIE['the_popup'])) {
-            setcookie('my_cookie', 'some default value', strtotime("+{$min} minutes"));
-        }
-    });*/
+<?php }
+    add_action('login_enqueue_scripts', 'my_login_stylesheet');
 
-    add_action( 'init', 'my_setcookie' );
-            function my_setcookie() {
-                $expires =  time() - (86400 * 21);
-                setcookie( 'popup_cookie', $expires, true , time() + 3600, '/' );
-                
-}
 
- 
+    function on_set_popup_cookie()
+    {
+        setcookie(
+            'the_popupcookie',
+            '1',
+            //  time() + 60,
+            (time() +  MINUTE_IN_SECONDS),
+            COOKIEPATH,
+            COOKIE_DOMAIN,
+            is_ssl()
+        );
+    }
+
+    add_action('init', 'on_set_popup_cookie');
+
 
 endif;
 
 add_action('after_setup_theme', 'brasos_setup');
-
