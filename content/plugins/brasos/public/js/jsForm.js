@@ -29,7 +29,6 @@ formMembers.addEventListener('submit', (event) => {
     url: ajax_formMembers.ajaxurl,
     data:
     {
-      //data: $(formMembers).serialize(),
       full_name: full_name,
       email: email,
       phone: phone,
