@@ -12,7 +12,7 @@ Version: 0.1
 
 
 
-require plugin_dir_path(__FILE__) . 'inc/customizer.php';
+require plugin_dir_path(__FILE__) . 'inc/customize-popup.php';
 
 
  

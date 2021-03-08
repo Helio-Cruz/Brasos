@@ -1,6 +1,11 @@
 <?php
 class Members
 {
+    public function __construct()
+    {
+        add_action('init', [$this, 'members']);
+    }
+
     public function members_area()
     {
         /**
@@ -40,10 +45,6 @@ class Members
             "taxonomies" => ["category", "post_tag"]
         ];
         register_post_type("members", $args);
-    }
-    public function __construct()
-    {
-        add_action('init', [$this, 'members']);
     }
 
     public function members_activate()
