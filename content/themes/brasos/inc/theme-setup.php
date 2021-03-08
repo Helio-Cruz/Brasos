@@ -136,21 +136,6 @@ if (!function_exists('brasos_setup')) :
     add_action('login_enqueue_scripts', 'my_login_stylesheet');
 
 
-    function on_set_popup_cookie()
-    {
-        setcookie(
-            'the_popupcookie',
-            '1',
-            //  time() + 60,
-            (time() +  MINUTE_IN_SECONDS),
-            COOKIEPATH,
-            COOKIE_DOMAIN,
-            is_ssl()
-        );
-    }
-
-    add_action('init', 'on_set_popup_cookie');
-
 
 endif;
 

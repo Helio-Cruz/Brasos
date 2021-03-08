@@ -1,6 +1,5 @@
  
 <?php
-require('customizer/brasos_home_popup.php');
 require('customizer/brasos_home_images.php');
 require('customizer/brasos_banner_textos.php');
 require('customizer/brasos_carousel_footer.php');
@@ -13,11 +12,6 @@ function brasos_customize_register($wp_customize) {
         'priority' => 1,
     ]);
 
-    // SECTION HOME POP UP
-    $wp_customize->add_section('brasos_home_popup', [
-        'title' => 'Brasos Home Pop-up',
-        'panel' => 'brasos_theme_panel',
-    ]);
 
     //SECTION  HOME IMAGES
     $wp_customize->add_section('brasos_home_images', [
@@ -38,7 +32,6 @@ function brasos_customize_register($wp_customize) {
     ]);
     
         
-    brasos_home_popup($wp_customize);
     brasos_home_images($wp_customize);
     brasos_banner_textos($wp_customize);
     brasos_carousel_footer($wp_customize);

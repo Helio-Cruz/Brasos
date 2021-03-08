@@ -42,7 +42,7 @@ class BecomeMember
             'Lista de Membros',
             'manage_options',
             __FILE__,
-            array(__CLASS__, 'members_content'),
+            array($this, 'members_content'),
             'dashicons-wordpress',
             3
         );

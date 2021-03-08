@@ -1,30 +1,5 @@
-<?php get_header();
+<?php get_header(); ?>
 
-
-$popup = get_theme_mod('brasos_popup_image');
-if (isset($_COOKIE['the_popupcookie'])) {
-
- // echo 'cookie is set';
-  $default;
-  $img = null;
-} else {
-  //echo 'cookie is not set';
-  $img = !empty($popup) ? $popup : $default;
-}
-?>
-
-<!-- POP UP -->
-<!-- This is a button toggling the modal with the outside close button -->
-
-<div id="modal-media-image" class="uk-flex-top" uk-modal>
-  <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
-    <button class="uk-modal-close-outside" type="button" uk-close></button>
-    <img class="modal-image" src="<?= $img; ?>" alt="">
-    <!--
-      <//?php echo do_shortcode('[link_popup link="https://regency.iweventos.com.br/site/brasit2020/inscreva-se" text="Mais informações e inscrição, Acesse"]'); ?>
-    -->
-  </div>
-</div>
 
 
 <!-- POP UP  brasit2020 media-->
