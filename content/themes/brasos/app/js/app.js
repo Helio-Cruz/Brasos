@@ -10,15 +10,6 @@ var app = {
     UIkit.use(Icons);
     UIkit.responsive(UIkit.util.$('iframe'));
 
-    /*
-    if ($('body').hasClass('home')) {
-      var popup = $('.modal-image').attr('src');
-      if (popup != '') {
-        UIkit.modal('#modal-media-image').show();
-      } else {
-        UIkit.modal('#modal-media-image').hide();
-      }
-    }*/
 
     // NAVBAR AND SIDEBAR 
     $('body').css('visibility', 'visible');

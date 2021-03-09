@@ -21,7 +21,6 @@ if (!function_exists('brasos_scripts')) :
             true
         );
 
-
         wp_localize_script(
             'brasos-js',
             'ajax_login_object',
@@ -126,73 +125,9 @@ add_action('admin_head', 'override_admin_bar_css');
 add_action('wp_head', 'override_admin_bar_css');
 
 
-// add_action('register_form', 'myplugin_register_form');
-// function myplugin_register_form()
-// {
-
-//     $first_name = (!empty($_POST['first_name'])) ? trim($_POST['first_name']) : '';
-//     $last_name = (!empty($_POST['last_name'])) ? trim($_POST['last_name']) : '';
-
-//    ?//>
-//     <!-- form html o wp-login.php  line 1074 -->
-
-//?php//
-// }
-// add_filter('registration_errors', 'myplugin_registration_errors', 10, 3);
-
-// function myplugin_registration_errors($errors, $sanitized_user_login, $user_email)
-// {
-
-//     if (empty($_POST['first_name']) || !empty($_POST['first_name']) && trim($_POST['first_name']) == '') {
-//         $errors->add('first_name_error', __('<strong>ERROR</strong>: You must include a first name.', 'mydomain'));
-//     }
-//     if (empty($_POST['last_name']) || !empty($_POST['last_name']) && trim($_POST['last_name']) == '') {
-//         $errors->add('last_name_error', __('<strong>ERROR</strong>: You must include a first name.', 'mydomain'));
-//     }
-//     return $errors;
-// }
-
-// add_action('user_register', 'myplugin_user_register');
-// function myplugin_user_register($user_id)
-// {
-//     if (!empty($_POST['first_name'])) {
-//         update_user_meta($user_id, 'first_name', trim($_POST['first_name']));
-//         update_user_meta($user_id, 'last_name', trim($_POST['last_name']));
-//     }
-// }
-
 
 /* not sending email registration */
 remove_action('register_new_user', 'wp_send_new_user_notifications');
-
-
-// function login_failed() {
-//     $login_page  = home_url( '/login/' );
-//     wp_redirect( $login_page . '?login=failed' );
-//     exit;
-//   }
-//   add_action( 'wp_login_failed', 'login_failed' );
-
-//   function verify_username_password( $user, $username, $password ) {
-//     $login_page  = home_url( '/login/' );
-//       if( $username == "" || $password == "" ) {
-//           wp_redirect( $login_page . "?login=empty" );
-//           exit;
-//       }
-//   }
-
-// add_action( 'wp_login_failed', 'my_front_end_login_fail' ); 
-
-// function my_front_end_login_fail( $username ) {
-//      $referrer = $_SERVER['HTTP_REFERER'];
-//      if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') ) {
-//           wp_redirect( $referrer . '?login=failed' ); 
-//           exit;
-//      }
-// }
-
-
-
 
 
 
@@ -201,7 +136,6 @@ remove_action('register_new_user', 'wp_send_new_user_notifications');
 if (!current_user_can('manage_options')) {
     show_admin_bar(false);
 }
-
 
 
 

@@ -8,22 +8,12 @@ class PopupCustom
     {
 
         add_action('wp_enqueue_scripts', [$this, 'init_js'], 20);
-        add_filter('script_loader_tag', [$this, 'add_type_attribute'], 10, 3);
+        add_action('wp_enqueue_scripts', [$this, 'uikit'], 20);
 
         add_action('customize_register', [$this, 'brasos_popup_register'], 20);
         
         add_action('wp_footer', [$this, 'showPopup'], 3);
         add_action('init', [$this, 'set_plugin_popup_cookie']);
-    }
-
-    public function add_type_attribute($tag, $handle, $src) {
-        // if not your script, do nothing and return original $tag
-        if ( 'init_js' !== $handle ) {
-            return $tag;
-        }
-        // change the script tag by adding type="module" and return it.
-        $tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
-        return $tag;
     }
 
     public function  brasos_popup_register($wp_customize)
@@ -60,6 +50,17 @@ class PopupCustom
         wp_enqueue_script(
             'init_js',
             plugin_dir_url(__DIR__) . 'public/js/index.js',
+            [],
+            '1.0.0',
+            true
+        );
+    }
+
+    public function uikit()
+    {
+        wp_enqueue_script(
+            'uikit',
+            'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.17/js/uikit.min.js',
             [],
             '1.0.0',
             true

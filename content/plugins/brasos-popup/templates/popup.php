@@ -2,13 +2,13 @@
 
 $popup = get_theme_mod('brasos_popup_customize');
 
-
 if (isset($_COOKIE['the_popup_plugin_cookie'])) {
   $default;
-  $img = null;
+  $img = '';
 } else {
   $img = !empty($popup) ? $popup : $default;
 }
+
 ?>
 
 <!-- POP UP -->

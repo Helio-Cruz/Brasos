@@ -420,7 +420,6 @@ function brasos_carousel_footer($wp_customize) {
         ]
     );
     $wp_customize->add_control($footer_image);
-    $wp_customize->add_control($footer_image_1);
     $wp_customize->add_control($footer_image_2);
     $wp_customize->add_control($footer_image_3);
     $wp_customize->add_control($footer_image_4);
