@@ -1,11 +1,9 @@
- 
- <?php
+<?php
 
 class BecomeMember
 {
     private $wpdb;
-    //  private $usersTable;
-    // private $usermetaTable;
+    private $brasosMembers;
 
     public function __construct()
     {
@@ -15,8 +13,11 @@ class BecomeMember
         $this->wpdb = $wpdb;
         $this->usersTable = $wpdb->prefix . 'users';
         $this->usermetaTable = $wpdb->prefix . 'usermeta';
+        $this->brasosMembers = $wpdb->prefix . 'brasos_members';
+        // $this->charset_collate = $wpdb->get_charset_collate();
 
-        // add_action('init', [$this, 'ajax_onFormSubmit'], 20);
+
+        add_action('init', [$this, 'createMembersTable'], 100);
 
         add_action('wp_enqueue_scripts', [$this, 'init_jsForm'], 20);
 
@@ -31,6 +32,21 @@ class BecomeMember
             add_action('init', [$this, 'exportCsv']);
         }
     }
+    public function createMembersTable()
+    {
+
+        $sql = "CREATE TABLE IF NOT EXISTS " . $this->brasosMembers . " (
+                `user_id` INT NOT NULL,
+                `full_name` VARCHAR(255) NOT NULL,
+                `phone` VARCHAR(255) NOT NULL,
+                `especiality` VARCHAR(255) NOT NULL,
+                `crm` VARCHAR(255)  NOT NULL,
+                `brasos_id` VARCHAR(255) NOT NULL,
+                PRIMARY KEY (user_id)
+            );";
+        $this->wpdb->query($sql);
+    }
+
 
     /**
      * Members Lists 
@@ -74,11 +90,17 @@ class BecomeMember
         );
     }
 
+
+
+
     /**
      * Members Form
      */
     public function ajax_onFormSubmit()
     {
+
+
+
         $error = '';
         $success = '';
 
@@ -105,9 +127,9 @@ class BecomeMember
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     $error = $email . 'Endereço de email invalido, favor tente de novo.';
                     echo '<div id="formMembers_error" class="uk-alert-danger" uk-alert>' .
-                    '<a class="uk-alert-close" uk-close></a>' .
-                    '<p>' . $error . '</p>' .
-                    '</div>';
+                        '<a class="uk-alert-close" uk-close></a>' .
+                        '<p>' . $error . '</p>' .
+                        '</div>';
                 } else {
                     // if email is valid, check if user is not already registered
                     $userExists = $this->checkRegisteredUser($email);
@@ -119,6 +141,7 @@ class BecomeMember
                             '<p>' . $error . '</p>' .
                             '</div>';
                     } else {
+                        //   $this->createMembersTable();
                         // if user is not registered & fields are ok
                         // add user to db
                         $this->wpdb->insert(
@@ -135,23 +158,44 @@ class BecomeMember
                         /* find the last ID created in wp_users */
                         $id = $this->getUserId($email);
 
+
+
                         //Join string MB0 to $id 
                         $userCustomId = 'MB' . $id;
 
-                      
 
-                            $this->wpdb->query("
+
+
+                        $this->wpdb->query("
                                 INSERT INTO $this->usermetaTable
                                     (user_id, meta_key, meta_value)
                                     VALUES
-                                    ('$id', 'wp_capabilities', 'a:1:{s:10:\"subscriber\";b:1;}'),
-                                    ('$id', 'full_name', '$fullname'),
-                                    ('$id', 'phone', '$phone'),
-                                    ('$id', 'especiality', '$especiality'),
-                                    ('$id', 'crm', '$crm'),
-                                    ('$id', 'brasos_id', '$userCustomId')
+                                    ('$id', 'wp_capabilities', 'a:1:{s:10:\"subscriber\";b:1;}')
                                 ");
-                       
+
+
+                        $this->wpdb->insert(
+                            $this->brasosMembers,
+                            [
+                                'user_id' => $id,
+                                'full_name' => $fullname,
+                                'phone' => $phone,
+                                'especiality' => $especiality,
+                                'crm' => $crm,
+                                'brasos_id' => $userCustomId
+
+                            ],
+                            [
+                                '%d',
+                                '%s',
+                                '%s',
+                                '%s',
+                                '%s',
+                                '%s'
+                            ]
+                        );
+
+
                         $success = 'Obrigado por se inscrever';
                         echo '<div id="formMembers_error" class="uk-alert-success" uk-alert>' .
                             '<a class="uk-alert-close" uk-close></a>' .
@@ -254,7 +298,7 @@ class BecomeMember
         // $sql = "SELECT u.ID, u.user_email, u.user_registered, um.user_id FROM  $userstable u JOIN  $usermetaTable um ON u.ID = um.user_id  ";
         //  $sql = "SELECT u.*, um.* FROM $userstable u, $usermetaTable um WHERE u.ID = um.user_id and um.meta_key IN ('full_name', 'phone', 'message')" ;
 
-        
+
         /*
        $sql = "SELECT 'u.ID' = 'um.user_id' FROM 
         $userstable u, $usermetaTable um  
@@ -313,6 +357,7 @@ class BecomeMember
 
     public function activate()
     {
+        $this->createMembersTable();
         flush_rewrite_rules();
     }
 
@@ -323,6 +368,5 @@ class BecomeMember
 }
 
 $becomeMember = new BecomeMember();
-
 register_activation_hook(__FILE__, [$becomeMember, 'activate']);
 register_deactivation_hook(__FILE__, [$becomeMember, 'deactivation']);

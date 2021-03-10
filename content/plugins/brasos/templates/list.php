@@ -68,64 +68,28 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
 
             global $wpdb; // access the database
 
-         
+
             $usersTable = $wpdb->prefix . 'users';
             $usermetaTable = $wpdb->prefix . 'usermeta';
+            $brasosMembers = $wpdb->prefix . 'brasos_members';
 
 
-            /*
-            $sql = "SELECT u.ID, um.user_id
-            FROM $usersTable u, $usermetaTable um
-            WHERE um.meta_key = 'wp_capabilities'
-            AND um.meta_value LIKE 'a:1:{s:10:\"subscriber\";b:1;}' ";
-        */
-
-            
             $sql = "SELECT u.ID, u.user_email, u.user_registered,
-                    (SELECT um.meta_value
-                    FROM   $usermetaTable um 
-                    WHERE um.user_id = u.ID
-                    AND um.meta_key = 'full_name') 
-                    AS full_name,
-                    (SELECT um.meta_value
-                    FROM   $usermetaTable um 
-                    WHERE um.user_id = u.ID
-                    AND um.meta_key = 'phone') 
-                    AS phone,
-                    (SELECT um.meta_value
-                    FROM   $usermetaTable um 
-                    WHERE um.user_id = u.ID
-                    AND um.meta_key = 'especiality') 
-                    AS especiality,
-                    (SELECT um.meta_value
-                    FROM   $usermetaTable um 
-                    WHERE um.user_id = u.ID
-                    AND um.meta_key = 'crm') 
-                    AS crm,
-                    (SELECT um.meta_value
-                    FROM   $usermetaTable um 
-                    WHERE um.user_id = u.ID
-                    AND um.meta_key = 'brasos_id') 
-                    AS brasos_id
-            FROM $usersTable  u
-            INNER JOIN $usermetaTable um 
-            ON  um.user_id  = u.ID
-            WHERE um.meta_key = 'wp_capabilities'
-            AND um.meta_value LIKE 'a:1:{s:10:\"subscriber\";b:1;}' ";
-            
-            /*
-            $sql = "SELECT  *
-            FROM $usermetaTable um 
-            INNER JOIN  $usersTable  u
-            ON um.user_id  = u.id 
-            WHERE um.meta_key = 'wp_capabilities'
-            AND um.meta_value LIKE 'a:1:{s:10:\"subscriber\";b:1;}' ";*/
-        
+                    (SELECT bm.full_name FROM   $brasosMembers bm WHERE bm.user_id = u.ID  AND bm.full_name = full_name)  AS full_name,   
+                    (SELECT bm.phone  FROM   $brasosMembers bm WHERE bm.user_id = u.ID  AND bm.phone = phone)  AS phone,        
+                    (SELECT bm.especiality  FROM   $brasosMembers bm WHERE bm.user_id = u.ID  AND bm.especiality = especiality)  AS especiality,
+                    (SELECT bm.crm  FROM   $brasosMembers bm WHERE bm.user_id = u.ID  AND bm.crm = crm)  AS crm,
+                    (SELECT bm.brasos_id  FROM   $brasosMembers bm WHERE bm.user_id = u.ID  AND bm.brasos_id = brasos_id)  AS brasos_id
 
-            //   $sql = "SELECT id FROM  {$this->userstable} WHERE user_email = %s";
-            //var_dump($sql);
+                    FROM $usersTable  u
 
-            //   $sql = "SELECT * from $this->usermetaTable WHERE meta_key = 'wp_capabilities' AND meta_value = 'a:1:{s:10:\"subscriber\";b:1;}'";
+                    INNER JOIN $usermetaTable um 
+
+                    ON  um.user_id  = u.ID
+
+                    WHERE um.meta_key = 'wp_capabilities'
+                    
+                    AND um.meta_value LIKE 'a:1:{s:10:\"subscriber\";b:1;}'";
 
             $getData = $wpdb->get_results($sql);
 
@@ -134,8 +98,8 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
                 echo
 
                 ' <tr>' .
-                   '<td class="has-row-actions column-primary">' . '<b>'  . ($user->full_name) . '</b>' .
-                 //   '<td class="has-row-actions column-primary">' . '<b>'  . $user['full_name'] . '</b>' .
+                    '<td class="has-row-actions column-primary">' . '<b>'  . ($user->full_name) . '</b>' .
+                    //   '<td class="has-row-actions column-primary">' . '<b>'  . $user['full_name'] . '</b>' .
                     ' <button type="button" class="toggle-row"><span class="screen-reader-text">Mostrar mais detalhes</span></button>' . '</td>',
                 '<td>' . esc_html($user->brasos_id) . '</td>',
                 '<td>'   . ($user->user_email) . '</td>',
