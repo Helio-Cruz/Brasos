@@ -74,22 +74,13 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
             $brasosMembers = $wpdb->prefix . 'brasos_members';
 
 
-            $sql = "SELECT u.ID, u.user_email, u.user_registered,
-                    (SELECT bm.full_name FROM   $brasosMembers bm WHERE bm.user_id = u.ID  AND bm.full_name = full_name)  AS full_name,   
-                    (SELECT bm.phone  FROM   $brasosMembers bm WHERE bm.user_id = u.ID  AND bm.phone = phone)  AS phone,        
-                    (SELECT bm.especiality  FROM   $brasosMembers bm WHERE bm.user_id = u.ID  AND bm.especiality = especiality)  AS especiality,
-                    (SELECT bm.crm  FROM   $brasosMembers bm WHERE bm.user_id = u.ID  AND bm.crm = crm)  AS crm,
-                    (SELECT bm.brasos_id  FROM   $brasosMembers bm WHERE bm.user_id = u.ID  AND bm.brasos_id = brasos_id)  AS brasos_id
+            $sql = "SELECT u.ID, u.user_email, u.user_registered, bm.full_name, bm.phone, bm.especiality, bm.crm, bm.brasos_id  
+             
+            FROM $usersTable  u,  $brasosMembers bm          
+    
+            WHERE u.ID  = bm.user_id
 
-                    FROM $usersTable  u
-
-                    INNER JOIN $usermetaTable um 
-
-                    ON  um.user_id  = u.ID
-
-                    WHERE um.meta_key = 'wp_capabilities'
-                    
-                    AND um.meta_value LIKE 'a:1:{s:10:\"subscriber\";b:1;}'";
+            ORDER BY user_id ASC";
 
             $getData = $wpdb->get_results($sql);
 
@@ -99,7 +90,6 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
 
                 ' <tr>' .
                     '<td class="has-row-actions column-primary">' . '<b>'  . ($user->full_name) . '</b>' .
-                    //   '<td class="has-row-actions column-primary">' . '<b>'  . $user['full_name'] . '</b>' .
                     ' <button type="button" class="toggle-row"><span class="screen-reader-text">Mostrar mais detalhes</span></button>' . '</td>',
                 '<td>' . esc_html($user->brasos_id) . '</td>',
                 '<td>'   . ($user->user_email) . '</td>',

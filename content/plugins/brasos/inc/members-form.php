@@ -164,8 +164,6 @@ class BecomeMember
                         $userCustomId = 'MB' . $id;
 
 
-
-
                         $this->wpdb->query("
                                 INSERT INTO $this->usermetaTable
                                     (user_id, meta_key, meta_value)
@@ -205,18 +203,19 @@ class BecomeMember
                         /**
                          * Email sending confirmation
                          */
-                        // $to = $email;
-                        // $subject = "Confirmaçao de inscriçao";
-                        // $headers = [
-                        //     'Content-Type: text/html; charset=UTF-8',
-                        //     'From: noreply@brasos.com.br'
-                        // ];
-                        // $body = 'Bem vindo a Brasos,' . "\n";
-                        // $body .= 'Obrigado por se inscrever como membro brasos.' . "\n\n";
-                        // $body .= '---------------' . "\n\n";
-                        // $body .= 'Este email é automatico, Por favor nao responder.' . "\n";
+                        $to = $email;
+                        $subject = "Confirmaçao de inscriçao";
+                        $headers = [
+                            'Content-Type: text/html; charset=UTF-8',
+                            'From: noreply@brasos.com.br'
+                        ];
+                        $body = 'Bem vindo a Brasos,' . "\n";
+                        $body .= 'Obrigado por tornar-se membro da Brasos !' . "\n\n";
+                        $body .= 'Retornaremos em breve,' . "\n\n";
+                        $body .= '---------------' . "\n\n";
+                        $body .= 'Este email é automático, Por favor não responder.' . "\n";
 
-                        // wp_mail($to, $subject, $body, $headers);
+                        wp_mail($to, $subject, $body, $headers);
                     }
                 }
             } else {
