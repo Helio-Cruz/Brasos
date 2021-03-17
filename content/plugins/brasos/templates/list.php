@@ -70,7 +70,7 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
 
 
             $usersTable = $wpdb->prefix . 'users';
-            $usermetaTable = $wpdb->prefix . 'usermeta';
+            //$usermetaTable = $wpdb->prefix . 'usermeta';
             $brasosMembers = $wpdb->prefix . 'brasos_members';
 
 

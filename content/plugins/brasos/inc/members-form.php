@@ -164,14 +164,29 @@ class BecomeMember
                         $userCustomId = 'MB' . $id;
 
 
+                        /*
                         $this->wpdb->query("
                                 INSERT INTO $this->usermetaTable
                                     (user_id, meta_key, meta_value)
                                     VALUES
                                     ('$id', 'wp_capabilities', 'a:1:{s:10:\"subscriber\";b:1;}')
                                 ");
+                        */
 
-
+                        $this->wpdb->insert(
+                            $this->usermetaTable,
+                            [
+                                'user_id' => $id,
+                                'meta_key' => 'wp_capabilities',
+                                'meta_value' => 'a:1:{s:10:\"subscriber\";b:1;}'
+                            ],
+                            [
+                                '%d',
+                                '%s',
+                                '%s',
+                            ]
+                        );
+                        /* insert espaces strings atumatically */
                         $this->wpdb->insert(
                             $this->brasosMembers,
                             [
