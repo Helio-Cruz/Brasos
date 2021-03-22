@@ -224,11 +224,11 @@ class BecomeMember
                             'Content-Type: text/html; charset=UTF-8',
                             'From: noreply@brasos.com.br'
                         ];
-                        $body = 'Bem vindo a Brasos,' . "\n";
-                        $body .= 'Obrigado por tornar-se membro da Brasos !' . "\n\n";
-                        $body .= 'Retornaremos em breve,' . "\n\n";
-                        $body .= '---------------' . "\n\n";
-                        $body .= 'Este email é automático, Por favor não responder.' . "\n";
+                        $body = "Bem vindo a Brasos $fullname. <br>"
+                        . "Obrigado por tornar-se membro da Brasos !<br>"
+                        ."Retornaremos em breve,<br>"
+                        . "---------------<br>"
+                        . "Este email é automático, Por favor não responder.";
 
                         wp_mail($to, $subject, $body, $headers);
                     }
@@ -295,7 +295,6 @@ class BecomeMember
         $usermetaTable = $this->usermetaTable;
 
         $domain = $_SERVER['SERVER_NAME'];
-        // $filename = $this->usersTable . $domain . '-' . time() . '.csv';
         $filename =  $domain . '-' . time() . '.csv';
 
         $header_row = array(
@@ -309,36 +308,6 @@ class BecomeMember
 
         );
         $data_rows = array();
-        // $sql = "SELECT u.ID, u.user_email, u.user_registered, um.user_id FROM  $userstable u JOIN  $usermetaTable um ON u.ID = um.user_id  ";
-        //  $sql = "SELECT u.*, um.* FROM $userstable u, $usermetaTable um WHERE u.ID = um.user_id and um.meta_key IN ('full_name', 'phone', 'message')" ;
-
-
-        /*
-       $sql = "SELECT 'u.ID' = 'um.user_id' FROM 
-        $userstable u, $usermetaTable um  
-        WHERE 'u.ID '= 'um.user_id'";
-        
-        
-       // $sql = "SELECT * FROM  $userstable ";
-       
-       
-        $sql = "SELECT * from $this->usermetaTable WHERE meta_key = 'wp_capabilities' AND meta_value = 'a:1:{s:10:\"subscriber\";b:1;}'";
-        $getData = $this->wpdb->get_users( $sql, 'ARRAY_A'  );
-        foreach ($getData as $user) {
-            $row = array(
-                $user['user_email'],
-                $user['full_name'],
-                $user['phone'],
-                $user['especiality'],
-                $user['crm'],
-                $user['other_professions'],
-                $user['message'],
-                $user['user_registered'],
-            );
-            $data_rows[] = $row;
-        }
-        
-*/
 
         $args = array(
             'role'    => 'subscriber',
