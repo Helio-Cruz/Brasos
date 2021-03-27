@@ -291,9 +291,6 @@ class BecomeMember
         }
 
         ob_start();
-        $userstable = $this->usersTable;
-        $usermetaTable = $this->usermetaTable;
-
         $domain = $_SERVER['SERVER_NAME'];
         $filename =  $domain . '-' . time() . '.csv';
 
@@ -307,13 +304,21 @@ class BecomeMember
             'Data de registro',
 
         );
+
+        global $wpdb;
+        $sql = "SELECT u.ID, u.user_email, u.user_registered, bm.full_name, bm.phone, bm.especiality, bm.crm, bm.brasos_id  
+             
+        FROM   $this->usersTable  u,   $this->brasosMembers bm          
+
+        WHERE u.ID  = bm.user_id
+
+        ORDER BY user_id ASC";
+
+
         $data_rows = array();
 
-        $args = array(
-            'role'    => 'subscriber',
-            'order'   => 'DESC'
-        );
-        $getUsers = get_users($args);
+       
+        $getUsers = $wpdb->get_results($sql);
         foreach ($getUsers as $user) {
             $row = array(
                 $user->user_email,
