@@ -7,10 +7,10 @@
 
 <!-- NAVIGATION -->
 <div class="uk-subnav navbar-events">
-  <?php 
-      $link = get_field('inscreva-se');
-      if ($link) :
-    ?>
+  <?php
+  $link = get_field('inscreva-se');
+  if ($link) :
+  ?>
     <a class="normal-link normal-link-one" target="_blank" href="<?php echo esc_url($link);  ?>">INSCREVA-SE</a>
   <?php endif; ?>
 </div>
@@ -19,15 +19,18 @@
     <a href="#">INFORMAÇÕES GERAIS</a>
   </li>
   <li>
-    <a href="#">PROGRAMAÇÃO</a>
+  <?php  echo (have_rows('programacao')) ? '<a href="#">PROGRAMAÇÃO</a>' : null ;  ?>
   </li>
   <li>
-    <a href="#">PALESTRANTES CONVIDADOS</a>
+    <?php  echo (have_rows('palestrantes_nacionais')) && (have_rows('palestrantes_internacionais'))  ? '<a href="#">PALESTRANTES CONVIDADOS</a>' : null ;  ?>
   </li>
 </ul>
-<div class="uk-subnav navbar-events">
-  <a class="normal-link" href="<?php echo site_url('/certificados/'); ?>">CERTIFICADOS</a>
+<!--
+  <div class="uk-subnav navbar-events">
+  <a class="normal-link" href="<//?php echo site_url('/certificados/'); ?>">CERTIFICADOS</a>
 </div>
+-->
+
 
 <?php
 $current_page_id = get_the_ID();
