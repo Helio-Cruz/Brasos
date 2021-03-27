@@ -7,11 +7,13 @@ $slide5 = get_theme_mod('brasos_bg_slide_5', '');
 $slide6 = get_theme_mod('brasos_bg_slide_6', '');
 ?>
 <!-- CAROUSEL -->
-<div class="carousel-images uk-position-relative uk-light" tabindex="-1" uk-slideshow="autoplay:true; autoplay-interval:7000; height:100; max-height:600; animation: fade">
+<div class="carousel-images uk-position-relative uk-light" tabindex="-1" uk-slideshow="autoplay:true; autoplay-interval:7000; height:100; max-height:600; animation: fade; pause-on-hover: false">
   <ul class="uk-slideshow-items">
     <?php if ($slide1 != '') : ?>
       <li>
-        <img src="<?= $slide1; ?>" alt="">
+        <a href="https://app.virtualieventos.com.br/cbmfr21" target="_blank">
+          <img src="<?= $slide1; ?>" alt="">
+        </a>
       </li>
     <?php endif; ?>
     <?php if ($slide2 != '') : ?>
