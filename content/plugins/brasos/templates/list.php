@@ -70,7 +70,6 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
 
 
             $usersTable = $wpdb->prefix . 'users';
-            //$usermetaTable = $wpdb->prefix . 'usermeta';
             $brasosMembers = $wpdb->prefix . 'brasos_members';
 
 
@@ -100,37 +99,7 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
                 '<td>'   . '</td>',
                 '<td>'   . '</td>',
                 '</tr>';
-                //var_dump($user);
             }
-
-            /*
-            
-            $args = array(
-                'role'    => 'subscriber',
-                'orderby' => 'id',
-                'order'   => 'ASC',
-
-            );
-            //   $usermeta = array();
-            // $userData = get_user_meta($user->ID);
-            $users = get_users($args);
-            // Array of WP_User objects.
-            foreach ($users as $user) {
-                echo
-                    ' <tr>' .
-                        '<td class="has-row-actions column-primary">' . '<b>'  . ($user->full_name) . '</b>' .
-                        ' <button type="button" class="toggle-row"><span class="screen-reader-text">Mostrar mais detalhes</span></button>' . '</td>',
-                    '<td>' . esc_html($user->brasos_id) . '</td>',
-                    '<td>'   . ($user->user_email) . '</td>',
-                    '<td>'   . ($user->phone) . '</td>',
-                    '<td>'   . ($user->especiality) . '</td>',
-                    '<td>'   . ($user->crm) . '</td>',
-                    '<td>'   . ($user->user_registered) . '</td>',
-                    '<td>'   . '</td>',
-                    '<td>'   . '</td>',
-                        '</tr>';
-            }*/
-
             ?>
         </tbody>
     </table>
