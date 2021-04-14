@@ -3,7 +3,6 @@
 class BecomeMember
 {
     private $wpdb;
-    private $brasosMembers;
 
     public function __construct()
     {
@@ -14,7 +13,6 @@ class BecomeMember
         $this->usersTable = $wpdb->prefix . 'users';
         $this->usermetaTable = $wpdb->prefix . 'usermeta';
         $this->brasosMembers = $wpdb->prefix . 'brasos_members';
-        // $this->charset_collate = $wpdb->get_charset_collate();
 
 
         add_action('init', [$this, 'createMembersTable'], 100);
@@ -99,8 +97,6 @@ class BecomeMember
     public function ajax_onFormSubmit()
     {
 
-
-
         $error = '';
         $success = '';
 
@@ -141,7 +137,6 @@ class BecomeMember
                             '<p>' . $error . '</p>' .
                             '</div>';
                     } else {
-                        //   $this->createMembersTable();
                         // if user is not registered & fields are ok
                         // add user to db
                         $this->wpdb->insert(
@@ -163,15 +158,6 @@ class BecomeMember
                         //Join string MB0 to $id 
                         $userCustomId = 'MB' . $id;
 
-
-                        /*
-                        $this->wpdb->query("
-                                INSERT INTO $this->usermetaTable
-                                    (user_id, meta_key, meta_value)
-                                    VALUES
-                                    ('$id', 'wp_capabilities', 'a:1:{s:10:\"subscriber\";b:1;}')
-                                ");
-                        */
 
                         $this->wpdb->insert(
                             $this->usermetaTable,
@@ -292,7 +278,7 @@ class BecomeMember
 
         ob_start();
         $domain = $_SERVER['SERVER_NAME'];
-        $filename =  $domain . '-' . time() . '.csv';
+        $filename =  $domain . '-' . 'memberslist' . '.csv';
 
         $header_row = array(
             'Email',
@@ -306,6 +292,7 @@ class BecomeMember
         );
 
         global $wpdb;
+
         $sql = "SELECT u.ID, u.user_email, u.user_registered, bm.full_name, bm.phone, bm.especiality, bm.crm, bm.brasos_id  
              
         FROM   $this->usersTable  u,   $this->brasosMembers bm          
@@ -346,15 +333,9 @@ class BecomeMember
     public function activate()
     {
         $this->createMembersTable();
-        flush_rewrite_rules();
     }
 
-    public function deactivation()
-    {
-        flush_rewrite_rules();
-    }
 }
 
 $becomeMember = new BecomeMember();
 register_activation_hook(__FILE__, [$becomeMember, 'activate']);
-register_deactivation_hook(__FILE__, [$becomeMember, 'deactivation']);

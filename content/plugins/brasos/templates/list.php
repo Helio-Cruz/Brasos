@@ -2,14 +2,6 @@
 
 echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
 ?>
-<div class="search">
-    <p class="search-box">
-        <label class="screen-reader-text" for="search-search-input">Search:</label>
-        <input type="search" id="search-search-input" name="s" value="">
-        <input type="submit" id="search-submit" class="button" value="Search">
-    </p>
-
-</div>
 <div class="tablenav top">
     <div class="alignleft">
         <a href="<?php echo admin_url('admin.php?page=myplugin-settings-page') ?>&action=download_csv&_wpnonce=<?php echo wp_create_nonce('download_csv') ?>" style="float:right; margin:0;" class="button"><?php _e('Export CSV', 'my-plugin-slug'); ?>

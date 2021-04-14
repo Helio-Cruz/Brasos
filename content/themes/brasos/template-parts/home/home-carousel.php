@@ -11,7 +11,7 @@ $slide6 = get_theme_mod('brasos_bg_slide_6', '');
   <ul class="uk-slideshow-items">
     <?php if ($slide1 != '') : ?>
       <li>
-        <a href="https://app.virtualieventos.com.br/cbmfr21" target="_blank">
+        <a href="" target="_blank">
           <img src="<?= $slide1; ?>" alt="">
         </a>
       </li>

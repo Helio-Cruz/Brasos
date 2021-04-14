@@ -9,9 +9,6 @@ Version: 0.1
  
  if (!defined('WPINC')) {die();}
 
-
-
-
 require plugin_dir_path(__FILE__) . 'inc/customize-popup.php';
 
 
