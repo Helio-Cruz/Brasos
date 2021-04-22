@@ -4,6 +4,8 @@
 class PopupCustom
 {
 
+
+
     public function __construct()
     {
 
@@ -11,13 +13,14 @@ class PopupCustom
         add_action('wp_enqueue_scripts', [$this, 'uikit'], 20);
 
         add_action('customize_register', [$this, 'brasos_popup_register'], 20);
-        
+
         add_action('wp_footer', [$this, 'showPopup'], 3);
         add_action('init', [$this, 'set_plugin_popup_cookie']);
     }
 
     public function  brasos_popup_register($wp_customize)
     {
+        
         $wp_customize->add_panel('brasos_popup_panel', [
             'title' => 'Brasos Popup',
             'description' => 'Brasos Painel Popup - Gestao',
@@ -28,6 +31,7 @@ class PopupCustom
             'title' => 'Brasos Popup',
             'panel' => 'brasos_popup_panel',
         ]);
+
 
         $wp_customize->add_setting('brasos_popup_customize', []);
 
@@ -44,7 +48,8 @@ class PopupCustom
         $wp_customize->add_control($popup_image);
     }
 
-    
+
+
     public function init_js()
     {
         wp_enqueue_script(
@@ -84,20 +89,6 @@ class PopupCustom
     {
         require __DIR__ . './../templates/popup.php';
     }
-
-    public function activate()
-    {
-        flush_rewrite_rules();
-    }
-
-    public function deactivation()
-    {
-
-        flush_rewrite_rules();
-    }
 }
 
 $popupCustom = new PopupCustom();
-
-register_activation_hook(__FILE__, [$popupCustom, 'activate']);
-register_deactivation_hook(__FILE__, [$popupCustom, 'deactivation']);

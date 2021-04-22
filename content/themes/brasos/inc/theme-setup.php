@@ -62,7 +62,9 @@ if (!function_exists('brasos_setup')) :
         );
     };
     
+    
 */
+/*
     function my_login_stylesheet()
     { ?>
         <style type="text/css">
@@ -134,7 +136,7 @@ if (!function_exists('brasos_setup')) :
         </style>
 <?php }
     add_action('login_enqueue_scripts', 'my_login_stylesheet');
-
+*/
 
 
 endif;

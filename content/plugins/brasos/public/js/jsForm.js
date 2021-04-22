@@ -1,5 +1,7 @@
-jQuery(function ($) { 
-  let formMembers = document.querySelector('#formMembers');
+jQuery(document).ready(function ($) {
+
+
+  let formMembers = document.getElementById('formMembers');
   if (formMembers) {
     formMembers.addEventListener('submit', (event) => {
       event.preventDefault();
@@ -10,15 +12,17 @@ jQuery(function ($) {
       const especiality = $('input[name="especiality"]').val();
       const crm = $('input[name="crm"]').val();
       const area = $('#formMembers .uk-active a').text();
+      displayMessage.show();
 
       function clearForm() {
-        $('input[name="full_name"]').val('');
-        $('input[name="email"]').val('');
-        $('input[name="phone"]').val('');
-        $('input[name="especiality"]').val('');
-        $('input[name="crm"]').val('');
+        $('input[name="full_name"]').val();
+        $('input[name="email"]').val();
+        $('input[name="phone"]').val();
+        $('input[name="especiality"]').val();
+        $('input[name="crm"]').val();
         $('#formMembers_output').hide();
       }
+
 
       $.ajax({
         type: 'POST',
@@ -32,7 +36,7 @@ jQuery(function ($) {
           crm: crm,
           area: area,
           nonce: ajax_formMembers.nonce,
-          action: 'ajax_onFormSubmit',
+          action: 'ajax_onFormSubmit'
         },
         success: function (data) {
           displayMessage.html(data);
@@ -45,4 +49,6 @@ jQuery(function ($) {
 
     });
   }
+
+
 });

@@ -20,7 +20,7 @@ if (!function_exists('brasos_scripts')) :
             '1.1.0',
             true
         );
-
+/*
         wp_localize_script(
             'brasos-js',
             'ajax_login_object',
@@ -29,6 +29,7 @@ if (!function_exists('brasos_scripts')) :
                 'redirecturl' => home_url('/membros')
             )
         );
+        */
     }
 
 endif;
@@ -58,7 +59,7 @@ add_action('login_enqueue_scripts', 'my_login_logo');
 
 
 
-
+/*
 
 function my_register_stylesheet()
 {
@@ -76,7 +77,7 @@ function my_register_stylesheet()
 }
 add_action('login_enqueue_scripts', 'my_register_stylesheet');
 
-
+*/
 
 
 
@@ -84,6 +85,7 @@ add_action('login_enqueue_scripts', 'my_register_stylesheet');
 
 // REDIRECT TO HOME PAGE IF ASSINANTE ACCESS DASHBOARD
 // ASSINANTES = SUBSCRIBERS
+/*
 function dashboard_redirect()
 {
     if (is_admin() && !defined('DOING_AJAX') && current_user_can('subscriber')) {
@@ -92,11 +94,12 @@ function dashboard_redirect()
     }
 }
 add_action('init', 'dashboard_redirect');
-
+*/
 
 
 // remove SITE NAME from the admin bar
 // = no access to the dashboard as subscriber
+/*
 function ebd_admin_bar_render()
 {
     if (!is_admin() && current_user_can('subscriber')) {
@@ -106,6 +109,8 @@ function ebd_admin_bar_render()
     }
 }
 add_action('wp_before_admin_bar_render', 'ebd_admin_bar_render');
+*/
+/*
 
 function override_admin_bar_css()
 {
@@ -123,16 +128,17 @@ function override_admin_bar_css()
 add_action('admin_head', 'override_admin_bar_css');
 // on frontend area
 add_action('wp_head', 'override_admin_bar_css');
-
+*/
 
 
 /* not sending email registration */
-remove_action('register_new_user', 'wp_send_new_user_notifications');
+// remove_action('register_new_user', 'wp_send_new_user_notifications');
 
 
 
 
 /* Remove admin bar for subscribers */
+/*
 if (!current_user_can('manage_options')) {
     show_admin_bar(false);
 }
@@ -140,3 +146,4 @@ if (!current_user_can('manage_options')) {
 
 
 add_filter('authenticate', 'verify_username_password', 1, 3);
+*/

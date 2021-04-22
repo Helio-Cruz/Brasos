@@ -8,6 +8,7 @@ Template Name: Area de Membros
 
 <?php
 
+/*
 $current_user = wp_get_current_user();
 
 if ( is_page('membros') && !is_user_logged_in() ) {

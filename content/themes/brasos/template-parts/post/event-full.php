@@ -224,7 +224,7 @@
 
   <!-- INFORMAÇOES DE INSCRIÇAO  -->
   <!-- <li>
-    <!-- PRICES INFOS -->
+    <!- PRICES INFOS -->
   <!--
     <//?php if (have_rows('valores')) : ?>
       <div class="blog__content inscriptions__content">
@@ -286,7 +286,7 @@
             <a class="uk-margin-auto uk-margin-auto-vertical normal-button special-button margin-button" href="#modal-form" uk-toggle><//?php the_title(); ?></a>
           </div>
         </div>
-        <!-- FORM BUTTON  
+        <!- FORM BUTTON  
 
         <div id="modal-form" class="uk-flex-top" uk-modal>
           <div class="uk-modal-dialog uk-margin-auto-vertical contact-form contact-form-inscription">

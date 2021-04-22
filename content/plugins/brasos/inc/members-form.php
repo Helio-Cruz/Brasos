@@ -19,6 +19,7 @@ class BecomeMember
 
         add_action('wp_enqueue_scripts', [$this, 'init_jsForm'], 20);
 
+
         add_action('wp_ajax_nopriv_ajax_onFormSubmit', [$this, 'ajax_onFormSubmit'], 20);
         add_action('wp_ajax_ajax_onFormSubmit', [$this, 'ajax_onFormSubmit'], 20);
 
@@ -108,13 +109,13 @@ class BecomeMember
             echo '<div id="formMembers_error" class="uk-text-danger">' . $error . '</div>';
             exit;
         } else {
-            $fullname =  $this->wpdb->escape(trim($_POST['full_name']));
+            $fullname =  esc_sql(trim($_POST['full_name']));
             // https://www.w3schools.com/php/filter_validate_email.asp
             // Remove all illegal characters from email
-            $email =  $this->wpdb->escape(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL));
-            $phone =  $this->wpdb->escape(trim($_POST['phone']));
-            $especiality =  $this->wpdb->escape(trim($_POST['especiality']));
-            $crm =  $this->wpdb->escape(trim($_POST['crm']));
+            $email = esc_sql(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL));
+            $phone = esc_sql(trim($_POST['phone']));
+            $especiality = esc_sql(trim($_POST['especiality']));
+            $crm =  esc_sql(trim($_POST['crm']));
 
             // champs obligatoires
             // si nom et email sont complétés "et" (spécialité + crm "ou" profession)
@@ -211,10 +212,10 @@ class BecomeMember
                             'From: noreply@brasos.com.br'
                         ];
                         $body = "Bem vindo a Brasos $fullname. <br>"
-                        . "Obrigado por tornar-se membro da Brasos !<br>"
-                        ."Retornaremos em breve,<br>"
-                        . "---------------<br>"
-                        . "Este email é automático, Por favor não responder.";
+                            . "Obrigado por tornar-se membro da Brasos !<br>"
+                            . "Retornaremos em breve,<br>"
+                            . "---------------<br>"
+                            . "Este email é automático, Por favor não responder.";
 
                         wp_mail($to, $subject, $body, $headers);
                     }
@@ -304,7 +305,7 @@ class BecomeMember
 
         $data_rows = array();
 
-       
+
         $getUsers = $wpdb->get_results($sql);
         foreach ($getUsers as $user) {
             $row = array(
@@ -334,7 +335,6 @@ class BecomeMember
     {
         $this->createMembersTable();
     }
-
 }
 
 $becomeMember = new BecomeMember();

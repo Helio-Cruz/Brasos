@@ -1,5 +1,5 @@
 <?php
-
+/*
 add_action('wp_ajax_nopriv_login_member', 'login_member');
 add_action('wp_ajax_login_member', 'login_member');
 
@@ -37,7 +37,7 @@ function login_member()
             echo "<span style='color:#FF0000'>Invalid username or password. Please try again!</span>";
             
         }*/
-
+/*
             $user_signon = wp_signon($login_data, false);
 
             if (is_wp_error($user_signon)) {
@@ -50,3 +50,4 @@ function login_member()
 
     wp_die();
 }
+*/

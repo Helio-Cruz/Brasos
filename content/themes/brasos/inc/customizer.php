@@ -1,5 +1,5 @@
+ <?php
  
-<?php
 require('customizer/brasos_home_images.php');
 require('customizer/brasos_banner_textos.php');
 require('customizer/brasos_carousel_footer.php');

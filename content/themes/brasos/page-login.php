@@ -1,6 +1,6 @@
-
-    <!-- This is the modal -->
-<div id="my-id" uk-modal>
+<!-- This is the modal -->
+<!--
+        <div id="my-id" uk-modal>
     <div class="uk-modal-dialog uk-modal-body page-login">
         <p>Área exclusiva para Membros</p>
         <div id="form_output"></div>
@@ -17,10 +17,12 @@
             <p class="login-submit">
                 <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="Entrar">
             </p>
-            <?php wp_nonce_field('ajax-login-nonce', 'security'); ?>
+            <//?php wp_nonce_field('ajax-login-nonce', 'security'); ?>
         </form>
     </div>
 </div>
+    -->
+
 
 
 <?php
