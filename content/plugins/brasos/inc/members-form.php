@@ -294,20 +294,20 @@ class BecomeMember
 
         global $wpdb;
 
-        $sql = "SELECT u.ID, u.user_email, u.user_registered, bm.full_name, bm.phone, bm.especiality, bm.crm, bm.brasos_id  
-             
-        FROM   $this->usersTable  u,   $this->brasosMembers bm          
 
-        WHERE u.ID  = bm.user_id
-
-        ORDER BY user_id ASC";
-
+        $sql = (
+            "
+              SELECT * $this->usersTable   u,  $this->usersTable  bm       
+              WHERE u.ID = bm.user_id
+              ORDER BY user_id ASC
+            "
+          );
 
         $data_rows = array();
 
 
         $getUsers = $wpdb->get_results($sql);
-        
+
         foreach ($getUsers as $user) {
             $row = array(
                 $user->user_email,

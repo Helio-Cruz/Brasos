@@ -58,7 +58,7 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
 
             <?php
 
-            /*
+
             function getData()
             {
                 global $wpdb; // access the database
@@ -66,16 +66,13 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
                 $usersTable = $wpdb->prefix . 'users';
                 $brasosMembers = $wpdb->prefix . 'brasos_members';
 
-                $sql = $wpdb->prepare(
-            
-                "SELECT u.ID, u.user_email, u.user_registered, bm.full_name, bm.phone, bm.especiality, bm.crm, bm.brasos_id  
-                    
-                    FROM $usersTable  u,  $brasosMembers bm          
-            
-                    WHERE u.ID  = bm.user_id
-
-                    ORDER BY user_id ASC", ARRAY_A
-
+                $sql = (
+                 "
+                 SELECT *
+                    FROM $usersTable  u,  $brasosMembers bm       
+                    WHERE u.ID = bm.user_id
+                    ORDER BY user_id ASC
+                 "
                 );
 
                 return $wpdb->get_results($sql);
@@ -83,28 +80,6 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
 
             $getData = getData();
 
-*/
-
-
-
-            global $wpdb; // access the database
-
-
-            $usersTable = $wpdb->prefix . 'users';
-            $brasosMembers = $wpdb->prefix . 'brasos_members';
-
-
-            $sql = "SELECT * 
-            
-             FROM $usersTable  u,  $brasosMembers bm          
-    
-            WHERE u.ID  = bm.user_id
-
-            ORDER BY user_id ASC";
-         
-
-            $getData = $wpdb->get_results($sql);
-   
             foreach ($getData as $user) {
 
                 echo
