@@ -109,7 +109,7 @@ class BecomeMember
             echo '<div id="formMembers_error" class="uk-text-danger">' . $error . '</div>';
             exit;
         } else {
-            $fullname =  esc_sql(trim($_POST['full_name']));
+            $fullname =  $this->wpdb->esc_sql(trim($_POST['full_name']));
             // https://www.w3schools.com/php/filter_validate_email.asp
             // Remove all illegal characters from email
             $email = esc_sql(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL));
@@ -307,6 +307,7 @@ class BecomeMember
 
 
         $getUsers = $wpdb->get_results($sql);
+        
         foreach ($getUsers as $user) {
             $row = array(
                 $user->user_email,
