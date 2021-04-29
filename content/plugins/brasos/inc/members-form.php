@@ -3,11 +3,12 @@
 class BecomeMember
 {
     private $wpdb;
+ 
 
     public function __construct()
     {
 
-        global $wpdb; // access the database
+        global $wpdb; 
 
         $this->wpdb = $wpdb;
         $this->usersTable = $wpdb->prefix . 'users';
@@ -109,7 +110,7 @@ class BecomeMember
             echo '<div id="formMembers_error" class="uk-text-danger">' . $error . '</div>';
             exit;
         } else {
-            $fullname =  $this->wpdb->esc_sql(trim($_POST['full_name']));
+            $fullname = esc_sql(trim($_POST['full_name']));
             // https://www.w3schools.com/php/filter_validate_email.asp
             // Remove all illegal characters from email
             $email = esc_sql(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL));
@@ -228,7 +229,7 @@ class BecomeMember
                     '</div>';
             }
         }
-        wp_die(); // terminate immediately and return a proper response /!\ required !
+        wp_die();  
     }
 
     public function checkRegisteredUser($email)
@@ -295,16 +296,12 @@ class BecomeMember
         global $wpdb;
 
 
-        $sql = (
-            "
-              SELECT * $this->usersTable   u,  $this->usersTable  bm       
+        $sql = "SELECT *        
+              FROM $this->usersTable   u, $this->brasosMembers bm    
               WHERE u.ID = bm.user_id
-              ORDER BY user_id ASC
-            "
-          );
+              ORDER BY user_id ASC";
 
         $data_rows = array();
-
 
         $getUsers = $wpdb->get_results($sql);
 
