@@ -3,9 +3,6 @@
 
 class PopupCustom
 {
-
-
-
     public function __construct()
     {
 
@@ -92,3 +89,4 @@ class PopupCustom
 }
 
 $popupCustom = new PopupCustom();
+register_activation_hook(__FILE__, [$popupCustom , 'activate']);

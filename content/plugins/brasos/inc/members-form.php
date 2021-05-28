@@ -4,7 +4,6 @@ class BecomeMember
 {
     private $wpdb;
  
-
     public function __construct()
     {
 

@@ -13,7 +13,8 @@
   }
   @include TwoK {
    // max-height: unset;
-    max-width: 1600px;
+    max-width: 100%;
+    background: $color-green-dark;
     max-height: calc(100vh - 100px);
     //max-width: 1500px;
   }
@@ -38,37 +39,12 @@
     }
     @include TwoK {
      // max-height: unset;
-      max-height: calc(100vh - 100px);
+      max-height: calc(85vh - 110px);
+      width: 110%;
+      object-fit: contain;
+     
     }
   }
-  //   .h1-title {
-  //     z-index: 1;
-  //     color: $white;
-  //     text-align: right;
-  //     font-size: 10px;
-  //     margin: 100px auto;
-  //     @include tablets {
-  //       font-size: 18px;
-  //       margin: 100px 60px;
-  //     }
-  //     @include large-screens {
-  //       font-size: 25px;
-  //       margin: 100px 150px;
-  //     }
-  //     @include TwoK {
-  //       margin: 100px 400px;
-  //     }
-  //     span {
-  //       font-size: 16px;
-  //       @include tablets {
-  //         font-size: 23px;
-  //       }
-  //       font-weight: bold;
-  //       @include computers {
-  //         font-size: 28px;
-  //       }
-  //     }
-  //   }
 }
 
 .uk-slidenav-next,
@@ -78,5 +54,8 @@
   visibility: hidden;
   @include tablets {
     visibility: visible;
+  }
+  @include TwoK{
+    color: $white !important;
   }
 }
