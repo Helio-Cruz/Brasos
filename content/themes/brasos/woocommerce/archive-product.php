@@ -1,6 +1,7 @@
 <?php
 /**
  * The Template for displaying product archives, including the main shop page which is a post type archive
+ * @version 3.4.0
  */
 
 defined( 'ABSPATH' ) || exit;

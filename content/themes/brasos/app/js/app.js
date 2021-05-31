@@ -171,6 +171,23 @@ var app = {
       event.preventDefault();
       // }
     });
+
+
+    // woocommerce
+    // PAGE MY ACCOUNT
+    if (window.location.pathname == '/Wordpress/Brasos/my-account/') {
+      const dashboardNav = document.querySelector('.woocommerce-MyAccount-navigation-link--dashboard');
+      const dashboardTitle = document.querySelector('.woocommerce-MyAccount-content p')
+      const dashboardLink = document.querySelector('.woocommerce-MyAccount-content p a')
+      if (dashboardNav.classList.contains('is-active')) {
+        dashboardTitle.style.backgroundColor = '#006e78';
+        dashboardTitle.style.color = 'white';
+        dashboardTitle.style.borderRadius = '5px';
+        dashboardTitle.style.padding = '0.5em';
+        dashboardLink.style.color = 'white';
+      }
+    }
+    
   }
 };
 

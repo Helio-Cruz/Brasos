@@ -1,6 +1,7 @@
 <?php
 /**
  * The template for displaying product content within loops
+ * @version 3.6.0
  */
 
 defined( 'ABSPATH' ) || exit;

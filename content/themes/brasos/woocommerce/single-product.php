@@ -1,6 +1,7 @@
 <?php
 /**
  * The Template for displaying all single products
+ * @version     1.6.4
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
