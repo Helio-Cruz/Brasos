@@ -24,18 +24,21 @@
       width: 800px;
       border-bottom: 1px solid #707070;
       padding: 1.5em 2em;
-      &:first-child:not(.purchasable) { // green line
+      &:first-child:not(.purchasable) {
+        // green line
         padding: 0.7em 2em;
       }
       a:first-child,
-      div:first-child { // div -> green line
+      div:first-child {
+        // div -> green line
         margin-right: 2em;
         width: 70%;
         display: flex;
         align-items: center;
         justify-content: space-between;
       }
-      div:first-child { // green line
+      div:first-child {
+        // green line
         font-size: 16px;
         color: white;
         text-transform: uppercase;
@@ -49,19 +52,7 @@
         color: $color-green-dark;
       }
       .button {
-        font-weight: normal;
-        font-size: 12px;
         margin: 0;
-        background-color: $color-green-dark;
-        color: white;
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: .618em 1.3em;
-        &::after {
-          right: 3px;
-        }
       }
     }
   }
@@ -109,7 +100,7 @@
         background: $color-green-regular;
         border-radius: 5px;
         a {
-          color: #ccc;
+          color: white;
         }
       }
       a {
@@ -146,5 +137,74 @@
     margin: 0 auto 1em;
     float: unset;
     width: 300px;
+  }
+}
+
+// PAGE CART
+.woocommerce-cart.woocommerce-page {
+  .woocommerce {
+    max-width: 1200px;
+    margin: auto;
+  }
+  .woocommerce-cart-form {
+    float: left;
+    margin: 2em;
+    table {
+      border: none;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+    }
+    table thead tr {
+      background: $color-green-dark;
+      padding: 0.7em 2em;
+      color: white;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    table .product-thumbnail {
+      display: none;
+    }
+    table .button:hover {
+      color: #515151 !important;
+    }
+  }
+  .wc-proceed-to-checkout a.checkout-button {
+    display: inline-flex;
+    font-size: 14px;
+    background-color: $color-green-dark;
+    float: right;
+    &:hover {
+      background-color: #dfdcde;
+      color: #515151 !important;
+    }
+  }
+  .cart_totals {
+    margin: 2em;
+    width: 400px;
+    h2 {
+      background: $color-green-dark;
+      padding: 0.7em 2em;
+      color: white;
+      font-size: 16px;
+      text-transform: uppercase;
+      border-radius: 5px 5px 0 0;
+    }
+    table {
+      border: none;
+    }
+  }
+}
+
+// EVERYPAGE BTN
+.woocommerce button.button,
+.woocommerce a.button {
+  font-weight: normal;
+  font-size: 12px;
+  background-color: $color-green-dark;
+  color: white !important;
+  text-transform: uppercase;
+  padding: 0.618em 1.3em;
+  &:hover {
+    color: #515151 !important;
   }
 }
