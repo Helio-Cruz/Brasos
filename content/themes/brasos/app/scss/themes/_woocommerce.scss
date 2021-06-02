@@ -121,6 +121,10 @@
   .woocommerce-MyAccount-content {
     padding: 1em;
   }
+  form.edit-account .form-row input.input-text {
+    height: 35px;
+    margin-bottom: 3px;
+  }
 }
 
 // NOT LOGGED IN
