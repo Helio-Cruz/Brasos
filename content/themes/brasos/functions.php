@@ -11,3 +11,5 @@ require('inc/customizer.php');
 require('inc/cpt-taxonomies.php');
 
 require('inc/shortcodes.php');
+
+require('inc/woocommerce.php');

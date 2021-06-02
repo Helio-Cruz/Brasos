@@ -11,7 +11,7 @@
       border-radius: 5px 5px 0 0;
       margin: 5em auto 0;
       li.product {
-        width: 580px;
+        width: 690px;
         margin-left: 0;
       }
     }
@@ -24,17 +24,19 @@
       width: 800px;
       border-bottom: 1px solid #707070;
       padding: 1.5em 2em;
+      &:first-child:not(.purchasable) { // green line
+        padding: 0.7em 2em;
+      }
       a:first-child,
-      // green line
-      div:first-child {
+      div:first-child { // div -> green line
         margin-right: 2em;
-        width: 100%;
+        width: 70%;
         display: flex;
         align-items: center;
         justify-content: space-between;
       }
-      // green line
-      div:first-child {
+      div:first-child { // green line
+        font-size: 16px;
         color: white;
         text-transform: uppercase;
       }
@@ -43,22 +45,23 @@
       }
       .price {
         font-size: 16px;
-        margin: 0 2em;
+        margin: 0 4em;
         color: $color-green-dark;
       }
       .button {
         font-weight: normal;
-        font-size: 16px;
+        font-size: 12px;
         margin: 0;
-        height: 40px;
-        width: 235px;
         background-color: $color-green-dark;
         color: white;
         text-transform: uppercase;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0;
+        padding: .618em 1.3em;
+        &::after {
+          right: 3px;
+        }
       }
     }
   }
@@ -66,11 +69,9 @@
 
 // PAGE SINGLE PRODUCT
 .single-product.woocommerce-page {
-  .article-cover {
+  .article-cover,
+  .wc-tabs {
     display: none;
-  }
-  .woocommerce ul.products {
-    padding: 2em 2em 0 4em;
   }
   div.product div.summary {
     width: 50%;
@@ -80,9 +81,13 @@
     width: 50%;
     padding: 0 0.5em;
   }
+  .blog__content {
+    box-shadow: none;
+  }
 }
 
-// PAGE ACCOUNT
+// PAGE MY-ACCOUNT
+// LOGGED IN
 .woocommerce-account.woocommerce-page {
   .woocommerce {
     margin: 3em auto;
@@ -115,5 +120,27 @@
   // right content
   .woocommerce-MyAccount-content {
     padding: 1em;
+  }
+}
+
+// NOT LOGGED IN
+.woocommerce form.login {
+  max-width: 500px;
+  margin: 2em auto;
+  border: 1px solid $color-green-dark;
+  .form-row input.input-text {
+    height: 35px;
+  }
+}
+
+// LOST PASSWORD
+.woocommerce form.lost_reset_password {
+  max-width: 500px;
+  margin: 2em auto;
+  text-align: center;
+  .form-row-first {
+    margin: 0 auto 1em;
+    float: unset;
+    width: 300px;
   }
 }
