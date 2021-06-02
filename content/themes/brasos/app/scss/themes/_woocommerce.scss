@@ -113,7 +113,6 @@
     padding: 1em;
   }
   form.edit-account .form-row input.input-text {
-    height: 35px;
     margin-bottom: 3px;
   }
 }
@@ -123,9 +122,6 @@
   max-width: 500px;
   margin: 2em auto;
   border: 1px solid $color-green-dark;
-  .form-row input.input-text {
-    height: 35px;
-  }
 }
 
 // LOST PASSWORD
@@ -160,22 +156,20 @@
       color: white;
       font-size: 16px;
       text-transform: uppercase;
+      th {
+        font-weight: normal;
+      }
     }
     table .product-thumbnail {
       display: none;
     }
-    table .button:hover {
-      color: #515151 !important;
+    table .button {
+      &:hover {
+        color: #515151 !important;
+      }
     }
-  }
-  .wc-proceed-to-checkout a.checkout-button {
-    display: inline-flex;
-    font-size: 14px;
-    background-color: $color-green-dark;
-    float: right;
-    &:hover {
-      background-color: #dfdcde;
-      color: #515151 !important;
+    table a {
+      color: $color-green-dark;
     }
   }
   .cart_totals {
@@ -192,10 +186,27 @@
     table {
       border: none;
     }
+    table td {
+      text-align: right;
+    }
+  }
+  .wc-proceed-to-checkout {
+    padding: 0;
+    a.checkout-button {
+      display: inline-flex;
+      font-size: 14px;
+      background-color: $color-green-dark;
+      float: right;
+      padding: 0.618em 1.3em;
+      &:hover {
+        background-color: #dfdcde;
+        color: #515151 !important;
+      }
+    }
   }
 }
 
-// EVERYPAGE BTN
+// EVERY PAGE
 .woocommerce button.button,
 .woocommerce a.button {
   font-weight: normal;
@@ -207,4 +218,14 @@
   &:hover {
     color: #515151 !important;
   }
+}
+.woocommerce a {
+  color: $color-green-dark;
+  font-weight: bold;
+}
+.woocommerce * {
+  font-family: inherit;
+}
+.woocommerce form .form-row input.input-text {
+  height: 35px;
 }
