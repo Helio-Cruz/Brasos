@@ -7,35 +7,65 @@
     // green line
     &:first-of-type {
       background: $color-green-dark;
-      width: 800px;
+      width: 95%;
       border-radius: 5px 5px 0 0;
       margin: 5em auto 0;
+      @include computers {
+        max-width: 800px;
+      }
       li.product {
-        width: 690px;
+        width: 100%;
         margin-left: 0;
+        @include computers {
+          max-width: 690px;
+        }
       }
     }
     li.product {
       display: flex;
       align-items: center;
+      flex-direction: column;
       justify-content: space-between;
       float: unset;
       margin: 0 auto;
-      width: 800px;
+      width: 100%;
       border-bottom: 1px solid #707070;
       padding: 1.5em 2em;
+      @include computers {
+        flex-direction: row;
+        max-width: 800px;
+      }
       &:first-child:not(.purchasable) {
         // green line
         padding: 0.7em 2em;
       }
+      a:first-child {
+        flex-direction: column;
+        margin-bottom: 1em;
+        @include computers {
+          flex-direction: row;
+          margin-bottom: 0;
+        }
+        h2 {
+          padding: 1em 0;
+          @include computers {
+            padding: 0.5em 0;
+          }
+        }
+      }
       a:first-child,
       div:first-child {
         // div -> green line
-        margin-right: 2em;
-        width: 70%;
+        margin-right: 0;
+        width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
+        @include computers {
+          margin-right: 2em;
+          width: 70%;
+          justify-content: space-between;
+        }
       }
       div:first-child {
         // green line
@@ -93,7 +123,7 @@
       color: $color-green-dark;
     }
     .woocommerce-MyAccount-navigation-link {
-      width: 235px;
+      width: 220px;
       padding: 0.5em;
       font-size: 16px;
       &.is-active {
@@ -224,8 +254,25 @@
     margin: 5em auto;
     .col2-set .col-1,
     .col2-set .col-2 {
-      width: 50%;
+      width: 90%;
+      max-width: 500px;
       margin: auto;
+      @include computers {
+        width: 50%;
+        max-width: unset;
+      }
+    }
+    .col2-set .col-1 {
+      float: unset;
+      @include computers {
+        float: left;
+      }
+    }
+    .col2-set .col-2 {
+      float: unset;
+      @include computers {
+        float: right;
+      }
     }
     h3 {
       text-align: center;
@@ -233,12 +280,17 @@
       color: white;
       background: $color-green-dark;
       padding: 0.7em 2em;
-      border-radius: 5px 0 0 0;
+      border-radius: 5px 5px 0 0;
       font-size: 20px;
       font-weight: 600;
+      @include computers {
+        border-radius: 5px 0 0 0;
+      }
     }
     h3#order_review_heading {
-      border-radius: 0 5px 0 0;
+      @include computers {
+        border-radius: 0 5px 0 0;
+      }
     }
     form.woocommerce-checkout {
       .woocommerce-billing-fields__field-wrapper {
@@ -248,7 +300,10 @@
         color: $color-green-dark;
       }
       .form-row {
-        width: 90%;
+        width: 100%;
+        @include computers {
+          width: 90%;
+        }
       }
       .form-row.place-order {
         width: 100%;
