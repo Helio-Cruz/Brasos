@@ -117,14 +117,14 @@
   }
 }
 
-// NOT LOGGED IN
+// MY-ACCOUNT NOT LOGGED IN
 .woocommerce form.login {
   max-width: 500px;
   margin: 2em auto;
   border: 1px solid $color-green-dark;
 }
 
-// LOST PASSWORD
+// MY-ACCOUNT LOST PASSWORD
 .woocommerce form.lost_reset_password {
   max-width: 500px;
   margin: 2em auto;
@@ -149,6 +149,7 @@
       border: none;
       border-radius: 5px 5px 0 0;
       overflow: hidden;
+      width: 680px;
     }
     table thead tr {
       background: $color-green-dark;
@@ -171,6 +172,12 @@
     table a {
       color: $color-green-dark;
     }
+    table .product-quantity {
+      text-align: center;
+    }
+    table tbody td {
+      color: $color-green-dark;
+    }
   }
   .cart_totals {
     margin: 2em;
@@ -188,6 +195,10 @@
     }
     table td {
       text-align: right;
+      color: $color-green-dark;
+    }
+    table th {
+      color: $color-green-dark;
     }
   }
   .wc-proceed-to-checkout {
@@ -197,11 +208,89 @@
       font-size: 14px;
       background-color: $color-green-dark;
       float: right;
-      padding: 0.618em 1.3em;
+      padding: 0.6em 0.8em;
       &:hover {
         background-color: #dfdcde;
         color: #515151 !important;
       }
+    }
+  }
+}
+
+// PAGE CHECKOUT
+.woocommerce-checkout.woocommerce-page {
+  .woocommerce {
+    max-width: 1200px;
+    margin: 5em auto;
+    .col2-set .col-1,
+    .col2-set .col-2 {
+      width: 50%;
+      margin: auto;
+    }
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
+      color: white;
+      background: $color-green-dark;
+      padding: 0.7em 2em;
+      border-radius: 5px 0 0 0;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    h3#order_review_heading {
+      border-radius: 0 5px 0 0;
+    }
+    form.woocommerce-checkout {
+      .woocommerce-billing-fields__field-wrapper {
+        padding: 2em;
+      }
+      label {
+        color: $color-green-dark;
+      }
+      .form-row {
+        width: 90%;
+      }
+      .form-row.place-order {
+        width: 100%;
+        text-align: center;
+      }
+      .form-row input.input-text {
+        background: #dbdbdb;
+        border: none;
+      }
+      .select2-container--default .select2-selection--single {
+        background: #dbdbdb;
+        color: black;
+      }
+      .select2-selection__placeholder {
+        color: rgb(70, 70, 70);
+      }
+    }
+    #order_review {
+      padding: 4em 2em;
+    }
+    #payment #place_order {
+      float: unset;
+      background: $color-green-dark;
+      &:hover {
+        background-color: #dfdcde;
+        color: #515151 !important;
+      }
+    }
+    table {
+      border: none;
+      thead,
+      tfoot {
+        background: #dbdbdb;
+      }
+      th,
+      tr {
+        color: $color-green-dark;
+      }
+    }
+    .woocommerce-privacy-policy-text {
+      line-height: 20px;
+      text-align: left;
     }
   }
 }

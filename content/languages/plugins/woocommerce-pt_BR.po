@@ -20887,8 +20887,8 @@ msgid "Recently Viewed Products"
 msgstr "Produtos vistos recentemente"
 
 #: templates/checkout/payment.php:33
-msgid "Please fill in your details above to see available payment methods."
-msgstr "Informe os dados acima para ver os meios de pagamento disponíveis."
+msgid "Please fill in your details to see available payment methods."
+msgstr "Informe os dados para ver os meios de pagamento disponíveis."
 
 #: includes/wc-user-functions.php:72
 msgid "Please enter an account password."

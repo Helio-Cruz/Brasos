@@ -33902,7 +33902,7 @@ msgid "Sorry, it seems that there are no available payment methods for your stat
 msgstr ""
 
 #: templates/checkout/payment.php:33
-msgid "Please fill in your details above to see available payment methods."
+msgid "Please fill in your details to see available payment methods."
 msgstr ""
 
 #. translators: $1 and $2 opening and closing emphasis tags respectively
