@@ -215,15 +215,23 @@
   .woocommerce {
     max-width: 1200px;
     margin: auto;
+    text-align: center;
   }
   .woocommerce-cart-form {
-    float: left;
-    margin: 2em;
+    margin: 2em auto;
+    width: 90%;
+    @include computers {
+      float: left;
+      margin: 2em;
+    }
     table {
       border: none;
       border-radius: 0;
       overflow: hidden;
-      width: 680px;
+      width: 100%;
+      @include computers {
+        width: 680px;
+      }
     }
     table thead tr {
       background: $color-green-dark;
@@ -258,11 +266,25 @@
       height: 60px;
       padding: 18px 12px;
     }
+    td.actions .button {
+      float: right;
+      width: auto;
+    }
   }
   .cart_totals {
     margin: 2em;
     width: 400px;
     align-self: center;
+    // old
+    //margin: 2em auto;
+    //  width: 90%;
+    //  float: unset;
+    //  @include computers {
+    //    margin: 2em;
+    //    width: 400px;
+    //    float: right;
+    //  }
+
     h2 {
       background: $color-green-dark;
       padding: 1.2em 2em;

@@ -56,26 +56,25 @@
     color: inherit;
   }
   li {
-    box-shadow: 3px 5px 3px 3px   rgba(0, 110, 120, 0.1);
+    box-shadow: 3px 5px 3px 3px rgba(0, 110, 120, 0.1);
     padding: 25px;
   }
   .uk-accordion-title::before {
     background-image: none;
-    content:'+';
+    content: "+";
     font-size: 2em;
     font-weight: 300;
     height: 12px;
     border: none;
   }
-  
- 
+
   .uk-open {
     .uk-accordion-title::before {
-    content:'+';
-    font-size: 2em;
-    font-weight: 300;
-    height: 15px;
-    border: none;
+      content: "+";
+      font-size: 2em;
+      font-weight: 300;
+      height: 15px;
+      border: none;
     }
   }
 }
