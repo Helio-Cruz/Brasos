@@ -23,3 +23,9 @@
   <?php get_template_part('template-parts/header/header', 'navbar'); ?>
   <?php get_template_part('template-parts/header/header', 'navbarmobile'); ?>
   <?php get_template_part('template-parts/header/header', 'sidebar'); ?>
+
+ 
+    
+
+
+ 

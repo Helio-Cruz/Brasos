@@ -65,7 +65,21 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
- 
+ <script>
+/*
+jQuery(document).ready(function($) {
+    var url = window.location.href;
+    url = url.split("/");
+    if (url[5] == "my-account") // You can set url[] according to slash parameter wise
+    {
+        $("#customer_login .u-column2").remove(); //Remove Registration Div
+    }
+    if (url[5] == "register") {
+        $("#customer_login .u-column1").remove(); // Remove Login Div
+    }
+    console.log(url);
+});*/
+ </script>
 
 
  <?php wp_footer(); ?>

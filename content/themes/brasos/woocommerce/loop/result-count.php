@@ -8,6 +8,8 @@
 if (!defined('ABSPATH')) {
 	exit;
 }
+
+custom_breadcrumbs();
 ?>
 
 <ul class="products columns-4">
@@ -18,3 +20,4 @@ if (!defined('ABSPATH')) {
 		</div>
 	</li>
 </ul>
+

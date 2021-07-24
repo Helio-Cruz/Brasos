@@ -14,6 +14,7 @@
 @import
    'components/accordion',
    'components/blog-cards',
+   'components/breadcrumbs',
    'components/buttons',
    'components/carousel-footer',
    'components/home-brasos',
@@ -29,6 +30,7 @@
    'components/not-found';
 
 @import
+   'layout/tooltip',  
    'layout/header',
    'layout/footer';
  

@@ -22,14 +22,14 @@
     bottom: 40px;
     color: $white;
     a {
-      color: $color-green-dark;
+      color: $color-green-dark !important;
       font-size: $body;
     }
     &:hover {
       background-color: $color-green-regular;
       transition: ease-in $duration-medium;
       a {
-        color: white;
+        color: white !important;
       }
     }
   }
@@ -61,6 +61,12 @@
 
   &__logo img {
     width: 140px;
+  }
+  &__media-social{
+    a{
+       color: $white !important;
+    }
+   
   }
 }
 .footer-mentions {

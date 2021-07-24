@@ -1,0 +1,89 @@
+07-15-2021 @ 03:27:32 - Requesting session ID...
+07-15-2021 @ 03:27:34 - PagSeguro session is valid! The return is: SimpleXMLElement Object
+(
+    [id] => dd85fda6a45846b39585c3a333d1ad4d
+)
+
+07-15-2021 @ 03:30:11 - Requesting direct payment for order 3761 with the following data: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<payment>
+  <mode>default</mode>
+  <method>creditCard</method>
+  <currency>BRL</currency>
+  <notificationURL><![CDATA[http://localhost/Wordpress/Brasos/wc-api/WC_PagSeguro_Gateway/]]></notificationURL>
+  <items>
+    <item>
+      <id>1</id>
+      <description><![CDATA[Médicos e Outros Profissionais de Saúde]]></description>
+      <amount>200.00</amount>
+      <quantity>1</quantity>
+    </item>
+    <item>
+      <id>2</id>
+      <description><![CDATA[Alunos de Medicina e outras áreas da saúde]]></description>
+      <amount>105.00</amount>
+      <quantity>3</quantity>
+    </item>
+  </items>
+  <reference><![CDATA[WC-3761]]></reference>
+  <sender>
+    <email><![CDATA[c50827929427530012794@sandbox.pagseguro.com.br]]></email>
+    <documents>
+      <document>
+        <type>CPF</type>
+        <value>35734165867</value>
+      </document>
+    </documents>
+    <name><![CDATA[Claire Lavigne]]></name>
+    <phone>
+      <areaCode>11</areaCode>
+      <number>945859677</number>
+    </phone>
+    <hash>139b8d0d04a149e8ac26462e97c8819b5df11f7741cb622bd7ffc198427b6bdf</hash>
+  </sender>
+  <shipping>
+    <type>3</type>
+    <address>
+      <street><![CDATA[Rua Dolomita]]></street>
+      <number>350</number>
+      <district><![CDATA[Gonzaga]]></district>
+      <postalCode>09990730</postalCode>
+      <city><![CDATA[Diadema]]></city>
+      <state>SP</state>
+      <country>BRA</country>
+    </address>
+    <cost>0</cost>
+  </shipping>
+  <creditCard>
+    <token>1d8509d3f3b349edac25e3b685578487</token>
+    <installment>
+      <quantity>1</quantity>
+      <value>515.00</value>
+    </installment>
+    <holder>
+      <name><![CDATA[Helio Cruz]]></name>
+      <documents>
+        <document>
+          <type>CPF</type>
+          <value>35734165867</value>
+        </document>
+      </documents>
+      <birthDate>11/04/1890</birthDate>
+      <phone>
+        <areaCode>11</areaCode>
+        <number>40587888</number>
+      </phone>
+    </holder>
+    <billingAddress>
+      <street><![CDATA[Rua Dolomita]]></street>
+      <number>350</number>
+      <district><![CDATA[Gonzaga]]></district>
+      <city><![CDATA[Diadema]]></city>
+      <state>SP</state>
+      <country>BRA</country>
+      <postalCode>09990730</postalCode>
+    </billingAddress>
+  </creditCard>
+</payment>
+
+07-15-2021 @ 03:30:15 - PagSeguro direct payment created successfully!
+07-15-2021 @ 03:30:15 - PagSeguro payment status for order 3761 is: 1

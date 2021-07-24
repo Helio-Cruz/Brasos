@@ -1,0 +1,30 @@
+07-21-2021 @ 04:57:28 - Requesting session ID...
+07-21-2021 @ 04:57:30 - PagSeguro session is valid! The return is: SimpleXMLElement Object
+(
+    [id] => 023773e7138d4b1699a085dc9f0cd59f
+)
+
+07-21-2021 @ 04:57:53 - Requesting session ID...
+07-21-2021 @ 04:57:54 - PagSeguro session is valid! The return is: SimpleXMLElement Object
+(
+    [id] => 6bc7bba892c34fcc8bbdc6c786774d2c
+)
+
+07-21-2021 @ 04:58:30 - Requesting session ID...
+07-21-2021 @ 04:58:31 - PagSeguro session is valid! The return is: SimpleXMLElement Object
+(
+    [id] => dd9f8c8eef954026ba4773f654770b59
+)
+
+07-21-2021 @ 04:59:00 - Requesting session ID...
+07-21-2021 @ 04:59:01 - PagSeguro session is valid! The return is: SimpleXMLElement Object
+(
+    [id] => 57355d415e124df99a31c588e7f43170
+)
+
+07-21-2021 @ 05:59:22 - Requesting session ID...
+07-21-2021 @ 05:59:23 - PagSeguro session is valid! The return is: SimpleXMLElement Object
+(
+    [id] => 5cd59fa9bbbd4d0bab1ac691eee60f53
+)
+

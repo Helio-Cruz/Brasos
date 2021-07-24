@@ -5,25 +5,24 @@
   <img class="events-cover__img" src="<?php the_post_thumbnail_url(); ?>" alt="" />
 </div>
 
+
 <!-- NAVIGATION -->
-<div class="uk-subnav navbar-events">
-  <?php
-  $link = get_field('inscreva-se');
-  if ($link) :
-  ?>
-    <a class="normal-link normal-link-one" target="_blank" href="<?php echo esc_url($link);  ?>">INSCREVA-SE</a>
-  <?php endif; ?>
-</div>
+ 
+
+
+
 <ul class="uk-subnav navbar-events" uk-switcher>
-  <li>
+
+  <li>  
     <a href="#">INFORMAÇÕES GERAIS</a>
   </li>
   <li>
-  <?php  echo (have_rows('programacao')) ? '<a href="#">PROGRAMAÇÃO</a>' : null ;  ?>
+    <?php echo (have_rows('programacao')) ? '<a href="#">PROGRAMAÇÃO</a>' : null;  ?>
   </li>
   <li>
-    <?php  echo (have_rows('palestrantes_nacionais')) && (have_rows('palestrantes_internacionais'))  ? '<a href="#">PALESTRANTES CONVIDADOS</a>' : null ;  ?>
+    <?php echo (have_rows('palestrantes_nacionais')) && (have_rows('palestrantes_internacionais'))  ? '<a href="#">PALESTRANTES CONVIDADOS</a>' : null;  ?>
   </li>
+
 </ul>
 <!--
   <div class="uk-subnav navbar-events">
@@ -31,6 +30,7 @@
 </div>
 -->
 
+ 
 
 <?php
 $current_page_id = get_the_ID();
@@ -49,5 +49,20 @@ if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_
   endwhile;
 endif;
 wp_reset_postdata(); ?>
+ 
+
+ <div class="uk-subnav navbar-events">
+
+  <?php
+  $link = get_field('inscreva-se');
+  if ($link) :
+  ?>
+      <a class="normal-link normal-link-one" href="<?php echo esc_url($link);  ?>">VOLTAR A PÁGINA DO EVENTO</a>
+  
+  
+  <?php endif; ?>
+</div>
+
+<?php get_template_part('template-parts/woocommerce/footer', 'patrocinio'); ?>
 
 <?php get_footer(); ?>

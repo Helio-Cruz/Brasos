@@ -1,5 +1,5 @@
 <?php get_header(); ?>
- 
+
 
 <!-- POP UP  brasit2020 media-->
 <!-- This is a button toggling the modal with the outside close button -->
@@ -20,9 +20,13 @@
 </div>
 
 
-<?php get_template_part('template-parts/home/home', 'carousel'); ?>
+
+<?php get_template_part('template-parts/home/home', 'event'); ?>
 <?php get_template_part('template-parts/home/home', 'blog'); ?>
 <?php get_template_part('template-parts/home/home', 'brasos'); ?>
 <?php get_template_part('template-parts/home/footer', 'images'); ?>
+
+
+
 
 <?php get_footer(); ?>

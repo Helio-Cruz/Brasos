@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WooCommerce - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-18 21:19:07+0000\n"
+"PO-Revision-Date: 2021-06-08 17:42:34+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,10 @@ msgstr ""
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: pt_BR\n"
 "Project-Id-Version: Plugins - WooCommerce - Stable (latest release)\n"
+
+#: includes/rest-api/Controllers/Version3/class-wc-rest-taxes-controller.php:86
+msgid "List of city names. Introduced in WooCommerce 5.3."
+msgstr "Lista de nomes de cidades. Introduzido no WooCommerce 5.3."
 
 #. translators: %s Field label.
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/OrderController.php:360
@@ -61,6 +65,14 @@ msgstr "endereço de entrega"
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/OrderController.php:241
 msgid "Sorry, we do not allow orders from the provided country (%s)"
 msgstr "Não permitimos pedidos do país informado (%s)"
+
+#: packages/woocommerce-admin/src/Features/Onboarding.php:959
+msgid "Extended task List"
+msgstr "Lista de tarefas estendida"
+
+#: packages/woocommerce-admin/src/Notes/GettingStartedInEcommerceWebinar.php:76
+msgid "Watch the webinar"
+msgstr "Assista o webinar"
 
 #: includes/admin/plugin-updates/views/html-notice-untested-extensions-modal.php:21
 msgid "Are you sure you're ready?"
@@ -525,6 +537,10 @@ msgstr "Mensagem de status da exportação."
 #: packages/woocommerce-admin/dist/app/index.js:2
 msgid "Setup Wizard"
 msgstr "Assistente de configuração"
+
+#: packages/woocommerce-admin/src/API/OnboardingTasks.php:527
+msgid "Country codes that support Automated Taxes."
+msgstr "Códigos de países que suportam taxas automatizadas."
 
 #: packages/woocommerce-admin/src/Notes/EditProductsOnTheMove.php:55
 msgid "Edit and create new products from your mobile devices with the Woo app"
@@ -1765,10 +1781,6 @@ msgstr "Nome da tag"
 msgid "Education and learning"
 msgstr "Educação e aprendizagem"
 
-#: packages/woocommerce-admin/src/Notes/CustomizeStoreWithBlocks.php:70
-msgid "With our blocks, you can select and display products, categories, filters, and more virtually anywhere on your site — no need to use shortcodes or edit lines of code. Learn more about how to use each one of them."
-msgstr "Com nossos blocos, você pode selecionar e exibir produtos, categorias, filtros e mais praticamente em qualquer lugar do seu site, não é necessário usar códigos de acesso nem editar linhas de código. Saiba mais sobre como usar cada um deles."
-
 #: packages/woocommerce-admin/src/Features/Onboarding.php:446
 msgid "Customizable products"
 msgstr "Produtos personalizáveis"
@@ -1820,6 +1832,10 @@ msgstr "O cache das análises foi limpo."
 #: packages/woocommerce-admin/src/Features/Analytics.php:97
 msgid "Clear analytics cache"
 msgstr "Limpar cache de análises"
+
+#: packages/woocommerce-admin/src/Notes/CustomizeStoreWithBlocks.php:70
+msgid "With our blocks, you can select and display products, categories, filters, and more virtually anywhere on your site — no need to use shortcodes or edit lines of code. Learn more about how to use each one of them."
+msgstr "Com nossos blocos, você pode selecionar e exibir produtos, categorias, filtros e mais praticamente em qualquer lugar do seu site, não é necessário usar shortcodes e nem editar linhas de código. Saiba mais sobre como usar cada um deles."
 
 #: packages/woocommerce-admin/src/Notes/LaunchChecklist.php:45
 msgid "To make sure you never get that sinking \"what did I forget\" feeling, we've put together the essential pre-launch checklist."
@@ -4437,22 +4453,6 @@ msgstr "Tipo de intervalo."
 msgid "Reports data grouped by intervals."
 msgstr "Reporta dados agrupados por intervalos."
 
-#: packages/woocommerce-admin/src/API/Reports/Coupons/Controller.php:154
-msgid "Coupon ID."
-msgstr "ID do cupom."
-
-#: packages/woocommerce-admin/src/API/Reports/Controller.php:278
-msgid "API path."
-msgstr "Caminho da API."
-
-#: packages/woocommerce-admin/src/API/Reports/Controller.php:142
-msgid "Customers detailed reports."
-msgstr "Relatórios detalhados de clientes."
-
-#: packages/woocommerce-admin/src/API/Reports/Controller.php:130
-msgid "Product downloads detailed reports."
-msgstr "Relatórios detalhados de downloads de produtos."
-
 #: packages/woocommerce-admin/src/API/Reports/Coupons/Stats/Controller.php:183
 #: packages/woocommerce-admin/src/API/Reports/Coupons/Stats/Controller.php:248
 #: packages/woocommerce-admin/src/API/Reports/Revenue/Stats/Controller.php:264
@@ -4468,6 +4468,22 @@ msgstr "Relatórios detalhados de downloads de produtos."
 #: packages/woocommerce-admin/src/API/Reports/Products/Stats/Controller.php:269
 msgid "Interval subtotals."
 msgstr "Subtotais de intervalo."
+
+#: packages/woocommerce-admin/src/API/Reports/Coupons/Controller.php:154
+msgid "Coupon ID."
+msgstr "ID do cupom."
+
+#: packages/woocommerce-admin/src/API/Reports/Controller.php:278
+msgid "API path."
+msgstr "Caminho da API."
+
+#: packages/woocommerce-admin/src/API/Reports/Controller.php:142
+msgid "Customers detailed reports."
+msgstr "Relatórios detalhados de clientes."
+
+#: packages/woocommerce-admin/src/API/Reports/Controller.php:130
+msgid "Product downloads detailed reports."
+msgstr "Relatórios detalhados de downloads de produtos."
 
 #: packages/woocommerce-admin/src/API/Reports/Categories/Controller.php:173
 msgid "Amount of items sold."
@@ -4619,6 +4635,17 @@ msgstr "Estatísticas sobre taxas."
 msgid "Taxes detailed reports."
 msgstr "Relatórios detalhados de taxas."
 
+#: packages/woocommerce-admin/src/API/Reports/Coupons/Stats/Controller.php:320
+#: packages/woocommerce-admin/src/API/Reports/Revenue/Stats/Controller.php:412
+#: packages/woocommerce-admin/src/API/Reports/Categories/Controller.php:269
+#: packages/woocommerce-admin/src/API/Reports/Taxes/Stats/Controller.php:358
+#: packages/woocommerce-admin/src/API/Reports/Variations/Stats/Controller.php:374
+#: packages/woocommerce-admin/src/API/Reports/Downloads/Stats/Controller.php:275
+#: packages/woocommerce-admin/src/API/Reports/Orders/Stats/Controller.php:381
+#: packages/woocommerce-admin/src/API/Reports/Products/Stats/Controller.php:367
+msgid "Time interval to use for buckets in the returned data."
+msgstr "Intervalo de tempo a ser usado para agrupamentos nos dados retornados."
+
 #: packages/woocommerce-admin/src/API/Reports/Controller.php:94
 msgid "Stats about products."
 msgstr "Estatísticas sobre produtos."
@@ -4638,17 +4665,6 @@ msgstr "Estatísticas sobre downloads de produtos."
 #: packages/woocommerce-admin/src/API/Reports/Controller.php:78
 msgid "Batch endpoint for getting specific performance indicators from `stats` endpoints."
 msgstr "Extremidade para requisição em lote para obter indicadores de desempenho específicos a partir de pontos de extremidade das estatísticas."
-
-#: packages/woocommerce-admin/src/API/Reports/Coupons/Stats/Controller.php:320
-#: packages/woocommerce-admin/src/API/Reports/Revenue/Stats/Controller.php:412
-#: packages/woocommerce-admin/src/API/Reports/Categories/Controller.php:269
-#: packages/woocommerce-admin/src/API/Reports/Taxes/Stats/Controller.php:358
-#: packages/woocommerce-admin/src/API/Reports/Variations/Stats/Controller.php:374
-#: packages/woocommerce-admin/src/API/Reports/Downloads/Stats/Controller.php:275
-#: packages/woocommerce-admin/src/API/Reports/Orders/Stats/Controller.php:381
-#: packages/woocommerce-admin/src/API/Reports/Products/Stats/Controller.php:367
-msgid "Time interval to use for buckets in the returned data."
-msgstr "Intervalo de tempo a ser usado para agrupamentos nos dados retornados."
 
 #: packages/woocommerce-admin/src/API/Reports/Revenue/Stats/Controller.php:213
 msgid "Total of returns."
@@ -8283,14 +8299,6 @@ msgstr "Status da avaliação."
 msgid "Unique identifier for the product."
 msgstr "Identificador exclusivo do produto."
 
-#: includes/admin/views/html-notice-template-check.php:27
-msgid "View affected templates"
-msgstr "Visualizar modelos afetados"
-
-#: includes/rest-api/Controllers/Version3/class-wc-rest-product-reviews-controller.php:646
-msgid "The object has already been trashed."
-msgstr "O objeto já esta na lixeira."
-
 #: includes/rest-api/Controllers/Version3/class-wc-rest-payment-gateways-controller.php:158
 msgid "Supported features for this payment gateway."
 msgstr "Recursos suportados para este método de pagamento."
@@ -8307,6 +8315,14 @@ msgstr "Se for verdadeiro, essa nota será atribuída ao usuário atual. Se for 
 #: includes/rest-api/Controllers/Version3/class-wc-rest-order-notes-controller.php:128
 msgid "Order note author."
 msgstr "Autor da nota de pedido."
+
+#: includes/admin/views/html-notice-template-check.php:27
+msgid "View affected templates"
+msgstr "Visualizar modelos afetados"
+
+#: includes/rest-api/Controllers/Version3/class-wc-rest-product-reviews-controller.php:646
+msgid "The object has already been trashed."
+msgstr "O objeto já esta na lixeira."
 
 #: includes/admin/views/html-notice-template-check.php:21
 msgid "Update your theme to the latest version. If no update is available contact your theme author asking about compatibility with the current WooCommerce version."
@@ -10379,6 +10395,11 @@ msgstr "Filtrar por endereço IP"
 msgid "Limit result set to products with specific SKU(s). Use commas to separate."
 msgstr "Limita o resultado para produtos com SKU(s) específicos. Utilize vírgulas para separar."
 
+#. translators: WooCommerce link to setting up shipping zones
+#: includes/admin/settings/views/html-admin-page-shipping-zone-methods.php:69
+msgid "Postcodes containing wildcards (e.g. CB23*) or fully numeric ranges (e.g. <code>90210...99000</code>) are also supported. Please see the shipping zones <a href=\"%s\" target=\"_blank\">documentation</a> for more information."
+msgstr "CEPs que contenham curingas (p. ex. 170*) ou intervalos numéricos (ex. <code>17000000...17099999</code>) também são suportados. Veja a <a href=\"%s\" target=\"_blank\">documentação</a> sobre áreas de entrega para mais informações."
+
 #: includes/admin/list-tables/class-wc-admin-list-table-orders.php:580
 msgid "Completed"
 msgstr "Concluído"
@@ -12312,10 +12333,6 @@ msgstr "%s ativado com sucesso. Você receberá atualizações para este produto
 msgid "Create a new webhook"
 msgstr "Cria um novo webhook"
 
-#: includes/admin/class-wc-admin-webhooks.php:291
-msgid "Webhooks are event notifications sent to URLs of your choice. They can be used to integrate with third-party services which support them."
-msgstr "Webhooks são notificações de eventos enviados para uma URL de sua escolha. Eles podem ser utilizados para entregar com serviços de terceiros que tenha suporta para isso."
-
 #: includes/admin/importers/views/html-product-csv-import-form.php:14
 msgid "Import products from a CSV file"
 msgstr "Importar produtos de um arquivo CSV"
@@ -12348,6 +12365,10 @@ msgstr[1] "Nota: Você atualmente tem <a href=\"%1$s\">%2$d extensões pages</a>
 #: includes/admin/class-wc-admin-profile.php:99
 msgid "Copy from billing address"
 msgstr "Copiar do endereço de faturamento"
+
+#: includes/admin/class-wc-admin-webhooks.php:291
+msgid "Webhooks are event notifications sent to URLs of your choice. They can be used to integrate with third-party services which support them."
+msgstr "Webhooks são notificações de eventos enviados para URLs de sua escolha. Eles podem ser utilizados para integrar com serviços de terceiros que tenham suporte para isso."
 
 #: includes/admin/class-wc-admin-addons.php:409
 msgid "Show Canada Post shipping rates"
@@ -20887,8 +20908,8 @@ msgid "Recently Viewed Products"
 msgstr "Produtos vistos recentemente"
 
 #: templates/checkout/payment.php:33
-msgid "Please fill in your details to see available payment methods."
-msgstr "Informe os dados para ver os meios de pagamento disponíveis."
+msgid "Please fill in your details above to see available payment methods."
+msgstr "Informe os dados acima para ver os meios de pagamento disponíveis."
 
 #: includes/wc-user-functions.php:72
 msgid "Please enter an account password."
