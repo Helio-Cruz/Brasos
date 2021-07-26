@@ -50,7 +50,6 @@
                               <?php while (have_rows('patrocinadores')) : the_row(); ?>
                                 <div class="patrocinador"><img src="<?= get_sub_field('patrocinador'); ?>" /></div>
                               <?php endwhile; ?>
-
                             </div>
                           <?php endif; ?>
                         <?php endwhile; ?>

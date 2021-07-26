@@ -102,23 +102,11 @@
       padding: 0.2em 1.8em;
       font-size: 16px;
       font-weight: bold;
-      top: -20px;
-      &-center {
-        top: -40px;
-        @include mobiles {
-          top: -40px;
-        }
-      }
+      top: -40px;
     }
     .end-hour {
       top: unset;
-      bottom: -20px;
-      &-center {
-        bottom: -40px;
-        @include mobiles {
-          bottom: -40px;
-        }
-      }
+      bottom: -40px;
     }
     h2.subtitle,
     h3.subtitle {
@@ -190,6 +178,14 @@
           padding: 0;
         }
       }
+    }
+    .patrocinadores {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .patrocinador {
+      width: 100px;
+      height: 60px;
     }
   }
 }
