@@ -18,17 +18,17 @@ Template Name: Brasostba2021
           </g>
         </a>
         -->
-        <a href="">
+        <a href=" <?php echo get_permalink(get_page_by_path('Programacao')) ?>">
           <g id="svg_11">
             <ellipse class="pulse" stroke="#fff" stroke-width="3" ry="10" rx="10" id="svg_10" cy="836.38235" cx="1001.58824" fill="#006e78" />
           </g>
         </a>
-        <a href="<?= home_url('/inscricao'); ?>">
+        <a href="<?php echo get_permalink(get_page_by_path('inscricao')) ?>">
           <g id="svg_14">
             <ellipse class="pulse" stroke="#fff" stroke-width="3" ry="10" rx="10" id="svg_13" cy="534.5" cx="1182" fill="#006e78" />
           </g>
         </a>
-        <a href="<?= home_url('/eventos/brasostba-2021/'); ?>">
+        <a href="<?php echo get_permalink(get_page_by_path('/eventos/brasostba-2021/')) ?>">
           <g id="svg_17">
             <ellipse class="pulse" stroke="#fff" stroke-width="3" ry="10" rx="10" id="svg_16" cy="164.5" cx="1003" fill="#006e78" />
           </g>
