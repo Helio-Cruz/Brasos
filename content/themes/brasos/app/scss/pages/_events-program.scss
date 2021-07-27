@@ -65,76 +65,87 @@
 }
 
 .events__layout {
+  padding: 0.5em;
+  li {
+    padding: 20px;
+  }
   .uk-accordion-content {
     .full-content {
       display: flex;
       position: relative;
       width: 100%;
+      max-width: 400px;
       margin: 4em auto;
       @include tablets {
-        max-width: 600px;
-      }
-    }
-    .left-content {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10;
-      top: -40px;
-      padding: 0.2em 1.8em;
-      font-size: 16px;
-      font-weight: bold;
-      background: white;
-      @include tablets {
-        left: 0;
-        transform: none;
+        max-width: 500px;
       }
     }
     .right-content {
-      margin: auto;
+      border-left: 2px solid $white;
+      margin-left: 0;
+      padding-left: 25px;
+      width: 100%;
+      &-border {
+        border-left: 2px solid $black;
+      }
       @include tablets {
         padding-left: 100px;
-        border-left: 2px solid black;
       }
     }
-    .start-hour {
+    .start-hour,
+    .end-hour {
+      left: -50px;
+      position: absolute;
+      z-index: 10;
       color: black;
+      background: white;
+      padding: 0.2em 1.8em;
+      font-size: 16px;
       font-weight: bold;
-      position: relative;
-      margin: 0 auto;
-      &::after {
-        content: "";
-        position: absolute;
-        width: 2px;
-        background-color: black;
-        top: 60px;
-        bottom: 0;
-        left: 50%;
-      }
+      top: -40px;
     }
     .end-hour {
+      top: unset;
+      bottom: -40px;
+    }
+    h2.subtitle,
+    h3.subtitle {
+      font-size: 12px;
       color: black;
       font-weight: bold;
+      text-align: left;
+      text-transform: capitalize;
+      width: 100%;
     }
-    .subtitle {
-      font-size: 3em;
-      text-transform: uppercase;
+    h2.subtitle {
+      font-size: 18px;
       color: $color-green-dark;
-      font-weight: bold;
+      text-transform: uppercase;
+      @include mobiles {
+        font-size: 22px;
+      }
+    }
+    h3.subtitle::first-line {
+      text-transform: uppercase;
+      font-size: 16px;
     }
     .card {
-      background: $color-green-dark;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      max-width: 400px;
+      background: $white;
       border-radius: 8px;
-      margin: 1em 0;
+      margin: 1em auto;
       padding: 1em;
-      @include tablets {
-        flex-direction: row;
+      border: 1px solid $black;
+      @include mobiles {
         width: 400px;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 1em 0;
       }
       &-image {
         height: 70px;
@@ -149,17 +160,32 @@
         }
       }
       &-text {
-        color: white;
+        color: $black;
         font-weight: bold;
         text-align: center;
-        padding: 1em 0;
+        padding: 1em 0 0;
         line-height: 1.3em;
         width: 220px;
+        @include mobiles {
+          padding: 1em 0;
+        }
       }
       &-flag {
         margin: 0 0.5em;
         width: 50px;
+        padding-top: 1em;
+        @include mobiles {
+          padding: 0;
+        }
       }
+    }
+    .patrocinadores {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .patrocinador {
+      width: 100px;
+      height: 60px;
     }
   }
 }
