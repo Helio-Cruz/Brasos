@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Eventos Template
+Template Name: Programacao Template
 */
 ?>
 
