@@ -12,6 +12,11 @@ body {
   visibility: hidden;
 }
 
+iframe {
+  width: 800px !important;
+  height: 481px !important;
+}
+
 a:hover {
   text-decoration: none;
 }

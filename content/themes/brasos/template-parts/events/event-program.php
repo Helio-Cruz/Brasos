@@ -6,7 +6,6 @@
         <?php while (have_rows('programacao')) : the_row();
           $titleProgram = get_sub_field('titulo');
           $contentProgram = get_sub_field('detalhes');
-          $introProgram = get_sub_field('introducao');
         ?>
           <li>
             <?php if ($titleProgram) : ?>
@@ -15,8 +14,6 @@
               </a>
             <?php endif; ?>
             <div class="uk-accordion-content">
-              <?php if ($introProgram) : echo $introProgram;
-              endif; ?>
 
               <?php if (have_rows('detalhe')) : while (have_rows('detalhe')) : the_row();
                   $modulo = get_sub_field('modulo_');
@@ -40,7 +37,7 @@
                           $description = get_sub_field('descricao_da_pessoa');
                           $nationality = get_sub_field('nacionalidade');
                         ?>
-                          <div class="card">
+                          <div class="card uk-card-default">
                             <div class="card-image"><img src="<?= esc_url($img['url']); ?>" alt="<?= esc_attr($img['alt']); ?>" /></div>
                             <div class="card-text"><?= $description ?></div>
                             <?php if ($nationality) : ?><div class="card-flag"><img src="<?= $nationality ?>" /></div><?php endif; ?>
