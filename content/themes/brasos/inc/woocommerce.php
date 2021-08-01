@@ -132,6 +132,19 @@ function custom_breadcrumbs()
       <a href="<?= home_url('/my-account'); ?>">
         <div uk-icon="icon: lock"></div> Minha-Conta
       </a>
+      <a>
+        <?php
+        $current_user = wp_get_current_user();
+
+        /*
+          * @example Safe usage: $current_user = wp_get_current_user();
+          * if ( ! ( $current_user instanceof WP_User ) ) {
+          *     return;
+          * }
+      */
+        printf(__('Olá %s', 'textdomain'), esc_html($current_user->user_firstname)) . '<br />';
+        ?>
+      </a>
     </div>
 
     <span <?php if (is_page('shop')) { ?> class="active" <?php } ?>><a href="<?= home_url('/inscricao'); ?>">Ingressos</a></span> <a uk-icon="icon: chevron-right"></a>
@@ -171,6 +184,17 @@ function remove_cart_message()
 
 add_filter('wc_add_to_cart_message_html', 'remove_cart_message');
 
- 
 
- 
+
+function woo_login_redirect()
+{
+  if (
+    !is_user_logged_in()
+    && (is_woocommerce() || is_cart() || is_checkout())
+  ) {
+    wp_redirect(home_url('/my-account'));
+    // minha-conta on production website
+    exit;
+  }
+}
+add_action('template_redirect', 'woo_login_redirect');

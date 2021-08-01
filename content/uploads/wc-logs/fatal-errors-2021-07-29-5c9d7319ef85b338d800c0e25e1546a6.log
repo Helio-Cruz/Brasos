@@ -1,0 +1,68 @@
+2021-07-29T17:56:17+00:00 CRITICAL syntax error, unexpected ';', em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\woocommerce.php, na linha 185
+
+2021-07-29T17:56:19+00:00 CRITICAL syntax error, unexpected ';', em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\woocommerce.php, na linha 185
+
+2021-07-29T17:56:23+00:00 CRITICAL syntax error, unexpected ';', em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\woocommerce.php, na linha 185
+
+2021-07-29T17:56:32+00:00 CRITICAL syntax error, unexpected ';', em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\woocommerce.php, na linha 185
+
+2021-07-29T17:59:14+00:00 CRITICAL Uncaught Error: Object of class WP_Post could not be converted to string in C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\pluggable.php:1349
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\pluggable.php(1349): str_replace(' ', '%20', Object(WP_Post))
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\pluggable.php(1310): wp_sanitize_redirect(Object(WP_Post))
+#2 C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\woocommerce.php(187): wp_redirect(Object(WP_Post))
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(292): woo_login_redirect('')
+#4 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#5 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#6 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\template-loader.php(13): do_action('template_redire...')
+#7 C:\wamp64\www\Wordpress\Brasos\wp\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\W...')
+#8 C:\wamp64\www\Wordpress\Brasos\inde, em C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\pluggable.php, na linha 1349
+
+2021-07-29T17:59:17+00:00 CRITICAL Uncaught Error: Object of class WP_Post could not be converted to string in C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\pluggable.php:1349
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\pluggable.php(1349): str_replace(' ', '%20', Object(WP_Post))
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\pluggable.php(1310): wp_sanitize_redirect(Object(WP_Post))
+#2 C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\woocommerce.php(187): wp_redirect(Object(WP_Post))
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(292): woo_login_redirect('')
+#4 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#5 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#6 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\template-loader.php(13): do_action('template_redire...')
+#7 C:\wamp64\www\Wordpress\Brasos\wp\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\W...')
+#8 C:\wamp64\www\Wordpress\Brasos\inde, em C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\pluggable.php, na linha 1349
+
+2021-07-29T17:59:32+00:00 CRITICAL Uncaught Error: Object of class WP_Post could not be converted to string in C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\pluggable.php:1349
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\pluggable.php(1349): str_replace(' ', '%20', Object(WP_Post))
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\pluggable.php(1310): wp_sanitize_redirect(Object(WP_Post))
+#2 C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\woocommerce.php(187): wp_redirect(Object(WP_Post))
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(292): woo_login_redirect('')
+#4 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#5 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#6 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\template-loader.php(13): do_action('template_redire...')
+#7 C:\wamp64\www\Wordpress\Brasos\wp\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\W...')
+#8 C:\wamp64\www\Wordpress\Brasos\inde, em C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\pluggable.php, na linha 1349
+
+2021-07-29T18:00:59+00:00 CRITICAL syntax error, unexpected ';', em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\woocommerce.php, na linha 187
+
+2021-07-29T18:23:07+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function woo_login_redirect(), 1 passed in C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php on line 292 and exactly 2 expected in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\woocommerce.php:176
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(292): woo_login_redirect('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\template-loader.php(13): do_action('template_redire...')
+#4 C:\wamp64\www\Wordpress\Brasos\wp\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\W...')
+#5 C:\wamp64\www\Wordpress\Brasos\index.php(17): require('C:\\wamp64\\www\\W...')
+#6 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\woocommerce.php, na linha 176
+
+2021-07-29T18:23:21+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function woo_login_redirect(), 1 passed in C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php on line 292 and exactly 2 expected in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\woocommerce.php:176
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(292): woo_login_redirect('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\template-loader.php(13): do_action('template_redire...')
+#4 C:\wamp64\www\Wordpress\Brasos\wp\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\W...')
+#5 C:\wamp64\www\Wordpress\Brasos\index.php(17): require('C:\\wamp64\\www\\W...')
+#6 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\woocommerce.php, na linha 176
+

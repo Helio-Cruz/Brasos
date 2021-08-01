@@ -2,7 +2,7 @@
 
 
 <!-- POP UP  brasit2020 media-->
-<!-- This is a button toggling the modal with the outside close button -->
+<!-- This is a button toggling the modal with the outside close button 
 <div id="modal-media-brasit2020" class="uk-flex-top" uk-modal>
   <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
     <button class="uk-modal-close-outside" type="button" uk-close></button>
@@ -17,7 +17,7 @@
       </p>
     </div>
   </div>
-</div>
+</div>-->
 
 
 

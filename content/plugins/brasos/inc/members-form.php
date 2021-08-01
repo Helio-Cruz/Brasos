@@ -116,6 +116,7 @@ class BecomeMember
             $phone = esc_sql(trim($_POST['phone']));
             $especiality = esc_sql(trim($_POST['especiality']));
             $crm =  esc_sql(trim($_POST['crm']));
+            $login = strstr($email, '@', true);
 
             // champs obligatoires
             // si nom et email sont complétés "et" (spécialité + crm "ou" profession)
@@ -140,21 +141,22 @@ class BecomeMember
                     } else {
                         // if user is not registered & fields are ok
                         // add user to db
+
                         $this->wpdb->insert(
                             $this->usersTable,
                             [
                                 'user_email' => $email,
+                                'user_login' => $login,
                                 'user_registered' => current_time('mysql')
                             ],
                             [
+                                '%s',
                                 '%s',
                                 '%s',
                             ]
                         );
                         /* find the last ID created in wp_users */
                         $id = $this->getUserId($email);
-
-
 
                         //Join string MB0 to $id 
                         $userCustomId = 'MB' . $id;
@@ -258,7 +260,6 @@ class BecomeMember
 
         return $this->wpdb->get_var($getLastRegisteredUser);
     }
-
 
     public function exportCsv()
     {

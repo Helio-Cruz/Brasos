@@ -5,7 +5,7 @@
   background: $grey;
   @include tablets {
     width: 700px;
-    margin: 6em auto;
+    margin: 16em auto;
   }
   @include computers {
     width: 900px;
@@ -38,6 +38,7 @@
     padding: 7em 1em 2em;
     line-height: 1.5em;
     text-align: justify;
+    color: $black;
     @include tablets {
       padding: 5.5em 4em 4em;
     }

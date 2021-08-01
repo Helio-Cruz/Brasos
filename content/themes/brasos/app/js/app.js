@@ -127,6 +127,16 @@ var app = {
           $("#form_output").hide();
         }
     */
+    /* modal become-member template */
+    jQuery(function ($) {
+      var popup = $('#modal-media-text');
+      if (popup) {
+        UIkit.modal('#modal-media-text').show();
+      } else {
+        UIkit.modal('#modal-media-text').hide();
+      }
+    });
+
 
 
     $("#loginform").on('submit', function (event) {
@@ -173,6 +183,74 @@ var app = {
     });
 
 
+
+    const checkoutLoginForm = $('.xoo-el-form-inline [data-section="login"]');
+    const ResetPwd = `
+    <hr class="xoo-aff-group">
+    <form class="xoo-aff-group" id="form-password-reset" action="<?php echo wp_lostpassword_url(); ?>" method="post">
+      <h3 class="h3" style="text-align: center; line-height: 50px; background: #f2f2f2; font-weight: bold ">Membro Brasos? <br/>Por favor insira seu e-mail e clique abaixo para gerar sua senha.</h3>
+      <div>
+        <label for="auth-password-reset-email" style="visibility: hidden">Email</label>
+        <div class="xoo-aff-input-group">
+          <input type="email" class="xoo-aff-text" id="auth-password-reset-email" name="email" placeholder="Email" style="width: 65% !important; margin-right: 20px; height: 45px;">
+          <button type="submit" class="button btn xoo-el-action-btn xoo-el-login-btn" style="width: 35% !important; margin: 0 !important; height: 45px;">Gerar Senha</button>
+        </div>
+      </div>
+      <p class="form__error uk-text-danger"></p>
+      <p class="form__success uk-text-success"></p>
+    </form>
+    `;
+
+    if (checkoutLoginForm) {
+      checkoutLoginForm.append(ResetPwd);
+    }
+
+    $('.xoo-el-form-inline #form-password-reset').on('submit', function (event) {
+      event.preventDefault(event);
+      const email = $(`.xoo-el-form-inline #auth-password-reset-email`).val()
+      console.log(email)
+      const error = $('.xoo-el-form-inline #form-password-reset .form__error');
+      const success = $('.xoo-el-form-inline #form-password-reset .form__success');
+
+      if (email) {
+        $.ajax({
+          type: 'POST',
+          url: ajax_brasos.ajaxurl,
+          data: {
+            action: 'authResetPassword',
+            email: email,
+            security: ajax_brasos.security
+          },
+          success: function (data) {
+            console.log(data)
+            if (data.status == true) {
+              error.text("")
+              success.text("")
+              success.text(data.data.message)
+            }
+            if (data.status == false) {
+              success.text("")
+              error.text("")
+              error.text(data.data.message)
+            }
+          },
+          error: function (data) {
+            console.log(data)
+            success.text("")
+            error.text("")
+            error.text('Occoreu um erro, tente de novo mais tarde.');
+          }
+        })
+      } else {
+        success.text("")
+        error.text("")
+        error.text("Insira seu email")
+        return false;
+      }
+
+    })
+
+
     // woocommerce
     // PAGE MY ACCOUNT
     if (window.location.pathname == '/Wordpress/Brasos/my-account/') {
@@ -187,7 +265,6 @@ var app = {
         dashboardLink.style.color = 'white';
       }
     }
-    
   }
 };
 

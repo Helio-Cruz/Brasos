@@ -3,6 +3,7 @@
     margin: 2em auto;
     width: 85%;
     padding: 2em;
+    font-size: 16px;
     @include tablets {
       padding: 2em 4em;
     }
@@ -10,7 +11,7 @@
       line-height: 2em;
     }
     h2:not(.events-informations__subtitle), h3:not(.events-informations__subtitle), h4, h5, h6 {
-      font-size: inherit;
+     // font-size: inherit;
       color: inherit;
       font-style: inherit;
       font-weight: inherit;
@@ -26,7 +27,7 @@
     &__subtitle {
       font-style: normal;
       text-align: left;
-      font-size: 18px;
+      font-size: 24px;
       padding: 0.5em 0 0;
       color: $color-green-dark;
       text-transform: uppercase;

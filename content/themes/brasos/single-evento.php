@@ -7,13 +7,13 @@
 
 
 <!-- NAVIGATION -->
- 
+
 
 
 
 <ul class="uk-subnav navbar-events" uk-switcher>
 
-  <li>  
+  <li>
     <a href="#">INFORMAÇÕES GERAIS</a>
   </li>
   <li>
@@ -30,7 +30,7 @@
 </div>
 -->
 
- 
+
 
 <?php
 $current_page_id = get_the_ID();
@@ -46,23 +46,11 @@ if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_
 
     get_template_part('template-parts/events/event', 'full');
 
+
+
   endwhile;
 endif;
 wp_reset_postdata(); ?>
- 
 
- <div class="uk-subnav navbar-events">
-
-  <?php
-  $link = get_field('inscreva-se');
-  if ($link) :
-  ?>
-      <a class="normal-link normal-link-one" href="<?php echo esc_url($link);  ?>">VOLTAR A PÁGINA DO EVENTO</a>
-  
-  
-  <?php endif; ?>
-</div>
-
-<?php get_template_part('template-parts/woocommerce/footer', 'patrocinio'); ?>
 
 <?php get_footer(); ?>

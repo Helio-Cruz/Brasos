@@ -22,21 +22,21 @@
                   $subtitle = get_sub_field('subtitulo');
               ?>
                   <div class="full-content">
-                    <?php if (!$modulo && $startHour) : ?>
-                      <div class="start-hour"> <?= $startHour ?> </div>
-                    <?php endif; ?>
-                    <!-- CARDS -->
-                    <?php if (have_rows('cards')) : ?>
-                      <div class="right-content <?php if (!$modulo) : ?>right-content-border<?php endif; ?>">
-                        <?php if ($modulo && $subtitle) : ?> <h2 class="subtitle"><?= $subtitle ?></h2>
-                        <?php elseif (!$modulo && $subtitle) : ?> <h3 class="subtitle"><?= $subtitle ?></h3>
-                        <?php endif; ?>
-                        <!-- CARDS -->
-                        <?php while (have_rows('cards')) : the_row();
+                    <?php if ($startHour) : ?><div class="start-hour"><?= $startHour ?></div><?php endif; ?>
+                    <div class="right-content <?php if ($modulo == 'conteudo') : ?>right-content-border<?php endif; ?>">
+                      <?php if ($subtitle && $modulo == 'sessao') : ?>
+                        <h2 class="subtitle"><?= $subtitle ?></h2>
+                      <?php elseif ($subtitle && $modulo == 'mini-simposio') : ?>
+                        <h2 class="subtitle mini-simposio"><?= $subtitle ?></h2>
+                      <?php elseif ($subtitle && $modulo == 'conteudo') : ?>
+                        <h3 class="subtitle"><?= $subtitle ?></h3>
+                      <?php endif; ?>
+                      <!-- CARDS -->
+                      <?php if (have_rows('cards')) : while (have_rows('cards')) : the_row();
                           $img = get_sub_field('imagem_de_perfil');
                           $description = get_sub_field('descricao_da_pessoa');
                           $nationality = get_sub_field('nacionalidade');
-                        ?>
+                      ?>
                           <div class="card uk-card-default">
                             <div class="card-image"><img src="<?= esc_url($img['url']); ?>" alt="<?= esc_attr($img['alt']); ?>" /></div>
                             <div class="card-text"><?= $description ?></div>
@@ -50,11 +50,9 @@
                             </div>
                           <?php endif; ?>
                         <?php endwhile; ?>
-                      </div>
-                    <?php endif; ?>
-                    <?php if (!$modulo && $endHour) : ?>
-                      <div class="end-hour"> <?= $endHour ?> </div>
-                    <?php endif; ?>
+                      <?php endif; ?>
+                    </div>
+                    <?php if ($endHour) : ?><div class="end-hour"><?= $endHour ?></div><?php endif; ?>
                   </div>
 
               <?php endwhile;

@@ -26,6 +26,8 @@
       <?php endwhile;
       endif; ?>
 
+
+
       <!-- MENSAGEM PRESIDENTE  -->
       <?php if (have_rows('mensagem_do_presidente')) : while (have_rows('mensagem_do_presidente')) : the_row();
           $titleMessageCEO = get_sub_field('titulo_do_mensagem');
@@ -59,4 +61,19 @@
 
     </div>
   <?php endif; ?>
+
+  <div class="uk-subnav navbar-events">
+    <?php
+    $link = get_field('inscreva-se');
+    if ($link) :
+    ?>
+      <a class="normal-link normal-link-one" href="<?php echo esc_url($link);  ?>">VOLTAR A PÁGINA DO EVENTO</a>
+    <?php endif; ?>
+  </div>
+
+  <?php $patrocinio = get_field('patrocinios'); ?>
+  <div class="patrocinios" style="margin: auto; text-align:center">
+    <?php echo $patrocinio; ?>
+  </div>
+
 </li>

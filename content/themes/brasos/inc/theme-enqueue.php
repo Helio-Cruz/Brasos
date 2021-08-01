@@ -20,7 +20,7 @@ if (!function_exists('brasos_scripts')) :
             '1.1.0',
             true
         );
-/*
+        /*
         wp_localize_script(
             'brasos-js',
             'ajax_login_object',
@@ -30,6 +30,15 @@ if (!function_exists('brasos_scripts')) :
             )
         );
         */
+
+        wp_localize_script(
+            'brasos-js',
+            'ajax_brasos',
+            [
+                'ajaxurl' => admin_url('admin-ajax.php'),
+                'security' => wp_create_nonce('ajax-resetpassword-nonce')
+            ]
+        );
     }
 
 endif;

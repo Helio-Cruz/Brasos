@@ -8,8 +8,14 @@
   @include computers {
     width: 75%;
   }
+  &.page-programacao {
+    margin: 4em auto !important;
+  }
   li {
     padding: 20px;
+  }
+  li.uk-open.no-shadow {
+    box-shadow: none;
   }
   h2,
   h3,
@@ -63,50 +69,38 @@
     }
   }
 
-  h2.uk-title {
-    font-style: inherit;
-    margin: 2em auto;
-    width: 100%;
-    color: #006e78;
-    font-size: 28px;
-    font-weight: 200;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1.3;
-  }
-
   .uk-accordion-content {
     .full-content {
       display: flex;
       position: relative;
       width: 100%;
       max-width: 400px;
-      margin: 4em auto;
+      margin: 4em auto 0;
       @include tablets {
-        max-width: 500px;
+        max-width: 800px;
       }
     }
     .right-content {
-      border-left: 2px solid $white;
+      border-left: 1px solid $white;
       margin-left: 0;
       padding-left: 25px;
       width: 100%;
-      &-border {
-        border-left: 2px solid $black;
-      }
       @include tablets {
-        padding-left: 100px;
+      //  padding-left: 100px;
+      }
+      &-border {
+        border-left: 1px solid $black;
       }
     }
     .start-hour,
     .end-hour {
-      left: -50px;
+      left: -45px;
       position: absolute;
       z-index: 10;
       color: black;
       background: white;
       padding: 0.2em 1.8em;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: bold;
       top: -40px;
     }
@@ -116,24 +110,34 @@
     }
     h2.subtitle,
     h3.subtitle {
-      font-size: 12px;
       color: black;
       font-weight: bold;
       text-align: left;
-      text-transform: capitalize;
       width: 100%;
+      font-family: $body-font-regular;
     }
     h2.subtitle {
-      font-size: 18px;
-      color: $color-green-dark;
-      text-transform: uppercase;
-      @include mobiles {
-        font-size: 22px;
+      font-size: 13px;
+      color: $white;
+      background: $color-green-dark;
+      padding: 9px 20px;
+      text-align: left;
+      border-radius: 80px;
+      @include tablets {
+        margin-left: -120px;
+      }
+      &.mini-simposio {
+        background: $color-green-regular;
+        margin: 1em 0 -2em;
+        @include tablets {
+          width: 120%;
+          margin: 1em 0 -2em -120px;
+        }
       }
     }
-    h3.subtitle::first-line {
+    h3.subtitle {
       text-transform: uppercase;
-      font-size: 16px;
+      font-size: 12px;
     }
     .card {
       display: flex;
@@ -144,7 +148,9 @@
       max-width: 400px;
       background: $white;
       margin: 1em auto;
-      padding: 1em;
+      padding: 1.8em;
+      border: solid $black 1px;
+      border-radius: 10px;
       @include mobiles {
         width: 400px;
         flex-direction: row;
@@ -164,12 +170,13 @@
         }
       }
       &-text {
-        color: $color-green-dark;
+        color: $black;
         font-weight: bold;
         text-align: center;
         padding: 1em 0 0;
-        line-height: 1.3em;
+        line-height: 1.2em;
         width: 220px;
+        font-size: 12px;
         @include mobiles {
           padding: 1em 0;
         }
@@ -185,12 +192,13 @@
     }
     .patrocinadores {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
     }
     .patrocinador {
-      width: 100px;
+      width: 150px;
       margin-right: 2em;
+      margin-top: 1em;
       &:last-child {
         margin-right: 0;
       }

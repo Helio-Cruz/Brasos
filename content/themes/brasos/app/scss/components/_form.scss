@@ -20,6 +20,10 @@
   height: auto;
   width: 80vw;
   padding: 2em;
+  h2{
+    font-weight: 800;
+    text-transform: uppercase;
+  }
   @include tablets {
     width: 600px;
     padding: 2em 3em;
@@ -46,11 +50,12 @@
   }
   .uk-input,
   .uk-textarea {
-    border: none;
-    border-bottom: 2px solid $color-green-regular;
+    border-radius: 5px;
+    padding: 30px;
     color: black;
     &::placeholder {
       color: $color-green-regular;
+      font-weight: 800;
       font-size: $body-xs;
     }
   }
