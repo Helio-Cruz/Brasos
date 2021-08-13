@@ -58,3 +58,12 @@
     }
   }
 }
+
+.inscription-modal{
+  justify-content: center !important;
+  display: flex !important;
+  form{
+    align-self: center;
+    width: 40%;
+  }
+}

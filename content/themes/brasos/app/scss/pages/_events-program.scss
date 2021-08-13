@@ -117,7 +117,7 @@
       font-family: $body-font-regular;
     }
     h2.subtitle {
-      font-size: 13px;
+      font-size: 17px;
       color: $white;
       background: $color-green-dark;
       padding: 9px 20px;
@@ -167,6 +167,7 @@
           height: 100%;
           width: 100%;
           object-fit: cover;
+          border-radius: 80px;
         }
       }
       &-text {

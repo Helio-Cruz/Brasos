@@ -63,7 +63,7 @@
         justify-content: space-around;
         @include computers {
           margin-right: 2em;
-          width: 70%;
+          width: 78%;
           justify-content: space-between;
         }
       }
@@ -78,9 +78,23 @@
         color: $black;
       }
       .price {
+        padding-bottom: 1em;
         font-size: 16px;
-        margin: 0 4em;
+        margin: 0;
         color: $black;
+        @include computers {
+          padding-bottom: 0;
+        }
+      }
+      &:first-child .price {
+        @include computers {
+          margin-right: 1em;
+        }
+      }
+      &:last-child .price {
+        @include computers {
+          margin-left: 9em;
+        }
       }
       .button {
         margin: 0;
@@ -125,7 +139,7 @@
     }
     .woocommerce-MyAccount-navigation-link {
       width: 220px;
-      padding: 0.5em;
+      padding: 1em;
       font-size: 16px;
       &.is-active {
         background: $color-green-regular;
@@ -141,7 +155,7 @@
   }
   // right content
   .woocommerce-MyAccount-content {
-    padding: 1.5em;
+   // padding: 1.5em;
     p {
       // height: 50px;
       border-radius: 0 !important;
@@ -557,7 +571,7 @@
 
 .woocommerce-info {
   border-top-color: $black !important;
-  margin: 120px auto !important;
+ // margin: 120px auto !important;
   &::before {
     color: $black;
   }

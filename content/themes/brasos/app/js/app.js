@@ -199,6 +199,7 @@ var app = {
       <p class="form__error uk-text-danger"></p>
       <p class="form__success uk-text-success"></p>
     </form>
+  
     `;
 
     if (checkoutLoginForm) {

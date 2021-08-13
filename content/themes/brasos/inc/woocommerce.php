@@ -38,12 +38,6 @@ function my_custom_checkout_field($checkout)
     'class' => array('form-row-wide'),
   ), $checkout->get_value('especialidade'));
 
-  woocommerce_form_field('crm', array(
-    'type'          => 'text',
-    'label'         => __('CRM'),
-    'required' => true,
-    'class' => array('form-row-wide'),
-  ), $checkout->get_value('crm'));
   echo '</div>';
 }
 
@@ -62,9 +56,6 @@ function my_custom_checkout_field_update_order_meta($order_id)
   if (!empty($_POST['especialidade'])) {
     update_post_meta($order_id, 'My Field', sanitize_text_field($_POST['especialidade']));
   }
-  if (!empty($_POST['crm'])) {
-    update_post_meta($order_id, 'My Field 2', sanitize_text_field($_POST['crm']));
-  }
 }
 
 /**
@@ -75,10 +66,11 @@ add_action('woocommerce_admin_order_data_after_billing_address', 'my_custom_chec
 function my_custom_checkout_field_display_admin_order_meta($order)
 {
   echo '<p><strong>' . __('Especialidade') . ':</strong> ' . get_post_meta($order->id, 'My Field', true) . '</p>';
-  echo '<p><strong>' . __('CRM') . ':</strong> ' . get_post_meta($order->id, 'My Field 2', true) . '</p>';
+ 
 }
 
 
+ 
 // remove billing fields
 add_filter('woocommerce_checkout_fields', 'remove_fields',  10, 1);
 function remove_fields($fields)
@@ -118,6 +110,8 @@ function reorder_fields($fields)
 
 
 
+ 
+
 
 function custom_breadcrumbs()
 { ?>
@@ -142,13 +136,13 @@ function custom_breadcrumbs()
           *     return;
           * }
       */
-        printf(__('Olá %s', 'textdomain'), esc_html($current_user->user_firstname)) . '<br />';
+        printf(__('Olá, %s', 'textdomain'), esc_html($current_user->user_firstname)) . '<br />';
         ?>
       </a>
     </div>
 
     <span <?php if (is_page('shop')) { ?> class="active" <?php } ?>><a href="<?= home_url('/inscricao'); ?>">Ingressos</a></span> <a uk-icon="icon: chevron-right"></a>
-    <span <?php if (is_page('checkout')) { ?> class="active" <?php } ?>><a href="<?= home_url('/checkout'); ?>">Pagamento</a></span>
+    <span <?php if (is_page('checkout')) { ?> class="active" <?php } ?>><a href="<?= home_url('/checkout'); ?>">Checkout</a></span>
 
   </div>
 <?php
@@ -198,3 +192,11 @@ function woo_login_redirect()
   }
 }
 add_action('template_redirect', 'woo_login_redirect');
+
+
+// remove single product page link
+remove_action('woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10);
+
+
+ // Do not save address on checkout Page
+add_filter( 'woocommerce_checkout_update_customer_data', '__return_false' );

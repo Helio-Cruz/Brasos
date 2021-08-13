@@ -1,0 +1,26 @@
+2021-08-12T11:18:58+00:00 CRITICAL syntax error, unexpected '/', em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\woocommerce.php, na linha 97
+
+2021-08-12T19:08:43+00:00 CRITICAL Uncaught Error: Call to undefined method WC_PagSeguro_XML::add_shipping_data() in C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce-pagseguro-master\includes\class-wc-pagseguro-api.php:571
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce-pagseguro-master\includes\class-wc-pagseguro-api.php(724): WC_PagSeguro_API->get_payment_xml(Object(Automattic\WooCommerce\Admin\Overrides\Order), Array)
+#1 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce-pagseguro-master\includes\class-wc-pagseguro-gateway.php(386): WC_PagSeguro_API->do_payment_request(Object(Automattic\WooCommerce\Admin\Overrides\Order), Array)
+#2 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\class-wc-checkout.php(980): WC_PagSeguro_Gateway->process_payment(3883)
+#3 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\class-wc-checkout.php(1195): WC_Checkout->process_order_payment(3883, 'pagseguro')
+#4 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\class-, em C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce-pagseguro-master\includes\class-wc-pagseguro-api.php, na linha 571
+
+2021-08-12T19:09:32+00:00 CRITICAL Uncaught Error: Call to undefined method WC_PagSeguro_XML::add_shipping_data() in C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce-pagseguro-master\includes\class-wc-pagseguro-api.php:571
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce-pagseguro-master\includes\class-wc-pagseguro-api.php(724): WC_PagSeguro_API->get_payment_xml(Object(Automattic\WooCommerce\Admin\Overrides\Order), Array)
+#1 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce-pagseguro-master\includes\class-wc-pagseguro-gateway.php(386): WC_PagSeguro_API->do_payment_request(Object(Automattic\WooCommerce\Admin\Overrides\Order), Array)
+#2 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\class-wc-checkout.php(980): WC_PagSeguro_Gateway->process_payment(3883)
+#3 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\class-wc-checkout.php(1195): WC_Checkout->process_order_payment(3883, 'pagseguro')
+#4 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\class-, em C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce-pagseguro-master\includes\class-wc-pagseguro-api.php, na linha 571
+
+2021-08-12T19:11:48+00:00 CRITICAL Uncaught Error: Call to undefined method WC_PagSeguro_XML::add_shipping_data() in C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce-pagseguro-master\includes\class-wc-pagseguro-api.php:571
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce-pagseguro-master\includes\class-wc-pagseguro-api.php(724): WC_PagSeguro_API->get_payment_xml(Object(Automattic\WooCommerce\Admin\Overrides\Order), Array)
+#1 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce-pagseguro-master\includes\class-wc-pagseguro-gateway.php(386): WC_PagSeguro_API->do_payment_request(Object(Automattic\WooCommerce\Admin\Overrides\Order), Array)
+#2 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\class-wc-checkout.php(980): WC_PagSeguro_Gateway->process_payment(3883)
+#3 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\class-wc-checkout.php(1195): WC_Checkout->process_order_payment(3883, 'pagseguro')
+#4 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\class-, em C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce-pagseguro-master\includes\class-wc-pagseguro-api.php, na linha 571
+
