@@ -1,10 +1,0 @@
-2021-07-01T08:00:59+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';', em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\template-parts\woocommerce\footer-patrocinio.php, na linha 4
-
-2021-07-01T09:12:10+00:00 CRITICAL syntax error, unexpected '}', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF), em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\woocommerce.php, na linha 148
-
-2021-07-01T09:51:32+00:00 CRITICAL syntax error, unexpected '?>', em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\woocommerce.php, na linha 141
-
-2021-07-01T09:51:49+00:00 CRITICAL syntax error, unexpected '?>', em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\woocommerce.php, na linha 141
-
-2021-07-01T09:52:01+00:00 CRITICAL syntax error, unexpected '?>', em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\woocommerce.php, na linha 141
-

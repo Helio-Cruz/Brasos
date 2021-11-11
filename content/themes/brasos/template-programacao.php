@@ -6,7 +6,6 @@ Template Name: Programacao Template
 
 <?php get_header(); ?>
 
-
 <?php if (have_rows('programacao')) : ?>
   <div class="accordion__content events__layout page-programacao">
     <ul uk-accordion>
@@ -15,7 +14,7 @@ Template Name: Programacao Template
         $contentProgram = get_sub_field('detalhes');
       ?>
 
-        <li class="no-shadow">
+        <li class="no-shadow ">
           <a class="uk-accordion-title" href="#">
             <h2><?php echo $titleProgram; ?></h2>
           </a>
@@ -26,6 +25,7 @@ Template Name: Programacao Template
                 $startHour = get_sub_field('horario_inicial');
                 $endHour = get_sub_field('horario_final');
                 $subtitle = get_sub_field('subtitulo');
+                $patrocinadorMS = get_sub_field('patrocinador_mini-simposio');
             ?>
                 <div class="full-content">
                   <?php if ($startHour) : ?><div class="start-hour"><?= $startHour ?></div><?php endif; ?>
@@ -34,6 +34,9 @@ Template Name: Programacao Template
                       <h2 class="subtitle"><?= $subtitle ?></h2>
                     <?php elseif ($subtitle && $modulo == 'mini-simposio') : ?>
                       <h2 class="subtitle mini-simposio"><?= $subtitle ?></h2>
+                      <?php if ($patrocinadorMS) : ?>
+                        <div class="patrocinador-ms"><img src="<?= esc_url($patrocinadorMS['url']); ?>" alt="<?= esc_attr($img['alt']); ?>" /></div>
+                      <?php endif; ?>
                     <?php elseif ($subtitle && $modulo == 'conteudo') : ?>
                       <h3 class="subtitle"><?= $subtitle ?></h3>
                     <?php endif; ?>
@@ -69,5 +72,10 @@ Template Name: Programacao Template
     </ul>
   </div>
 <?php endif; ?>
+
+<?php $patrocinio = get_field('patrocinios'); ?>
+<div class="patrocinios" style="margin: auto; text-align:center">
+  <?php echo $patrocinio; ?>
+</div>
 
 <?php get_footer(); ?>

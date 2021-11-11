@@ -27,7 +27,10 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
                 <th scope="col">Email</th>
                 <th scope="col">Telefone</th>
                 <th scope="col">Especialidade</th>
-                <th scope="col">CRM</th>
+                <!--
+                    <th scope="col">CRM</th>
+                -->
+
                 <th scope="col">data/registro</th>
                 <th scope="col"></th>
                 <th scope="col"></th>
@@ -58,6 +61,56 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
 
             <?php
 
+            /*
+            function getData()
+            {
+                global $wpdb; // access the database
+
+                $usersTable = $wpdb->prefix . 'users';
+                $brasosMembers = $wpdb->prefix . 'brasos_members';
+                $userMeta = $wpdb->prefix . 'usermeta';
+                /*
+
+                $sql = ("
+                
+                 SELECT *
+                    FROM $usersTable  u,  $brasosMembers bm, $userMeta um,       
+                    WHERE u.ID = bm.user_id
+                    AND wp_usermeta.meta_value LIKE '%subscriber%' 
+                    ORDER BY user_id ASC
+                 ");
+
+*/
+
+            /*
+
+                $sql = ("
+                 
+                       SELECT *
+                        FROM $usersTable u
+                            JOIN  $brasosMembers bm ON  u.ID =  bm.user_id
+                            JOIN $userMeta um ON u.ID = um.user_id
+                            WHERE  um.meta_value LIKE '%subscriber%'
+                        
+                            
+                        ");
+
+                return $wpdb->get_results($sql);
+            }
+            
+
+            /*
+            $args = array(
+                'role'    => 'subscriber',
+                //'orderby' => 'user_nicename',
+                'order'   => 'ASC'
+            );
+            $users = get_users( $args );
+
+            $getData = getData();
+
+*/
+
 
             function getData()
             {
@@ -66,14 +119,12 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
                 $usersTable = $wpdb->prefix . 'users';
                 $brasosMembers = $wpdb->prefix . 'brasos_members';
 
-                $sql = (
-                 "
-                 SELECT *
-                    FROM $usersTable  u,  $brasosMembers bm       
-                    WHERE u.ID = bm.user_id
-                    ORDER BY user_id ASC
-                 "
-                );
+                $sql = ("
+                        SELECT *
+                            FROM $usersTable  u,  $brasosMembers bm       
+                            WHERE u.ID = bm.user_id
+                            ORDER BY user_id ASC
+                        ");
 
                 return $wpdb->get_results($sql);
             }
@@ -91,7 +142,7 @@ echo '<h2>Lista de Membros Brasos</h2>Membros<br /><br />';
                 '<td>'   . ($user->user_email) . '</td>',
                 '<td>'   . ($user->phone) . '</td>',
                 '<td>'   . ($user->especiality) . '</td>',
-                '<td>'   . ($user->crm) . '</td>',
+                // '<td>'   . ($user->crm) . '</td>',
                 '<td>'   . ($user->user_registered) . '</td>',
                 '<td>'   . '</td>',
                 '<td>'   . '</td>',

@@ -24,9 +24,14 @@ $redirect 	= !empty( $redirect ) ? esc_attr( $redirect ) : $_SERVER['REQUEST_URI
 <?php xoo_el()->aff->fields->get_fields_layout(); ?>
 
 <input type="hidden" name="_xoo_el_form" value="register">
-
+ 
 <?php do_action( 'xoo_el_register_add_fields', $args ); ?>
-
-<button type="submit" class="button btn xoo-el-action-btn xoo-el-register-btn"><?php _e('Registrar-se','easy-login-woocommerce'); ?></button>
-
+ 
+<span style="color:black;position:relative;bottom:50px; ">Ao clicar no botão Cadastra-se, você se tornará membro da BRASOS automaticamente de forma gratuita.
+A BRASOS não cobra nenhuma mensalidade ou anuidade de seus membros, sendo uma adesão gratuita. Caso, ainda sim, não queira se tornar membro, clique na opção abaixo.
+</span>
+<button type="submit" class="button btn xoo-el-action-btn xoo-el-register-btn"><?php _e('Cadastrar-se','easy-login-woocommerce'); ?></button>
+ 
 <input type="hidden" name="xoo_el_redirect" value="<?= home_url('/inscricao'); ?>">
+
+ 

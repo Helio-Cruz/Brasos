@@ -1,0 +1,25 @@
+.custom-woocommerce-inscription {
+  width: 100%;
+  margin: auto;
+  padding: 50px;
+  @include tablets {
+    max-width: 900px;
+    padding: 60px;
+  }
+  &__access {
+    text-align: center;
+    button {
+      margin: 0.5em auto;
+    }
+    a {
+      color: white;
+    }
+  }
+  /*inscription page finger effect*/
+  .finger-effect {
+    display: inline-block;
+    animation: leftToRight ease 1.5s infinite;
+  }
+}
+
+ 

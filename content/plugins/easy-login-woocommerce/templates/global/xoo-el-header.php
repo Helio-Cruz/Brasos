@@ -25,10 +25,10 @@ $form_active 	= $args['form_active'];
 <div class="xoo-el-header">
 	<ul class="xoo-el-tabs">
 
-		<li data-tab="login" class="xoo-el-login-tgr"><?php _e( 'Login', 'easy-login-woocommerce' ); ?></li>
+		<li data-tab="login" class="xoo-el-login-tgr"><?php _e( 'Membro-Brasos "LOGIN"', 'easy-login-woocommerce' ); ?></li>
 
 		<?php if( isset( $register_args['enable'] ) && $register_args['enable'] === "yes" ): ?> 
-			<li data-tab="register" class="xoo-el-reg-tgr"><?php _e( 'Cadastro', 'easy-login-woocommerce' ); ?></li>
+			<li data-tab="register" class="xoo-el-reg-tgr"><?php _e( 'Não Membro-Brasos "CADASTRO"', 'easy-login-woocommerce' ); ?></li>
 		<?php endif; ?>
 
 	</ul>

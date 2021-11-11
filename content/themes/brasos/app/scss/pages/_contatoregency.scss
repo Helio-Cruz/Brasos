@@ -1,0 +1,16 @@
+.regencyc{
+    margin: auto;
+    padding: 80px 0px;
+    text-align: center;
+    @include tablets {
+        padding: 120px;
+    }
+    p{
+        font-size: 12px;
+        font-weight: 900;
+        @include tablets {
+            font-size: 20px;
+        }
+    }
+   
+}

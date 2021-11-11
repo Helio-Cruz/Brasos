@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100i,300i,400,500i,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -83,8 +84,17 @@ h3 {
   display: flex;
   justify-content: center;
   background: #00a4e3;
-  &--event{
+  &--event {
     background: #d8d1c7;
+  }
+  &--event2 {
+    background: $color-green-dark;
+  }
+  &--animation {
+    animation-name: rightToLeft;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
   @include TwoK {
     padding-top: 1120px;
@@ -101,6 +111,10 @@ h3 {
   max-width: 100%;
   max-height: 100%;
 }
+.mockup .video-presentation {
+  max-height: 100%;
+}
+
 .faixatopo {
   overflow: hidden;
   position: absolute;
@@ -147,3 +161,73 @@ h3 {
     transform: translate(0, 0);
   }
 }
+
+@keyframes leftToRight {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-10px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.backToEvent {
+  margin: 100px auto;
+  width: 200px;
+  @include computers {
+    margin: 100px 200px;
+  }
+  a {
+    color: $black;
+    font-weight: 600;
+  }
+}
+
+.xoo-aff-group label:last-child {
+  position: relative !important;
+  top: 130px !important;
+  @include mobiles {
+    top: 60px !important;
+  }
+}
+
+.xoo-el-form-container button.btn.button.xoo-el-action-btn {
+  position: relative;
+  top: 40px;
+}
+
+text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+@keyframes rightToLeft {
+  0% {
+    transform: translateX(1500px);
+  }
+  100% {
+    transform: translateX(-1500px);
+  }
+}
+
+/***
+* css svg home event
+*/
+.button-mobile {
+  cursor: pointer; 
+  @include mobiles {
+    display: none;
+  }
+}
+.video-home-promotion {
+  z-index: 10;
+  display: none;
+  @include mobiles {
+    display: flex;
+  }
+}
+
+ 

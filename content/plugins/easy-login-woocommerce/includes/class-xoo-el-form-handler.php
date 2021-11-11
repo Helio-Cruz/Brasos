@@ -303,7 +303,7 @@ class Xoo_El_Form_Handler{
 		}
 
 		if ( email_exists( $email ) ) {
-			return new WP_Error( 'registration-error-email-exists',  __( 'An account is already registered with your email address. Please log in.', 'easy-login-woocommerce' ) );
+			return new WP_Error( 'registration-error-email-exists',  __( 'Uma conta já está registrada com seu endereço de e-mail. Por favor conecte-se.', 'easy-login-woocommerce' ) );
 		}
 
 		// Handle username creation.
@@ -570,7 +570,7 @@ class Xoo_El_Form_Handler{
 
 				do_action( 'xoo_el_reset_password_success', $user );
 
-				$success_notice = apply_filters( 'xoo_el_reset_password_success_notice', __( 'Your password has been reset successfully! Please <a class="xoo-el-login-tgr">Login</a>', 'easy-login-woocommerce' ), $user );
+				$success_notice = apply_filters( 'xoo_el_reset_password_success_notice', __( 'Sua senha foi criada com sucesso! Por Favor <a class="xoo-el-login-tgr">Login</a>', 'easy-login-woocommerce' ), $user );
 
 				return array(
 					'error' 	=> 0,

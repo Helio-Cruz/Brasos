@@ -23,7 +23,7 @@ Template Name: Torne-se Membro
 </section>
 
 <section id="modal-media-text" uk-modal>
-  <div class="message fadeBottom">
+  <div class="message fadeBottom uk-modal-dialog uk-modal-body">
     <button class="uk-modal-close-outside" type="button" uk-close></button>
     <p class="message__content">
       Faça parte de uma comunidade de profissionais de medicina com a mesma mentalidade: atualização, aplicação

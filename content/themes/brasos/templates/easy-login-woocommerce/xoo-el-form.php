@@ -52,7 +52,7 @@ $form_active = $args['form_active'];
 					<?php do_action( 'xoo_el_form_end', $form, $args ); ?>
 
 				</form>
-
+		 
 				<?php do_action( 'xoo_el_after_form', $form, $form_args ); ?>
 
 			</div>

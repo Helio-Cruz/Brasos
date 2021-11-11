@@ -1,21 +1,27 @@
-<div class="uk-card uk-card-default box">
-  <div class="uk-card-header">
-    <h3 class="uk-card-title h3-title">
-      <?php if (get_field('link')) : ?>
-        <a href="<?php the_field('link'); ?>" target="_blank"><?php the_title(); ?></a>
-      <?php else : ?>
-        <?php the_title(); ?>
-      <?php endif; ?>
-    </h3>
+ 
+
+ 
+
+  <div class="uk-section uk-light uk-background-cover uk-section-large" style="background-image: url(<?php echo get_template_directory_uri() . '/public/images/brasit-foto.jpg' ?>)">
+    <div class="uk-container">
+
+       
+      <div>
+        <?php if (get_field('local')) : ?>
+          <p><?php the_field('local'); ?></p>
+        <?php endif; ?>
+        <br />
+        <?php if (get_field('data')) : ?>
+          <p><?php the_field('data'); ?></p>
+        <?php endif; ?>
+        <br />
+        <?php if (get_field('link')) : ?>
+          <button href="<?php the_field('link'); ?>" class="uk-button uk-button-default">
+            <a href="<?php the_field('link'); ?>" target="_blank">Acesse o site</a>
+          </button>
+        <?php endif; ?>
+      </div>
+
+    </div>
   </div>
-  <div class="uk-card-body">
-    <?php if (get_field('local')) : ?>
-      <h4>Local</h4>
-      <p><?php the_field('local'); ?></p>
-    <?php endif; ?>
-    <?php if (get_field('data')) : ?>
-      <h4>Data</h4>
-      <p><?php the_field('data'); ?></p>
-    <?php endif; ?>
-  </div>
-</div>
+ 

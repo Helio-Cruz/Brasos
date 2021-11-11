@@ -8,28 +8,27 @@
 
 <!-- NAVIGATION -->
 
-
-
-
 <ul class="uk-subnav navbar-events" uk-switcher>
-
-  <li>
-    <a href="#">INFORMAÇÕES GERAIS</a>
-  </li>
-  <li>
-    <?php echo (have_rows('programacao')) ? '<a href="#">PROGRAMAÇÃO</a>' : null;  ?>
-  </li>
-  <li>
-    <?php echo (have_rows('palestrantes_nacionais')) && (have_rows('palestrantes_internacionais'))  ? '<a href="#">PALESTRANTES CONVIDADOS</a>' : null;  ?>
-  </li>
-
+<?php
+  $post = $wp_query->get_queried_object();
+  $pagename = $post->post_name;
+  if ($pagename === 'brasostba-2021') { ?>
+    <li> <?= (get_field('valores_de_inscricao')) ? '<a href="#">Valores de inscrição</a>' : '';  ?></li>
+    <li> <?= (get_field('sobre_o_evento')) ? '<a href="#">Política de Inscrição</a>' : '';  ?></li>
+    <li> <?= (get_field('palavra_do_secretario')) ? '<a href="#">PALAVRA DO SECRETÁRIO</a>' : '';  ?></li>
+  <?php } else { ?>
+    <li> <?= (get_field('sobre_o_evento')) ? '<a href="#">Informaçoes gerais</a>' : '';  ?></li>
+    <li> <?= (have_rows('programacao')) ? '<a href="#">PROGRAMAÇÃO</a>' : '';  ?> </li>
+    <li> <?= (have_rows('palestrantes_nacionais')) && (have_rows('palestrantes_internacionais'))  ? ' <a href="#">PALESTRANTES CONVIDADOS</a>' : '';  ?></li>
+  <?php  }
+  ?>
 </ul>
+
 <!--
   <div class="uk-subnav navbar-events">
   <a class="normal-link" href="<//?php echo site_url('/certificados/'); ?>">CERTIFICADOS</a>
 </div>
 -->
-
 
 
 <?php

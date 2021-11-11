@@ -95,13 +95,14 @@ function authResetPassword()
         $message .= '<p style="margin:16px 0;padding:0.2em 2em;">Usuário: ' . esc_html($user_login) . '</p>';
         $message .= '<p style="margin:16px 0;padding:0.2em 2em;">Se você não fez essa solicitação, ignore este e-mail. Se você gostaria de prosseguir:</p>';
         $message .= '<p style="margin:16px 0;padding:0.2em 2em;"><a style="font-weight:normal;text-decoration:underline;color:#006e78" href="' . $link . '">Clique aqui para redefinir sua senha</a></p>';
+  
         $message .= '</td></tr></tbody></table></div>';
         wp_mail($user_email, $subject, $message, $headers);
         $response['data'] = ["message" =>  'O link para definir a senha foi enviado no seu email.'];
         wp_send_json($response);
     }
 
-    $response['data'] = ["message" =>  'Este endereço de e-mail não existe no nosso banco de dados.'];
+    $response['data'] = ["message" =>  'Este endereço de e-mail não existe em nosso banco de dados.'];
     wp_send_json($response);
 
     die();

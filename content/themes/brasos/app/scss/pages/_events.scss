@@ -50,9 +50,9 @@ ul.navbar-events {
   li {
     padding-left: 0;
   }
-  li + li {
+  a {
     @include tablets {
-      padding-left: 20px !important;
+      margin-left: 20px !important;
     }
   }
 }

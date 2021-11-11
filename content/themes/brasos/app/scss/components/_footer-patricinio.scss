@@ -1,0 +1,14 @@
+.footer-patrocinio {
+  margin: 100px auto;
+  width: 80%;
+  align-items: center;
+  @include tablets {
+    width: 800px;
+  }
+  img {
+    margin: 60px;
+    @include tablets {
+      margin: 0;
+    }
+  }
+}

@@ -3,11 +3,11 @@
 class BecomeMember
 {
     private $wpdb;
- 
+
     public function __construct()
     {
 
-        global $wpdb; 
+        global $wpdb;
 
         $this->wpdb = $wpdb;
         $this->usersTable = $wpdb->prefix . 'users';
@@ -19,6 +19,9 @@ class BecomeMember
 
         add_action('wp_enqueue_scripts', [$this, 'init_jsForm'], 20);
 
+        // add_action('set_user_role', [$this, 'user_role_update', 2], 10);
+        //add_action('wp_ajax_nopriv_ajax_newMemberSubmit', [$this, 'ajax_newMemberSubmit'], 20);
+        //add_action('wp_ajax_ajax_newMemberSubmit', [$this, 'ajax_newMemberSubmit'], 20);
 
         add_action('wp_ajax_nopriv_ajax_onFormSubmit', [$this, 'ajax_onFormSubmit'], 20);
         add_action('wp_ajax_ajax_onFormSubmit', [$this, 'ajax_onFormSubmit'], 20);
@@ -39,7 +42,6 @@ class BecomeMember
                 `full_name` VARCHAR(255) NOT NULL,
                 `phone` VARCHAR(255) NOT NULL,
                 `especiality` VARCHAR(255) NOT NULL,
-                `crm` VARCHAR(255)  NOT NULL,
                 `brasos_id` VARCHAR(255) NOT NULL,
                 PRIMARY KEY (user_id)
             );";
@@ -89,8 +91,74 @@ class BecomeMember
         );
     }
 
+    /*
+    // When updating user role from "cliente" to "subscriber", add infos to table BrasosMembers
+    public function user_role_update($user_id, $new_role)
+    {
+        if ($new_role == 'subscriber') {
 
+            $user_info = get_userdata($user_id);
 
+            $id = $user_info->ID;
+            $first_name = $user_info->first_name;
+            $last_name = $user_info->last_name;
+
+            $userCustomId = 'MB' . $id;
+            $fullname = `$first_name $last_name`;
+            //$phone = ;
+            //$especiality = ;
+            echo $user_info->last_name;
+
+            $this->wpdb->insert(
+                $this->brasosMembers,
+                [
+                    'user_id' => $id,
+                    'full_name' => $fullname,
+                    //'phone' => $phone,
+                    //'especiality' => $especiality,
+                    // 'crm' => $crm,
+                    'brasos_id' => $userCustomId
+
+                ],
+                [
+                    '%d',
+                    '%s',
+                   // '%s',
+                   // '%s',
+                    // '%s',
+                    '%s'
+                ]
+            );
+        }
+    }
+    */
+/*
+    public function ajax_newMemberSubmit()
+    {
+        // check if user was created
+        $email = esc_sql(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL));
+        $is_member = esc_sql($_POST['rememberme']);
+        printf($is_member);
+        sleep(5);
+        $user = get_user_by( 'email', $email );
+
+        if ($user) {
+            $this->wpdb->insert(
+                $this->brasosMembers,
+                [
+                    'user_id' => $user->ID,
+                    'full_name' => `$user->first_name $user->last_name`,
+                    'brasos_id' => `MB $user->ID`
+                ],
+                [
+                    '%d',
+                    '%s',
+                    '%s',
+                ]
+            );
+        }
+    }
+*/
 
     /**
      * Members Form
@@ -115,12 +183,12 @@ class BecomeMember
             $email = esc_sql(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL));
             $phone = esc_sql(trim($_POST['phone']));
             $especiality = esc_sql(trim($_POST['especiality']));
-            $crm =  esc_sql(trim($_POST['crm']));
+            // $crm =  esc_sql(trim($_POST['crm']));
             $login = strstr($email, '@', true);
 
             // champs obligatoires
             // si nom et email sont complétés "et" (spécialité + crm "ou" profession)
-            if (!empty($fullname) && !empty($email) && ((!empty($especiality) && !empty($crm)))) {
+            if (!empty($fullname) && !empty($email) && ((!empty($especiality)))) {
                 // If email is not valid
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     $error = $email . 'Endereço de email invalido, favor tente de novo.';
@@ -183,7 +251,7 @@ class BecomeMember
                                 'full_name' => $fullname,
                                 'phone' => $phone,
                                 'especiality' => $especiality,
-                                'crm' => $crm,
+                                // 'crm' => $crm,
                                 'brasos_id' => $userCustomId
 
                             ],
@@ -192,7 +260,7 @@ class BecomeMember
                                 '%s',
                                 '%s',
                                 '%s',
-                                '%s',
+                                // '%s',
                                 '%s'
                             ]
                         );
@@ -230,7 +298,7 @@ class BecomeMember
                     '</div>';
             }
         }
-        wp_die();  
+        wp_die();
     }
 
     public function checkRegisteredUser($email)
@@ -288,7 +356,7 @@ class BecomeMember
             'Nome Completo',
             'Telefone',
             'Especialidade',
-            'CRM',
+            //  'CRM',
             'Data de registro',
 
         );
@@ -312,7 +380,7 @@ class BecomeMember
                 $user->full_name,
                 $user->phone,
                 $user->especiality,
-                $user->crm,
+                //  $user->crm,
                 $user->user_registered
             );
             $data_rows[] = $row;

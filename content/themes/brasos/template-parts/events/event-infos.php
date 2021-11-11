@@ -62,18 +62,9 @@
     </div>
   <?php endif; ?>
 
-  <div class="uk-subnav navbar-events">
-    <?php
-    $link = get_field('inscreva-se');
-    if ($link) :
-    ?>
-      <a class="normal-link normal-link-one" href="<?php echo esc_url($link);  ?>">VOLTAR A PÁGINA DO EVENTO</a>
-    <?php endif; ?>
-  </div>
-
-  <?php $patrocinio = get_field('patrocinios'); ?>
+  <?php $patrocinio = get_field('patrocinios', 1578); ?>
   <div class="patrocinios" style="margin: auto; text-align:center">
-    <?php echo $patrocinio; ?>
+       <?php the_field('patrocinios', 1578); ?>
   </div>
 
 </li>

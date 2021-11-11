@@ -139,6 +139,13 @@
       text-transform: uppercase;
       font-size: 12px;
     }
+    .patrocinador-ms {
+      margin-top: 4em;
+      img {
+        max-width: unset;
+        width: 190px;
+      }
+    }
     .card {
       display: flex;
       flex-direction: column;
