@@ -14,7 +14,7 @@
   @include TwoK {
    // max-height: unset;
     max-width: 100%;
-    background: $color-green-dark;
+  //  background: $color-green-dark;
     max-height: calc(100vh - 100px);
     //max-width: 1500px;
   }
@@ -37,6 +37,20 @@
      max-height: calc(100vh - 100px);
      // max-height: unset;
     }
+    @include TwoK {
+     // max-height: unset;
+      max-height: calc(85vh - 110px);
+      width: 110%;
+      object-fit: contain;
+     
+    }
+  }
+  // Caroussel home iframe video
+  &__iframe-home{
+    display:flex;
+    margin:auto;
+    width: 100% !important;
+    height: 100% !important;
     @include TwoK {
      // max-height: unset;
       max-height: calc(85vh - 110px);

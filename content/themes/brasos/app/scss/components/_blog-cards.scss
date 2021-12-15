@@ -9,6 +9,7 @@
   }
   @include computers {
     width: 950px;
+    margin: 280px auto
   }
   .row {
     @include flexbox;

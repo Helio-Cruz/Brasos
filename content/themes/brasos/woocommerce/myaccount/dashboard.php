@@ -13,8 +13,8 @@ $allowed_html = array(
 	),
 );
 ?>
-
-<p id="dashboard-hello" style="padding: 1.5em !important">
+ 
+	<p id="dashboard-hello" style="padding: 1.5em !important">
 	<?php
 	printf(
 		/* translators: 1: user display name 2: logout url */
@@ -24,6 +24,8 @@ $allowed_html = array(
 	);
 	?>
 </p>
+ 
+
 
 <p>
 	<?php

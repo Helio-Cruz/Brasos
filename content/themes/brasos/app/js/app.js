@@ -226,15 +226,15 @@ var app = {
     </div>
     `;
 */ /*  
-           // if (window.location.pathname == '/minha-conta/') {
-              if (window.location.pathname == '/Wordpress/Brasos/my-account/') {
-              checkoutLoginForm.append(ResetPwd);
-            }
-            
-         //   if (window.location.href == 'https://brasos.com.br/minha-conta/') {
-           if (window.location.href == 'http://localhost/Wordpress/Brasos/my-account/') {
-              UIkit.modal('#my-account-member-form').show();
-            }*/
+                                                                   // if (window.location.pathname == '/minha-conta/') {
+                                                                      if (window.location.pathname == '/Wordpress/Brasos/my-account/') {
+                                                                      checkoutLoginForm.append(ResetPwd);
+                                                                    }
+                                                                    
+                                                                 //   if (window.location.href == 'https://brasos.com.br/minha-conta/') {
+                                                                   if (window.location.href == 'http://localhost/Wordpress/Brasos/my-account/') {
+                                                                      UIkit.modal('#my-account-member-form').show();
+                                                                    }*/
 
     $('#my-account-member-form #form-password-reset').on('submit', function (event) {
       event.preventDefault(event);
@@ -330,6 +330,45 @@ var app = {
         }
       }
     }
+
+
+ 
+ 
+
+    // update ID
+    $("#eventAccess").on("submit", function (e) {
+      e.preventDefault();
+
+      const userEmail = $('#myAccessEmail').val().trim();
+      const error = `
+      <div class="uk-alert-danger" uk-alert style="width: 400px; margin: auto;font-weight:600">
+      <a class="uk-alert-close" uk-close></a>
+      <p>Este e-mail não consta em nosso banco de dados, por favor insira um e-mail válido.</p>
+     </div>`;
+
+      $.ajax({
+        type: "POST",
+        url: ajax_brasos.ajaxurl,
+        dataType: 'json',
+        data: {
+          action: "verify_registered_user",
+          email: userEmail,
+        },
+        success: function (data) {
+          $('.messageForm').html(data);
+          if (data.logged == true) {
+            document.location.href = ajax_brasos.redirecturl;
+          }
+        },
+        error: function () {
+          $('.messageForm')
+            .addClass("uk-text-danger")
+            //  .html("Este e-mail não consta em nosso banco de dados, por favor insira um e-mail válido");
+            .html(error);
+        }
+      });
+    });
+
 
 
     // hide inputs page pagamento

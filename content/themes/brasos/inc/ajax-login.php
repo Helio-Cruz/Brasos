@@ -78,7 +78,10 @@ function authResetPassword()
         $user_info = get_userdata($user_id);
         $user_login = $user_info->user_login;
         $reset_key = get_password_reset_key($user_info);
-        $link = esc_url( add_query_arg( array( 'key' => $reset_key, 'id' => $user_id ), wc_get_endpoint_url( 'lost-password', '', wc_get_page_permalink( 'myaccount' ) ) ) );
+        $link = esc_url(add_query_arg(array('key' => $reset_key, 'id' => $user_id), wc_get_endpoint_url('lost-password', '', wc_get_page_permalink('myaccount'))));
+        //  $link = esc_url( add_query_arg( array( 'key' => $reset_key, 'id' => $user_id ), wc_get_endpoint_url( 'lost-password', '', get_permalink( 'inscrever-se' ) ) ) );
+
+
 
         $headers = ['Content-Type: text/html; charset=UTF-8'];
         $subject = 'Solicitação de definição de senha na Brasos';
@@ -95,7 +98,7 @@ function authResetPassword()
         $message .= '<p style="margin:16px 0;padding:0.2em 2em;">Usuário: ' . esc_html($user_login) . '</p>';
         $message .= '<p style="margin:16px 0;padding:0.2em 2em;">Se você não fez essa solicitação, ignore este e-mail. Se você gostaria de prosseguir:</p>';
         $message .= '<p style="margin:16px 0;padding:0.2em 2em;"><a style="font-weight:normal;text-decoration:underline;color:#006e78" href="' . $link . '">Clique aqui para redefinir sua senha</a></p>';
-  
+
         $message .= '</td></tr></tbody></table></div>';
         wp_mail($user_email, $subject, $message, $headers);
         $response['data'] = ["message" =>  'O link para definir a senha foi enviado no seu email.'];
@@ -106,4 +109,32 @@ function authResetPassword()
     wp_send_json($response);
 
     die();
+}
+
+
+
+
+add_action('wp_ajax_nopriv_verify_registered_user', 'verify_registered_user', 20);
+add_action('wp_ajax_verify_registered_user', 'verify_registered_user', 20);
+
+function verify_registered_user()
+{
+
+    $email = $_POST['email'];
+    $sanitized_email = sanitize_email($email);
+    $userID = email_exists($sanitized_email);
+
+    if ($userID) {
+
+        // change current user, force login and redirect
+        $user = get_user_by( 'id', $userID ); 
+        if( $user ) {
+            wp_set_current_user( $userID, $user->user_login );
+            wp_set_auth_cookie( $userID );
+            do_action( 'wp_login', $user->user_login, $user );
+            echo json_encode(['logged' => true]);
+        }
+    }
+
+    wp_die();
 }

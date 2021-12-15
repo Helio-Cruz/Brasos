@@ -20,23 +20,25 @@ if (!function_exists('brasos_scripts')) :
             '1.1.0',
             true
         );
-        /*
+/*
         wp_localize_script(
             'brasos-js',
             'ajax_login_object',
-            array(
+            [
                 'ajaxurl' => admin_url('admin-ajax.php'),
-                'redirecturl' => home_url('/membros')
-            )
+             //   'redirecturl' => home_url('/evento-transmissao/')
+            ]
         );
-        */
+*/
 
         wp_localize_script(
             'brasos-js',
             'ajax_brasos',
             [
                 'ajaxurl' => admin_url('admin-ajax.php'),
-                'security' => wp_create_nonce('ajax-resetpassword-nonce')
+                'security' => wp_create_nonce('ajax-resetpassword-nonce'),
+              //  'redirecturl' => home_url('/my-account/downloads')
+                'redirecturl' => home_url('/my-account/order')
             ]
         );
     }

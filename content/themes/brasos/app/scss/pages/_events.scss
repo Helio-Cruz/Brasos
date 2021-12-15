@@ -24,14 +24,14 @@
   //  border: 1px solid $grey;
     border-radius: 8px;
     color: $white !important;
-    background-color:  $color-green-dark;
-    font-size: $body;
+    background-color: $color-green-regular;
+    font-size: 13px;
     margin: 1em auto;
-    padding: 0.7em 2em;
+    padding: 0.6em 1em;
     font-weight: 600;
     &:hover {
       // color: $white !important;
-    background-color: $color-green-regular;
+    background-color: $color-green-dark;
  
       transition: ease-in $duration-medium;
     }

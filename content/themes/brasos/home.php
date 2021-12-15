@@ -14,7 +14,7 @@
 
 -->
 
-<?php get_template_part('template-parts/home/home', 'event'); ?>
+<?php get_template_part('template-parts/home/home', 'carousel'); ?>
 <?php get_template_part('template-parts/home/home', 'blog'); ?>
 <?php get_template_part('template-parts/home/home', 'brasos'); ?>
 <?php get_template_part('template-parts/home/footer', 'images'); ?>

@@ -269,22 +269,39 @@ function woocommerce_custom_product_add_to_cart_text()
 
 
 
-
-
-
-
 function wpb_woo_my_account_order()
 {
   $myorder = array(
 
 
-    'dashboard'          => __('Painel', 'woocommerce'),
-    'orders'             => __('Pedidos', 'woocommerce'),
+    // 'dashboard'          => __('Painel', 'woocommerce'),
+    'orders'             => __('Pedido', 'woocommerce'),
     'downloads' => __('Acessar Brasostba 2021', 'woocommerce'),
-    'edit-account'       => __('Detalhes da conta', 'woocommerce'),
+    //  'edit-account'       => __('Detalhes da conta', 'woocommerce'),
     'customer-logout'    => __('Sair', 'woocommerce'),
   );
 
   return $myorder;
 }
 add_filter('woocommerce_account_menu_items', 'wpb_woo_my_account_order');
+
+
+/**
+ * WooCommerce My Account Page Logout Redirect
+ */
+add_action('wp_logout', 'owp_redirect_after_logout');
+function owp_redirect_after_logout()
+{
+  wp_redirect(home_url());
+  exit();
+}
+
+
+// Rename My account > Orders "view" action button text
+add_filter('woocommerce_my_account_my_orders_actions', 'change_my_account_my_orders_view_text_button', 10, 2);
+function change_my_account_my_orders_view_text_button($actions, $order)
+{
+  $actions['view']['name'] = __('Certificado', 'woocommerce');
+
+  return $actions;
+}
