@@ -1,0 +1,99 @@
+2021-12-10T19:44:26+00:00 CRITICAL Uncaught Error: Call to a member function get_customer_order_notes() on null in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php:23
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3135): wc_get_template('myaccount/order...', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_orders(1)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#4 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#5 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3084): do_action('woocommerce_acc...', '')
+#6 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_content('')
+#7 C:\wamp64\www\Wordpress\Brasos\wp\, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php, na linha 23
+
+2021-12-10T19:44:38+00:00 CRITICAL Uncaught Error: Call to a member function get_customer_order_notes() on null in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php:23
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3135): wc_get_template('myaccount/order...', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_orders(1)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#4 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#5 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3084): do_action('woocommerce_acc...', '')
+#6 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_content('')
+#7 C:\wamp64\www\Wordpress\Brasos\wp\, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php, na linha 23
+
+2021-12-10T19:44:53+00:00 CRITICAL Uncaught Error: Call to a member function get_customer_order_notes() on null in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php:23
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3135): wc_get_template('myaccount/order...', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_orders(1)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#4 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#5 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3084): do_action('woocommerce_acc...', '')
+#6 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_content('')
+#7 C:\wamp64\www\Wordpress\Brasos\wp\, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php, na linha 23
+
+2021-12-10T19:45:02+00:00 CRITICAL Uncaught Error: Call to a member function get_customer_order_notes() on null in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php:23
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3135): wc_get_template('myaccount/order...', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_orders(1)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#4 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#5 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3084): do_action('woocommerce_acc...', '')
+#6 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_content('')
+#7 C:\wamp64\www\Wordpress\Brasos\wp\, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php, na linha 23
+
+2021-12-10T19:48:28+00:00 CRITICAL Uncaught Error: Call to a member function get_customer_order_notes() on null in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php:49
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3135): wc_get_template('myaccount/order...', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_orders(1)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#4 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#5 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3084): do_action('woocommerce_acc...', '')
+#6 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_content('')
+#7 C:\wamp64\www\Wordpress\Brasos\wp\, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php, na linha 49
+
+2021-12-10T19:48:40+00:00 CRITICAL Uncaught Error: Call to a member function get_customer_order_notes() on null in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php:42
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3135): wc_get_template('myaccount/order...', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_orders(1)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#4 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#5 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3084): do_action('woocommerce_acc...', '')
+#6 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_content('')
+#7 C:\wamp64\www\Wordpress\Brasos\wp\, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php, na linha 42
+
+2021-12-10T19:49:00+00:00 CRITICAL Uncaught Error: Call to a member function get_customer_order_notes() on null in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php:34
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3135): wc_get_template('myaccount/order...', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_orders(1)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#4 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#5 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3084): do_action('woocommerce_acc...', '')
+#6 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_content('')
+#7 C:\wamp64\www\Wordpress\Brasos\wp\, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php, na linha 34
+
+2021-12-10T19:52:30+00:00 CRITICAL Uncaught Error: Call to a member function get_customer_order_notes() on null in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php:22
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3135): wc_get_template('myaccount/order...', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_orders(1)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#4 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#5 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3084): do_action('woocommerce_acc...', '')
+#6 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_content('')
+#7 C:\wamp64\www\Wordpress\Brasos\wp\, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php, na linha 22
+
+2021-12-10T19:52:58+00:00 CRITICAL Uncaught Error: Call to a member function get_customer_order_notes() on null in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php:22
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3135): wc_get_template('myaccount/order...', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_orders(1)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#4 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#5 C:\wamp64\www\Wordpress\Brasos\content\plugins\woocommerce\includes\wc-template-functions.php(3084): do_action('woocommerce_acc...', '')
+#6 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): woocommerce_account_content('')
+#7 C:\wamp64\www\Wordpress\Brasos\wp\, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\woocommerce\myaccount\orders.php, na linha 22
+

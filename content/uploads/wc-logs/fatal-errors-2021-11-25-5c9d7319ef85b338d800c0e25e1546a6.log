@@ -1,0 +1,16 @@
+2021-11-25T21:06:21+00:00 CRITICAL Uncaught Error: Call to undefined function redirect() in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\template-evento-transmissao.php:22
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\template-loader.php(106): include()
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\W...')
+#2 C:\wamp64\www\Wordpress\Brasos\index.php(17): require('C:\\wamp64\\www\\W...')
+#3 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\template-evento-transmissao.php, na linha 22
+
+2021-11-25T21:06:25+00:00 CRITICAL Uncaught Error: Call to undefined function redirect() in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\template-evento-transmissao.php:22
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\template-loader.php(106): include()
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\W...')
+#2 C:\wamp64\www\Wordpress\Brasos\index.php(17): require('C:\\wamp64\\www\\W...')
+#3 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\template-evento-transmissao.php, na linha 22
+

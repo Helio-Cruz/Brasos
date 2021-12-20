@@ -1,0 +1,167 @@
+2021-11-29T02:38:34+00:00 CRITICAL Uncaught Error: Cannot create references to/from string offsets in C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\user.php:67
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php(144): wp_signon('helio-cruz@hotm...', true)
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#5 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\user.php, na linha 67
+
+2021-11-29T21:30:01+00:00 CRITICAL syntax error, unexpected end of file, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 181
+
+2021-11-29T22:06:35+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php:139
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 139
+
+2021-11-29T22:06:47+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php:139
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 139
+
+2021-11-29T22:06:49+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php:139
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 139
+
+2021-11-29T22:06:51+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php:139
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 139
+
+2021-11-29T22:06:51+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php:139
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 139
+
+2021-11-29T22:07:40+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php:139
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 139
+
+2021-11-29T22:36:03+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php:147
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 147
+
+2021-11-29T22:36:40+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php:147
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 147
+
+2021-11-29T22:37:13+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php:147
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 147
+
+2021-11-29T22:37:40+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php:147
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 147
+
+2021-11-29T22:37:57+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php:147
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 147
+
+2021-11-29T22:38:25+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php:144
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 144
+
+2021-11-29T22:38:36+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php:144
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 144
+
+2021-11-29T22:39:04+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php:144
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 144
+
+2021-11-29T22:39:29+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php:144
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 144
+
+2021-11-29T22:40:52+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php:147
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 147
+
+2021-11-29T22:41:07+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php:147
+Stack trace:
+#0 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(303): verify_registered_user('')
+#1 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\Wordpress\Brasos\wp\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\Brasos\wp\wp-admin\admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown, em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 147
+
+2021-11-29T22:41:28+00:00 CRITICAL syntax error, unexpected '}', expecting ';' or ',', em C:\wamp64\www\Wordpress\Brasos\content\themes\brasos\inc\ajax-login.php, na linha 149
+

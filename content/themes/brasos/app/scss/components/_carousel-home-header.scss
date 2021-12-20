@@ -3,60 +3,63 @@
 //CAROUSEL HEADER - BIG IMAGES
 .carousel-images {
   // backdrop-filter: brightness(70%);
-  background: $color-green-dark;
+  // background: $color-green-dark;
+  width: 50% !important;
+  margin: auto;
   @include tablets {
     background: none;
-  max-height: calc(100vh - 100px);
-   // max-width: 1600px;
-    margin: auto;
-  //  max-height: unset;
+ //   max-height: calc(50vh - 100px);
+    // max-width: 1600px;
+    //  max-height: unset;
   }
   @include TwoK {
-   // max-height: unset;
-    max-width: 100%;
-  //  background: $color-green-dark;
-    max-height: calc(100vh - 100px);
+    // max-height: unset;
+   // max-width: 100%;
+    //  background: $color-green-dark;
+   // max-height: calc(100vh - 100px);
     //max-width: 1500px;
+    width: 40% !important;
   }
   .uk-slideshow-items {
     //height: calc(69vh - 120px);
     @include tablets {
       //  height: calc(111vh - 200px);
-      padding-bottom: 56.2%;
+      //  padding-bottom: 56.2%;
     }
   }
   img {
     height: 100% !important;
     width: 100%;
     object-fit: cover;
+    margin: auto;
+    display: flex;
     //object-position: center;
     object-position: top;
-    filter: brightness(90%);
+    //  filter: brightness(90%);
     @include tablets {
       object-fit: cover;
-     max-height: calc(100vh - 100px);
-     // max-height: unset;
+      max-height: calc(100vh - 100px);
+      // max-height: unset;
     }
     @include TwoK {
-     // max-height: unset;
-      max-height: calc(85vh - 110px);
-      width: 110%;
+      // max-height: unset;
+      max-height: calc(70vh - 110px);
+     // width: 110%;
       object-fit: contain;
-     
     }
   }
   // Caroussel home iframe video
-  &__iframe-home{
-    display:flex;
-    margin:auto;
+  &__iframe-home {
+    display: flex;
+    margin: auto;
     width: 100% !important;
     height: 100% !important;
+    object-position: top;
     @include TwoK {
-     // max-height: unset;
+      // max-height: unset;
       max-height: calc(85vh - 110px);
       width: 110%;
       object-fit: contain;
-     
     }
   }
 }
@@ -69,7 +72,7 @@
   @include tablets {
     visibility: visible;
   }
-  @include TwoK{
+  @include TwoK {
     color: $white !important;
   }
 }

@@ -3,6 +3,10 @@
   $post = $wp_query->get_queried_object();
   $pagename = $post->post_name;
   if ($pagename === 'brasostba-2021') { ?>
+    <!-- Transmissao Dia 1-->
+    <?php get_template_part('template-parts/events/event', 'transmissaoDayOne'); ?>
+    <!-- Transmissao Dia 2-->
+    <?php get_template_part('template-parts/events/event', 'transmissaoDayTwo'); ?>
     <!-- Valores de inscriçao-->
     <?php get_template_part('template-parts/events/event', 'prices'); ?>
     <!-- INFORMAÇOES BASICAS -->
